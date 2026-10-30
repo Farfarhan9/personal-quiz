@@ -1,0 +1,2177 @@
+{
+  "id": "testing-ch3",
+  "title": "Software Testing · Chapter 3",
+  "description": "Testing throughout the life cycle: SDLC and development models, test levels, test types, and maintenance testing.",
+  "topics": [
+    {
+      "id": "development-models",
+      "title": "SDLC & Development Models",
+      "description": "SDLC phases, waterfall, V-model and iterative-incremental models.",
+      "questions": [
+        {
+          "id": "c3-sdm-001",
+          "type": "single_choice",
+          "prompt": "Which phase sequence matches the SDLC used in this subject (RDDTDS)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Design → Requirement → Develop → Deploy → Test → Support"
+            },
+            {
+              "id": "b",
+              "text": "Requirement → Design → Develop → Test → Deploy → Support"
+            },
+            {
+              "id": "c",
+              "text": "Requirement → Develop → Design → Test → Support → Deploy"
+            },
+            {
+              "id": "d",
+              "text": "Develop → Design → Requirement → Test → Deploy → Support"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "RDDTDS = Requirement, Design, Develop, Test, Deploy, Support. (PADIT — Planning, Analysis, Design, Implementation, Testing — is the other common version.)",
+          "difficulty": "easy",
+          "tags": [
+            "sdlc"
+          ]
+        },
+        {
+          "id": "c3-sdm-002",
+          "type": "typed",
+          "prompt": "In the SDLC Design phase, what does HLD stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "high level design",
+            "high-level design"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type the full phrase"
+          },
+          "explanation": "HLD = High Level Design; LLD = Low Level Design.",
+          "difficulty": "easy",
+          "tags": [
+            "sdlc",
+            "design"
+          ]
+        },
+        {
+          "id": "c3-sdm-003",
+          "type": "single_choice",
+          "prompt": "Which item belongs to LOW level design (LLD) rather than high level design?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Activity flows / work flows"
+            },
+            {
+              "id": "b",
+              "text": "Program inventory"
+            },
+            {
+              "id": "c",
+              "text": "Functional design"
+            },
+            {
+              "id": "d",
+              "text": "Class specifications"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "LLD covers program specs, database design, data access design, interface design and class specifications. Functional design, activity flows and program inventory are HLD.",
+          "difficulty": "medium",
+          "tags": [
+            "sdlc",
+            "design"
+          ]
+        },
+        {
+          "id": "c3-sdm-004",
+          "type": "multiple_choice",
+          "prompt": "Which items belong to the REQUIREMENT phase of the SDLC? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Class specifications"
+            },
+            {
+              "id": "b",
+              "text": "Functional requirements"
+            },
+            {
+              "id": "c",
+              "text": "Data flow diagrams"
+            },
+            {
+              "id": "d",
+              "text": "Acceptance criteria"
+            },
+            {
+              "id": "e",
+              "text": "State transition diagrams"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Requirements include functional requirements, DFDs, ER diagrams, state transition diagrams, system parameters, external interfaces and acceptance criteria. Class specs are LLD.",
+          "difficulty": "medium",
+          "tags": [
+            "sdlc",
+            "requirements"
+          ]
+        },
+        {
+          "id": "c3-sdm-005",
+          "type": "multiple_choice",
+          "prompt": "Which are tasks in the DEVELOP phase? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Coding"
+            },
+            {
+              "id": "b",
+              "text": "Test data creation"
+            },
+            {
+              "id": "c",
+              "text": "Environment setup"
+            },
+            {
+              "id": "d",
+              "text": "User training"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Develop = environment setup, test data creation and coding. User training happens in Deploy.",
+          "difficulty": "medium",
+          "tags": [
+            "sdlc"
+          ]
+        },
+        {
+          "id": "c3-sdm-006",
+          "type": "multiple_choice",
+          "prompt": "Which are tasks in the DEPLOY phase? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "User training"
+            },
+            {
+              "id": "b",
+              "text": "Data migration"
+            },
+            {
+              "id": "c",
+              "text": "Writing test specifications"
+            },
+            {
+              "id": "d",
+              "text": "Production support"
+            },
+            {
+              "id": "e",
+              "text": "Contingency planning"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "Deploy includes data conversion/migration, database creation, production tests, contingency planning, user training, production support and enhancements. Test specifications belong to the Test phase.",
+          "difficulty": "medium",
+          "tags": [
+            "sdlc"
+          ]
+        },
+        {
+          "id": "c3-sdm-007",
+          "type": "multiple_choice",
+          "prompt": "Which statements are MYTHS about the SDLC? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Until I get the program running, I have no way of assessing its quality"
+            },
+            {
+              "id": "b",
+              "text": "Once the program is written and working, the job is done"
+            },
+            {
+              "id": "c",
+              "text": "Testing activities should start early in the development cycle"
+            },
+            {
+              "id": "d",
+              "text": "For every development activity there is a corresponding test activity"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "The two myths are that the job is done once the program works, and that quality can't be assessed until the program runs (reviews can assess it earlier).",
+          "difficulty": "medium",
+          "tags": [
+            "sdlc",
+            "myths"
+          ]
+        },
+        {
+          "id": "c3-sdm-008",
+          "type": "multiple_choice",
+          "prompt": "Which are the three software development models covered in this chapter? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Waterfall model"
+            },
+            {
+              "id": "b",
+              "text": "V-model"
+            },
+            {
+              "id": "c",
+              "text": "Iterative-incremental model"
+            },
+            {
+              "id": "d",
+              "text": "Big-bang model"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "WVI: Waterfall, V-model and Iterative-incremental. Big-bang is an integration testing strategy, not a development model.",
+          "difficulty": "medium",
+          "tags": [
+            "models"
+          ]
+        },
+        {
+          "id": "c3-sdm-009",
+          "type": "single_choice",
+          "prompt": "What is the correct order of phases in the waterfall model (RDIVM)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Requirements → Design → Implementation → Verification → Maintenance"
+            },
+            {
+              "id": "b",
+              "text": "Design → Requirements → Implementation → Maintenance → Verification"
+            },
+            {
+              "id": "c",
+              "text": "Requirements → Implementation → Design → Verification → Maintenance"
+            },
+            {
+              "id": "d",
+              "text": "Requirements → Design → Verification → Implementation → Maintenance"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "RDIVM: Requirements, Design, Implementation, Verification, Maintenance.",
+          "difficulty": "easy",
+          "tags": [
+            "models",
+            "waterfall"
+          ]
+        },
+        {
+          "id": "c3-sdm-010",
+          "type": "multiple_choice",
+          "prompt": "What are the disadvantages of the waterfall model? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It is inflexible"
+            },
+            {
+              "id": "b",
+              "text": "It uses too many short development cycles"
+            },
+            {
+              "id": "c",
+              "text": "Fixing defects involves a high cost"
+            },
+            {
+              "id": "d",
+              "text": "It is non-iterative"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Waterfall flows one way: non-iterative, inflexible, and defects found late are expensive to fix.",
+          "difficulty": "medium",
+          "tags": [
+            "models",
+            "waterfall"
+          ]
+        },
+        {
+          "id": "c3-sdm-011",
+          "type": "single_choice",
+          "prompt": "Which diagram represents the V-model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "image": {
+                "src": "images/model-shape-c.svg",
+                "alt": "Two circular Plan, Build, Test cycles side by side, with an arrow leading from the first cycle to the second."
+              }
+            },
+            {
+              "id": "b",
+              "image": {
+                "src": "images/model-shape-b.svg",
+                "alt": "Boxes going down the left side to Code at the bottom, then back up the right side, with dashed lines linking each left box to the right box opposite it."
+              }
+            },
+            {
+              "id": "c",
+              "image": {
+                "src": "images/model-shape-a.svg",
+                "alt": "Five boxes stepping diagonally downwards, each with an arrow to the next (Requirements, Design, Implement, Verify, Maintain)."
+              }
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The V-model goes down through the development phases and back up through the test levels, with each development phase mirrored by a test level. A is waterfall; C is iterative-incremental.",
+          "difficulty": "medium",
+          "tags": [
+            "models",
+            "v-model"
+          ]
+        },
+        {
+          "id": "c3-sdm-012",
+          "type": "single_choice",
+          "prompt": "How does the V-model differ from the waterfall model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It develops the system as a series of short cycles"
+            },
+            {
+              "id": "b",
+              "text": "It is built on the waterfall concept but adds a mirrored test-planning and validation level for every development phase"
+            },
+            {
+              "id": "c",
+              "text": "It has no testing phase at all"
+            },
+            {
+              "id": "d",
+              "text": "It links all units together at once and tests them"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The V-model keeps the sequential waterfall flow but mirrors each development phase with a matching test level.",
+          "difficulty": "easy",
+          "tags": [
+            "models",
+            "v-model"
+          ]
+        },
+        {
+          "id": "c3-sdm-013",
+          "type": "typed",
+          "prompt": "In the V-model, which test level goes in the box marked “?” (between component testing and system testing)?",
+          "image": {
+            "src": "images/v-model.svg",
+            "alt": "V-shaped diagram. Left side going down: User requirements, System requirements, High-level design, Low-level design, then Code at the bottom. Right side going up: Component testing, a dashed box with a question mark, System testing, Acceptance testing. Dashed lines link each left box to the box opposite it."
+          },
+          "acceptedAnswers": [
+            "integration testing",
+            "integration",
+            "integration test"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "e.g. ______ testing"
+          },
+          "explanation": "The four V-model levels (CISA) are Component, Integration, System and Acceptance testing. Integration testing is mirrored with high-level design.",
+          "difficulty": "easy",
+          "tags": [
+            "models",
+            "v-model"
+          ]
+        },
+        {
+          "id": "c3-sdm-014",
+          "type": "true_false",
+          "prompt": "The V-model must always have exactly four test levels.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "The V-model may have more, fewer or different levels depending on the project and product.",
+          "difficulty": "medium",
+          "tags": [
+            "models",
+            "v-model"
+          ]
+        },
+        {
+          "id": "c3-sdm-015",
+          "type": "single_choice",
+          "prompt": "Which describes the iterative-incremental model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "All modules are tested together only at the end"
+            },
+            {
+              "id": "b",
+              "text": "Every development phase has a mirrored test level"
+            },
+            {
+              "id": "c",
+              "text": "Development flows steadily downwards through each phase once"
+            },
+            {
+              "id": "d",
+              "text": "Requirements, design, build and test are done as a series of shorter development cycles"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Iterative-incremental development repeats requirements → design → build → test in short cycles.",
+          "difficulty": "easy",
+          "tags": [
+            "models",
+            "iterative"
+          ]
+        },
+        {
+          "id": "c3-sdm-016",
+          "type": "multiple_choice",
+          "prompt": "Which are examples of iterative-incremental development models? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Agile development models"
+            },
+            {
+              "id": "b",
+              "text": "Prototyping"
+            },
+            {
+              "id": "c",
+              "text": "Rational Unified Process (RUP)"
+            },
+            {
+              "id": "d",
+              "text": "Rapid Application Development (RAD)"
+            },
+            {
+              "id": "e",
+              "text": "Waterfall"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "RRAP: RAD, RUP, Agile and Prototyping. Waterfall is sequential.",
+          "difficulty": "medium",
+          "tags": [
+            "models",
+            "iterative"
+          ]
+        },
+        {
+          "id": "c3-sdm-017",
+          "type": "typed",
+          "prompt": "What does RAD stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "rapid application development"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type the full phrase"
+          },
+          "explanation": "RAD = Rapid Application Development, an iterative-incremental model.",
+          "difficulty": "easy",
+          "tags": [
+            "models",
+            "acronym"
+          ]
+        },
+        {
+          "id": "c3-sdm-018",
+          "type": "multiple_choice",
+          "prompt": "Which are tips for good testing in any development model? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "For every development activity there is a corresponding test activity"
+            },
+            {
+              "id": "b",
+              "text": "Include testers early in reviewing development documents"
+            },
+            {
+              "id": "c",
+              "text": "Adapt the model to the project rather than using it 'out of the box'"
+            },
+            {
+              "id": "d",
+              "text": "Test analysis and design should begin in parallel with the corresponding development stage"
+            },
+            {
+              "id": "e",
+              "text": "Only start testing once all coding is complete"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Testing should start early and run in parallel with development, and models must be adapted to each project.",
+          "difficulty": "medium",
+          "tags": [
+            "models",
+            "good-practice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-levels",
+      "title": "Test Levels",
+      "description": "Component, integration, system and acceptance testing; incremental vs big-bang; alpha vs beta.",
+      "questions": [
+        {
+          "id": "c3-tl-001",
+          "type": "multiple_choice",
+          "prompt": "Which are test levels listed in the notes (CISAIB)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "System testing"
+            },
+            {
+              "id": "b",
+              "text": "Component / unit testing"
+            },
+            {
+              "id": "c",
+              "text": "Acceptance testing"
+            },
+            {
+              "id": "d",
+              "text": "Integration testing"
+            },
+            {
+              "id": "e",
+              "text": "Regression testing"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "CISAIB = Component, Integration, System, Acceptance, Incremental, Big-bang. Regression testing is a test TYPE (testing related to changes).",
+          "difficulty": "medium",
+          "tags": [
+            "levels"
+          ]
+        },
+        {
+          "id": "c3-tl-002",
+          "type": "single_choice",
+          "prompt": "Which test level searches for defects in separately testable software such as modules, programs, objects and classes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Acceptance testing"
+            },
+            {
+              "id": "b",
+              "text": "Component / unit testing"
+            },
+            {
+              "id": "c",
+              "text": "Integration testing"
+            },
+            {
+              "id": "d",
+              "text": "System testing"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Component (unit) testing verifies separately testable pieces of software.",
+          "difficulty": "easy",
+          "tags": [
+            "component"
+          ]
+        },
+        {
+          "id": "c3-tl-003",
+          "type": "multiple_choice",
+          "prompt": "Where are test cases for component testing derived from? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Component specification"
+            },
+            {
+              "id": "b",
+              "text": "Data model"
+            },
+            {
+              "id": "c",
+              "text": "Software design"
+            },
+            {
+              "id": "d",
+              "text": "Customer acceptance criteria"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Component test cases come from the component specification, software design or data model.",
+          "difficulty": "medium",
+          "tags": [
+            "component"
+          ]
+        },
+        {
+          "id": "c3-tl-004",
+          "type": "single_choice",
+          "prompt": "Who usually performs component testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "End users outside the organisation"
+            },
+            {
+              "id": "b",
+              "text": "The customer"
+            },
+            {
+              "id": "c",
+              "text": "An independent testing team"
+            },
+            {
+              "id": "d",
+              "text": "The developer who wrote the code"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Component testing is usually done by the developer who wrote the code.",
+          "difficulty": "easy",
+          "tags": [
+            "component"
+          ]
+        },
+        {
+          "id": "c3-tl-005",
+          "type": "true_false",
+          "prompt": "Component testing may include non-functional characteristics (e.g. memory leaks) and structural testing (e.g. branch coverage).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Besides functionality, component testing can cover resource behaviour, robustness and structural coverage.",
+          "difficulty": "medium",
+          "tags": [
+            "component"
+          ]
+        },
+        {
+          "id": "c3-tl-006",
+          "type": "single_choice",
+          "prompt": "Which test level tests interfaces between components and interactions with other parts of the system, such as the OS, file system or hardware?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Component testing"
+            },
+            {
+              "id": "b",
+              "text": "Acceptance testing"
+            },
+            {
+              "id": "c",
+              "text": "Beta testing"
+            },
+            {
+              "id": "d",
+              "text": "Integration testing"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Integration testing focuses on interfaces and interactions.",
+          "difficulty": "easy",
+          "tags": [
+            "integration"
+          ]
+        },
+        {
+          "id": "c3-tl-007",
+          "type": "multiple_choice",
+          "prompt": "What are the two types of integration testing? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Alpha integration testing"
+            },
+            {
+              "id": "b",
+              "text": "System integration testing"
+            },
+            {
+              "id": "c",
+              "text": "Component integration testing"
+            },
+            {
+              "id": "d",
+              "text": "Regression integration testing"
+            }
+          ],
+          "correct": [
+            "b",
+            "c"
+          ],
+          "explanation": "There are two types: component integration testing and system integration testing.",
+          "difficulty": "medium",
+          "tags": [
+            "integration"
+          ]
+        },
+        {
+          "id": "c3-tl-008",
+          "type": "single_choice",
+          "prompt": "Who normally performs integration testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Independent testers"
+            },
+            {
+              "id": "b",
+              "text": "External beta users"
+            },
+            {
+              "id": "c",
+              "text": "The developer who wrote the code"
+            },
+            {
+              "id": "d",
+              "text": "The customer"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Integration testing is normally done by independent testers.",
+          "difficulty": "easy",
+          "tags": [
+            "integration"
+          ]
+        },
+        {
+          "id": "c3-tl-009",
+          "type": "true_false",
+          "prompt": "Only functional approaches can be used for integration testing.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Both functional and structural approaches may be used.",
+          "difficulty": "easy",
+          "tags": [
+            "integration"
+          ]
+        },
+        {
+          "id": "c3-tl-010",
+          "type": "single_choice",
+          "prompt": "Modules M1, M2, M3… are first unit-tested individually, then combined ONE BY ONE and tested for successful interaction. This is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Incremental testing"
+            },
+            {
+              "id": "b",
+              "text": "Beta testing"
+            },
+            {
+              "id": "c",
+              "text": "Retest all"
+            },
+            {
+              "id": "d",
+              "text": "Big-bang testing"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Incremental testing combines modules one at a time and tests each interaction.",
+          "difficulty": "easy",
+          "tags": [
+            "integration",
+            "incremental"
+          ]
+        },
+        {
+          "id": "c3-tl-011",
+          "type": "single_choice",
+          "prompt": "An integration strategy in which all units are linked at once, resulting in a complete system, is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Big-bang testing"
+            },
+            {
+              "id": "b",
+              "text": "Alpha testing"
+            },
+            {
+              "id": "c",
+              "text": "Incremental testing"
+            },
+            {
+              "id": "d",
+              "text": "Regression test selection"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "In big-bang testing all units are linked together at once.",
+          "difficulty": "easy",
+          "tags": [
+            "integration",
+            "big-bang"
+          ]
+        },
+        {
+          "id": "c3-tl-012",
+          "type": "single_choice",
+          "prompt": "What is the main drawback of big-bang testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It can only be done by customers"
+            },
+            {
+              "id": "b",
+              "text": "It takes too many test cycles"
+            },
+            {
+              "id": "c",
+              "text": "It requires every module to be tested individually first"
+            },
+            {
+              "id": "d",
+              "text": "It is difficult to isolate errors, because the interfaces across individual units were not verified"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "With everything linked at once, it is hard to tell which interface caused a failure.",
+          "difficulty": "medium",
+          "tags": [
+            "integration",
+            "big-bang"
+          ]
+        },
+        {
+          "id": "c3-tl-013",
+          "type": "single_choice",
+          "prompt": "System testing is concerned with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A single class or module"
+            },
+            {
+              "id": "b",
+              "text": "Whether the customer accepts the system"
+            },
+            {
+              "id": "c",
+              "text": "Only the interface between two modules"
+            },
+            {
+              "id": "d",
+              "text": "The behaviour of the whole system / product"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "System testing looks at the whole system or product.",
+          "difficulty": "easy",
+          "tags": [
+            "system"
+          ]
+        },
+        {
+          "id": "c3-tl-014",
+          "type": "multiple_choice",
+          "prompt": "Which statements about system testing are true? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It is done by the customer at their own site"
+            },
+            {
+              "id": "b",
+              "text": "It is done in a controlled environment"
+            },
+            {
+              "id": "c",
+              "text": "It investigates both functional and non-functional requirements"
+            },
+            {
+              "id": "d",
+              "text": "Its goal is to see if the software meets its requirements"
+            },
+            {
+              "id": "e",
+              "text": "It is done by an independent testing team"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "System testing is done by an independent team in a controlled environment, checking functional and non-functional requirements.",
+          "difficulty": "medium",
+          "tags": [
+            "system"
+          ]
+        },
+        {
+          "id": "c3-tl-015",
+          "type": "single_choice",
+          "prompt": "Whose responsibility is acceptance testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The independent testing team only"
+            },
+            {
+              "id": "b",
+              "text": "The customer or user"
+            },
+            {
+              "id": "c",
+              "text": "The project manager only"
+            },
+            {
+              "id": "d",
+              "text": "The developer who wrote the code"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Acceptance testing is the responsibility of the customer or user.",
+          "difficulty": "easy",
+          "tags": [
+            "acceptance"
+          ]
+        },
+        {
+          "id": "c3-tl-016",
+          "type": "single_choice",
+          "prompt": "What is the main goal of acceptance testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To find as many defects as possible"
+            },
+            {
+              "id": "b",
+              "text": "To establish confidence in the system"
+            },
+            {
+              "id": "c",
+              "text": "To test the interfaces between modules"
+            },
+            {
+              "id": "d",
+              "text": "To check branch coverage"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Acceptance testing aims to establish confidence. Finding defects is not its main focus.",
+          "difficulty": "medium",
+          "tags": [
+            "acceptance"
+          ]
+        },
+        {
+          "id": "c3-tl-017",
+          "type": "true_false",
+          "prompt": "Acceptance testing is always the final test level.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Acceptance testing is not necessarily the final level in testing.",
+          "difficulty": "medium",
+          "tags": [
+            "acceptance"
+          ]
+        },
+        {
+          "id": "c3-tl-018",
+          "type": "single_choice",
+          "prompt": "Testing performed at the developer's site by testers who are internal employees of the organisation is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Beta testing"
+            },
+            {
+              "id": "b",
+              "text": "Retest all"
+            },
+            {
+              "id": "c",
+              "text": "System integration testing"
+            },
+            {
+              "id": "d",
+              "text": "Alpha testing"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Alpha testing happens at the developer's site with internal testers.",
+          "difficulty": "easy",
+          "tags": [
+            "acceptance",
+            "alpha-beta"
+          ]
+        },
+        {
+          "id": "c3-tl-019",
+          "type": "single_choice",
+          "prompt": "Testing that commonly uses black-box techniques, performed by clients outside the organisation at the end-user's location, is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Alpha testing"
+            },
+            {
+              "id": "b",
+              "text": "Component testing"
+            },
+            {
+              "id": "c",
+              "text": "Beta testing"
+            },
+            {
+              "id": "d",
+              "text": "Big-bang testing"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Beta testing is done by real users outside the organisation, in their own environment.",
+          "difficulty": "easy",
+          "tags": [
+            "acceptance",
+            "alpha-beta"
+          ]
+        },
+        {
+          "id": "c3-tl-020",
+          "type": "multiple_choice",
+          "prompt": "Which statements describe ALPHA testing? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reliability, security and robustness are checked"
+            },
+            {
+              "id": "b",
+              "text": "It requires a testing environment or lab"
+            },
+            {
+              "id": "c",
+              "text": "Multiple test cycles are organised"
+            },
+            {
+              "id": "d",
+              "text": "It involves both white-box and black-box testing"
+            },
+            {
+              "id": "e",
+              "text": "Developers can immediately address critical issues"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Reliability, security and robustness are checked in BETA testing, not alpha.",
+          "difficulty": "hard",
+          "tags": [
+            "acceptance",
+            "alpha-beta"
+          ]
+        },
+        {
+          "id": "c3-tl-021",
+          "type": "multiple_choice",
+          "prompt": "Which statements describe BETA testing? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It does not require a testing environment or lab"
+            },
+            {
+              "id": "b",
+              "text": "It is performed at the developer's site"
+            },
+            {
+              "id": "c",
+              "text": "Most feedback is implemented in future versions of the product"
+            },
+            {
+              "id": "d",
+              "text": "Reliability, security and robustness are checked"
+            },
+            {
+              "id": "e",
+              "text": "Only one or two test cycles are run"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Beta testing runs at the end-user's site, so it doesn't need a lab; it's the alpha testing that happens at the developer's site.",
+          "difficulty": "hard",
+          "tags": [
+            "acceptance",
+            "alpha-beta"
+          ]
+        },
+        {
+          "id": "c3-tl-022",
+          "type": "typed",
+          "prompt": "In which type of acceptance testing are reliability and security NOT checked? (alpha or beta)",
+          "image": null,
+          "acceptedAnswers": [
+            "alpha",
+            "alpha testing"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "alpha or beta"
+          },
+          "explanation": "Reliability and security are not checked in alpha testing; they are checked in beta testing.",
+          "difficulty": "medium",
+          "tags": [
+            "acceptance",
+            "alpha-beta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-types",
+      "title": "Test Types",
+      "description": "Functional, non-functional, structural, and confirmation & regression testing.",
+      "questions": [
+        {
+          "id": "c3-tt-001",
+          "type": "multiple_choice",
+          "prompt": "Which are the four test types? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Big-bang testing"
+            },
+            {
+              "id": "b",
+              "text": "Functional testing"
+            },
+            {
+              "id": "c",
+              "text": "Non-functional testing"
+            },
+            {
+              "id": "d",
+              "text": "Structural testing"
+            },
+            {
+              "id": "e",
+              "text": "Testing related to changes (confirmation and regression)"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "The four test types are functional, non-functional, structural, and change-related (confirmation & regression). Big-bang is an integration strategy.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "c3-tt-002",
+          "type": "true_false",
+          "prompt": "All test types can be applied at every test level (component, integration, system and acceptance).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Yes — all test types can be implemented at all CISA levels.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "c3-tt-003",
+          "type": "single_choice",
+          "prompt": "Functional testing is concerned with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "WHAT the system should do"
+            },
+            {
+              "id": "b",
+              "text": "The internal structure of the code"
+            },
+            {
+              "id": "c",
+              "text": "HOW GOOD the system works"
+            },
+            {
+              "id": "d",
+              "text": "Whether changes broke existing features"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Functionality describes WHAT the system should perform.",
+          "difficulty": "easy",
+          "tags": [
+            "functional"
+          ]
+        },
+        {
+          "id": "c3-tt-004",
+          "type": "single_choice",
+          "prompt": "Non-functional testing is concerned with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Which modules are combined first"
+            },
+            {
+              "id": "b",
+              "text": "Who accepts the system"
+            },
+            {
+              "id": "c",
+              "text": "HOW GOOD (how well) the system works"
+            },
+            {
+              "id": "d",
+              "text": "WHAT the system should do"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Non-functional testing checks software and system attributes: how good the system works.",
+          "difficulty": "easy",
+          "tags": [
+            "non-functional"
+          ]
+        },
+        {
+          "id": "c3-tt-005",
+          "type": "multiple_choice",
+          "prompt": "What is the test basis for functional testing? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Use cases"
+            },
+            {
+              "id": "b",
+              "text": "Requirements specification"
+            },
+            {
+              "id": "c",
+              "text": "Control flow within the code"
+            },
+            {
+              "id": "d",
+              "text": "Functional specification"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "Functional tests are derived from requirements, use cases and functional specifications. Control flow is the basis for structural testing.",
+          "difficulty": "medium",
+          "tags": [
+            "functional"
+          ]
+        },
+        {
+          "id": "c3-tt-006",
+          "type": "true_false",
+          "prompt": "Functionality can also be undocumented, for example the legitimate expectations of the customer.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Not all functionality is written down; legitimate customer expectations count too.",
+          "difficulty": "medium",
+          "tags": [
+            "functional"
+          ]
+        },
+        {
+          "id": "c3-tt-007",
+          "type": "multiple_choice",
+          "prompt": "Which of these are NON-FUNCTIONAL tests? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Load testing"
+            },
+            {
+              "id": "b",
+              "text": "Component testing"
+            },
+            {
+              "id": "c",
+              "text": "Portability testing"
+            },
+            {
+              "id": "d",
+              "text": "Stress testing"
+            },
+            {
+              "id": "e",
+              "text": "Maintainability testing"
+            },
+            {
+              "id": "f",
+              "text": "Big-bang testing"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Non-functional tests include performance, suitability, load, maintainability, stress, reliability and portability testing.",
+          "difficulty": "medium",
+          "tags": [
+            "non-functional"
+          ]
+        },
+        {
+          "id": "c3-tt-008",
+          "type": "single_choice",
+          "prompt": "Structure-based testing is based on…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "User feedback from beta testing"
+            },
+            {
+              "id": "b",
+              "text": "How fast the system responds"
+            },
+            {
+              "id": "c",
+              "text": "The customer's acceptance criteria only"
+            },
+            {
+              "id": "d",
+              "text": "The internal structure of a component or the architecture of the system"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Structure-based testing uses the internal structure or architecture.",
+          "difficulty": "easy",
+          "tags": [
+            "structural"
+          ]
+        },
+        {
+          "id": "c3-tt-009",
+          "type": "multiple_choice",
+          "prompt": "What can structure-based testing be based on? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The structure of abstract models such as a finite state machine"
+            },
+            {
+              "id": "b",
+              "text": "The customer's legitimate expectations"
+            },
+            {
+              "id": "c",
+              "text": "The calling hierarchy of procedures or structured menus"
+            },
+            {
+              "id": "d",
+              "text": "The control flow within components"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Structural testing uses control flow, calling hierarchies/menus and abstract models such as finite state machines.",
+          "difficulty": "medium",
+          "tags": [
+            "structural"
+          ]
+        },
+        {
+          "id": "c3-tt-010",
+          "type": "single_choice",
+          "prompt": "What is the objective of structure-based testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To re-run every existing test"
+            },
+            {
+              "id": "b",
+              "text": "To measure performance under load"
+            },
+            {
+              "id": "c",
+              "text": "To cover all elements of the considered structure"
+            },
+            {
+              "id": "d",
+              "text": "To establish customer confidence"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Structural testing aims to cover all elements of the structure being considered.",
+          "difficulty": "easy",
+          "tags": [
+            "structural"
+          ]
+        },
+        {
+          "id": "c3-tt-011",
+          "type": "single_choice",
+          "prompt": "Where is structure-based testing mainly applied?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only maintenance testing"
+            },
+            {
+              "id": "b",
+              "text": "Only beta testing"
+            },
+            {
+              "id": "c",
+              "text": "Only acceptance testing"
+            },
+            {
+              "id": "d",
+              "text": "Component and integration testing (and as an addition at higher levels, e.g. menu structures)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It is mostly used in component and integration testing, and sometimes at higher levels.",
+          "difficulty": "medium",
+          "tags": [
+            "structural"
+          ]
+        },
+        {
+          "id": "c3-tt-012",
+          "type": "single_choice",
+          "prompt": "What is regression testing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Testing performed by beta users"
+            },
+            {
+              "id": "b",
+              "text": "Testing a brand-new program for the first time"
+            },
+            {
+              "id": "c",
+              "text": "Linking all units together at once"
+            },
+            {
+              "id": "d",
+              "text": "Executing previously defined test cases on a modified program"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Regression testing re-runs existing tests on a modified program.",
+          "difficulty": "easy",
+          "tags": [
+            "regression"
+          ]
+        },
+        {
+          "id": "c3-tt-013",
+          "type": "single_choice",
+          "prompt": "Why is regression testing done?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To make sure software changes have not adversely affected previously existing capabilities"
+            },
+            {
+              "id": "b",
+              "text": "To decide whether the customer accepts the system"
+            },
+            {
+              "id": "c",
+              "text": "To check that the test environment is set up"
+            },
+            {
+              "id": "d",
+              "text": "To find the root cause of a defect"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "It ensures changes haven't broken what already worked.",
+          "difficulty": "easy",
+          "tags": [
+            "regression"
+          ]
+        },
+        {
+          "id": "c3-tt-014",
+          "type": "single_choice",
+          "prompt": "Trying to remove an item from a queue BEFORE it has been placed into the queue is an example of which regression error type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inappropriate control sequencing"
+            },
+            {
+              "id": "b",
+              "text": "Data corruption"
+            },
+            {
+              "id": "c",
+              "text": "Resource contention"
+            },
+            {
+              "id": "d",
+              "text": "Performance deficiency"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Inappropriate control sequencing errors are side effects of changes in execution sequence.",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "error-types"
+          ]
+        },
+        {
+          "id": "c3-tt-015",
+          "type": "single_choice",
+          "prompt": "Bottlenecks and deadlocks are examples of which regression error type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Resource contention"
+            },
+            {
+              "id": "b",
+              "text": "Inappropriate control sequencing"
+            },
+            {
+              "id": "c",
+              "text": "Data corruption"
+            },
+            {
+              "id": "d",
+              "text": "Performance deficiency"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Resource contention errors include bottlenecks and deadlocks.",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "error-types"
+          ]
+        },
+        {
+          "id": "c3-tt-016",
+          "type": "single_choice",
+          "prompt": "Side effects caused by SHARED DATA are which regression error type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Performance deficiencies"
+            },
+            {
+              "id": "b",
+              "text": "Resource contention"
+            },
+            {
+              "id": "c",
+              "text": "Data corruption errors"
+            },
+            {
+              "id": "d",
+              "text": "Inappropriate control sequencing"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Data corruption errors are side effects due to shared data.",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "error-types"
+          ]
+        },
+        {
+          "id": "c3-tt-017",
+          "type": "typed",
+          "prompt": "Timing and storage utilisation errors are called performance ______.",
+          "image": null,
+          "acceptedAnswers": [
+            "deficiencies",
+            "deficiency",
+            "performance deficiencies"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Performance deficiencies include timing and storage utilisation errors (the P in DIRP).",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "error-types"
+          ]
+        },
+        {
+          "id": "c3-tt-018",
+          "type": "multiple_choice",
+          "prompt": "Which are techniques of regression testing (RRP)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Prioritisation of test cases"
+            },
+            {
+              "id": "b",
+              "text": "Regression test selection"
+            },
+            {
+              "id": "c",
+              "text": "Big-bang retesting"
+            },
+            {
+              "id": "d",
+              "text": "Retest all"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "RRP: Retest all, Regression test selection, Prioritisation of test cases.",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "techniques"
+          ]
+        },
+        {
+          "id": "c3-tt-019",
+          "type": "single_choice",
+          "prompt": "Which regression technique re-executes every test in the existing suite, and is very expensive in time and resources?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Confirmation testing"
+            },
+            {
+              "id": "b",
+              "text": "Retest all"
+            },
+            {
+              "id": "c",
+              "text": "Regression test selection"
+            },
+            {
+              "id": "d",
+              "text": "Prioritisation of test cases"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Retest all runs the whole suite, so it is the most expensive technique.",
+          "difficulty": "easy",
+          "tags": [
+            "regression",
+            "techniques"
+          ]
+        },
+        {
+          "id": "c3-tt-020",
+          "type": "single_choice",
+          "prompt": "In regression test selection, test cases are categorised into which two groups?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Alpha and beta"
+            },
+            {
+              "id": "b",
+              "text": "Static and dynamic"
+            },
+            {
+              "id": "c",
+              "text": "Functional and non-functional"
+            },
+            {
+              "id": "d",
+              "text": "Reusable and obsolete"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Reusable test cases can be used in later regression cycles; obsolete ones cannot.",
+          "difficulty": "medium",
+          "tags": [
+            "regression",
+            "techniques"
+          ]
+        },
+        {
+          "id": "c3-tt-021",
+          "type": "single_choice",
+          "prompt": "Prioritisation of test cases selects tests based on…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Which tests run fastest"
+            },
+            {
+              "id": "b",
+              "text": "Alphabetical order of test names"
+            },
+            {
+              "id": "c",
+              "text": "Business impact, and critical & frequently used functionality"
+            },
+            {
+              "id": "d",
+              "text": "Which tests were written most recently"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Prioritising by business impact and critical/frequent functionality greatly reduces the regression suite.",
+          "difficulty": "easy",
+          "tags": [
+            "regression",
+            "techniques"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maintenance-testing",
+      "title": "Maintenance Testing",
+      "description": "Testing an existing operational system after modification, migration or retirement.",
+      "questions": [
+        {
+          "id": "c3-mt-001",
+          "type": "single_choice",
+          "prompt": "Where is maintenance testing done?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only on individual components during development"
+            },
+            {
+              "id": "b",
+              "text": "Only at the developer's site during alpha testing"
+            },
+            {
+              "id": "c",
+              "text": "On a brand-new system before its first release"
+            },
+            {
+              "id": "d",
+              "text": "On an existing operational system"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Maintenance testing is done on an existing operational system.",
+          "difficulty": "easy",
+          "tags": [
+            "maintenance"
+          ]
+        },
+        {
+          "id": "c3-mt-002",
+          "type": "multiple_choice",
+          "prompt": "What triggers maintenance testing? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Migration of the software or system"
+            },
+            {
+              "id": "b",
+              "text": "Writing the very first version of the code"
+            },
+            {
+              "id": "c",
+              "text": "Modification of the software or system"
+            },
+            {
+              "id": "d",
+              "text": "Retirement of the software or system"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Maintenance testing is triggered by modifications, migration or retirement.",
+          "difficulty": "medium",
+          "tags": [
+            "maintenance"
+          ]
+        },
+        {
+          "id": "c3-mt-003",
+          "type": "single_choice",
+          "prompt": "Planned enhancement changes fall under which maintenance trigger?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Migration"
+            },
+            {
+              "id": "b",
+              "text": "Retirement"
+            },
+            {
+              "id": "c",
+              "text": "Modification"
+            },
+            {
+              "id": "d",
+              "text": "Prioritisation"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Modifications include planned enhancement changes.",
+          "difficulty": "easy",
+          "tags": [
+            "maintenance"
+          ]
+        },
+        {
+          "id": "c3-mt-004",
+          "type": "single_choice",
+          "prompt": "Operational tests of BOTH the new environment and the old environment are part of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Retest all"
+            },
+            {
+              "id": "b",
+              "text": "Migration"
+            },
+            {
+              "id": "c",
+              "text": "Retirement"
+            },
+            {
+              "id": "d",
+              "text": "Modification"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Migration includes operational tests of the new environment as well as the old one.",
+          "difficulty": "medium",
+          "tags": [
+            "maintenance"
+          ]
+        },
+        {
+          "id": "c3-mt-005",
+          "type": "typed",
+          "prompt": "Testing of data migration or archiving is required when a system is ______. (one word)",
+          "image": null,
+          "acceptedAnswers": [
+            "retired",
+            "retirement",
+            "being retired"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Retirement of a system includes testing the data migration or archiving.",
+          "difficulty": "medium",
+          "tags": [
+            "maintenance"
+          ]
+        },
+        {
+          "id": "c3-mt-006",
+          "type": "true_false",
+          "prompt": "Maintenance testing is performed before a system is first released into operation.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Maintenance testing is done on an EXISTING operational system, after release.",
+          "difficulty": "easy",
+          "tags": [
+            "maintenance"
+          ]
+        }
+      ]
+    }
+  ]
+}

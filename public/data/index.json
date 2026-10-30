@@ -1,0 +1,20 @@
+{
+  "subjects": [
+    {
+      "id": "testing-ch2",
+      "title": "Software Testing · Chapter 2",
+      "description": "Fundamentals of testing: what testing is, the seven principles, error vs defect vs failure, the fundamental test process, and the psychology of testing.",
+      "file": "subjects/testing-ch2.json",
+      "icon": "🧪",
+      "color": "#0f6e64"
+    },
+    {
+      "id": "testing-ch3",
+      "title": "Software Testing · Chapter 3",
+      "description": "Testing throughout the life cycle: SDLC and development models, test levels, test types, and maintenance testing.",
+      "file": "subjects/testing-ch3.json",
+      "icon": "🔁",
+      "color": "#4f46e5"
+    }
+  ]
+}

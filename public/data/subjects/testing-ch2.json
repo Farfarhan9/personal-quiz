@@ -1,0 +1,1878 @@
+{
+  "id": "testing-ch2",
+  "title": "Software Testing · Chapter 2",
+  "description": "Fundamentals of testing: what testing is, the seven principles, error vs defect vs failure, the fundamental test process, and the psychology of testing.",
+  "topics": [
+    {
+      "id": "what-is-testing",
+      "title": "What Is Testing?",
+      "description": "The definition of testing, testing vs debugging, and test objectives.",
+      "questions": [
+        {
+          "id": "c2-wit-001",
+          "type": "single_choice",
+          "prompt": "According to the definition of testing, the lifecycle activities involved are…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Both static and dynamic"
+            },
+            {
+              "id": "b",
+              "text": "Only dynamic (executing the code)"
+            },
+            {
+              "id": "c",
+              "text": "Only static (reviews and inspections)"
+            },
+            {
+              "id": "d",
+              "text": "Only the activities carried out after coding"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Testing consists of all lifecycle activities, both static (e.g. reviews) and dynamic (executing the software).",
+          "difficulty": "easy",
+          "tags": [
+            "definition"
+          ]
+        },
+        {
+          "id": "c2-wit-002",
+          "type": "multiple_choice",
+          "prompt": "According to the definition, testing evaluates a component or system and related work products in order to… (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Demonstrate that they are fit for purpose"
+            },
+            {
+              "id": "b",
+              "text": "Detect defects"
+            },
+            {
+              "id": "c",
+              "text": "Determine that they satisfy specified requirements"
+            },
+            {
+              "id": "d",
+              "text": "Prove that the software contains no defects"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "The definition lists three aims: satisfy specified requirements, demonstrate fitness for purpose, and detect defects. Testing can never prove that defects are absent.",
+          "difficulty": "medium",
+          "tags": [
+            "definition"
+          ]
+        },
+        {
+          "id": "c2-wit-003",
+          "type": "single_choice",
+          "prompt": "What is the goal of debugging?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Comparing actual progress against the test plan"
+            },
+            {
+              "id": "b",
+              "text": "The systematic detection of failures"
+            },
+            {
+              "id": "c",
+              "text": "Defining the objectives of testing"
+            },
+            {
+              "id": "d",
+              "text": "Localizing and correcting faults"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Debugging is the task of localizing and correcting faults. Detecting failures is the goal of testing.",
+          "difficulty": "easy",
+          "tags": [
+            "testing-vs-debugging"
+          ]
+        },
+        {
+          "id": "c2-wit-004",
+          "type": "single_choice",
+          "prompt": "What is the goal of testing, as opposed to debugging?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The (more or less systematic) detection of failures that indicate the presence of defects"
+            },
+            {
+              "id": "b",
+              "text": "Deploying the system to production"
+            },
+            {
+              "id": "c",
+              "text": "Writing the program code"
+            },
+            {
+              "id": "d",
+              "text": "Localizing and correcting faults in the code"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Testing detects failures that point to defects; debugging then localizes and corrects the faults.",
+          "difficulty": "easy",
+          "tags": [
+            "testing-vs-debugging"
+          ]
+        },
+        {
+          "id": "c2-wit-005",
+          "type": "true_false",
+          "prompt": "Testing and debugging are the same activity.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "They are different: testing detects failures, while debugging localizes and corrects the faults that caused them.",
+          "difficulty": "easy",
+          "tags": [
+            "testing-vs-debugging"
+          ]
+        },
+        {
+          "id": "c2-wit-006",
+          "type": "typed",
+          "prompt": "A reason or purpose for designing and executing a test is called a test ______.",
+          "image": null,
+          "acceptedAnswers": [
+            "objective",
+            "test objective"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type one word"
+          },
+          "explanation": "A test objective is a reason or purpose for designing and executing a test.",
+          "difficulty": "easy",
+          "tags": [
+            "test-objective"
+          ]
+        },
+        {
+          "id": "c2-wit-007",
+          "type": "multiple_choice",
+          "prompt": "Which of these are usual test objectives? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Preventing defects"
+            },
+            {
+              "id": "b",
+              "text": "Assigning blame to the developer who wrote the code"
+            },
+            {
+              "id": "c",
+              "text": "Gaining confidence about the quality of the system and providing information"
+            },
+            {
+              "id": "d",
+              "text": "Finding defects"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "The usual test objectives are finding defects, preventing defects, and gaining confidence about quality / providing information.",
+          "difficulty": "medium",
+          "tags": [
+            "test-objective"
+          ]
+        },
+        {
+          "id": "c2-wit-008",
+          "type": "multiple_choice",
+          "prompt": "How can testing help to PREVENT defects? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Waiting until coding is finished before testing"
+            },
+            {
+              "id": "b",
+              "text": "Designing tests early in the test lifecycle"
+            },
+            {
+              "id": "c",
+              "text": "Re-running the same unchanged tests many times"
+            },
+            {
+              "id": "d",
+              "text": "Reviewing documents such as requirements"
+            }
+          ],
+          "correct": [
+            "b",
+            "d"
+          ],
+          "explanation": "Designing tests early can stop defects being introduced into the code, and reviewing documents like requirements also reduces defects.",
+          "difficulty": "medium",
+          "tags": [
+            "defect-prevention"
+          ]
+        },
+        {
+          "id": "c2-wit-009",
+          "type": "true_false",
+          "prompt": "Testing is concerned with the system AND its related work products, not only the program code.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "The definition covers a component or system and related work products, such as requirements and design documents.",
+          "difficulty": "easy",
+          "tags": [
+            "definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing-principles",
+      "title": "General Testing Principles",
+      "description": "The seven principles of testing, plus test cases.",
+      "questions": [
+        {
+          "id": "c2-gtp-001",
+          "type": "typed",
+          "prompt": "How many general testing principles are there?",
+          "image": null,
+          "acceptedAnswers": [
+            "7",
+            "seven"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "There are seven: presence of defects, exhaustive testing is impossible, early testing, defect clustering, pesticide paradox, context dependence, and the absence-of-errors fallacy.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-002",
+          "type": "single_choice",
+          "prompt": "“Program testing can be used to show the presence of bugs, but never to show their absence.” Which principle is this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Exhaustive testing is impossible"
+            },
+            {
+              "id": "b",
+              "text": "Defect clustering"
+            },
+            {
+              "id": "c",
+              "text": "Testing shows presence of defects"
+            },
+            {
+              "id": "d",
+              "text": "Absence of errors fallacy"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Principle 1: testing shows the presence of defects. Even when no failures are found, you cannot conclude that no defects remain.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-003",
+          "type": "true_false",
+          "prompt": "Exhaustive (complete) testing is feasible for most real-world programs if enough time is available.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Exhaustive testing is impossible except for trivial programs, so testing effort must be focused.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-004",
+          "type": "single_choice",
+          "prompt": "Why does early testing (e.g. reviews running in parallel with development) save money?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It guarantees the software has no defects"
+            },
+            {
+              "id": "b",
+              "text": "Defects are detected earlier, and earlier defects cost less to fix"
+            },
+            {
+              "id": "c",
+              "text": "It lets you skip writing requirements"
+            },
+            {
+              "id": "d",
+              "text": "It removes the need for any later testing"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Testing should start as early as possible. Defects found early cost less to fix.",
+          "difficulty": "easy",
+          "tags": [
+            "principles",
+            "early-testing"
+          ]
+        },
+        {
+          "id": "c2-gtp-005",
+          "type": "single_choice",
+          "prompt": "A small number of modules contains most of the defects found during pre-release testing. Which principle describes this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Pesticide paradox"
+            },
+            {
+              "id": "b",
+              "text": "Testing is context dependent"
+            },
+            {
+              "id": "c",
+              "text": "Defect clustering"
+            },
+            {
+              "id": "d",
+              "text": "Early testing"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Defect clustering: effort should be focused in proportion to the expected and observed defect density of modules.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-006",
+          "type": "typed",
+          "prompt": "Running the same tests over and over eventually stops finding new defects. What is this principle also called? (two words)",
+          "image": null,
+          "acceptedAnswers": [
+            "pesticide paradox",
+            "the pesticide paradox"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "e.g. ______ paradox"
+          },
+          "explanation": "This is the pesticide paradox: repetitions have no effect, so tests must be reviewed and revised.",
+          "difficulty": "medium",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-007",
+          "type": "single_choice",
+          "prompt": "What should be done to overcome the pesticide paradox?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Run the same tests more often"
+            },
+            {
+              "id": "b",
+              "text": "Stop testing once no new defects are found"
+            },
+            {
+              "id": "c",
+              "text": "Only add more testers to the team"
+            },
+            {
+              "id": "d",
+              "text": "Regularly review, revise and modify the test cases"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Test cases need to be regularly reviewed, revised and modified to keep finding new defects.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-008",
+          "type": "single_choice",
+          "prompt": "Safety-critical software is tested more intensely, and with other techniques, than a commercial application. Which principle is this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Testing shows presence of defects"
+            },
+            {
+              "id": "b",
+              "text": "Absence of errors fallacy"
+            },
+            {
+              "id": "c",
+              "text": "Defect clustering"
+            },
+            {
+              "id": "d",
+              "text": "Testing is context dependent"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Testing depends on context: the type of system determines how intensely and with what techniques it is tested.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-009",
+          "type": "single_choice",
+          "prompt": "A system has no failures, yet users say it does not meet their expectations. Which principle explains this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Exhaustive testing is impossible"
+            },
+            {
+              "id": "b",
+              "text": "Early testing"
+            },
+            {
+              "id": "c",
+              "text": "Absence of errors fallacy"
+            },
+            {
+              "id": "d",
+              "text": "Pesticide paradox"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Absence of errors fallacy: a system without failures does not automatically meet users' expectations.",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-010",
+          "type": "multiple_choice",
+          "prompt": "Which of the following ARE among the seven general testing principles? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Testing proves that software is bug-free"
+            },
+            {
+              "id": "b",
+              "text": "Exhaustive testing is always possible"
+            },
+            {
+              "id": "c",
+              "text": "Early testing"
+            },
+            {
+              "id": "d",
+              "text": "Testing is context dependent"
+            },
+            {
+              "id": "e",
+              "text": "Defect clustering"
+            }
+          ],
+          "correct": [
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Early testing, defect clustering and context dependence are principles. Testing never proves software is bug-free, and exhaustive testing is impossible.",
+          "difficulty": "medium",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "c2-gtp-011",
+          "type": "single_choice",
+          "prompt": "What is a test case?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A set of conditions or variables under which a tester determines whether a system under test satisfies requirements or works correctly"
+            },
+            {
+              "id": "b",
+              "text": "The overall plan for the whole test project"
+            },
+            {
+              "id": "c",
+              "text": "A report describing a defect that was found"
+            },
+            {
+              "id": "d",
+              "text": "A tool used to manage tests"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A test case is a set of conditions or variables used to determine whether the system under test (SUT) satisfies requirements or works correctly.",
+          "difficulty": "easy",
+          "tags": [
+            "test-case"
+          ]
+        },
+        {
+          "id": "c2-gtp-012",
+          "type": "typed",
+          "prompt": "In the definition of a test case, what does the abbreviation SUT stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "system under test",
+            "system-under-test"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type the full phrase"
+          },
+          "explanation": "SUT = System Under Test.",
+          "difficulty": "easy",
+          "tags": [
+            "test-case"
+          ]
+        },
+        {
+          "id": "c2-gtp-013",
+          "type": "true_false",
+          "prompt": "The process of developing test cases can also help find problems in the requirements or design of an application.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Writing test cases forces you to read requirements and design closely, which often reveals problems in them.",
+          "difficulty": "easy",
+          "tags": [
+            "test-case"
+          ]
+        },
+        {
+          "id": "c2-gtp-014",
+          "type": "true_false",
+          "prompt": "Companies normally use a test management tool, and the test case format is determined by that tool or the standard the company follows.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "There is no single universal template; the format usually comes from the test management tool or company standard.",
+          "difficulty": "easy",
+          "tags": [
+            "test-case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-testing-necessary",
+      "title": "Why Testing Is Necessary",
+      "description": "Error, defect and failure; causes and costs of defects; testing and quality.",
+      "questions": [
+        {
+          "id": "c2-wtn-001",
+          "type": "single_choice",
+          "prompt": "The diagram shows how a problem moves from a person, into the software, and then into operation. Which sequence of terms matches Steps 1 → 2 → 3?",
+          "image": {
+            "src": "images/error-chain.svg",
+            "alt": "Three boxes joined by arrows: Step 1 shows a person, Step 2 shows the software (code symbol), Step 3 shows a broken screen labelled 'In operation'.",
+            "caption": "Step 1 → Step 2 → Step 3"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Error → Fault (defect) → Failure"
+            },
+            {
+              "id": "b",
+              "text": "Fault → Error → Failure"
+            },
+            {
+              "id": "c",
+              "text": "Error → Failure → Fault"
+            },
+            {
+              "id": "d",
+              "text": "Failure → Fault → Error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A person makes an ERROR, which creates a FAULT (defect) in the software, which can cause a FAILURE in operation.",
+          "difficulty": "easy",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-002",
+          "type": "single_choice",
+          "prompt": "“A human action that produces an incorrect result.” This is the definition of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An error (mistake)"
+            },
+            {
+              "id": "b",
+              "text": "A failure"
+            },
+            {
+              "id": "c",
+              "text": "A test case"
+            },
+            {
+              "id": "d",
+              "text": "A defect (fault/bug)"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "An error, or mistake, is a human action that produces an incorrect result.",
+          "difficulty": "easy",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-003",
+          "type": "single_choice",
+          "prompt": "“A flaw in a component or system that can cause it to fail to perform its required function, e.g. an incorrect statement or data definition.” This is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An incident"
+            },
+            {
+              "id": "b",
+              "text": "An error (mistake)"
+            },
+            {
+              "id": "c",
+              "text": "A failure"
+            },
+            {
+              "id": "d",
+              "text": "A defect (fault/bug)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A defect (fault or bug) is a flaw in a component or system, such as an incorrect statement or data definition.",
+          "difficulty": "easy",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-004",
+          "type": "single_choice",
+          "prompt": "A discrepancy between the actual result (seen while executing a test) and the expected result (from the specification) is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A test objective"
+            },
+            {
+              "id": "b",
+              "text": "A defect"
+            },
+            {
+              "id": "c",
+              "text": "An error"
+            },
+            {
+              "id": "d",
+              "text": "A failure"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A failure is a non-fulfilment of a requirement: the actual result or behaviour differs from what was expected.",
+          "difficulty": "easy",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-005",
+          "type": "true_false",
+          "prompt": "A defect always causes a failure.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "A defect MAY cause a failure, but only if it is encountered during execution.",
+          "difficulty": "medium",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-006",
+          "type": "true_false",
+          "prompt": "A product that is too slow or too hard to use can count as a failure even if it fulfils all its functional requirements.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "A failure is present when a warrantable user expectation is not fulfilled adequately, e.g. a system that is too slow or too hard to use.",
+          "difficulty": "medium",
+          "tags": [
+            "error-defect-failure"
+          ]
+        },
+        {
+          "id": "c2-wtn-007",
+          "type": "multiple_choice",
+          "prompt": "Which of these are causes of the human errors that lead to defects? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Too much documentation"
+            },
+            {
+              "id": "b",
+              "text": "Too many system interactions"
+            },
+            {
+              "id": "c",
+              "text": "Time pressure"
+            },
+            {
+              "id": "d",
+              "text": "Changed technology"
+            },
+            {
+              "id": "e",
+              "text": "Using a test management tool"
+            },
+            {
+              "id": "f",
+              "text": "Complex code"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "f"
+          ],
+          "explanation": "The notes list time pressure, complex code, complex infrastructure, changed technology and too many system interactions.",
+          "difficulty": "medium",
+          "tags": [
+            "causes"
+          ]
+        },
+        {
+          "id": "c2-wtn-008",
+          "type": "single_choice",
+          "prompt": "Ariane 5 self-destructed 39 seconds after take-off on its maiden flight (4 June 1996). What was the cause?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The rotation of the earth around the sun was not taken into consideration"
+            },
+            {
+              "id": "b",
+              "text": "Ozone measurements were averaged out by the software"
+            },
+            {
+              "id": "c",
+              "text": "Ariane 4 position control software was reused without testing against Ariane 5's take-off trajectory, causing a conversion error"
+            },
+            {
+              "id": "d",
+              "text": "A fuel tank hardware failure"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The Ariane 4 position control software was reused for Ariane 5 without being tested against the new trajectory, leading to a conversion error.",
+          "difficulty": "medium",
+          "tags": [
+            "real-world"
+          ]
+        },
+        {
+          "id": "c2-wtn-009",
+          "type": "single_choice",
+          "prompt": "The manned NASA capsule Gemini V missed its airfield by about 160 km. What was the software defect?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Ozone data was averaged"
+            },
+            {
+              "id": "b",
+              "text": "The rotation of the earth around the sun was not taken into consideration"
+            },
+            {
+              "id": "c",
+              "text": "Software from an earlier rocket was reused without testing"
+            },
+            {
+              "id": "d",
+              "text": "A unit conversion between metres and feet"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Gemini V's software did not account for the earth's rotation around the sun.",
+          "difficulty": "medium",
+          "tags": [
+            "real-world"
+          ]
+        },
+        {
+          "id": "c2-wtn-010",
+          "type": "typed",
+          "prompt": "Because of a software defect in NASA's Earth observation satellites (1979–1985), for how many years was the hole in the ozone layer not detected?",
+          "image": null,
+          "acceptedAnswers": [
+            "7",
+            "seven",
+            "7 years",
+            "seven years"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "The hole in the ozone layer went undetected for 7 years.",
+          "difficulty": "medium",
+          "tags": [
+            "real-world"
+          ]
+        },
+        {
+          "id": "c2-wtn-011",
+          "type": "multiple_choice",
+          "prompt": "What are implications of defects in software? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Waste of time"
+            },
+            {
+              "id": "b",
+              "text": "Guaranteed better performance"
+            },
+            {
+              "id": "c",
+              "text": "Damage to business reputation"
+            },
+            {
+              "id": "d",
+              "text": "Injury or even death"
+            },
+            {
+              "id": "e",
+              "text": "Loss of money"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Defects can cause loss of money, waste of time, damage to reputation, and even injury or death.",
+          "difficulty": "medium",
+          "tags": [
+            "implications"
+          ]
+        },
+        {
+          "id": "c2-wtn-012",
+          "type": "multiple_choice",
+          "prompt": "What is the role of software testing in development, maintenance and operation? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It guarantees that no defects will ever occur in operation"
+            },
+            {
+              "id": "b",
+              "text": "It may be required to meet contractual, legal or industry-specific standards"
+            },
+            {
+              "id": "c",
+              "text": "Rigorous testing helps reduce risks during operation of the system"
+            },
+            {
+              "id": "d",
+              "text": "It contributes to quality if defects are found and corrected before release"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Testing reduces risk, contributes to quality when defects are fixed before release, and may be required by contracts, law or standards. It cannot guarantee zero defects.",
+          "difficulty": "medium",
+          "tags": [
+            "role-of-testing"
+          ]
+        },
+        {
+          "id": "c2-wtn-013",
+          "type": "true_false",
+          "prompt": "Testing can give confidence in the quality of a system if few or no defects are found.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "When few or no defects are found, testing gives confidence in the system's quality.",
+          "difficulty": "easy",
+          "tags": [
+            "quality"
+          ]
+        },
+        {
+          "id": "c2-wtn-014",
+          "type": "single_choice",
+          "prompt": "According to the notes, when does the quality of the system actually increase?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "When the test plan is approved"
+            },
+            {
+              "id": "b",
+              "text": "When the defects that were found are fixed"
+            },
+            {
+              "id": "c",
+              "text": "As soon as defects are found"
+            },
+            {
+              "id": "d",
+              "text": "When more test cases are written"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Finding defects only measures quality. Quality increases when those defects are fixed.",
+          "difficulty": "medium",
+          "tags": [
+            "quality"
+          ]
+        },
+        {
+          "id": "c2-wtn-015",
+          "type": "typed",
+          "prompt": "Complete the flow: Root cause analysis of previous defects → ______ → Prevents defects in future → Improves quality of the system.",
+          "image": null,
+          "acceptedAnswers": [
+            "process improvement",
+            "process improvements"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Two words"
+          },
+          "explanation": "Root cause analysis leads to process improvement, which prevents future defects and improves quality.",
+          "difficulty": "medium",
+          "tags": [
+            "quality"
+          ]
+        },
+        {
+          "id": "c2-wtn-016",
+          "type": "true_false",
+          "prompt": "Testing is a part of Quality Assurance (QA).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Testing is one aspect of QA.",
+          "difficulty": "easy",
+          "tags": [
+            "quality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fundamental-test-process",
+      "title": "Fundamental Test Process",
+      "description": "Planning & control, analysis & design, implementation & execution, exit criteria, closure.",
+      "questions": [
+        {
+          "id": "c2-ftp-001",
+          "type": "single_choice",
+          "prompt": "Which activity of the fundamental test process belongs in the box marked “?”",
+          "image": {
+            "src": "images/test-process.svg",
+            "alt": "Flow of five numbered boxes: 1 Planning and control, 2 Analysis and design, 3 is a dashed box with a question mark, 4 Evaluating exit criteria and reporting, 5 Test closure activities.",
+            "caption": "Fundamental test process"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Debugging and correction"
+            },
+            {
+              "id": "b",
+              "text": "Implementation and execution"
+            },
+            {
+              "id": "c",
+              "text": "Requirements gathering"
+            },
+            {
+              "id": "d",
+              "text": "Deployment and support"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The five activities are: 1 Planning and control, 2 Analysis and design, 3 Implementation and execution, 4 Evaluating exit criteria and reporting, 5 Test closure activities (PAIET).",
+          "difficulty": "easy",
+          "tags": [
+            "process"
+          ]
+        },
+        {
+          "id": "c2-ftp-002",
+          "type": "typed",
+          "prompt": "What 5-letter acronym from the notes helps you remember the fundamental test process activities?",
+          "image": null,
+          "acceptedAnswers": [
+            "PAIET"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type the acronym"
+          },
+          "explanation": "PAIET = Planning & control, Analysis & design, Implementation & execution, Evaluating exit criteria & reporting, Test closure.",
+          "difficulty": "easy",
+          "tags": [
+            "process",
+            "acronym"
+          ]
+        },
+        {
+          "id": "c2-ftp-003",
+          "type": "multiple_choice",
+          "prompt": "Which of these are activities of the fundamental test process? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Evaluating exit criteria and reporting"
+            },
+            {
+              "id": "b",
+              "text": "Analysis and design"
+            },
+            {
+              "id": "c",
+              "text": "Planning and control"
+            },
+            {
+              "id": "d",
+              "text": "Test closure activities"
+            },
+            {
+              "id": "e",
+              "text": "Debugging and deployment"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Debugging and deployment are not part of the fundamental test process.",
+          "difficulty": "medium",
+          "tags": [
+            "process"
+          ]
+        },
+        {
+          "id": "c2-ftp-004",
+          "type": "single_choice",
+          "prompt": "Verifying the mission of testing, defining the objectives of testing and specifying test activities to meet them is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Test planning"
+            },
+            {
+              "id": "b",
+              "text": "Test control"
+            },
+            {
+              "id": "c",
+              "text": "Test closure"
+            },
+            {
+              "id": "d",
+              "text": "Test analysis"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Test planning verifies the mission, defines the objectives and specifies the test activities.",
+          "difficulty": "easy",
+          "tags": [
+            "planning-control"
+          ]
+        },
+        {
+          "id": "c2-ftp-005",
+          "type": "single_choice",
+          "prompt": "The ongoing activity of comparing actual progress against the plan, reporting status (including deviations) and taking necessary actions is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Test execution"
+            },
+            {
+              "id": "b",
+              "text": "Evaluating exit criteria"
+            },
+            {
+              "id": "c",
+              "text": "Test control"
+            },
+            {
+              "id": "d",
+              "text": "Test planning"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Test control continuously compares actual progress against the plan and takes action when needed.",
+          "difficulty": "easy",
+          "tags": [
+            "planning-control"
+          ]
+        },
+        {
+          "id": "c2-ftp-006",
+          "type": "single_choice",
+          "prompt": "In which activity are general testing objectives transformed into tangible test conditions and test cases?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Planning and control"
+            },
+            {
+              "id": "b",
+              "text": "Analysis and design"
+            },
+            {
+              "id": "c",
+              "text": "Test closure activities"
+            },
+            {
+              "id": "d",
+              "text": "Implementation and execution"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Test analysis and design turns general objectives into concrete test conditions and test cases.",
+          "difficulty": "easy",
+          "tags": [
+            "analysis-design"
+          ]
+        },
+        {
+          "id": "c2-ftp-007",
+          "type": "multiple_choice",
+          "prompt": "Which are major tasks of test ANALYSIS and DESIGN? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reviewing the test basis"
+            },
+            {
+              "id": "b",
+              "text": "Handing testware over to the maintenance organisation"
+            },
+            {
+              "id": "c",
+              "text": "Designing the test environment set-up"
+            },
+            {
+              "id": "d",
+              "text": "Writing a test summary report for stakeholders"
+            },
+            {
+              "id": "e",
+              "text": "Identifying necessary test data"
+            },
+            {
+              "id": "f",
+              "text": "Evaluating testability of the test basis and test objects"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e",
+            "f"
+          ],
+          "explanation": "REIDID: Review test basis, Evaluate testability, Identify & prioritise test conditions, Design & prioritise test cases, Identify test data, Design test environment. The summary report and handover belong to later activities.",
+          "difficulty": "hard",
+          "tags": [
+            "analysis-design"
+          ]
+        },
+        {
+          "id": "c2-ftp-008",
+          "type": "typed",
+          "prompt": "Requirements, architecture, design and interfaces that are reviewed during test analysis are together known as the test ______.",
+          "image": null,
+          "acceptedAnswers": [
+            "basis",
+            "test basis"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "The test basis is the documentation that tests are derived from.",
+          "difficulty": "medium",
+          "tags": [
+            "analysis-design"
+          ]
+        },
+        {
+          "id": "c2-ftp-009",
+          "type": "single_choice",
+          "prompt": "Which activity combines test cases into test procedures/scripts in a particular order, sets up the environment and runs the tests?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Implementation and execution"
+            },
+            {
+              "id": "b",
+              "text": "Planning and control"
+            },
+            {
+              "id": "c",
+              "text": "Analysis and design"
+            },
+            {
+              "id": "d",
+              "text": "Test closure activities"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Implementation and execution: procedures are specified, the environment is set up and the tests are run.",
+          "difficulty": "easy",
+          "tags": [
+            "implementation-execution"
+          ]
+        },
+        {
+          "id": "c2-ftp-010",
+          "type": "multiple_choice",
+          "prompt": "Which are major tasks of test IMPLEMENTATION and EXECUTION? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Archiving testware for later reuse"
+            },
+            {
+              "id": "b",
+              "text": "Verifying that the test environment is set up correctly"
+            },
+            {
+              "id": "c",
+              "text": "Comparing actual results with expected results"
+            },
+            {
+              "id": "d",
+              "text": "Reporting discrepancies as incidents"
+            },
+            {
+              "id": "e",
+              "text": "Creating test suites from the test procedures"
+            },
+            {
+              "id": "f",
+              "text": "Checking test logs against the exit criteria"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Checking logs against exit criteria belongs to evaluating exit criteria; archiving testware belongs to test closure.",
+          "difficulty": "hard",
+          "tags": [
+            "implementation-execution"
+          ]
+        },
+        {
+          "id": "c2-ftp-011",
+          "type": "typed",
+          "prompt": "During execution, discrepancies between actual and expected results are reported as ______.",
+          "image": null,
+          "acceptedAnswers": [
+            "incidents",
+            "incident",
+            "incident reports",
+            "incident report"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Discrepancies are reported as incidents and analysed to find their cause.",
+          "difficulty": "medium",
+          "tags": [
+            "implementation-execution"
+          ]
+        },
+        {
+          "id": "c2-ftp-012",
+          "type": "single_choice",
+          "prompt": "Re-executing a test that previously failed, in order to confirm that a fix works, is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Regression testing"
+            },
+            {
+              "id": "b",
+              "text": "Confirmation testing"
+            },
+            {
+              "id": "c",
+              "text": "Acceptance testing"
+            },
+            {
+              "id": "d",
+              "text": "Component testing"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Confirmation testing re-runs a previously failed test to confirm the fix.",
+          "difficulty": "easy",
+          "tags": [
+            "implementation-execution",
+            "confirmation"
+          ]
+        },
+        {
+          "id": "c2-ftp-013",
+          "type": "single_choice",
+          "prompt": "Running tests to make sure that defects have not been introduced into UNCHANGED areas of the software (or that a fix did not uncover other defects) is called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Confirmation testing"
+            },
+            {
+              "id": "b",
+              "text": "Alpha testing"
+            },
+            {
+              "id": "c",
+              "text": "Regression testing"
+            },
+            {
+              "id": "d",
+              "text": "Exhaustive testing"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Regression testing checks that changes have not broken areas that were not changed.",
+          "difficulty": "easy",
+          "tags": [
+            "implementation-execution",
+            "regression"
+          ]
+        },
+        {
+          "id": "c2-ftp-014",
+          "type": "multiple_choice",
+          "prompt": "Which are major tasks of EVALUATING EXIT CRITERIA and REPORTING? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Checking test logs against the exit criteria specified in test planning"
+            },
+            {
+              "id": "b",
+              "text": "Assessing if more tests are needed or if the exit criteria should be changed"
+            },
+            {
+              "id": "c",
+              "text": "Designing the test environment set-up"
+            },
+            {
+              "id": "d",
+              "text": "Writing a test summary report for stakeholders"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "Exit-criteria evaluation checks logs, decides if more tests or changed criteria are needed, and produces the summary report.",
+          "difficulty": "medium",
+          "tags": [
+            "exit-criteria"
+          ]
+        },
+        {
+          "id": "c2-ftp-015",
+          "type": "true_false",
+          "prompt": "Evaluating exit criteria should be done for each test level.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Exit criteria are evaluated at every test level, not just once at the end.",
+          "difficulty": "easy",
+          "tags": [
+            "exit-criteria"
+          ]
+        },
+        {
+          "id": "c2-ftp-016",
+          "type": "multiple_choice",
+          "prompt": "Which are major tasks of TEST CLOSURE activities? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Analysing lessons learned for future projects"
+            },
+            {
+              "id": "b",
+              "text": "Handing over testware to the maintenance organisation"
+            },
+            {
+              "id": "c",
+              "text": "Executing test procedures in the planned sequence"
+            },
+            {
+              "id": "d",
+              "text": "Finalising and archiving testware, the test environment and infrastructure for reuse"
+            },
+            {
+              "id": "e",
+              "text": "Checking which planned deliverables have been delivered"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "Executing test procedures is part of implementation and execution, not closure.",
+          "difficulty": "medium",
+          "tags": [
+            "closure"
+          ]
+        },
+        {
+          "id": "c2-ftp-017",
+          "type": "multiple_choice",
+          "prompt": "Which events can trigger test closure activities? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A new tester joins the team"
+            },
+            {
+              "id": "b",
+              "text": "A maintenance release has been completed"
+            },
+            {
+              "id": "c",
+              "text": "A milestone has been achieved"
+            },
+            {
+              "id": "d",
+              "text": "A test project is completed or cancelled"
+            },
+            {
+              "id": "e",
+              "text": "A software system is released"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Closure collects data when a system is released, a project ends or is cancelled, a milestone is reached, or a maintenance release is completed.",
+          "difficulty": "medium",
+          "tags": [
+            "closure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "psychology-of-testing",
+      "title": "The Psychology of Testing",
+      "description": "Tester and developer mindsets, and how to communicate well.",
+      "questions": [
+        {
+          "id": "c2-pot-001",
+          "type": "multiple_choice",
+          "prompt": "Why are the mindsets of testers and developers different? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Testers need good interpersonal skills"
+            },
+            {
+              "id": "b",
+              "text": "Independent testing avoids author bias"
+            },
+            {
+              "id": "c",
+              "text": "Testers should criticise developers personally to improve quality"
+            },
+            {
+              "id": "d",
+              "text": "Testers can provide an independent view"
+            },
+            {
+              "id": "e",
+              "text": "Errors/defects should be communicated in a constructive way"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "Testers bring independence and avoid author bias, but must communicate constructively with good interpersonal skills.",
+          "difficulty": "medium",
+          "tags": [
+            "psychology"
+          ]
+        },
+        {
+          "id": "c2-pot-002",
+          "type": "typed",
+          "prompt": "Independent testing helps to avoid ______ bias.",
+          "image": null,
+          "acceptedAnswers": [
+            "author",
+            "author's",
+            "authors",
+            "the author's"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Independent testing avoids author bias: authors tend to overlook their own mistakes.",
+          "difficulty": "easy",
+          "tags": [
+            "psychology"
+          ]
+        },
+        {
+          "id": "c2-pot-003",
+          "type": "single_choice",
+          "prompt": "What is the best way for a tester to report a defect to a developer?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Communicate the finding in a neutral, fact-focused way without criticising the person who created it"
+            },
+            {
+              "id": "b",
+              "text": "Point out who made the mistake so it doesn't happen again"
+            },
+            {
+              "id": "c",
+              "text": "Escalate it to management before talking to the developer"
+            },
+            {
+              "id": "d",
+              "text": "Only mention it informally so nobody is upset"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Findings should be neutral and fact-focused, about the product, not the person.",
+          "difficulty": "easy",
+          "tags": [
+            "communication"
+          ]
+        },
+        {
+          "id": "c2-pot-004",
+          "type": "multiple_choice",
+          "prompt": "Which are tips for improving communication between testers and developers? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Win every argument about whether something is a defect"
+            },
+            {
+              "id": "b",
+              "text": "Confirm the other person has understood what you said, and vice versa"
+            },
+            {
+              "id": "c",
+              "text": "Try to understand how the other person feels and why they react as they do"
+            },
+            {
+              "id": "d",
+              "text": "Start with collaboration rather than battles"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Collaborate, empathise, and confirm mutual understanding — remembering the shared goal of better quality.",
+          "difficulty": "medium",
+          "tags": [
+            "communication"
+          ]
+        },
+        {
+          "id": "c2-pot-005",
+          "type": "true_false",
+          "prompt": "Testers and developers share a common goal: better quality systems.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Reminding everyone of this common goal is the first tip for good collaboration.",
+          "difficulty": "easy",
+          "tags": [
+            "communication"
+          ]
+        }
+      ]
+    }
+  ]
+}

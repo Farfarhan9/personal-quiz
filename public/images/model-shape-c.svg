@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="320" height="200" rx="14" fill="#ffffff"/>
+  <defs>
+    <marker id="c" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#0f6e64"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0f6e64" stroke-width="2.5">
+    <circle cx="90" cy="100" r="46" stroke-dasharray="190 99"/>
+    <circle cx="230" cy="100" r="46" stroke-dasharray="190 99"/>
+  </g>
+  <path d="M120 66 l8 -4" stroke="#0f6e64" stroke-width="2.5" marker-end="url(#c)"/>
+  <path d="M260 66 l8 -4" stroke="#0f6e64" stroke-width="2.5" marker-end="url(#c)"/>
+  <g font-size="12" fill="#1d1f23" text-anchor="middle">
+    <text x="90" y="86">Plan</text>
+    <text x="90" y="104">Build</text>
+    <text x="90" y="122">Test</text>
+    <text x="230" y="86">Plan</text>
+    <text x="230" y="104">Build</text>
+    <text x="230" y="122">Test</text>
+  </g>
+  <text x="90" y="172" text-anchor="middle" font-size="12" font-weight="600" fill="#5d6066">Cycle 1</text>
+  <text x="230" y="172" text-anchor="middle" font-size="12" font-weight="600" fill="#5d6066">Cycle 2</text>
+  <path d="M146 100 h28" stroke="#5d6066" stroke-width="2" marker-end="url(#c)"/>
+  <text x="300" y="104" text-anchor="middle" font-size="16" fill="#5d6066">…</text>
+</svg>
