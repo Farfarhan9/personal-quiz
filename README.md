@@ -2,12 +2,17 @@
 
 A calm, mobile-first personal quiz website. Subjects work like folders: open a subject, pick a topic, answer one question at a time, get instant feedback, then review your answers and retry. Everything is static, so it runs free on GitHub Pages.
 
-It ships with two subjects built from the Software Testing notes:
+It ships with five subjects:
 
 | Subject | Topics | Questions |
 | --- | --- | --- |
 | 🧪 Software Testing · Chapter 2 | What Is Testing · General Testing Principles · Why Testing Is Necessary · Fundamental Test Process · Psychology of Testing | 61 |
 | 🔁 Software Testing · Chapter 3 | SDLC & Development Models · Test Levels · Test Types · Maintenance Testing | 67 |
+| 🌐 Web Development · Chapter 1 | Internet & WWW · Architecture & Protocols · IP, DNS & URLs · Web Pages & Websites · Browsers · Requirements & Scripting | 83 |
+| 📄 Web Development · Chapter 2 | Presentation Layer · Markup Languages & History · XHTML · Tags & Structure · Lists, Links & Images · Tables · Forms · Semantic & Text Tags · Media, Entities & Attributes | 139 |
+| 🎨 Web Development · Chapter 3 | CSS Basics · Types & Cascade · Selectors · Combinators · Pseudo-classes · Typography · Colours & Backgrounds · Box Model & Positioning · Flexbox · Grid · Responsive Design · Preprocessors · Transitions & More | 206 |
+
+In the Web Development quizzes, explanations that start with “Extra — not in your notes” or “Covers a section missing from your notes” mark content added beyond the original notes.
 
 All four question types are used (single choice, multiple choice, true/false, typed), including questions with diagrams and one question whose answer options are images.
 
@@ -115,7 +120,15 @@ src/
 | `true_false` | `correct`: `["true"]` or `["false"]`; `options` optional (defaults to True/False) | as single choice |
 | `typed` | `acceptedAnswers` (1+ strings) | trimmed, spaces collapsed, case-insensitive unless `"caseSensitive": true` |
 
-Optional on every question: `image`, `explanation`, `difficulty` (`easy`/`medium`/`hard`), `tags`.
+Optional on every question: `code`, `image`, `explanation`, `difficulty` (`easy`/`medium`/`hard`), `tags`.
+
+**Code snippets** – add a `code` string to show a monospace block under the prompt. Use `\n` for new lines; indentation is kept and long lines scroll inside the block on phones:
+
+```json
+"code": "<ol>\n  <li>Langkawi</li>\n  <li>Melaka</li>\n</ol>"
+```
+
+**Inline code** – wrap short fragments in backticks inside `prompt`, option `text` or `explanation`, e.g. ``"What does `div > p` select?"``. They render as inline code.
 
 **Images** – put files in `public/images/` and reference them without a leading slash. `alt` is required:
 
@@ -136,7 +149,7 @@ Open `#/author` (✏️ in the top bar).
 1. **Draft** – your work autosaves to this browser. Start a new subject, **Import JSON** from a file, or **load a subject already on the site** to edit it.
 2. **Subject** – title, id, description, icon and colour.
 3. **Topics** – switch topics with the dropdown; add, rename, reorder, delete.
-4. **Questions** – tap a question to expand its editor. Change type, edit the prompt, image, options (tick the correct ones) or accepted answers, explanation, difficulty, tags. Use the **Preview** tab to try it exactly as it appears in a quiz.
+4. **Questions** – tap a question to expand its editor. Change type, edit the prompt, code snippet, image, options (tick the correct ones) or accepted answers, explanation, difficulty, tags. Use the **Preview** tab to try it exactly as it appears in a quiz.
 5. **Check & export** – problems are listed with links that jump to the right question. When everything is valid, **Download** the `.json` (or **Copy JSON** on a phone) and copy the `index.json` entry shown underneath.
 
 > **This is a static site.** Nothing is saved to a server. To make your questions permanent, put the exported file in `public/data/subjects/`, add the entry to `public/data/index.json`, then commit and push.
