@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="320" height="150" rx="16" fill="#ffffff"/>
+  <rect x="8" y="8" width="304" height="134" rx="10" fill="#fafaf8" stroke="#cbc7bb"/>
+  <text x="44" y="48" font-size="17" fill="#1d1f23">1.  Langkawi</text>
+  <text x="44" y="82" font-size="17" fill="#1d1f23">2.  Cameron Highlands</text>
+  <text x="44" y="116" font-size="17" fill="#1d1f23">3.  Melaka</text>
+</svg>

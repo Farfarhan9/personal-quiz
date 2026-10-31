@@ -1,5 +1,7 @@
 import { correctAnswerText, userAnswerText } from '../lib/grading';
+import { RichText } from './RichText';
 import type { Question, QuestionStatus, UserAnswer } from '../types';
+import { CodeSnippet } from './CodeSnippet';
 import { ZoomableImage } from './ImageViewer';
 
 export interface ReviewItem {
@@ -26,21 +28,30 @@ export function ReviewList({ items }: { items: ReviewItem[] }) {
             <span className="review-item__num">Q{i + 1}</span>
             <span className={`status-pill status-pill--${status}`}>{STATUS_LABEL[status]}</span>
           </div>
-          <p className="review-item__prompt">{question.prompt}</p>
+          <p className="review-item__prompt">
+            <RichText text={question.prompt} />
+          </p>
+          {question.code && <CodeSnippet code={question.code} />}
           {question.image && <ZoomableImage image={question.image} className="review-item__image" />}
           <dl className="review-item__answers">
             <div>
               <dt>Your answer</dt>
-              <dd>{status === 'skipped' ? 'Skipped' : userAnswerText(question, answer)}</dd>
+              <dd>{status === 'skipped' ? 'Skipped' : <RichText text={userAnswerText(question, answer)} />}</dd>
             </div>
             {status !== 'correct' && (
               <div>
                 <dt>Correct answer</dt>
-                <dd>{correctAnswerText(question)}</dd>
+                <dd>
+                  <RichText text={correctAnswerText(question)} />
+                </dd>
               </div>
             )}
           </dl>
-          {question.explanation && <p className="review-item__explanation">💡 {question.explanation}</p>}
+          {question.explanation && (
+            <p className="review-item__explanation">
+              💡 <RichText text={question.explanation} />
+            </p>
+          )}
         </li>
       ))}
     </ol>

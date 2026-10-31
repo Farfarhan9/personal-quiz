@@ -15,6 +15,30 @@
       "file": "subjects/testing-ch3.json",
       "icon": "🔁",
       "color": "#4f46e5"
+    },
+    {
+      "id": "webdev-ch1",
+      "title": "Web Development · Chapter 1",
+      "description": "Introduction to the WWW and the Internet: history, architecture, servers, protocols, IP & DNS, URLs, browsers, requirement analysis and scripting.",
+      "file": "subjects/webdev-ch1.json",
+      "icon": "🌐",
+      "color": "#2563eb"
+    },
+    {
+      "id": "webdev-ch2",
+      "title": "Web Development · Chapter 2",
+      "description": "Markup languages and HTML: presentation layer, HTML history and XHTML, tags and structure, lists, links, images, tables, forms, semantic tags, media and entities.",
+      "file": "subjects/webdev-ch2.json",
+      "icon": "📄",
+      "color": "#ea580c"
+    },
+    {
+      "id": "webdev-ch3",
+      "title": "Web Development · Chapter 3",
+      "description": "Style sheets (CSS): syntax, types and the cascade, selectors, combinators, pseudo-classes, typography, colours, box model, Flexbox, Grid, responsive design, preprocessors and effects.",
+      "file": "subjects/webdev-ch3.json",
+      "icon": "🎨",
+      "color": "#db2777"
     }
   ]
 }

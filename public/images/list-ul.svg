@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="320" height="150" rx="16" fill="#ffffff"/>
+  <rect x="8" y="8" width="304" height="134" rx="10" fill="#fafaf8" stroke="#cbc7bb"/>
+  <circle cx="50" cy="42" r="4" fill="#1d1f23"/>
+  <text x="64" y="48" font-size="17" fill="#1d1f23">Langkawi</text>
+  <circle cx="50" cy="76" r="4" fill="#1d1f23"/>
+  <text x="64" y="82" font-size="17" fill="#1d1f23">Cameron Highlands</text>
+  <circle cx="50" cy="110" r="4" fill="#1d1f23"/>
+  <text x="64" y="116" font-size="17" fill="#1d1f23">Melaka</text>
+</svg>

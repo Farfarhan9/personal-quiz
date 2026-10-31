@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 245" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="640" height="245" rx="16" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1d1f23">Anatomy of a CSS rule</text>
+  <rect x="67.0" y="90" width="37.2" height="38" rx="6" fill="#e1f1ee"/>
+  <text x="70.0" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">h1</text>
+  <text x="101.2" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23"> </text>
+  <text x="116.8" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">{</text>
+  <text x="132.4" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23"> </text>
+  <rect x="145.0" y="90" width="84.0" height="38" rx="6" fill="#e8eefc"/>
+  <text x="148.0" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="78.0" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">color</text>
+  <text x="226.0" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">:</text>
+  <text x="241.6" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23"> </text>
+  <rect x="254.2" y="90" width="68.4" height="38" rx="6" fill="#fff4dc"/>
+  <text x="257.2" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">blue</text>
+  <text x="319.6" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">;</text>
+  <text x="335.2" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23"> </text>
+  <text x="350.8" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="26" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#1d1f23">}</text>
+  <line x1="85.6" y1="146" x2="85.6" y2="166" stroke="#0f6e64" stroke-width="2"/>
+  <circle cx="85.6" cy="180" r="14" fill="#0f6e64"/>
+  <text x="85.6" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <line x1="187.0" y1="146" x2="187.0" y2="166" stroke="#2457d6" stroke-width="2"/>
+  <circle cx="187.0" cy="180" r="14" fill="#2457d6"/>
+  <text x="187.0" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <line x1="288.4" y1="146" x2="288.4" y2="166" stroke="#8a5a00" stroke-width="2"/>
+  <circle cx="288.4" cy="180" r="14" fill="#8a5a00"/>
+  <text x="288.4" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <path d="M116.8 78 v-10 H366.4 v10" fill="none" stroke="#b42318" stroke-width="2.5"/>
+  <circle cx="398.4" cy="68" r="14" fill="#b42318"/>
+  <text x="398.4" y="73" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="320" y="228" text-anchor="middle" font-size="13" fill="#5d6066">4 = everything between the curly braces</text>
+</svg>

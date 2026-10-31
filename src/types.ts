@@ -22,6 +22,8 @@ export interface ChoiceOption {
 interface QuestionBase {
   id: string;
   prompt: string;
+  /** Optional code snippet shown under the prompt in a monospace block (scrolls sideways if long). */
+  code?: string;
   image?: QuizImage | null;
   explanation?: string;
   difficulty?: Difficulty;

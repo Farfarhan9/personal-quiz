@@ -1,0 +1,6588 @@
+{
+  "id": "webdev-ch3",
+  "title": "Web Development · Chapter 3",
+  "description": "Style sheets (CSS): syntax, types and the cascade, selectors, combinators, pseudo-classes, typography, colours, box model, Flexbox, Grid, responsive design, preprocessors and effects.",
+  "topics": [
+    {
+      "id": "css-basics",
+      "title": "3.1 CSS Basics & Syntax",
+      "description": "What CSS is, why it exists, rules, declaration blocks and correct syntax.",
+      "questions": [
+        {
+          "id": "w3-basic-001",
+          "type": "typed",
+          "prompt": "What does CSS stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "cascading style sheets",
+            "cascading style sheet"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "CSS = Cascading Style Sheets.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "w3-basic-002",
+          "type": "single_choice",
+          "prompt": "What is CSS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A simple mechanism for adding style (fonts, colours, layouts) to web documents"
+            },
+            {
+              "id": "b",
+              "text": "A protocol for transferring web pages"
+            },
+            {
+              "id": "c",
+              "text": "A database for storing website data"
+            },
+            {
+              "id": "d",
+              "text": "A language for adding content to web pages"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "CSS adds style to HTML documents.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "w3-basic-003",
+          "type": "single_choice",
+          "prompt": "Why was CSS introduced?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To store data on the server"
+            },
+            {
+              "id": "b",
+              "text": "To enhance the display capabilities of HTML"
+            },
+            {
+              "id": "c",
+              "text": "To make pages interactive"
+            },
+            {
+              "id": "d",
+              "text": "To replace HTML completely"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "CSS enhances how HTML is displayed. It also separates content (HTML) from presentation (CSS), so one style sheet can restyle a whole site.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "w3-basic-004",
+          "type": "single_choice",
+          "prompt": "A rule that defines the appearance of an element on a web page is called a…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Style sheet"
+            },
+            {
+              "id": "b",
+              "text": "Tag"
+            },
+            {
+              "id": "c",
+              "text": "Style"
+            },
+            {
+              "id": "d",
+              "text": "Selector"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A style is one rule. A style sheet is a series of rules for a page or whole site.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "w3-basic-005",
+          "type": "single_choice",
+          "prompt": "A series of rules that defines the style for a web page or an entire web site is called a…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Style"
+            },
+            {
+              "id": "b",
+              "text": "Style sheet"
+            },
+            {
+              "id": "c",
+              "text": "Property"
+            },
+            {
+              "id": "d",
+              "text": "Declaration"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "That's a style sheet.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "w3-basic-006",
+          "type": "single_choice",
+          "prompt": "What is a declaration block?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An HTML element that holds CSS"
+            },
+            {
+              "id": "b",
+              "text": "A list of declarations inside curly braces { }"
+            },
+            {
+              "id": "c",
+              "text": "A comment in CSS"
+            },
+            {
+              "id": "d",
+              "text": "A list of selectors separated by commas"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Everything between { and } is the declaration block.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-007",
+          "type": "single_choice",
+          "prompt": "A declaration consists of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A value, a colon, then a property"
+            },
+            {
+              "id": "b",
+              "text": "A property, a colon, a value, then a semicolon"
+            },
+            {
+              "id": "c",
+              "text": "A selector, a comma, then a value"
+            },
+            {
+              "id": "d",
+              "text": "A tag, an equals sign, then a value"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "property: value;",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-008",
+          "type": "single_choice",
+          "prompt": "Which declaration is written correctly?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "color: blue;"
+            },
+            {
+              "id": "b",
+              "text": "color = blue;"
+            },
+            {
+              "id": "c",
+              "text": "blue: color;"
+            },
+            {
+              "id": "d",
+              "text": "color: blue,"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Property first, then a colon, the value, and a semicolon.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-009",
+          "type": "single_choice",
+          "prompt": "What is the basic CSS syntax?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "selector { property: value; }"
+            },
+            {
+              "id": "b",
+              "text": "property { selector: value; }"
+            },
+            {
+              "id": "c",
+              "text": "selector = property(value)"
+            },
+            {
+              "id": "d",
+              "text": "<selector property=\"value\">"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Selector, then a declaration block.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-010",
+          "type": "single_choice",
+          "prompt": "In this CSS rule, what is part 1 (h1) called?",
+          "image": {
+            "src": "images/web/css-rule.svg",
+            "alt": "The rule h1 { color: blue; } with numbered labels: 1 under h1, 2 under color, 3 under blue, and 4 above a bracket spanning the curly braces."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Property"
+            },
+            {
+              "id": "b",
+              "text": "Declaration block"
+            },
+            {
+              "id": "c",
+              "text": "Value"
+            },
+            {
+              "id": "d",
+              "text": "Selector"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "h1 is the selector: it picks which elements to style.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-011",
+          "type": "single_choice",
+          "prompt": "In this CSS rule, what is part 2 (color) called?",
+          "image": {
+            "src": "images/web/css-rule.svg",
+            "alt": "The rule h1 { color: blue; } with numbered labels: 1 under h1, 2 under color, 3 under blue, and 4 above a bracket spanning the curly braces."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Selector"
+            },
+            {
+              "id": "b",
+              "text": "Declaration block"
+            },
+            {
+              "id": "c",
+              "text": "Property"
+            },
+            {
+              "id": "d",
+              "text": "Value"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "color is the property; blue is its value; everything in { } is the declaration block.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-012",
+          "type": "single_choice",
+          "prompt": "In this CSS rule, what is part 4 (everything between the braces) called?",
+          "image": {
+            "src": "images/web/css-rule.svg",
+            "alt": "The rule h1 { color: blue; } with numbered labels: 1 under h1, 2 under color, 3 under blue, and 4 above a bracket spanning the curly braces."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Style sheet"
+            },
+            {
+              "id": "b",
+              "text": "Property"
+            },
+            {
+              "id": "c",
+              "text": "Declaration block"
+            },
+            {
+              "id": "d",
+              "text": "Selector"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The declaration block holds one or more declarations.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-013",
+          "type": "single_choice",
+          "prompt": "Which is a valid CSS comment?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<!-- This is a comment -->"
+            },
+            {
+              "id": "b",
+              "text": "// This is a comment"
+            },
+            {
+              "id": "c",
+              "text": "# This is a comment"
+            },
+            {
+              "id": "d",
+              "text": "/* This is a comment */"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "CSS only has /* … */ comments. <!-- --> is HTML.",
+          "difficulty": "easy",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-014",
+          "type": "single_choice",
+          "prompt": "Which property sets the TEXT colour of an element?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "font-color"
+            },
+            {
+              "id": "b",
+              "text": "color"
+            },
+            {
+              "id": "c",
+              "text": "fontcolor"
+            },
+            {
+              "id": "d",
+              "text": "text-color"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It's simply color. Your notes' example `fontcolor: navy` isn't a real property — the browser would ignore it.",
+          "difficulty": "medium",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-015",
+          "type": "true_false",
+          "prompt": "If you misspell a property, like `font-szie: 12px;`, the browser simply ignores that declaration.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Browsers skip declarations they don't understand and keep reading the rest. (font-szie in your notes is a typo for font-size.)",
+          "difficulty": "medium",
+          "tags": [
+            "syntax"
+          ]
+        },
+        {
+          "id": "w3-basic-016",
+          "type": "true_false",
+          "prompt": "`font-size: 14 pt;` (with a space between the number and unit) is valid CSS.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "There must be no space between a number and its unit: 14pt. With the space, the declaration is ignored.",
+          "difficulty": "medium",
+          "tags": [
+            "syntax"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-types-and-cascade",
+      "title": "3.2 Types of CSS & the Cascade",
+      "description": "Inline, embedded and external CSS, which overrides which, plus specificity, !important and inheritance.",
+      "questions": [
+        {
+          "id": "w3-types-001",
+          "type": "multiple_choice",
+          "prompt": "What are the 3 types of CSS? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inline"
+            },
+            {
+              "id": "b",
+              "text": "Embedded (internal)"
+            },
+            {
+              "id": "c",
+              "text": "Server-side"
+            },
+            {
+              "id": "d",
+              "text": "Imported JavaScript"
+            },
+            {
+              "id": "e",
+              "text": "External (linked)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "e"
+          ],
+          "explanation": "Inline, embedded/internal, and external/linked.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-002",
+          "type": "single_choice",
+          "prompt": "Which type of CSS controls the style for a SINGLE web page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Server-side"
+            },
+            {
+              "id": "b",
+              "text": "Embedded (internal)"
+            },
+            {
+              "id": "c",
+              "text": "Inline"
+            },
+            {
+              "id": "d",
+              "text": "External"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Embedded CSS lives in <style> tags inside that page's <head>.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-003",
+          "type": "single_choice",
+          "prompt": "Which type of CSS defines a style for only a SINGLE HTML tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "External"
+            },
+            {
+              "id": "b",
+              "text": "Embedded"
+            },
+            {
+              "id": "c",
+              "text": "Linked"
+            },
+            {
+              "id": "d",
+              "text": "Inline"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Inline CSS uses the style attribute on one tag.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-004",
+          "type": "single_choice",
+          "prompt": "Which type of CSS controls the appearance of MULTIPLE pages in a website?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inline"
+            },
+            {
+              "id": "b",
+              "text": "Comment"
+            },
+            {
+              "id": "c",
+              "text": "External (linked)"
+            },
+            {
+              "id": "d",
+              "text": "Embedded"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "One external .css file can be linked from every page.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-005",
+          "type": "single_choice",
+          "prompt": "Which type of CSS is this?",
+          "code": "<h1 style=\"font-family: Garamond; color: navy;\">Hello</h1>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "External"
+            },
+            {
+              "id": "b",
+              "text": "Inline"
+            },
+            {
+              "id": "c",
+              "text": "Embedded"
+            },
+            {
+              "id": "d",
+              "text": "Imported"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The style attribute sits directly on the tag, so only this <h1> is affected.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-006",
+          "type": "single_choice",
+          "prompt": "Which type of CSS does this line add?",
+          "code": "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inline"
+            },
+            {
+              "id": "b",
+              "text": "Pseudo"
+            },
+            {
+              "id": "c",
+              "text": "External (linked)"
+            },
+            {
+              "id": "d",
+              "text": "Embedded"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<link> in <head> connects an external style sheet.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-007",
+          "type": "single_choice",
+          "prompt": "For embedded CSS, where do you put the <style> … </style> tags?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "In a separate .css file"
+            },
+            {
+              "id": "b",
+              "text": "Inside the <head> tags"
+            },
+            {
+              "id": "c",
+              "text": "After </html>"
+            },
+            {
+              "id": "d",
+              "text": "Inside each <p> tag"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Embedded CSS goes in <style> inside <head>.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-008",
+          "type": "multiple_choice",
+          "prompt": "Which statements about EXTERNAL style sheets are true? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are applied with a <link> in the <head>"
+            },
+            {
+              "id": "b",
+              "text": "They are a separate text file (e.g. style.css)"
+            },
+            {
+              "id": "c",
+              "text": "They help every page use a consistent style"
+            },
+            {
+              "id": "d",
+              "text": "They are written inside the style attribute"
+            },
+            {
+              "id": "e",
+              "text": "They don't need <style> tags"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "The last option describes inline CSS.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-009",
+          "type": "typed",
+          "prompt": "In <link rel=\"______\" href=\"style.css\">, what value goes in rel?",
+          "image": null,
+          "acceptedAnswers": [
+            "stylesheet",
+            "rel=\"stylesheet\""
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "rel=\"stylesheet\" tells the browser the linked file is CSS.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "w3-types-010",
+          "type": "single_choice",
+          "prompt": "According to your notes, which type of CSS has the HIGHEST priority?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inline"
+            },
+            {
+              "id": "b",
+              "text": "Embedded"
+            },
+            {
+              "id": "c",
+              "text": "External"
+            },
+            {
+              "id": "d",
+              "text": "They are all equal"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Inline overrides embedded and external.",
+          "difficulty": "easy",
+          "tags": [
+            "cascade"
+          ]
+        },
+        {
+          "id": "w3-types-011",
+          "type": "single_choice",
+          "prompt": "According to your notes, which order is correct (highest priority first)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "External → Embedded → Inline"
+            },
+            {
+              "id": "b",
+              "text": "External → Inline → Embedded"
+            },
+            {
+              "id": "c",
+              "text": "Embedded → Inline → External"
+            },
+            {
+              "id": "d",
+              "text": "Inline → Embedded → External"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Inline beats embedded, which beats external. Strictly, embedded vs external is decided by ORDER: whichever comes later in the <head> wins. Embedded <style> is usually placed after the <link>, so it wins.",
+          "difficulty": "medium",
+          "tags": [
+            "cascade"
+          ]
+        },
+        {
+          "id": "w3-types-012",
+          "type": "single_choice",
+          "prompt": "What does “cascading” mean in Cascading Style Sheets?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Styles can only flow from parent to child"
+            },
+            {
+              "id": "b",
+              "text": "Several rules can apply to one element, and the browser has rules to decide which one wins"
+            },
+            {
+              "id": "c",
+              "text": "CSS files load one after another slowly"
+            },
+            {
+              "id": "d",
+              "text": "Style sheets must be stacked in folders"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Conflicts are settled by importance (!important), then specificity, then source order (later wins).",
+          "difficulty": "medium",
+          "tags": [
+            "cascade",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-types-013",
+          "type": "single_choice",
+          "prompt": "Three rules target the same <h1 id=\"title\" class=\"heading\">. Which colour wins?",
+          "code": "h1      { color: red; }\n.heading { color: blue; }\n#title  { color: green; }",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "green (the ID selector)"
+            },
+            {
+              "id": "b",
+              "text": "red (the element selector)"
+            },
+            {
+              "id": "c",
+              "text": "blue (the class selector)"
+            },
+            {
+              "id": "d",
+              "text": "Whichever is first"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Specificity: ID > class/attribute/pseudo-class > element. So #title wins regardless of order.",
+          "difficulty": "hard",
+          "tags": [
+            "cascade",
+            "specificity",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-types-014",
+          "type": "single_choice",
+          "prompt": "Two rules have exactly the same specificity. Which one is applied?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The shorter one"
+            },
+            {
+              "id": "b",
+              "text": "The one that comes first"
+            },
+            {
+              "id": "c",
+              "text": "The one that comes last"
+            },
+            {
+              "id": "d",
+              "text": "Neither"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. With equal specificity, source order decides: the later rule wins.",
+          "difficulty": "medium",
+          "tags": [
+            "cascade",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-types-015",
+          "type": "single_choice",
+          "prompt": "What does !important do in `color: red !important;`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the rule load first"
+            },
+            {
+              "id": "b",
+              "text": "Makes this declaration override normal declarations, even those with higher specificity"
+            },
+            {
+              "id": "c",
+              "text": "Marks the line as a comment"
+            },
+            {
+              "id": "d",
+              "text": "Makes the text bold"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. It beats normal rules (even inline styles). Use it sparingly — it makes CSS hard to maintain.",
+          "difficulty": "medium",
+          "tags": [
+            "cascade",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-types-016",
+          "type": "true_false",
+          "prompt": "Properties like color and font-family are inherited by child elements, but border and margin are not.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Extra — not in your notes. Text-related properties inherit; box properties (border, margin, padding, background) don't.",
+          "difficulty": "hard",
+          "tags": [
+            "cascade",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "selectors",
+      "title": "3.3 Selectors",
+      "description": "Tag, class, ID, grouping, universal, the five selector categories and attribute selectors.",
+      "questions": [
+        {
+          "id": "w3-sel-001",
+          "type": "multiple_choice",
+          "prompt": "Which selector types are listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Tag"
+            },
+            {
+              "id": "b",
+              "text": "Function"
+            },
+            {
+              "id": "c",
+              "text": "Class"
+            },
+            {
+              "id": "d",
+              "text": "Advanced (IDs, pseudo-class selectors)"
+            },
+            {
+              "id": "e",
+              "text": "Variable"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Tag, class and advanced (IDs, pseudo-classes).",
+          "difficulty": "medium",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-002",
+          "type": "single_choice",
+          "prompt": "A TAG selector like `body { … }` does what?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Styles links when hovered"
+            },
+            {
+              "id": "b",
+              "text": "Styles elements with a matching class"
+            },
+            {
+              "id": "c",
+              "text": "Redefines the look of every element of that tag"
+            },
+            {
+              "id": "d",
+              "text": "Styles one element with a matching id"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Tag selectors target all elements of that type.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-003",
+          "type": "single_choice",
+          "prompt": "A class selector always begins with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An at sign (@)"
+            },
+            {
+              "id": "b",
+              "text": "A hash (#)"
+            },
+            {
+              "id": "c",
+              "text": "A colon (:)"
+            },
+            {
+              "id": "d",
+              "text": "A period (.)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": ".indent { … }",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-004",
+          "type": "single_choice",
+          "prompt": "An ID selector begins with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A hash (#)"
+            },
+            {
+              "id": "b",
+              "text": "A tilde (~)"
+            },
+            {
+              "id": "c",
+              "text": "An asterisk (*)"
+            },
+            {
+              "id": "d",
+              "text": "A period (.)"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "#myID { … }",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-005",
+          "type": "typed",
+          "prompt": "Write the selector for elements with class=\"indent\".",
+          "image": null,
+          "acceptedAnswers": [
+            ".indent"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "selector"
+          },
+          "explanation": "Classes start with a dot.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-006",
+          "type": "typed",
+          "prompt": "Write the selector for the element with id=\"myID\".",
+          "image": null,
+          "acceptedAnswers": [
+            "#myID"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "selector"
+          },
+          "explanation": "IDs start with #.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-007",
+          "type": "single_choice",
+          "prompt": "Which elements does `p.beginning { … }` style?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only <p> elements that have class=\"beginning\""
+            },
+            {
+              "id": "b",
+              "text": "Every element with class=\"beginning\""
+            },
+            {
+              "id": "c",
+              "text": "<p> elements inside an element with class beginning"
+            },
+            {
+              "id": "d",
+              "text": "Every <p> element"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Tag + class (no space) = only that tag with that class. `.beginning` alone would target both <p> and <div>.",
+          "difficulty": "medium",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-008",
+          "type": "single_choice",
+          "prompt": "Which selector styles BOTH <p class=\"beginning\"> and <div class=\"beginning\">?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "p.beginning"
+            },
+            {
+              "id": "b",
+              "text": "#beginning"
+            },
+            {
+              "id": "c",
+              "text": ".beginning"
+            },
+            {
+              "id": "d",
+              "text": "div.beginning"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A class selector on its own matches any tag.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-009",
+          "type": "true_false",
+          "prompt": "According to your notes, class selectors can only be defined in embedded and external style sheets (not inline).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Inline styles sit on one tag, so there's no selector. Classes are defined in <style> or a .css file and used with class=\"…\".",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-010",
+          "type": "single_choice",
+          "prompt": "Which selector matches ALL elements on the page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "`*`"
+            },
+            {
+              "id": "b",
+              "text": "`all`"
+            },
+            {
+              "id": "c",
+              "text": "`html`"
+            },
+            {
+              "id": "d",
+              "text": "`.all`"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "* is the universal selector. (Your notes list `*` under “single element type” — the labels look shifted: `*` = all elements, `p` = a single element type, `h1, h2, h3` = multiple types.)",
+          "difficulty": "medium",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-011",
+          "type": "single_choice",
+          "prompt": "What does the comma do in `h1, h2, h3 { background-color: purple; }`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Groups selectors: the same style applies to h1, h2 AND h3"
+            },
+            {
+              "id": "b",
+              "text": "Selects only the first heading"
+            },
+            {
+              "id": "c",
+              "text": "Selects h3 inside h2 inside h1"
+            },
+            {
+              "id": "d",
+              "text": "It is a syntax error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A comma-separated list groups selectors that share the same declarations.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-012",
+          "type": "single_choice",
+          "prompt": "Which elements does `#p1, #p3 { background-color: aqua; }` style?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Elements with class=\"p1\" or \"p3\""
+            },
+            {
+              "id": "b",
+              "text": "Nothing — ids can't be grouped"
+            },
+            {
+              "id": "c",
+              "text": "The elements with id=\"p1\" and id=\"p3\""
+            },
+            {
+              "id": "d",
+              "text": "The 1st and 3rd paragraphs"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A grouped list of ID selectors.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-013",
+          "type": "multiple_choice",
+          "prompt": "Which are the five categories of CSS selectors? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Pseudo-element selectors"
+            },
+            {
+              "id": "b",
+              "text": "Attribute selectors"
+            },
+            {
+              "id": "c",
+              "text": "Combinator selectors"
+            },
+            {
+              "id": "d",
+              "text": "Pseudo-class selectors"
+            },
+            {
+              "id": "e",
+              "text": "Simple selectors"
+            },
+            {
+              "id": "f",
+              "text": "Variable selectors"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "The five categories from your notes.",
+          "difficulty": "medium",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-014",
+          "type": "single_choice",
+          "prompt": "Which category selects elements based on a certain STATE (e.g. being hovered)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Pseudo-class selectors"
+            },
+            {
+              "id": "b",
+              "text": "Pseudo-element selectors"
+            },
+            {
+              "id": "c",
+              "text": "Attribute selectors"
+            },
+            {
+              "id": "d",
+              "text": "Combinator selectors"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": ":hover, :visited, :focus are pseudo-classes.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-015",
+          "type": "single_choice",
+          "prompt": "Which category selects and styles a PART of an element (e.g. its first letter)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Simple selectors"
+            },
+            {
+              "id": "b",
+              "text": "Pseudo-class selectors"
+            },
+            {
+              "id": "c",
+              "text": "Combinator selectors"
+            },
+            {
+              "id": "d",
+              "text": "Pseudo-element selectors"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "::first-letter, ::before are pseudo-elements.",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-016",
+          "type": "single_choice",
+          "prompt": "Which category selects elements based on the RELATIONSHIP between them?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Pseudo-class selectors"
+            },
+            {
+              "id": "b",
+              "text": "Attribute selectors"
+            },
+            {
+              "id": "c",
+              "text": "Simple selectors"
+            },
+            {
+              "id": "d",
+              "text": "Combinator selectors"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Combinators: descendant (space), child (>), adjacent sibling (+), general sibling (~).",
+          "difficulty": "easy",
+          "tags": [
+            "selectors"
+          ]
+        },
+        {
+          "id": "w3-sel-017",
+          "type": "single_choice",
+          "prompt": "Which elements does this selector match?",
+          "code": "input[type=\"text\"] { border: 1px solid gray; }",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "All inputs"
+            },
+            {
+              "id": "b",
+              "text": "Elements with class text"
+            },
+            {
+              "id": "c",
+              "text": "<input> elements with type=\"text\""
+            },
+            {
+              "id": "d",
+              "text": "Inputs containing the word text"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. [attribute=\"value\"] is an attribute selector.",
+          "difficulty": "medium",
+          "tags": [
+            "selectors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-sel-018",
+          "type": "single_choice",
+          "prompt": "What does `a[href^=\"https\"]` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Links whose href CONTAINS https anywhere"
+            },
+            {
+              "id": "b",
+              "text": "Links whose href STARTS with https"
+            },
+            {
+              "id": "c",
+              "text": "Links without an href"
+            },
+            {
+              "id": "d",
+              "text": "Links whose href ENDS with https"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. ^= starts with, $= ends with (e.g. a[href$=\".pdf\"]), *= contains.",
+          "difficulty": "hard",
+          "tags": [
+            "selectors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-sel-019",
+          "type": "single_choice",
+          "prompt": "What does `.btn.primary` (no space) select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Nothing — two classes can't be combined"
+            },
+            {
+              "id": "b",
+              "text": "Elements with class primary inside a .btn"
+            },
+            {
+              "id": "c",
+              "text": "Elements with either class"
+            },
+            {
+              "id": "d",
+              "text": "Elements that have BOTH classes, e.g. class=\"btn primary\""
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Chained classes = same element. With a space (.btn .primary) it means a descendant.",
+          "difficulty": "hard",
+          "tags": [
+            "selectors",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combinators",
+      "title": "3.1 Combinators",
+      "description": "Extra detail — descendant (space), child (>), adjacent sibling (+) and general sibling (~).",
+      "questions": [
+        {
+          "id": "w3-comb-001",
+          "type": "single_choice",
+          "prompt": "What does the space in `div p` mean?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only <p> elements that are direct children of a <div>"
+            },
+            {
+              "id": "b",
+              "text": "A <p> immediately after a <div>"
+            },
+            {
+              "id": "c",
+              "text": "Any <p> inside a <div>, at any depth (descendant)"
+            },
+            {
+              "id": "d",
+              "text": "Both <div> and <p>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. The space is the descendant combinator.",
+          "difficulty": "easy",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-002",
+          "type": "single_choice",
+          "prompt": "What does `ul > li` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Every <ul> and <li>"
+            },
+            {
+              "id": "b",
+              "text": "<li> elements that are DIRECT children of a <ul>"
+            },
+            {
+              "id": "c",
+              "text": "All <li> at any depth inside <ul>"
+            },
+            {
+              "id": "d",
+              "text": "The <li> right after a <ul>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. > is the child combinator: one level down only.",
+          "difficulty": "easy",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-003",
+          "type": "typed",
+          "prompt": "Which symbol is the CHILD combinator?",
+          "image": null,
+          "acceptedAnswers": [
+            ">"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "symbol"
+          },
+          "explanation": "Extra — not in your notes. div > p.",
+          "difficulty": "easy",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-004",
+          "type": "single_choice",
+          "prompt": "What does `h2 + p` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Both every <h2> and every <p>"
+            },
+            {
+              "id": "b",
+              "text": "The first <p> that comes immediately after an <h2> (same parent)"
+            },
+            {
+              "id": "c",
+              "text": "Every <p> after an <h2>"
+            },
+            {
+              "id": "d",
+              "text": "Every <p> inside an <h2>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. + is the adjacent sibling combinator.",
+          "difficulty": "medium",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-005",
+          "type": "single_choice",
+          "prompt": "What does `h2 ~ p` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<p> elements before the <h2>"
+            },
+            {
+              "id": "b",
+              "text": "Only the first <p> after the <h2>"
+            },
+            {
+              "id": "c",
+              "text": "All <p> siblings that come after an <h2>"
+            },
+            {
+              "id": "d",
+              "text": "<p> inside the <h2>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. ~ is the general sibling combinator.",
+          "difficulty": "medium",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-006",
+          "type": "multiple_choice",
+          "prompt": "With this HTML, which paragraphs does `div p` style? (select all that apply)",
+          "code": "<div>\n  <p>A</p>\n  <section>\n    <p>B</p>\n  </section>\n</div>\n<p>C</p>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A"
+            },
+            {
+              "id": "b",
+              "text": "B"
+            },
+            {
+              "id": "c",
+              "text": "C"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Descendant = any depth inside the div, so A and B. C is outside the div.",
+          "difficulty": "medium",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-007",
+          "type": "multiple_choice",
+          "prompt": "With the same HTML, which paragraphs does `div > p` style? (select all that apply)",
+          "code": "<div>\n  <p>A</p>\n  <section>\n    <p>B</p>\n  </section>\n</div>\n<p>C</p>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A"
+            },
+            {
+              "id": "b",
+              "text": "B"
+            },
+            {
+              "id": "c",
+              "text": "C"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Only A is a direct child of the div. B's parent is <section>.",
+          "difficulty": "hard",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-comb-008",
+          "type": "multiple_choice",
+          "prompt": "With the same HTML, which paragraph does `div + p` style? (select all that apply)",
+          "code": "<div>\n  <p>A</p>\n  <section>\n    <p>B</p>\n  </section>\n</div>\n<p>C</p>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "C"
+            },
+            {
+              "id": "b",
+              "text": "A"
+            },
+            {
+              "id": "c",
+              "text": "B"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. C is the element immediately after the </div>, at the same level.",
+          "difficulty": "hard",
+          "tags": [
+            "combinators",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pseudo-classes-elements",
+      "title": "3.3 Pseudo-classes & Pseudo-elements",
+      "description": "Link states, :hover, :focus, structural pseudo-classes, ::before/::after and more.",
+      "questions": [
+        {
+          "id": "w3-pseudo-001",
+          "type": "single_choice",
+          "prompt": "Which pseudo-class styles links the user has NOT visited yet?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "a:hover"
+            },
+            {
+              "id": "b",
+              "text": "a:active"
+            },
+            {
+              "id": "c",
+              "text": "a:link"
+            },
+            {
+              "id": "d",
+              "text": "a:visited"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": ":link = unvisited.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class"
+          ]
+        },
+        {
+          "id": "w3-pseudo-002",
+          "type": "single_choice",
+          "prompt": "With this CSS, a link the user has already opened appears in which colour?",
+          "code": "a:link    { color: black; }\na:visited { color: yellow; }\na:active  { color: red; }",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Black"
+            },
+            {
+              "id": "b",
+              "text": "Blue"
+            },
+            {
+              "id": "c",
+              "text": "Yellow"
+            },
+            {
+              "id": "d",
+              "text": "Red"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": ":visited applies to links already visited.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class"
+          ]
+        },
+        {
+          "id": "w3-pseudo-003",
+          "type": "single_choice",
+          "prompt": "When does `a:active` apply?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "When the page first loads"
+            },
+            {
+              "id": "b",
+              "text": "While the link is being clicked (pressed)"
+            },
+            {
+              "id": "c",
+              "text": "After the link has been visited"
+            },
+            {
+              "id": "d",
+              "text": "When the mouse is over it"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": ":active = at the moment of clicking.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class"
+          ]
+        },
+        {
+          "id": "w3-pseudo-004",
+          "type": "single_choice",
+          "prompt": "Which pseudo-class applies when the mouse pointer is OVER an element?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ":over"
+            },
+            {
+              "id": "b",
+              "text": ":focus"
+            },
+            {
+              "id": "c",
+              "text": ":active"
+            },
+            {
+              "id": "d",
+              "text": ":hover"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. :hover. Phones have no hover, so don't hide important things behind it.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-005",
+          "type": "single_choice",
+          "prompt": "What is the correct order for link pseudo-classes in your CSS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ":hover, :active, :link, :visited"
+            },
+            {
+              "id": "b",
+              "text": "Order doesn't matter"
+            },
+            {
+              "id": "c",
+              "text": ":active, :hover, :visited, :link"
+            },
+            {
+              "id": "d",
+              "text": ":link, :visited, :hover, :active"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. “LoVe HAte” (LVHA). They have equal specificity, so later rules win; in this order hover and active can override link/visited.",
+          "difficulty": "hard",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-006",
+          "type": "single_choice",
+          "prompt": "Which pseudo-class applies when an input is selected/clicked into, ready for typing?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ":checked"
+            },
+            {
+              "id": "b",
+              "text": ":hover"
+            },
+            {
+              "id": "c",
+              "text": ":target"
+            },
+            {
+              "id": "d",
+              "text": ":focus"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. input:focus { outline: 2px solid blue; }.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-007",
+          "type": "single_choice",
+          "prompt": "Which selector styles the FIRST <li> in each list?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "li::first-line"
+            },
+            {
+              "id": "b",
+              "text": "li:first"
+            },
+            {
+              "id": "c",
+              "text": "li:nth(1)"
+            },
+            {
+              "id": "d",
+              "text": "li:first-child"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. :first-child and :last-child.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-008",
+          "type": "typed",
+          "prompt": "Write the pseudo-class to stripe every ODD table row: tr:______",
+          "image": null,
+          "acceptedAnswers": [
+            ":nth-child(odd)",
+            "nth-child(odd)",
+            ":nth-child(2n+1)",
+            "nth-child(2n+1)",
+            "tr:nth-child(odd)",
+            "tr:nth-child(2n+1)"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": ":nth-child(...)"
+          },
+          "explanation": "Extra — not in your notes. tr:nth-child(odd) or tr:nth-child(2n+1). Even rows: nth-child(even) or nth-child(2n).",
+          "difficulty": "hard",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-009",
+          "type": "single_choice",
+          "prompt": "Which items does `li:nth-child(3)` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Every third <li>"
+            },
+            {
+              "id": "b",
+              "text": "The first three <li>"
+            },
+            {
+              "id": "c",
+              "text": "All <li> except the third"
+            },
+            {
+              "id": "d",
+              "text": "The third <li> of its parent"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. A plain number picks that one position. Every third would be :nth-child(3n).",
+          "difficulty": "medium",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-010",
+          "type": "single_choice",
+          "prompt": "What does `button:not(.primary)` select?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "No buttons"
+            },
+            {
+              "id": "b",
+              "text": "Only buttons with class primary"
+            },
+            {
+              "id": "c",
+              "text": "Buttons that do NOT have the class primary"
+            },
+            {
+              "id": "d",
+              "text": "Every element except buttons"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. :not() excludes matches.",
+          "difficulty": "medium",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-011",
+          "type": "multiple_choice",
+          "prompt": "Which pseudo-classes describe the state of FORM inputs? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ":first-letter"
+            },
+            {
+              "id": "b",
+              "text": ":checked"
+            },
+            {
+              "id": "c",
+              "text": ":required"
+            },
+            {
+              "id": "d",
+              "text": ":disabled"
+            },
+            {
+              "id": "e",
+              "text": ":focus"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Extra — not in your notes. ::first-letter is a pseudo-element for text.",
+          "difficulty": "medium",
+          "tags": [
+            "pseudo-class",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-012",
+          "type": "single_choice",
+          "prompt": "Which uses double colons (::) in modern CSS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Pseudo-classes, e.g. ::hover"
+            },
+            {
+              "id": "b",
+              "text": "Class selectors"
+            },
+            {
+              "id": "c",
+              "text": "ID selectors"
+            },
+            {
+              "id": "d",
+              "text": "Pseudo-elements, e.g. ::before"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. One colon = pseudo-class (a state). Two colons = pseudo-element (a part). Browsers still accept old single-colon :before.",
+          "difficulty": "medium",
+          "tags": [
+            "pseudo-element",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-013",
+          "type": "single_choice",
+          "prompt": "What do ::before and ::after do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Run JavaScript before or after loading"
+            },
+            {
+              "id": "b",
+              "text": "Style links before and after visiting"
+            },
+            {
+              "id": "c",
+              "text": "Select the element before or after"
+            },
+            {
+              "id": "d",
+              "text": "Insert generated content before or after an element's content"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. They need a content property, e.g. .new::after { content: \" 🔥\"; }.",
+          "difficulty": "medium",
+          "tags": [
+            "pseudo-element",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-014",
+          "type": "true_false",
+          "prompt": "`p::before { color: red; }` with no content property will show something on the page.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Extra — not in your notes. Without `content` (even content: \"\"), ::before/::after aren't created.",
+          "difficulty": "hard",
+          "tags": [
+            "pseudo-element",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-015",
+          "type": "single_choice",
+          "prompt": "Which pseudo-element makes a large “drop cap” first letter of a paragraph?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "p:first-child"
+            },
+            {
+              "id": "b",
+              "text": "p::first-letter"
+            },
+            {
+              "id": "c",
+              "text": "p::first-line"
+            },
+            {
+              "id": "d",
+              "text": "p::before"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. ::first-letter styles the first letter; ::first-line the first line.",
+          "difficulty": "easy",
+          "tags": [
+            "pseudo-element",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-pseudo-016",
+          "type": "single_choice",
+          "prompt": "Which pseudo-element styles text the user highlights with the mouse?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "::selection"
+            },
+            {
+              "id": "b",
+              "text": "::marker"
+            },
+            {
+              "id": "c",
+              "text": ":active"
+            },
+            {
+              "id": "d",
+              "text": "::highlight-text"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. ::selection. Related: ::placeholder styles input hint text, ::marker styles list bullets/numbers.",
+          "difficulty": "hard",
+          "tags": [
+            "pseudo-element",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "title": "3.2 Typography & Text Styling",
+      "description": "font-family, sizes and units, weight, style, alignment, decoration, spacing and shadows.",
+      "questions": [
+        {
+          "id": "w3-type-001",
+          "type": "single_choice",
+          "prompt": "Why does this rule list several fonts?",
+          "code": "h1 { font-family: Georgia, \"Times New Roman\", Times, serif; }",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The browser mixes all four fonts together"
+            },
+            {
+              "id": "b",
+              "text": "Each word uses the next font in the list"
+            },
+            {
+              "id": "c",
+              "text": "They are fallbacks: the browser uses the first font available on the device"
+            },
+            {
+              "id": "d",
+              "text": "Only the last font is used"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "If Georgia isn't installed, the browser tries Times New Roman, then Times, then any serif font.",
+          "difficulty": "easy",
+          "tags": [
+            "fonts"
+          ]
+        },
+        {
+          "id": "w3-type-002",
+          "type": "true_false",
+          "prompt": "Font names that contain spaces, like \"Times New Roman\", should be wrapped in quotes.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Quote multi-word font names. Generic family names (serif, sans-serif) are never quoted.",
+          "difficulty": "easy",
+          "tags": [
+            "fonts"
+          ]
+        },
+        {
+          "id": "w3-type-003",
+          "type": "multiple_choice",
+          "prompt": "Which are GENERIC font families you can put last as a final fallback? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "cursive"
+            },
+            {
+              "id": "b",
+              "text": "bold"
+            },
+            {
+              "id": "c",
+              "text": "Arial"
+            },
+            {
+              "id": "d",
+              "text": "sans-serif"
+            },
+            {
+              "id": "e",
+              "text": "serif"
+            },
+            {
+              "id": "f",
+              "text": "monospace"
+            }
+          ],
+          "correct": [
+            "a",
+            "d",
+            "e",
+            "f"
+          ],
+          "explanation": "Extra — not in your notes. Arial is a specific font; bold is a weight.",
+          "difficulty": "medium",
+          "tags": [
+            "fonts",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-004",
+          "type": "single_choice",
+          "prompt": "Which property changes the size of text?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "text-size"
+            },
+            {
+              "id": "b",
+              "text": "font-size"
+            },
+            {
+              "id": "c",
+              "text": "font-scale"
+            },
+            {
+              "id": "d",
+              "text": "size"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "e.g. font-size: 32px;",
+          "difficulty": "easy",
+          "tags": [
+            "fonts"
+          ]
+        },
+        {
+          "id": "w3-type-005",
+          "type": "single_choice",
+          "prompt": "The `rem` unit is relative to…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A fixed 1/96 of an inch"
+            },
+            {
+              "id": "b",
+              "text": "The root (<html>) element's font size"
+            },
+            {
+              "id": "c",
+              "text": "The screen width"
+            },
+            {
+              "id": "d",
+              "text": "The parent element's font size"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. 1rem = root font size (usually 16px). `em` (for font-size) is relative to the PARENT's font size, so nested ems multiply.",
+          "difficulty": "medium",
+          "tags": [
+            "units",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-006",
+          "type": "single_choice",
+          "prompt": "A parent has font-size: 20px. Its child has font-size: 1.5em. What is the child's font size?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "24px"
+            },
+            {
+              "id": "b",
+              "text": "30px"
+            },
+            {
+              "id": "c",
+              "text": "20px"
+            },
+            {
+              "id": "d",
+              "text": "1.5px"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. 1.5 × 20px = 30px.",
+          "difficulty": "medium",
+          "tags": [
+            "units",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-007",
+          "type": "single_choice",
+          "prompt": "Which unit is mainly intended for PRINT (like in Word documents)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "pt (points)"
+            },
+            {
+              "id": "b",
+              "text": "%"
+            },
+            {
+              "id": "c",
+              "text": "px"
+            },
+            {
+              "id": "d",
+              "text": "rem"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. pt is a print unit (1pt = 1/72 inch). On screens px, em and rem are more common. Your notes use pt in `text-indent: 8pt`.",
+          "difficulty": "medium",
+          "tags": [
+            "units",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-008",
+          "type": "typed",
+          "prompt": "Which numeric font-weight is the same as bold?",
+          "image": null,
+          "acceptedAnswers": [
+            "700"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Extra — not in your notes. 400 = normal, 700 = bold. Values run from 100 (thin) to 900 (black).",
+          "difficulty": "medium",
+          "tags": [
+            "fonts",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-009",
+          "type": "single_choice",
+          "prompt": "Which declaration makes text italic?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "font-style: italic;"
+            },
+            {
+              "id": "b",
+              "text": "font-weight: italic;"
+            },
+            {
+              "id": "c",
+              "text": "text-style: italic;"
+            },
+            {
+              "id": "d",
+              "text": "font-italic: true;"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. font-style: italic | normal | oblique.",
+          "difficulty": "easy",
+          "tags": [
+            "fonts",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-010",
+          "type": "single_choice",
+          "prompt": "Which value of text-align spreads lines so both left and right edges are straight?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "stretch"
+            },
+            {
+              "id": "b",
+              "text": "full"
+            },
+            {
+              "id": "c",
+              "text": "center"
+            },
+            {
+              "id": "d",
+              "text": "justify"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "text-align: left | right | center | justify. Your notes use text-align: center on h1.",
+          "difficulty": "easy",
+          "tags": [
+            "text"
+          ]
+        },
+        {
+          "id": "w3-type-011",
+          "type": "single_choice",
+          "prompt": "How do you remove the underline from links?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "text-style: plain;"
+            },
+            {
+              "id": "b",
+              "text": "text-decoration: none;"
+            },
+            {
+              "id": "c",
+              "text": "underline: none;"
+            },
+            {
+              "id": "d",
+              "text": "font-decoration: none;"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. text-decoration also takes underline, overline and line-through.",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-012",
+          "type": "typed",
+          "prompt": "Which property turns text into CAPITAL letters without changing the HTML?",
+          "image": null,
+          "acceptedAnswers": [
+            "text-transform"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "property name"
+          },
+          "explanation": "Extra — not in your notes. text-transform: uppercase | lowercase | capitalize.",
+          "difficulty": "medium",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-013",
+          "type": "single_choice",
+          "prompt": "What does `p { text-indent: 8pt; }` (from your notes) do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Adds 8pt space between paragraphs"
+            },
+            {
+              "id": "b",
+              "text": "Makes the text 8pt"
+            },
+            {
+              "id": "c",
+              "text": "Indents every line by 8pt"
+            },
+            {
+              "id": "d",
+              "text": "Indents the FIRST line of each paragraph by 8pt"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "text-indent affects the first line only.",
+          "difficulty": "easy",
+          "tags": [
+            "text"
+          ]
+        },
+        {
+          "id": "w3-type-014",
+          "type": "single_choice",
+          "prompt": "Which property controls the space BETWEEN LINES of text?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "line-height"
+            },
+            {
+              "id": "b",
+              "text": "letter-spacing"
+            },
+            {
+              "id": "c",
+              "text": "text-indent"
+            },
+            {
+              "id": "d",
+              "text": "word-spacing"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. line-height: 1.5 is a common readable value.",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-015",
+          "type": "single_choice",
+          "prompt": "Which property controls the space between individual CHARACTERS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "line-height"
+            },
+            {
+              "id": "b",
+              "text": "text-spacing"
+            },
+            {
+              "id": "c",
+              "text": "letter-spacing"
+            },
+            {
+              "id": "d",
+              "text": "word-spacing"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Your notes show `letter-spacing: 1em` (they missed the colon). word-spacing is the gap between words.",
+          "difficulty": "easy",
+          "tags": [
+            "text"
+          ]
+        },
+        {
+          "id": "w3-type-016",
+          "type": "single_choice",
+          "prompt": "In `text-shadow: 2px 2px 4px gray;`, what is 4px?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The horizontal offset"
+            },
+            {
+              "id": "b",
+              "text": "The blur radius"
+            },
+            {
+              "id": "c",
+              "text": "The shadow's font size"
+            },
+            {
+              "id": "d",
+              "text": "The vertical offset"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Order: x-offset, y-offset, blur, colour.",
+          "difficulty": "hard",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-type-017",
+          "type": "single_choice",
+          "prompt": "How can you use a custom font that isn't installed on users' devices?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Just name it in font-family"
+            },
+            {
+              "id": "b",
+              "text": "Load it with @font-face (or a font service link such as Google Fonts)"
+            },
+            {
+              "id": "c",
+              "text": "Use text-transform: custom"
+            },
+            {
+              "id": "d",
+              "text": "It's impossible in CSS"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. @font-face { font-family: \"MyFont\"; src: url(myfont.woff2); } then use font-family: \"MyFont\".",
+          "difficulty": "medium",
+          "tags": [
+            "fonts",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors-and-backgrounds",
+      "title": "3.3 Colours, Backgrounds & Images",
+      "description": "Colour formats, background properties, gradients and image fitting.",
+      "questions": [
+        {
+          "id": "w3-color-001",
+          "type": "single_choice",
+          "prompt": "What is the difference between `color` and `background-color`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "color sets the border colour"
+            },
+            {
+              "id": "b",
+              "text": "background-color sets the text colour"
+            },
+            {
+              "id": "c",
+              "text": "color sets the text colour; background-color fills behind the element"
+            },
+            {
+              "id": "d",
+              "text": "They are the same"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "e.g. body { background-color: linen; } h1 { color: maroon; }",
+          "difficulty": "easy",
+          "tags": [
+            "colors"
+          ]
+        },
+        {
+          "id": "w3-color-002",
+          "type": "multiple_choice",
+          "prompt": "Which are valid ways to write a colour in CSS? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "rgb(48, 153, 211)"
+            },
+            {
+              "id": "b",
+              "text": "navy (a colour name)"
+            },
+            {
+              "id": "c",
+              "text": "#3099D3 (hex)"
+            },
+            {
+              "id": "d",
+              "text": "hsl(201, 64%, 51%)"
+            },
+            {
+              "id": "e",
+              "text": "colour(blue)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Names, hex, rgb()/rgba() and hsl()/hsla() are all valid.",
+          "difficulty": "medium",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-003",
+          "type": "single_choice",
+          "prompt": "Which colour is #000000?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Navy"
+            },
+            {
+              "id": "b",
+              "text": "Red"
+            },
+            {
+              "id": "c",
+              "text": "White"
+            },
+            {
+              "id": "d",
+              "text": "Black"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Hex is #RRGGBB. All zeros = no light = black. Your notes use it for the body background.",
+          "difficulty": "easy",
+          "tags": [
+            "colors"
+          ]
+        },
+        {
+          "id": "w3-color-004",
+          "type": "typed",
+          "prompt": "Write the hex code for white.",
+          "image": null,
+          "acceptedAnswers": [
+            "#ffffff",
+            "#fff"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "#"
+          },
+          "explanation": "Extra — not in your notes. #FFFFFF (or the shorthand #FFF).",
+          "difficulty": "easy",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-005",
+          "type": "single_choice",
+          "prompt": "Which colour is #FF0000?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Green"
+            },
+            {
+              "id": "b",
+              "text": "Red"
+            },
+            {
+              "id": "c",
+              "text": "Yellow"
+            },
+            {
+              "id": "d",
+              "text": "Blue"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. RR = FF (full red), GG = 00, BB = 00.",
+          "difficulty": "easy",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-006",
+          "type": "single_choice",
+          "prompt": "The shorthand hex #f80 is the same as…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "#ff8800"
+            },
+            {
+              "id": "b",
+              "text": "#0f0800"
+            },
+            {
+              "id": "c",
+              "text": "#f80000"
+            },
+            {
+              "id": "d",
+              "text": "#ff0080"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Each digit is doubled: f→ff, 8→88, 0→00.",
+          "difficulty": "hard",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-007",
+          "type": "single_choice",
+          "prompt": "In `rgba(0, 0, 0, 0.5)`, what does 0.5 control?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Transparency (alpha): 50% see-through"
+            },
+            {
+              "id": "b",
+              "text": "Blur"
+            },
+            {
+              "id": "c",
+              "text": "Font size"
+            },
+            {
+              "id": "d",
+              "text": "Brightness"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Alpha goes from 0 (invisible) to 1 (solid).",
+          "difficulty": "medium",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-008",
+          "type": "single_choice",
+          "prompt": "In `hsl(120, 100%, 50%)`, what does 120 represent?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Hue — an angle on the colour wheel (120 = green)"
+            },
+            {
+              "id": "b",
+              "text": "Red amount"
+            },
+            {
+              "id": "c",
+              "text": "Opacity"
+            },
+            {
+              "id": "d",
+              "text": "Lightness"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. hsl = hue (0–360°), saturation (%), lightness (%).",
+          "difficulty": "hard",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-009",
+          "type": "single_choice",
+          "prompt": "What is the difference between `opacity: 0.5` and `background-color: rgba(0,0,0,0.5)`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "opacity fades the WHOLE element including its text; rgba only makes the background see-through"
+            },
+            {
+              "id": "b",
+              "text": "rgba fades the text too"
+            },
+            {
+              "id": "c",
+              "text": "They are identical"
+            },
+            {
+              "id": "d",
+              "text": "opacity only works on images"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Use rgba/hsla when you want readable solid text on a see-through background.",
+          "difficulty": "hard",
+          "tags": [
+            "colors",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-010",
+          "type": "single_choice",
+          "prompt": "Which declaration sets an image as a background?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<background src=\"beach.jpg\">"
+            },
+            {
+              "id": "b",
+              "text": "background: image(\"beach.jpg\");"
+            },
+            {
+              "id": "c",
+              "text": "background-src: \"beach.jpg\";"
+            },
+            {
+              "id": "d",
+              "text": "background-image: url(\"beach.jpg\");"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. background-image takes url(…).",
+          "difficulty": "easy",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-011",
+          "type": "single_choice",
+          "prompt": "By default a small background image is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Hidden"
+            },
+            {
+              "id": "b",
+              "text": "Stretched to fill the element"
+            },
+            {
+              "id": "c",
+              "text": "Shown once in the centre"
+            },
+            {
+              "id": "d",
+              "text": "Repeated (tiled) to fill the element"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Use background-repeat: no-repeat to show it once.",
+          "difficulty": "medium",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-012",
+          "type": "single_choice",
+          "prompt": "Which background-size value makes the image cover the whole element, cropping if needed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "cover"
+            },
+            {
+              "id": "b",
+              "text": "contain"
+            },
+            {
+              "id": "c",
+              "text": "auto"
+            },
+            {
+              "id": "d",
+              "text": "fill"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. cover fills and may crop; contain shows the whole image and may leave gaps.",
+          "difficulty": "medium",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-013",
+          "type": "single_choice",
+          "prompt": "What does `background-attachment: fixed;` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The background stays still while the page scrolls"
+            },
+            {
+              "id": "b",
+              "text": "The background scrolls faster"
+            },
+            {
+              "id": "c",
+              "text": "The background is attached to the mouse"
+            },
+            {
+              "id": "d",
+              "text": "The background can't be changed"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. This creates a simple parallax effect.",
+          "difficulty": "medium",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-014",
+          "type": "single_choice",
+          "prompt": "Which line creates a background fading from red on the left to blue on the right?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "color: linear(red, blue);"
+            },
+            {
+              "id": "b",
+              "text": "background-color: red-to-blue;"
+            },
+            {
+              "id": "c",
+              "text": "background-image: linear-gradient(to right, red, blue);"
+            },
+            {
+              "id": "d",
+              "text": "background-gradient: red blue;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. Gradients are images, so they go in background-image (or background). radial-gradient makes a circular one.",
+          "difficulty": "medium",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-015",
+          "type": "single_choice",
+          "prompt": "What is the `background` property?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An HTML attribute"
+            },
+            {
+              "id": "b",
+              "text": "A shorthand that sets several background properties at once"
+            },
+            {
+              "id": "c",
+              "text": "A property that only works on <body>"
+            },
+            {
+              "id": "d",
+              "text": "Only the background colour"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. e.g. background: #000 url(\"star.png\") no-repeat center;",
+          "difficulty": "medium",
+          "tags": [
+            "backgrounds",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-color-016",
+          "type": "single_choice",
+          "prompt": "An <img> must fill a 300×300 box without stretching or squashing. Which declaration?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "image-fit: fill;"
+            },
+            {
+              "id": "b",
+              "text": "stretch: none;"
+            },
+            {
+              "id": "c",
+              "text": "background-size: cover;"
+            },
+            {
+              "id": "d",
+              "text": "object-fit: cover;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. object-fit is for <img>/<video>; background-size is for background images.",
+          "difficulty": "hard",
+          "tags": [
+            "images",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "box-model-and-positioning",
+      "title": "Box Model, Display & Positioning",
+      "description": "Extra — the box model, margin/padding shorthand, box-sizing, display, position, z-index, overflow, float.",
+      "questions": [
+        {
+          "id": "w3-box-001",
+          "type": "single_choice",
+          "prompt": "What is the missing layer marked “?” in the CSS box model?",
+          "image": {
+            "src": "images/web/box-model.svg",
+            "alt": "Nested boxes: the outermost dashed area is labelled Margin, then a dark Border, then a light area marked with a question mark, then the Content box in the centre."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Content"
+            },
+            {
+              "id": "b",
+              "text": "Outline"
+            },
+            {
+              "id": "c",
+              "text": "Padding"
+            },
+            {
+              "id": "d",
+              "text": "Margin"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. From inside out: content → padding → border → margin.",
+          "difficulty": "easy",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-002",
+          "type": "single_choice",
+          "prompt": "What is the difference between padding and margin?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are the same"
+            },
+            {
+              "id": "b",
+              "text": "Margin only works on images"
+            },
+            {
+              "id": "c",
+              "text": "Padding is outside; margin is inside"
+            },
+            {
+              "id": "d",
+              "text": "Padding is space INSIDE the border; margin is space OUTSIDE the border"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Background colour shows through padding but not through margin.",
+          "difficulty": "easy",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-003",
+          "type": "single_choice",
+          "prompt": "In `margin: 10px 20px 30px 40px;`, which side gets 40px?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Left"
+            },
+            {
+              "id": "b",
+              "text": "Bottom"
+            },
+            {
+              "id": "c",
+              "text": "Top"
+            },
+            {
+              "id": "d",
+              "text": "Right"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Clockwise from the top: top, right, bottom, left (remember “TRouBLe”).",
+          "difficulty": "medium",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-004",
+          "type": "single_choice",
+          "prompt": "`padding: 10px 20px;` gives…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "10px left and right, 20px top and bottom"
+            },
+            {
+              "id": "b",
+              "text": "10px top, 20px bottom"
+            },
+            {
+              "id": "c",
+              "text": "10px all round, then 20px extra"
+            },
+            {
+              "id": "d",
+              "text": "10px top and bottom, 20px left and right"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Two values = vertical, horizontal.",
+          "difficulty": "medium",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-005",
+          "type": "single_choice",
+          "prompt": "How do you centre a block element with a set width horizontally?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "text-align: center;"
+            },
+            {
+              "id": "b",
+              "text": "align: center;"
+            },
+            {
+              "id": "c",
+              "text": "padding: auto;"
+            },
+            {
+              "id": "d",
+              "text": "margin: 0 auto;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Auto left and right margins share the free space equally. (text-align centres inline content inside a block.)",
+          "difficulty": "medium",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-006",
+          "type": "typed",
+          "prompt": "With the default box-sizing (content-box), what is the total width of this box in px?",
+          "code": ".box {\n  width: 200px;\n  padding: 20px;\n  border: 5px solid black;\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "250",
+            "250px"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Extra — not in your notes. 200 content + 20+20 padding + 5+5 border = 250px. With box-sizing: border-box it would stay 200px.",
+          "difficulty": "hard",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-007",
+          "type": "single_choice",
+          "prompt": "What does `box-sizing: border-box;` change?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It makes boxes inline"
+            },
+            {
+              "id": "b",
+              "text": "It adds a border to every box"
+            },
+            {
+              "id": "c",
+              "text": "It removes margins"
+            },
+            {
+              "id": "d",
+              "text": "width/height now include padding and border, so the box stays the size you set"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Many developers set * { box-sizing: border-box; } so sizes are predictable.",
+          "difficulty": "medium",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-008",
+          "type": "single_choice",
+          "prompt": "What is the difference between `display: none` and `visibility: hidden`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are identical"
+            },
+            {
+              "id": "b",
+              "text": "visibility: hidden removes the space"
+            },
+            {
+              "id": "c",
+              "text": "display: none only works on images"
+            },
+            {
+              "id": "d",
+              "text": "display: none removes the element and its space; visibility: hidden hides it but keeps the space"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Hidden elements still take up room; display:none elements are gone from the layout.",
+          "difficulty": "medium",
+          "tags": [
+            "display",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-009",
+          "type": "single_choice",
+          "prompt": "Which display value lets elements sit side by side in a line BUT still accept width and height?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "block"
+            },
+            {
+              "id": "b",
+              "text": "inline-block"
+            },
+            {
+              "id": "c",
+              "text": "none"
+            },
+            {
+              "id": "d",
+              "text": "inline"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. inline ignores width/height; block takes the full line; inline-block is in between.",
+          "difficulty": "medium",
+          "tags": [
+            "display",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-010",
+          "type": "single_choice",
+          "prompt": "Which position value places an element relative to the browser window, so it stays put when scrolling (e.g. a chat button)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "fixed"
+            },
+            {
+              "id": "b",
+              "text": "relative"
+            },
+            {
+              "id": "c",
+              "text": "absolute"
+            },
+            {
+              "id": "d",
+              "text": "static"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. fixed = relative to the viewport.",
+          "difficulty": "easy",
+          "tags": [
+            "position",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-011",
+          "type": "single_choice",
+          "prompt": "An element with `position: absolute;` is positioned relative to…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The previous sibling"
+            },
+            {
+              "id": "b",
+              "text": "Always the browser window"
+            },
+            {
+              "id": "c",
+              "text": "Its nearest positioned ancestor (one with position other than static)"
+            },
+            {
+              "id": "d",
+              "text": "Its own normal position"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. That's why parents often get position: relative. If no ancestor is positioned, it uses the page.",
+          "difficulty": "hard",
+          "tags": [
+            "position",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-012",
+          "type": "single_choice",
+          "prompt": "What does `position: relative; top: 10px;` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Nothing — top needs absolute"
+            },
+            {
+              "id": "b",
+              "text": "Moves it 10px up"
+            },
+            {
+              "id": "c",
+              "text": "Moves it 10px from the top of the page"
+            },
+            {
+              "id": "d",
+              "text": "Moves the element 10px down from where it would normally be, leaving its original space"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. relative shifts the element visually; other elements act as if it hadn't moved.",
+          "difficulty": "hard",
+          "tags": [
+            "position",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-013",
+          "type": "single_choice",
+          "prompt": "Which position value makes a header scroll normally and then STICK to the top once it reaches it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "static"
+            },
+            {
+              "id": "b",
+              "text": "sticky"
+            },
+            {
+              "id": "c",
+              "text": "fixed"
+            },
+            {
+              "id": "d",
+              "text": "absolute"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. position: sticky; top: 0;",
+          "difficulty": "medium",
+          "tags": [
+            "position",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-014",
+          "type": "single_choice",
+          "prompt": "What does z-index control?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The zoom level"
+            },
+            {
+              "id": "b",
+              "text": "The text direction"
+            },
+            {
+              "id": "c",
+              "text": "The element's size"
+            },
+            {
+              "id": "d",
+              "text": "Which positioned element appears on top when they overlap"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Higher z-index = closer to the viewer. It needs a position (other than static), or a flex/grid item.",
+          "difficulty": "medium",
+          "tags": [
+            "position",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-015",
+          "type": "single_choice",
+          "prompt": "Content is too tall for its box. Which declaration adds a scrollbar only when needed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "overflow: hidden;"
+            },
+            {
+              "id": "b",
+              "text": "overflow: visible;"
+            },
+            {
+              "id": "c",
+              "text": "scroll: yes;"
+            },
+            {
+              "id": "d",
+              "text": "overflow: auto;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. visible (default) spills out, hidden clips, scroll always shows bars, auto shows them when needed.",
+          "difficulty": "medium",
+          "tags": [
+            "display",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-016",
+          "type": "single_choice",
+          "prompt": "What does `float: left;` on an image do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Centres the image"
+            },
+            {
+              "id": "b",
+              "text": "Moves the image to the left and lets text wrap around its right side"
+            },
+            {
+              "id": "c",
+              "text": "Makes the image hover over the page"
+            },
+            {
+              "id": "d",
+              "text": "Hides the image"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Use clear: both on a later element to stop wrapping. Flexbox/grid have replaced floats for layout.",
+          "difficulty": "medium",
+          "tags": [
+            "display",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-017",
+          "type": "single_choice",
+          "prompt": "Which declaration makes a square image into a circle?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "shape: round;"
+            },
+            {
+              "id": "b",
+              "text": "border: circle;"
+            },
+            {
+              "id": "c",
+              "text": "border-radius: 50%;"
+            },
+            {
+              "id": "d",
+              "text": "radius: 100px;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. border-radius rounds corners; 50% on a square gives a circle.",
+          "difficulty": "easy",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-box-018",
+          "type": "single_choice",
+          "prompt": "In `border: 2px solid red;`, which part is the border STYLE?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "border"
+            },
+            {
+              "id": "b",
+              "text": "2px"
+            },
+            {
+              "id": "c",
+              "text": "solid"
+            },
+            {
+              "id": "d",
+              "text": "red"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. Shorthand order: width, style (solid/dashed/dotted/double), colour.",
+          "difficulty": "easy",
+          "tags": [
+            "box-model",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flexbox",
+      "title": "3.4 Flexbox",
+      "description": "Covers a section missing from your notes. display: flex, main/cross axis, justify-content, align-items, wrap, gap and flex item properties.",
+      "questions": [
+        {
+          "id": "w3-flex-001",
+          "type": "typed",
+          "prompt": "Which declaration turns an element into a flex container?",
+          "image": null,
+          "acceptedAnswers": [
+            "display: flex",
+            "display: flex;",
+            "display:flex",
+            "display:flex;"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "property: value"
+          },
+          "explanation": "Covers a section missing from your notes. display: flex on the PARENT; its direct children become flex items.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-002",
+          "type": "true_false",
+          "prompt": "`display: flex` is set on the container, and it arranges the container's direct children.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Covers a section missing from your notes. Grandchildren are not affected unless their own parent is also a flex container.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-003",
+          "type": "true_false",
+          "prompt": "Flexbox is a one-dimensional layout system (it lays items out in a row OR a column).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Covers a section missing from your notes. Grid is two-dimensional (rows AND columns).",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-004",
+          "type": "single_choice",
+          "prompt": "What is the default flex-direction?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "row"
+            },
+            {
+              "id": "b",
+              "text": "row-reverse"
+            },
+            {
+              "id": "c",
+              "text": "wrap"
+            },
+            {
+              "id": "d",
+              "text": "column"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. Items line up left to right in a row by default.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-005",
+          "type": "single_choice",
+          "prompt": "This container uses flex-direction: column. Which arrow shows the MAIN axis?",
+          "image": {
+            "src": "images/web/flex-axes.svg",
+            "alt": "A flex container with three items stacked vertically and the label flex-direction: column. Arrow A points downwards beside the items; arrow B points to the right underneath."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Both arrows"
+            },
+            {
+              "id": "b",
+              "text": "Neither"
+            },
+            {
+              "id": "c",
+              "text": "Arrow A (vertical, the direction items flow)"
+            },
+            {
+              "id": "d",
+              "text": "Arrow B (horizontal)"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. The main axis follows flex-direction. With column it's vertical; the cross axis is horizontal.",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-006",
+          "type": "single_choice",
+          "prompt": "justify-content aligns flex items along the…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Cross axis"
+            },
+            {
+              "id": "b",
+              "text": "Main axis"
+            },
+            {
+              "id": "c",
+              "text": "Page edge only"
+            },
+            {
+              "id": "d",
+              "text": "Z axis"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. justify-content → main axis; align-items → cross axis.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-007",
+          "type": "single_choice",
+          "prompt": "Which diagram shows `justify-content: space-between`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "image": {
+                "src": "images/web/flex-between.svg",
+                "alt": "Three boxes: first at the far left, last at the far right, one in the middle; no space at the edges"
+              }
+            },
+            {
+              "id": "b",
+              "image": {
+                "src": "images/web/flex-center.svg",
+                "alt": "Three boxes packed together in the middle of the container"
+              }
+            },
+            {
+              "id": "c",
+              "image": {
+                "src": "images/web/flex-around.svg",
+                "alt": "Three boxes evenly spread with a half-size gap at both edges"
+              }
+            },
+            {
+              "id": "d",
+              "image": {
+                "src": "images/web/flex-start.svg",
+                "alt": "Three boxes packed together at the left of the container"
+              }
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. space-between: first item at the start, last at the end, equal gaps in between, no space at the edges.",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-008",
+          "type": "single_choice",
+          "prompt": "Which justify-content value produces this layout?",
+          "image": {
+            "src": "images/web/flex-around.svg",
+            "alt": "Three boxes evenly spread with a half-size gap at both edges"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "flex-end"
+            },
+            {
+              "id": "b",
+              "text": "center"
+            },
+            {
+              "id": "c",
+              "text": "space-between"
+            },
+            {
+              "id": "d",
+              "text": "space-around"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. space-around gives every item equal space on both sides, so the edge gaps are half the gaps between items. (space-evenly makes ALL gaps equal.)",
+          "difficulty": "hard",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-009",
+          "type": "single_choice",
+          "prompt": "Which justify-content value produces this layout?",
+          "image": {
+            "src": "images/web/flex-center.svg",
+            "alt": "Three boxes packed together in the middle of the container"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "space-around"
+            },
+            {
+              "id": "b",
+              "text": "flex-start"
+            },
+            {
+              "id": "c",
+              "text": "center"
+            },
+            {
+              "id": "d",
+              "text": "stretch"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. All items packed together in the middle.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-010",
+          "type": "single_choice",
+          "prompt": "What is the default value of justify-content?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "stretch"
+            },
+            {
+              "id": "b",
+              "text": "flex-start"
+            },
+            {
+              "id": "c",
+              "text": "space-between"
+            },
+            {
+              "id": "d",
+              "text": "center"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. Items pack at the start of the main axis. (Technically the initial value is `normal`, which behaves like flex-start in a flex container.)",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-011",
+          "type": "single_choice",
+          "prompt": "Which three declarations perfectly centre a child both horizontally and vertically?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "display: flex; justify-content: center; align-items: center;"
+            },
+            {
+              "id": "b",
+              "text": "display: flex; align-content: middle; justify-items: center;"
+            },
+            {
+              "id": "c",
+              "text": "position: center; margin: middle;"
+            },
+            {
+              "id": "d",
+              "text": "display: block; text-align: center; vertical-align: middle;"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. justify-content centres on the main axis (horizontal in a row); align-items centres on the cross axis.",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-012",
+          "type": "single_choice",
+          "prompt": "What is the default value of align-items?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "center"
+            },
+            {
+              "id": "b",
+              "text": "flex-start"
+            },
+            {
+              "id": "c",
+              "text": "stretch"
+            },
+            {
+              "id": "d",
+              "text": "baseline"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Items stretch to fill the container's cross size unless they have a fixed height. (The initial value is `normal`, which behaves like stretch for flex items.)",
+          "difficulty": "hard",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-013",
+          "type": "single_choice",
+          "prompt": "Items squeeze onto one line and overflow. Which declaration lets them move onto new lines?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "flex-direction: wrap;"
+            },
+            {
+              "id": "b",
+              "text": "flex-wrap: wrap;"
+            },
+            {
+              "id": "c",
+              "text": "overflow: wrap;"
+            },
+            {
+              "id": "d",
+              "text": "white-space: wrap;"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. The default is flex-wrap: nowrap.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-014",
+          "type": "single_choice",
+          "prompt": "Which property adds a consistent space BETWEEN flex items (but not around the outside)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "padding"
+            },
+            {
+              "id": "b",
+              "text": "spacing"
+            },
+            {
+              "id": "c",
+              "text": "gap"
+            },
+            {
+              "id": "d",
+              "text": "margin"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. gap: 16px; works in flexbox and grid.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-015",
+          "type": "single_choice",
+          "prompt": "Three items each have `flex: 1;`. What happens?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They grow to share the available space equally"
+            },
+            {
+              "id": "b",
+              "text": "They stack vertically"
+            },
+            {
+              "id": "c",
+              "text": "They shrink to 1px"
+            },
+            {
+              "id": "d",
+              "text": "Only the first item grows"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. flex: 1 means grow 1, shrink 1, basis 0 → equal shares.",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-016",
+          "type": "single_choice",
+          "prompt": "The `flex` shorthand `flex: 2 1 200px;` sets which three properties, in order?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "flex-basis, flex-grow, flex-shrink"
+            },
+            {
+              "id": "b",
+              "text": "flex-grow, flex-shrink, flex-basis"
+            },
+            {
+              "id": "c",
+              "text": "width, height, margin"
+            },
+            {
+              "id": "d",
+              "text": "order, grow, wrap"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. grow 2, shrink 1, starting size 200px.",
+          "difficulty": "hard",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-017",
+          "type": "single_choice",
+          "prompt": "What does flex-basis set?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "How much the item grows"
+            },
+            {
+              "id": "b",
+              "text": "The gap between items"
+            },
+            {
+              "id": "c",
+              "text": "The item's starting size before free space is shared out"
+            },
+            {
+              "id": "d",
+              "text": "The item's order"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Think of it as the item's ideal width (in a row).",
+          "difficulty": "hard",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-018",
+          "type": "single_choice",
+          "prompt": "Which property moves one flex item to a different visual position without changing the HTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "flex-direction"
+            },
+            {
+              "id": "b",
+              "text": "position"
+            },
+            {
+              "id": "c",
+              "text": "z-index"
+            },
+            {
+              "id": "d",
+              "text": "order"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Default order is 0; lower numbers come first. (Screen readers still follow the HTML order.)",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-019",
+          "type": "single_choice",
+          "prompt": "Which property overrides align-items for ONE particular item?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "self-align"
+            },
+            {
+              "id": "b",
+              "text": "align-self"
+            },
+            {
+              "id": "c",
+              "text": "align-content"
+            },
+            {
+              "id": "d",
+              "text": "justify-self"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. e.g. .logo { align-self: flex-start; }",
+          "difficulty": "medium",
+          "tags": [
+            "flexbox"
+          ]
+        },
+        {
+          "id": "w3-flex-020",
+          "type": "single_choice",
+          "prompt": "What does `flex-direction: row-reverse;` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Hides every other item"
+            },
+            {
+              "id": "b",
+              "text": "Stacks items bottom to top"
+            },
+            {
+              "id": "c",
+              "text": "Lays items in a row from right to left"
+            },
+            {
+              "id": "d",
+              "text": "Wraps items in reverse"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. column-reverse stacks bottom to top.",
+          "difficulty": "easy",
+          "tags": [
+            "flexbox"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-grid",
+      "title": "3.4 CSS Grid",
+      "description": "Covers a section missing from your notes. display: grid, columns/rows, fr, repeat(), minmax(), gap, spanning, line numbers and areas.",
+      "questions": [
+        {
+          "id": "w3-grid-001",
+          "type": "typed",
+          "prompt": "Which declaration turns an element into a grid container?",
+          "image": null,
+          "acceptedAnswers": [
+            "display: grid",
+            "display: grid;",
+            "display:grid",
+            "display:grid;"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "property: value"
+          },
+          "explanation": "Covers a section missing from your notes. display: grid on the parent.",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-002",
+          "type": "single_choice",
+          "prompt": "How is Grid different from Flexbox?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "There is no difference"
+            },
+            {
+              "id": "b",
+              "text": "Flexbox is newer and replaces Grid"
+            },
+            {
+              "id": "c",
+              "text": "Grid is two-dimensional (rows and columns); Flexbox is one-dimensional (a row or a column)"
+            },
+            {
+              "id": "d",
+              "text": "Grid only works on images"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Use Grid for page layouts and card grids; Flexbox for a row of buttons or a navbar.",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-003",
+          "type": "single_choice",
+          "prompt": "What does `grid-template-columns: 1fr 1fr 1fr;` create?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "One column 3× as wide"
+            },
+            {
+              "id": "b",
+              "text": "A 1px grid"
+            },
+            {
+              "id": "c",
+              "text": "Three rows"
+            },
+            {
+              "id": "d",
+              "text": "Three equal-width columns"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. fr = a fraction of the free space.",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-004",
+          "type": "single_choice",
+          "prompt": "What does the fr unit mean?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Frame"
+            },
+            {
+              "id": "b",
+              "text": "A fixed 1 rem"
+            },
+            {
+              "id": "c",
+              "text": "Font ratio"
+            },
+            {
+              "id": "d",
+              "text": "A fraction of the available free space"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. 1fr 2fr → the second column is twice as wide.",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-005",
+          "type": "single_choice",
+          "prompt": "`grid-template-columns: repeat(4, 1fr);` is the same as…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "4fr"
+            },
+            {
+              "id": "b",
+              "text": "4 rows of 1fr"
+            },
+            {
+              "id": "c",
+              "text": "1fr 4fr"
+            },
+            {
+              "id": "d",
+              "text": "1fr 1fr 1fr 1fr"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. repeat(count, size) saves typing.",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-006",
+          "type": "single_choice",
+          "prompt": "What does `grid-template-columns: 250px 1fr;` create?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A fixed 250px column (e.g. sidebar) and a second column that takes the rest"
+            },
+            {
+              "id": "b",
+              "text": "Two equal columns"
+            },
+            {
+              "id": "c",
+              "text": "A 250px row"
+            },
+            {
+              "id": "d",
+              "text": "Two columns of 250px"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. Mixing fixed and flexible sizes is very common.",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-007",
+          "type": "single_choice",
+          "prompt": "Which grid-column value makes Item 1 span the first two columns, as shown?",
+          "image": {
+            "src": "images/web/grid-span.svg",
+            "alt": "A three-column grid with lines numbered 1 to 4 across the top. Item 1 covers columns one and two (from line 1 to line 3); Item 2 is in column three; Items 3, 4 and 5 fill the second row."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "grid-column: 1 / 2;"
+            },
+            {
+              "id": "b",
+              "text": "grid-row: 1 / 3;"
+            },
+            {
+              "id": "c",
+              "text": "grid-column: 2 / 3;"
+            },
+            {
+              "id": "d",
+              "text": "grid-column: 1 / 3;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Grid LINES are numbered from 1. Item 1 starts at line 1 and ends at line 3. `grid-column: span 2;` also works.",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-008",
+          "type": "typed",
+          "prompt": "A grid has 3 columns. How many vertical grid LINES does it have?",
+          "image": null,
+          "acceptedAnswers": [
+            "4",
+            "four"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Covers a section missing from your notes. n columns have n + 1 lines.",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-009",
+          "type": "single_choice",
+          "prompt": "What does `grid-row: span 2;` do to an item?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Moves it to row 2"
+            },
+            {
+              "id": "b",
+              "text": "Hides 2 rows"
+            },
+            {
+              "id": "c",
+              "text": "Makes it 2 columns wide"
+            },
+            {
+              "id": "d",
+              "text": "Makes it 2 rows tall"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. span counts tracks instead of naming lines.",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-010",
+          "type": "single_choice",
+          "prompt": "Which property sets the space between grid rows and columns?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "grid-space"
+            },
+            {
+              "id": "b",
+              "text": "padding"
+            },
+            {
+              "id": "c",
+              "text": "gap"
+            },
+            {
+              "id": "d",
+              "text": "margin-grid"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. gap (or row-gap / column-gap).",
+          "difficulty": "easy",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-011",
+          "type": "single_choice",
+          "prompt": "What is `minmax(200px, 1fr)` for?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A track at most 200px"
+            },
+            {
+              "id": "b",
+              "text": "A track that is at least 200px but can grow to 1fr"
+            },
+            {
+              "id": "c",
+              "text": "The space between two columns"
+            },
+            {
+              "id": "d",
+              "text": "A track exactly 200px"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. It sets minimum and maximum sizes.",
+          "difficulty": "hard",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-012",
+          "type": "single_choice",
+          "prompt": "What does this create?",
+          "code": ".cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n  gap: 16px;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A fixed 3-column layout"
+            },
+            {
+              "id": "b",
+              "text": "As many 200px-minimum columns as fit, automatically wrapping on smaller screens (responsive without media queries)"
+            },
+            {
+              "id": "c",
+              "text": "One 200px column"
+            },
+            {
+              "id": "d",
+              "text": "Exactly 200 columns"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. auto-fit + minmax is a popular responsive card grid.",
+          "difficulty": "hard",
+          "tags": [
+            "grid",
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-grid-013",
+          "type": "single_choice",
+          "prompt": "How does this layout work?",
+          "code": ".page {\n  display: grid;\n  grid-template-areas:\n    \"header header\"\n    \"sidebar main\"\n    \"footer footer\";\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It sets fonts for each area"
+            },
+            {
+              "id": "b",
+              "text": "It names areas so each element can be placed with grid-area (header on top, sidebar + main, footer at the bottom)"
+            },
+            {
+              "id": "c",
+              "text": "It is invalid CSS"
+            },
+            {
+              "id": "d",
+              "text": "It creates text labels on the page"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. Then: header { grid-area: header; } etc. A dot (.) leaves a cell empty.",
+          "difficulty": "hard",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-014",
+          "type": "single_choice",
+          "prompt": "Which single declaration centres every item inside its grid cell, both ways?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "grid-center: true;"
+            },
+            {
+              "id": "b",
+              "text": "align: center;"
+            },
+            {
+              "id": "c",
+              "text": "place-items: center;"
+            },
+            {
+              "id": "d",
+              "text": "text-align: center;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. place-items is shorthand for align-items + justify-items.",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        },
+        {
+          "id": "w3-grid-015",
+          "type": "single_choice",
+          "prompt": "You need a whole-page layout with header, sidebar, content and footer. Which is usually the better fit?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS Grid"
+            },
+            {
+              "id": "b",
+              "text": "Floats"
+            },
+            {
+              "id": "c",
+              "text": "Flexbox"
+            },
+            {
+              "id": "d",
+              "text": "Tables"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. Grid handles rows and columns together. Flexbox is great inside each part (e.g. the nav links).",
+          "difficulty": "medium",
+          "tags": [
+            "grid"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "responsive-design",
+      "title": "3.5 Responsive Design & Media Queries",
+      "description": "Covers a section missing from your notes. Viewport, media queries, breakpoints, mobile-first, fluid units and responsive images.",
+      "questions": [
+        {
+          "id": "w3-resp-001",
+          "type": "single_choice",
+          "prompt": "What is responsive web design?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Making pages load faster"
+            },
+            {
+              "id": "b",
+              "text": "Designing pages that adapt their layout to different screen sizes and devices"
+            },
+            {
+              "id": "c",
+              "text": "Pages that reply to user messages"
+            },
+            {
+              "id": "d",
+              "text": "Using only fixed pixel widths"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. One site that works on phones, tablets and desktops.",
+          "difficulty": "easy",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-002",
+          "type": "single_choice",
+          "prompt": "What happens on a phone if the page has NO viewport meta tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The page won't load"
+            },
+            {
+              "id": "b",
+              "text": "CSS stops working"
+            },
+            {
+              "id": "c",
+              "text": "Nothing changes"
+            },
+            {
+              "id": "d",
+              "text": "The phone pretends to be a wide desktop screen (~980px) and shrinks the page, so text looks tiny"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Always include <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.",
+          "difficulty": "medium",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-003",
+          "type": "typed",
+          "prompt": "Which CSS at-rule starts a media query?",
+          "image": null,
+          "acceptedAnswers": [
+            "@media"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "@..."
+          },
+          "explanation": "Covers a section missing from your notes. @media (max-width: 600px) { … }",
+          "difficulty": "easy",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-004",
+          "type": "single_choice",
+          "prompt": "When do the styles inside this media query apply?",
+          "code": "@media (max-width: 600px) {\n  nav { display: none; }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "When the viewport is wider than 600px"
+            },
+            {
+              "id": "b",
+              "text": "When the viewport is 600px wide or narrower"
+            },
+            {
+              "id": "c",
+              "text": "Always"
+            },
+            {
+              "id": "d",
+              "text": "Only when printing"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. max-width = “up to”. min-width = “from this width and up”.",
+          "difficulty": "easy",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-005",
+          "type": "typed",
+          "prompt": "With this CSS, how many columns does .grid have on a 500px-wide phone?",
+          "code": ".grid {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n\n@media (min-width: 768px) {\n  .grid { grid-template-columns: 1fr 1fr; }\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "1",
+            "one"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Covers a section missing from your notes. 500px is below 768px, so the media query doesn't apply: 1 column.",
+          "difficulty": "medium",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-006",
+          "type": "typed",
+          "prompt": "With the same CSS, how many columns on a 1024px-wide laptop?",
+          "code": ".grid {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n\n@media (min-width: 768px) {\n  .grid { grid-template-columns: 1fr 1fr; }\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "2",
+            "two"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Covers a section missing from your notes. 1024px ≥ 768px, so the min-width query applies: 2 columns.",
+          "difficulty": "medium",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-007",
+          "type": "single_choice",
+          "prompt": "The CSS above is an example of which approach?",
+          "code": ".grid {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n\n@media (min-width: 768px) {\n  .grid { grid-template-columns: 1fr 1fr; }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Desktop-first: base styles for desktops, max-width queries for phones"
+            },
+            {
+              "id": "b",
+              "text": "Mobile-first: base styles for small screens, min-width queries add features for bigger screens"
+            },
+            {
+              "id": "c",
+              "text": "Print styling"
+            },
+            {
+              "id": "d",
+              "text": "Fixed layout"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. Mobile-first uses min-width; desktop-first uses max-width.",
+          "difficulty": "medium",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-008",
+          "type": "single_choice",
+          "prompt": "What is a breakpoint?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A screen width at which the layout changes"
+            },
+            {
+              "id": "b",
+              "text": "A pause in a CSS animation"
+            },
+            {
+              "id": "c",
+              "text": "A bug in the CSS"
+            },
+            {
+              "id": "d",
+              "text": "Where a line of text wraps"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. e.g. 600px, 768px, 1024px — chosen where your design starts to look cramped.",
+          "difficulty": "easy",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-009",
+          "type": "multiple_choice",
+          "prompt": "Which are real media features you can test in a media query? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "prefers-color-scheme: dark"
+            },
+            {
+              "id": "b",
+              "text": "battery-level: low"
+            },
+            {
+              "id": "c",
+              "text": "orientation: landscape"
+            },
+            {
+              "id": "d",
+              "text": "min-width: 768px"
+            },
+            {
+              "id": "e",
+              "text": "prefers-reduced-motion: reduce"
+            },
+            {
+              "id": "f",
+              "text": "user-age: 18"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Covers a section missing from your notes. Media features describe the device or user settings.",
+          "difficulty": "medium",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-010",
+          "type": "single_choice",
+          "prompt": "Which media query applies only when the page is PRINTED?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "@media (printer: yes) { … }"
+            },
+            {
+              "id": "b",
+              "text": "@media print { … }"
+            },
+            {
+              "id": "c",
+              "text": "@print { … }"
+            },
+            {
+              "id": "d",
+              "text": "@media paper { … }"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. Media types: screen, print, all. You can hide the nav and ads when printing.",
+          "difficulty": "medium",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-011",
+          "type": "single_choice",
+          "prompt": "How do you apply styles only between 600px and 900px wide?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "@media (600px - 900px) { … }"
+            },
+            {
+              "id": "b",
+              "text": "@media between 600 900 { … }"
+            },
+            {
+              "id": "c",
+              "text": "@media (min-width: 600px) and (max-width: 900px) { … }"
+            },
+            {
+              "id": "d",
+              "text": "@media (width: 600px, 900px) { … }"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Join conditions with and.",
+          "difficulty": "medium",
+          "tags": [
+            "media-queries"
+          ]
+        },
+        {
+          "id": "w3-resp-012",
+          "type": "single_choice",
+          "prompt": "What is 1vw?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "1 pixel"
+            },
+            {
+              "id": "b",
+              "text": "1% of the parent's width"
+            },
+            {
+              "id": "c",
+              "text": "The root font size"
+            },
+            {
+              "id": "d",
+              "text": "1% of the viewport's width"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. vw/vh are viewport units: 100vh = full screen height.",
+          "difficulty": "easy",
+          "tags": [
+            "units"
+          ]
+        },
+        {
+          "id": "w3-resp-013",
+          "type": "typed",
+          "prompt": "How wide is an element with width: 50vw on a 400px-wide phone? (in px)",
+          "image": null,
+          "acceptedAnswers": [
+            "200",
+            "200px"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Covers a section missing from your notes. 50% of 400px = 200px.",
+          "difficulty": "medium",
+          "tags": [
+            "units"
+          ]
+        },
+        {
+          "id": "w3-resp-014",
+          "type": "single_choice",
+          "prompt": "Which CSS makes images shrink to fit small screens without distortion?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "img { width: 1000px; }"
+            },
+            {
+              "id": "b",
+              "text": "img { height: 100%; width: 100%; }"
+            },
+            {
+              "id": "c",
+              "text": "img { zoom: fit; }"
+            },
+            {
+              "id": "d",
+              "text": "img { max-width: 100%; height: auto; }"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. max-width stops overflow; height: auto keeps the proportions.",
+          "difficulty": "easy",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-015",
+          "type": "single_choice",
+          "prompt": "What do the srcset attribute and the <picture> element help with?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Adding image captions"
+            },
+            {
+              "id": "b",
+              "text": "Making images clickable"
+            },
+            {
+              "id": "c",
+              "text": "Serving different image files for different screen sizes/resolutions"
+            },
+            {
+              "id": "d",
+              "text": "Animating images"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Phones can download a smaller image, saving data.",
+          "difficulty": "hard",
+          "tags": [
+            "responsive"
+          ]
+        },
+        {
+          "id": "w3-resp-016",
+          "type": "single_choice",
+          "prompt": "What does `font-size: clamp(1rem, 4vw, 2rem);` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes text 1rem on all screens"
+            },
+            {
+              "id": "b",
+              "text": "Fixes text at 4vw"
+            },
+            {
+              "id": "c",
+              "text": "Text scales with the screen width but never goes below 1rem or above 2rem"
+            },
+            {
+              "id": "d",
+              "text": "Clamps the element to the top of the page"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. clamp(min, preferred, max) gives fluid typography.",
+          "difficulty": "hard",
+          "tags": [
+            "units"
+          ]
+        },
+        {
+          "id": "w3-resp-017",
+          "type": "single_choice",
+          "prompt": "Why are relative units (%, em, rem, vw) preferred over fixed px for responsive layouts?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They load faster"
+            },
+            {
+              "id": "b",
+              "text": "They make code shorter"
+            },
+            {
+              "id": "c",
+              "text": "Browsers don't support px on phones"
+            },
+            {
+              "id": "d",
+              "text": "They scale with the screen or user's font settings"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Fluid sizes adapt; fixed widths cause horizontal scrolling on small screens.",
+          "difficulty": "easy",
+          "tags": [
+            "units"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-preprocessors",
+      "title": "3.6 CSS Preprocessors (Sass / LESS)",
+      "description": "Covers a section missing from your notes. What a preprocessor is, Sass vs LESS, variables, nesting, mixins, partials, extend, and native CSS variables.",
+      "questions": [
+        {
+          "id": "w3-pre-001",
+          "type": "single_choice",
+          "prompt": "What is a CSS preprocessor?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A tool that converts HTML to CSS"
+            },
+            {
+              "id": "b",
+              "text": "A CSS reset file"
+            },
+            {
+              "id": "c",
+              "text": "A language that extends CSS with features like variables and nesting, then compiles into normal CSS"
+            },
+            {
+              "id": "d",
+              "text": "A browser plug-in that reads CSS faster"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. You write .scss/.less, a compiler turns it into .css that browsers understand.",
+          "difficulty": "easy",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-002",
+          "type": "true_false",
+          "prompt": "Browsers can read .scss and .less files directly, with no compiling.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Covers a section missing from your notes. They must be compiled to plain CSS first (e.g. with the sass or lessc command, or a build tool).",
+          "difficulty": "easy",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-003",
+          "type": "single_choice",
+          "prompt": "Your notes say “CASS/LESS”. The well-known preprocessor is actually called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Cass"
+            },
+            {
+              "id": "b",
+              "text": "Kass"
+            },
+            {
+              "id": "c",
+              "text": "SCSS-Pro"
+            },
+            {
+              "id": "d",
+              "text": "Sass"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Sass = Syntactically Awesome Style Sheets. CASS is most likely a typo for Sass.",
+          "difficulty": "easy",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-004",
+          "type": "typed",
+          "prompt": "What does Sass stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "syntactically awesome style sheets",
+            "syntactically awesome stylesheets"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "Covers a section missing from your notes. Syntactically Awesome Style Sheets.",
+          "difficulty": "hard",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-005",
+          "type": "typed",
+          "prompt": "What does LESS stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "leaner style sheets",
+            "leaner stylesheets",
+            "leaner css"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "Covers a section missing from your notes. LESS = Leaner Style Sheets.",
+          "difficulty": "hard",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-006",
+          "type": "multiple_choice",
+          "prompt": "Which features do preprocessors like Sass and LESS add? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Replacing HTML"
+            },
+            {
+              "id": "b",
+              "text": "Nesting"
+            },
+            {
+              "id": "c",
+              "text": "Variables"
+            },
+            {
+              "id": "d",
+              "text": "Running in the browser without compiling"
+            },
+            {
+              "id": "e",
+              "text": "Maths operations (e.g. $gap * 2)"
+            },
+            {
+              "id": "f",
+              "text": "Mixins (reusable groups of declarations)"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "e",
+            "f"
+          ],
+          "explanation": "Covers a section missing from your notes. Also partials/imports, inheritance (@extend) and built-in functions.",
+          "difficulty": "medium",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-007",
+          "type": "single_choice",
+          "prompt": "In Sass (SCSS), how do you declare a variable?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "var primary = #3099d3;"
+            },
+            {
+              "id": "b",
+              "text": "@primary: #3099d3;"
+            },
+            {
+              "id": "c",
+              "text": "$primary: #3099d3;"
+            },
+            {
+              "id": "d",
+              "text": "--primary: #3099d3;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Sass uses $. LESS uses @. Native CSS uses --name.",
+          "difficulty": "easy",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-008",
+          "type": "single_choice",
+          "prompt": "In LESS, variables start with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "@"
+            },
+            {
+              "id": "b",
+              "text": "$"
+            },
+            {
+              "id": "c",
+              "text": "--"
+            },
+            {
+              "id": "d",
+              "text": "#"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. @primary: #3099d3; color: @primary;",
+          "difficulty": "easy",
+          "tags": [
+            "less"
+          ]
+        },
+        {
+          "id": "w3-pre-009",
+          "type": "single_choice",
+          "prompt": "What CSS does this SCSS compile to?",
+          "code": "nav {\n  ul { margin: 0; }\n  li { display: inline-block; }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "nav ul { margin: 0; }  nav li { display: inline-block; }"
+            },
+            {
+              "id": "b",
+              "text": "nav { ul { margin: 0; } }"
+            },
+            {
+              "id": "c",
+              "text": "ul nav { margin: 0; }"
+            },
+            {
+              "id": "d",
+              "text": "nav, ul, li { margin: 0; }"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. Nesting mirrors the HTML structure and is turned into descendant selectors.",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-010",
+          "type": "single_choice",
+          "prompt": "In SCSS, what does & mean here?",
+          "code": "a {\n  color: blue;\n  &:hover { color: red; }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It's an error"
+            },
+            {
+              "id": "b",
+              "text": "It refers to the parent selector, so this compiles to a:hover"
+            },
+            {
+              "id": "c",
+              "text": "It means AND between two selectors"
+            },
+            {
+              "id": "d",
+              "text": "It inserts a space"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. &:hover, &.active, &::before all attach to the parent.",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-011",
+          "type": "single_choice",
+          "prompt": "In Sass, how do you define and then use a mixin?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "$mixin and $call"
+            },
+            {
+              "id": "b",
+              "text": "@mixin to define it, @include to use it"
+            },
+            {
+              "id": "c",
+              "text": "@define and @use"
+            },
+            {
+              "id": "d",
+              "text": ".mixin() and @apply"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. @mixin rounded($r) { border-radius: $r; }  .card { @include rounded(8px); }",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-012",
+          "type": "single_choice",
+          "prompt": "How is a mixin used in LESS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "@mixin rounded;"
+            },
+            {
+              "id": "b",
+              "text": "use(rounded);"
+            },
+            {
+              "id": "c",
+              "text": "@include rounded;"
+            },
+            {
+              "id": "d",
+              "text": "By calling a class like a function: .rounded();"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. In LESS any class can be mixed in: .card { .rounded(); }",
+          "difficulty": "hard",
+          "tags": [
+            "less"
+          ]
+        },
+        {
+          "id": "w3-pre-013",
+          "type": "single_choice",
+          "prompt": "Why does a Sass partial's file name start with an underscore, e.g. _variables.scss?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It tells Sass not to compile it into its own CSS file; it's only imported into other files"
+            },
+            {
+              "id": "b",
+              "text": "It hides comments"
+            },
+            {
+              "id": "c",
+              "text": "It is required for all .scss files"
+            },
+            {
+              "id": "d",
+              "text": "It makes the file private on the web server"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Covers a section missing from your notes. Partials are pulled in with @use (modern) or @import (older).",
+          "difficulty": "hard",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-014",
+          "type": "single_choice",
+          "prompt": "What does @extend do in Sass?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the page wider"
+            },
+            {
+              "id": "b",
+              "text": "Lets one selector inherit all the styles of another"
+            },
+            {
+              "id": "c",
+              "text": "Creates a variable"
+            },
+            {
+              "id": "d",
+              "text": "Imports a file"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. .error { @extend .message; color: red; }",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-015",
+          "type": "single_choice",
+          "prompt": "What is the difference between .scss and .sass files?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ".sass is for LESS"
+            },
+            {
+              "id": "b",
+              "text": ".scss uses CSS-like braces and semicolons; .sass uses indentation instead"
+            },
+            {
+              "id": "c",
+              "text": ".scss can't use variables"
+            },
+            {
+              "id": "d",
+              "text": "They are compiled by different browsers"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Covers a section missing from your notes. SCSS (Sassy CSS) is the more popular syntax because any valid CSS is valid SCSS.",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-016",
+          "type": "single_choice",
+          "prompt": "What does `darken($primary, 10%)` do in Sass?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the page 10% darker"
+            },
+            {
+              "id": "b",
+              "text": "Sets opacity to 10%"
+            },
+            {
+              "id": "c",
+              "text": "Nothing — it's not valid"
+            },
+            {
+              "id": "d",
+              "text": "Returns a version of the colour 10% darker"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Preprocessors have built-in colour functions (darken, lighten, mix…). LESS has darken() too. Newer Sass versions prefer color.adjust().",
+          "difficulty": "medium",
+          "tags": [
+            "sass"
+          ]
+        },
+        {
+          "id": "w3-pre-017",
+          "type": "single_choice",
+          "prompt": "Native CSS also has variables (custom properties). How do you declare and use one?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "var main-color = navy;"
+            },
+            {
+              "id": "b",
+              "text": "$main-color: navy;  then  color: $main-color;"
+            },
+            {
+              "id": "c",
+              "text": "--main-color: navy;  then  color: var(--main-color);"
+            },
+            {
+              "id": "d",
+              "text": "@main-color: navy;  then  color: @main-color;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Covers a section missing from your notes. Custom properties work in the browser at runtime (no compiling) and can change with media queries or JavaScript.",
+          "difficulty": "medium",
+          "tags": [
+            "preprocessors"
+          ]
+        },
+        {
+          "id": "w3-pre-018",
+          "type": "multiple_choice",
+          "prompt": "Why do developers use preprocessors? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Organise styles into smaller files"
+            },
+            {
+              "id": "b",
+              "text": "Make large style sheets easier to maintain"
+            },
+            {
+              "id": "c",
+              "text": "Because browsers require them"
+            },
+            {
+              "id": "d",
+              "text": "Reuse values and code (less repetition)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "Covers a section missing from your notes. Browsers only ever receive the compiled plain CSS.",
+          "difficulty": "medium",
+          "tags": [
+            "preprocessors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transitions-and-more",
+      "title": "More CSS: Transitions, Transforms & Handy Properties",
+      "description": "Extra — transition, transform, animation, box-shadow, cursor, list-style, border-collapse and more.",
+      "questions": [
+        {
+          "id": "w3-more-001",
+          "type": "single_choice",
+          "prompt": "What does this CSS do when you hover the button?",
+          "code": "button { background: teal; transition: background-color 0.3s ease; }\nbutton:hover { background: navy; }",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Nothing; transition only works with JavaScript"
+            },
+            {
+              "id": "b",
+              "text": "The button moves 0.3px"
+            },
+            {
+              "id": "c",
+              "text": "The background changes to navy smoothly over 0.3 seconds"
+            },
+            {
+              "id": "d",
+              "text": "The colour changes instantly"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. transition: property duration timing-function. It animates between the two values.",
+          "difficulty": "medium",
+          "tags": [
+            "effects",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-002",
+          "type": "multiple_choice",
+          "prompt": "Which are valid transform functions? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "translate(10px, 20px)"
+            },
+            {
+              "id": "b",
+              "text": "spin(45deg)"
+            },
+            {
+              "id": "c",
+              "text": "rotate(45deg)"
+            },
+            {
+              "id": "d",
+              "text": "grow(2)"
+            },
+            {
+              "id": "e",
+              "text": "scale(1.2)"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "Extra — not in your notes. transform can rotate, scale, translate (move) and skew an element.",
+          "difficulty": "medium",
+          "tags": [
+            "effects",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-003",
+          "type": "single_choice",
+          "prompt": "Which pair creates a CSS animation that can loop on its own?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "@media plus transform"
+            },
+            {
+              "id": "b",
+              "text": "@import plus opacity"
+            },
+            {
+              "id": "c",
+              "text": "@keyframes plus the animation property"
+            },
+            {
+              "id": "d",
+              "text": "transition plus :hover"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. @keyframes spin { from {…} to {…} }  .loader { animation: spin 1s linear infinite; }",
+          "difficulty": "medium",
+          "tags": [
+            "effects",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-004",
+          "type": "single_choice",
+          "prompt": "In `box-shadow: 0 4px 10px rgba(0,0,0,0.2);`, what is 10px?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Blur radius"
+            },
+            {
+              "id": "b",
+              "text": "Border width"
+            },
+            {
+              "id": "c",
+              "text": "Vertical offset"
+            },
+            {
+              "id": "d",
+              "text": "Horizontal offset"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. x-offset, y-offset, blur, (spread), colour.",
+          "difficulty": "hard",
+          "tags": [
+            "effects",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-005",
+          "type": "single_choice",
+          "prompt": "Which declaration shows a hand pointer when hovering over a clickable element?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "mouse: click;"
+            },
+            {
+              "id": "b",
+              "text": "pointer: hand;"
+            },
+            {
+              "id": "c",
+              "text": "cursor: pointer;"
+            },
+            {
+              "id": "d",
+              "text": "cursor: hand-click;"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. cursor: pointer;",
+          "difficulty": "easy",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-006",
+          "type": "single_choice",
+          "prompt": "How do you remove the bullets from a <ul>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "list-style-type: none;"
+            },
+            {
+              "id": "b",
+              "text": "display: no-bullets;"
+            },
+            {
+              "id": "c",
+              "text": "text-decoration: none;"
+            },
+            {
+              "id": "d",
+              "text": "bullets: none;"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Also try list-style-type: square | circle | decimal | upper-roman.",
+          "difficulty": "easy",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-007",
+          "type": "single_choice",
+          "prompt": "Table cells show double borders. Which declaration on the table merges them into single lines?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "border-spacing: none;"
+            },
+            {
+              "id": "b",
+              "text": "table-border: single;"
+            },
+            {
+              "id": "c",
+              "text": "border-merge: true;"
+            },
+            {
+              "id": "d",
+              "text": "border-collapse: collapse;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. border-collapse: collapse is the modern replacement for border=\"1\" double lines.",
+          "difficulty": "medium",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-008",
+          "type": "single_choice",
+          "prompt": "What is the difference between `outline` and `border`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "border can't have a colour"
+            },
+            {
+              "id": "b",
+              "text": "outline is drawn outside the box and doesn't take up space; border is part of the box"
+            },
+            {
+              "id": "c",
+              "text": "outline only works on text"
+            },
+            {
+              "id": "d",
+              "text": "They are identical"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Browsers use outline for focus rings — never remove it without a visible replacement.",
+          "difficulty": "hard",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-009",
+          "type": "single_choice",
+          "prompt": "Which three declarations together cut off long text with “…”?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "text-overflow: ellipsis; display: inline;"
+            },
+            {
+              "id": "b",
+              "text": "text-cut: dots;"
+            },
+            {
+              "id": "c",
+              "text": "overflow: dots; width: auto;"
+            },
+            {
+              "id": "d",
+              "text": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. text-overflow only works when the text can't wrap and overflow is hidden.",
+          "difficulty": "hard",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        },
+        {
+          "id": "w3-more-010",
+          "type": "single_choice",
+          "prompt": "Why do some properties appear with prefixes like -webkit-?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Vendor prefixes for browser-specific or experimental versions of a feature"
+            },
+            {
+              "id": "b",
+              "text": "They are comments"
+            },
+            {
+              "id": "c",
+              "text": "They are Sass variables"
+            },
+            {
+              "id": "d",
+              "text": "They make the property important"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. e.g. -webkit-backdrop-filter. Modern tools add prefixes automatically.",
+          "difficulty": "medium",
+          "tags": [
+            "more",
+            "extra"
+          ]
+        }
+      ]
+    }
+  ]
+}

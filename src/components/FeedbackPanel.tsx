@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 import { correctAnswerText } from '../lib/grading';
+import { RichText } from './RichText';
 import type { Question, QuestionStatus } from '../types';
 
 interface FeedbackPanelProps {
@@ -25,10 +26,14 @@ export const FeedbackPanel = forwardRef<HTMLDivElement, FeedbackPanelProps>(func
       </p>
       {status !== 'correct' && (
         <p className="feedback__answer">
-          <strong>Correct answer:</strong> {correctAnswerText(question)}
+          <strong>Correct answer:</strong> <RichText text={correctAnswerText(question)} />
         </p>
       )}
-      {question.explanation && <p className="feedback__explanation">{question.explanation}</p>}
+      {question.explanation && (
+        <p className="feedback__explanation">
+          <RichText text={question.explanation} />
+        </p>
+      )}
     </div>
   );
 });

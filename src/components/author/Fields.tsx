@@ -50,9 +50,10 @@ interface TextAreaFieldProps extends BaseFieldProps {
   onChange: (value: string) => void;
   placeholder?: string;
   rows?: number;
+  monospace?: boolean;
 }
 
-export function TextAreaField({ id, label, hint, required, invalid, value, onChange, placeholder, rows = 3 }: TextAreaFieldProps) {
+export function TextAreaField({ id, label, hint, required, invalid, value, onChange, placeholder, rows = 3, monospace }: TextAreaFieldProps) {
   return (
     <div className="field">
       <label htmlFor={id} className="field__label">
@@ -61,8 +62,12 @@ export function TextAreaField({ id, label, hint, required, invalid, value, onCha
       </label>
       <textarea
         id={id}
-        className="input textarea"
+        className={`input textarea ${monospace ? 'input--mono' : ''}`}
         rows={rows}
+        spellCheck={!monospace}
+        autoCapitalize={monospace ? 'off' : 'sentences'}
+        autoCorrect={monospace ? 'off' : 'on'}
+        wrap={monospace ? 'off' : 'soft'}
         value={value}
         placeholder={placeholder}
         aria-invalid={invalid || undefined}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 215" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="640" height="215" rx="16" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1d1f23">Internet milestones during the Cold War</text>
+  <rect x="30" y="108" width="548" height="24" rx="12" fill="#e8eefc"/>
+  <text x="150" y="100" font-size="12" font-weight="600" fill="#2457d6">Cold War (1947–1991)</text>
+  <line x1="40" y1="120" x2="600" y2="120" stroke="#cbc7bb" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="85" cy="120" r="7" fill="#0f6e64"/>
+  <line x1="85" y1="113" x2="85" y2="84" stroke="#0f6e64" stroke-width="2"/>
+  <rect x="45" y="46" width="80" height="40" rx="9" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="85" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#0f6e64">1969</text>
+  <text x="85" y="79" text-anchor="middle" font-size="13" font-weight="500" fill="#1d1f23">ARPANET</text>
+  <circle cx="331" cy="120" r="7" fill="#0f6e64"/>
+  <line x1="331" y1="127" x2="331" y2="154" stroke="#0f6e64" stroke-width="2"/>
+  <rect x="291" y="154" width="80" height="40" rx="9" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="331" y="171" text-anchor="middle" font-size="12" font-weight="700" fill="#0f6e64">1980</text>
+  <text x="331" y="187" text-anchor="middle" font-size="13" fill="#1d1f23">NSFNET</text>
+  <circle cx="398" cy="120" r="7" fill="#8a5a00"/>
+  <line x1="398" y1="113" x2="398" y2="84" stroke="#8a5a00" stroke-width="2"/>
+  <rect x="358" y="46" width="80" height="40" rx="9" fill="#fff4dc" stroke="#8a5a00" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="398" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#8a5a00">1983</text>
+  <text x="398" y="79" text-anchor="middle" font-size="18" font-weight="700" fill="#1d1f23">?</text>
+  <circle cx="421" cy="120" r="7" fill="#0f6e64"/>
+  <line x1="421" y1="127" x2="421" y2="154" stroke="#0f6e64" stroke-width="2"/>
+  <rect x="381" y="154" width="80" height="40" rx="9" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="421" y="171" text-anchor="middle" font-size="12" font-weight="700" fill="#0f6e64">1984</text>
+  <text x="421" y="187" text-anchor="middle" font-size="13" fill="#1d1f23">DNS</text>
+  <circle cx="555" cy="120" r="7" fill="#0f6e64"/>
+  <line x1="555" y1="113" x2="555" y2="84" stroke="#0f6e64" stroke-width="2"/>
+  <rect x="515" y="46" width="80" height="40" rx="9" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="555" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#0f6e64">1990</text>
+  <text x="555" y="79" text-anchor="middle" font-size="13" font-weight="500" fill="#1d1f23">WWW</text>
+</svg>

@@ -1,0 +1,4410 @@
+{
+  "id": "webdev-ch2",
+  "title": "Web Development · Chapter 2",
+  "description": "Markup languages and HTML: presentation layer, HTML history and XHTML, tags and structure, lists, links, images, tables, forms, semantic tags, media and entities.",
+  "topics": [
+    {
+      "id": "presentation-layer",
+      "title": "2.1 Presentation Layer",
+      "description": "What the presentation layer is and the roles of HTML, CSS and JavaScript.",
+      "questions": [
+        {
+          "id": "w2-pres-001",
+          "type": "single_choice",
+          "prompt": "What is the presentation layer?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The database that stores a website's data"
+            },
+            {
+              "id": "b",
+              "text": "The cables that carry internet traffic"
+            },
+            {
+              "id": "c",
+              "text": "The server that runs PHP code"
+            },
+            {
+              "id": "d",
+              "text": "The part users access through a browser, made of UI components and UI process components"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The presentation layer is what users see and interact with in the browser.",
+          "difficulty": "easy",
+          "tags": [
+            "presentation"
+          ]
+        },
+        {
+          "id": "w2-pres-002",
+          "type": "multiple_choice",
+          "prompt": "Which three core technologies are used to build the presentation layer? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "JavaScript"
+            },
+            {
+              "id": "c",
+              "text": "HTML"
+            },
+            {
+              "id": "d",
+              "text": "SQL"
+            },
+            {
+              "id": "e",
+              "text": "PHP"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "HTML (content), CSS (look) and JavaScript (interactivity).",
+          "difficulty": "easy",
+          "tags": [
+            "presentation"
+          ]
+        },
+        {
+          "id": "w2-pres-003",
+          "type": "typed",
+          "prompt": "Which technology determines WHAT your website will contain?",
+          "image": null,
+          "acceptedAnswers": [
+            "html"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "e.g. HTML, CSS or JavaScript"
+          },
+          "explanation": "HTML = content and structure; CSS = how it looks; JavaScript = how it behaves.",
+          "difficulty": "easy",
+          "tags": [
+            "presentation"
+          ]
+        },
+        {
+          "id": "w2-pres-004",
+          "type": "single_choice",
+          "prompt": "Which technology controls how a website LOOKS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "JavaScript"
+            },
+            {
+              "id": "c",
+              "text": "HTTP"
+            },
+            {
+              "id": "d",
+              "text": "HTML"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "CSS controls presentation: colours, fonts, layout.",
+          "difficulty": "easy",
+          "tags": [
+            "presentation"
+          ]
+        },
+        {
+          "id": "w2-pres-005",
+          "type": "single_choice",
+          "prompt": "Which technology makes a website interactive — responsive to a user's actions?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "DNS"
+            },
+            {
+              "id": "c",
+              "text": "JavaScript"
+            },
+            {
+              "id": "d",
+              "text": "HTML"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "JavaScript (and its frameworks) handles interactivity.",
+          "difficulty": "easy",
+          "tags": [
+            "presentation"
+          ]
+        },
+        {
+          "id": "w2-pres-006",
+          "type": "multiple_choice",
+          "prompt": "Which JavaScript frameworks/libraries are named in your notes for making pages dynamic? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "React"
+            },
+            {
+              "id": "b",
+              "text": "MySQL"
+            },
+            {
+              "id": "c",
+              "text": "Apache"
+            },
+            {
+              "id": "d",
+              "text": "Angular"
+            }
+          ],
+          "correct": [
+            "a",
+            "d"
+          ],
+          "explanation": "Angular and React. MySQL is a database; Apache is a web server.",
+          "difficulty": "medium",
+          "tags": [
+            "presentation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "markup-languages-history",
+      "title": "2.2 Markup Languages & HTML History",
+      "description": "What a markup language is, examples, W3C/WHATWG, Tim Berners-Lee and HTML versions.",
+      "questions": [
+        {
+          "id": "w2-ml-001",
+          "type": "single_choice",
+          "prompt": "What is a markup language?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A language that performs calculations and logic"
+            },
+            {
+              "id": "b",
+              "text": "A database query language"
+            },
+            {
+              "id": "c",
+              "text": "A protocol for sending files"
+            },
+            {
+              "id": "d",
+              "text": "A language that annotates text so a computer can manipulate (format and align) it"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A markup language labels content so it can be formatted and laid out.",
+          "difficulty": "easy",
+          "tags": [
+            "markup"
+          ]
+        },
+        {
+          "id": "w2-ml-002",
+          "type": "single_choice",
+          "prompt": "How is a markup language different from a programming language?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It runs faster than a programming language"
+            },
+            {
+              "id": "b",
+              "text": "It is written in binary"
+            },
+            {
+              "id": "c",
+              "text": "It labels (marks up) content to define its role and layout instead of executing logical instructions"
+            },
+            {
+              "id": "d",
+              "text": "It can only be used on servers"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Markup doesn't execute logic — it simply marks up raw content such as text, images and links.",
+          "difficulty": "medium",
+          "tags": [
+            "markup"
+          ]
+        },
+        {
+          "id": "w2-ml-003",
+          "type": "true_false",
+          "prompt": "HTML is a programming language.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "HTML is a markup language: it describes content, it doesn't run logic like loops or calculations.",
+          "difficulty": "easy",
+          "tags": [
+            "markup"
+          ]
+        },
+        {
+          "id": "w2-ml-004",
+          "type": "true_false",
+          "prompt": "Most markup languages are human-readable because they are tag-based.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Tags like <p> separate the markup from the text, so people can read it.",
+          "difficulty": "easy",
+          "tags": [
+            "markup"
+          ]
+        },
+        {
+          "id": "w2-ml-005",
+          "type": "multiple_choice",
+          "prompt": "Which of these are markup languages? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Python"
+            },
+            {
+              "id": "b",
+              "text": "LaTeX"
+            },
+            {
+              "id": "c",
+              "text": "HTML"
+            },
+            {
+              "id": "d",
+              "text": "XHTML"
+            },
+            {
+              "id": "e",
+              "text": "JavaScript"
+            },
+            {
+              "id": "f",
+              "text": "XML"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "f"
+          ],
+          "explanation": "HTML, XML, XHTML and LaTeX are markup languages. JavaScript and Python are programming languages.",
+          "difficulty": "medium",
+          "tags": [
+            "markup"
+          ]
+        },
+        {
+          "id": "w2-ml-006",
+          "type": "typed",
+          "prompt": "What does HTML stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "hypertext markup language",
+            "hyper text markup language"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "HTML = HyperText Markup Language.",
+          "difficulty": "easy",
+          "tags": [
+            "html"
+          ]
+        },
+        {
+          "id": "w2-ml-007",
+          "type": "single_choice",
+          "prompt": "Which organisation is regarded as the de facto body that governs HTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CERN"
+            },
+            {
+              "id": "b",
+              "text": "WHATWG"
+            },
+            {
+              "id": "c",
+              "text": "W3C"
+            },
+            {
+              "id": "d",
+              "text": "ICANN"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The World Wide Web Consortium (W3C). WHATWG formed later because W3C was slow.",
+          "difficulty": "easy",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-008",
+          "type": "typed",
+          "prompt": "What does W3C stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "world wide web consortium"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "W3C = World Wide Web Consortium.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-009",
+          "type": "single_choice",
+          "prompt": "Why was WHATWG formed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To build the first web browser"
+            },
+            {
+              "id": "b",
+              "text": "To manage domain names"
+            },
+            {
+              "id": "c",
+              "text": "Because web standards were developing too slowly under W3C"
+            },
+            {
+              "id": "d",
+              "text": "To replace HTML with XML"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "WHATWG (Web Hypertext Application Technology Working Group) formed in response to W3C's slow progress.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-010",
+          "type": "single_choice",
+          "prompt": "According to your notes, which HTML version (2018) is the latest, developed by W3C and WHATWG?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "HTML 5.2"
+            },
+            {
+              "id": "b",
+              "text": "HTML 3.0"
+            },
+            {
+              "id": "c",
+              "text": "HTML 4.01"
+            },
+            {
+              "id": "d",
+              "text": "XHTML 1.0"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Your notes say HTML 5.2 (2018). Good to know: since 2019 HTML has been maintained by WHATWG as the “HTML Living Standard”, which is updated continuously instead of getting version numbers.",
+          "difficulty": "easy",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-011",
+          "type": "single_choice",
+          "prompt": "Who initially developed HTML in late 1991?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Sir Tim Berners-Lee"
+            },
+            {
+              "id": "b",
+              "text": "Håkon Wium Lie"
+            },
+            {
+              "id": "c",
+              "text": "Brendan Eich"
+            },
+            {
+              "id": "d",
+              "text": "Bill Gates"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Tim Berners-Lee designed HTML as a standard language for creating documents on the WWW. (Brendan Eich created JavaScript; Håkon Wium Lie proposed CSS.)",
+          "difficulty": "easy",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-012",
+          "type": "single_choice",
+          "prompt": "HTML 4.01 (Dec 1999) syntax is defined using…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "SGML (Standard Generalized Markup Language)"
+            },
+            {
+              "id": "b",
+              "text": "LaTeX"
+            },
+            {
+              "id": "c",
+              "text": "XML (Extensible Markup Language)"
+            },
+            {
+              "id": "d",
+              "text": "JSON"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "HTML 4.01 → SGML. XHTML 1.0 → XML.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-013",
+          "type": "single_choice",
+          "prompt": "XHTML 1.0 (Jan 2000) syntax is defined using…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "SGML (Standard Generalized Markup Language)"
+            },
+            {
+              "id": "b",
+              "text": "CSS"
+            },
+            {
+              "id": "c",
+              "text": "XML (Extensible Markup Language)"
+            },
+            {
+              "id": "d",
+              "text": "HTTP"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "XHTML is HTML defined as an XML application.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-014",
+          "type": "typed",
+          "prompt": "What does SGML stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "standard generalized markup language",
+            "standard generalised markup language"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "SGML = Standard Generalized Markup Language.",
+          "difficulty": "hard",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-015",
+          "type": "typed",
+          "prompt": "According to the version table, in which year was HTML5 officially released?",
+          "image": null,
+          "acceptedAnswers": [
+            "2014"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a year"
+          },
+          "explanation": "HTML5: draft in 2008, released in 2014.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        },
+        {
+          "id": "w2-ml-016",
+          "type": "single_choice",
+          "prompt": "Which list of HTML versions is in the correct order?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "HTML → HTML 2.0 → HTML 4.01 → XHTML 1.0 → HTML5"
+            },
+            {
+              "id": "b",
+              "text": "HTML 2.0 → HTML → XHTML 1.0 → HTML 4.01 → HTML5"
+            },
+            {
+              "id": "c",
+              "text": "HTML → XHTML 1.0 → HTML 2.0 → HTML 4.01 → HTML5"
+            },
+            {
+              "id": "d",
+              "text": "HTML → HTML 4.01 → HTML 2.0 → HTML5 → XHTML 1.0"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "1990 HTML, 1995 HTML 2.0, 1997 HTML 3.0, Dec 1999 HTML 4.01, Jan 2000 XHTML 1.0, 2014 HTML5.",
+          "difficulty": "medium",
+          "tags": [
+            "history"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xhtml",
+      "title": "2.2 XHTML vs HTML",
+      "description": "What XHTML is and its stricter rules for documents, elements and attributes.",
+      "questions": [
+        {
+          "id": "w2-xhtml-001",
+          "type": "typed",
+          "prompt": "What does XHTML stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "extensible hypertext markup language",
+            "extensible hyper text markup language"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "XHTML = EXtensible HyperText Markup Language.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-002",
+          "type": "multiple_choice",
+          "prompt": "Which statements about XHTML are true? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It is stricter than HTML"
+            },
+            {
+              "id": "b",
+              "text": "It is almost identical to HTML"
+            },
+            {
+              "id": "c",
+              "text": "It is HTML written as XML"
+            },
+            {
+              "id": "d",
+              "text": "It is supported by all major browsers"
+            },
+            {
+              "id": "e",
+              "text": "It is more relaxed than HTML"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "XHTML is HTML defined as an XML application, and it is stricter.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-003",
+          "type": "multiple_choice",
+          "prompt": "What are the primary differences between HTML 4.01 and XHTML 1.0? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "XHTML element and attribute names must be lowercase"
+            },
+            {
+              "id": "b",
+              "text": "XHTML cannot display images"
+            },
+            {
+              "id": "c",
+              "text": "HTML requires every attribute value to be quoted"
+            },
+            {
+              "id": "d",
+              "text": "HTML allows some tags to be omitted (e.g. end tags); XHTML doesn't"
+            },
+            {
+              "id": "e",
+              "text": "XHTML requires attribute values to be quoted"
+            }
+          ],
+          "correct": [
+            "a",
+            "d",
+            "e"
+          ],
+          "explanation": "HTML is case-insensitive and lets you skip some end tags; XHTML is lowercase, quoted and always closed.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-004",
+          "type": "multiple_choice",
+          "prompt": "Which are MANDATORY in an XHTML document? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The XHTML DOCTYPE"
+            },
+            {
+              "id": "b",
+              "text": "A <footer> element"
+            },
+            {
+              "id": "c",
+              "text": "The xmlns attribute on <html>"
+            },
+            {
+              "id": "d",
+              "text": "The <html>, <head>, <title> and <body> elements"
+            },
+            {
+              "id": "e",
+              "text": "An external CSS file"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "DOCTYPE, xmlns on <html>, and html/head/title/body are all required.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-005",
+          "type": "multiple_choice",
+          "prompt": "Which are rules for XHTML ELEMENTS? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Elements must be properly nested"
+            },
+            {
+              "id": "b",
+              "text": "Elements must always be closed"
+            },
+            {
+              "id": "c",
+              "text": "Elements must be lowercase"
+            },
+            {
+              "id": "d",
+              "text": "The document must have one root element"
+            },
+            {
+              "id": "e",
+              "text": "Elements may overlap if the browser can understand them"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Proper nesting, always closed, lowercase, one root element.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-006",
+          "type": "multiple_choice",
+          "prompt": "Which are rules for XHTML ATTRIBUTES? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Attribute minimization is forbidden"
+            },
+            {
+              "id": "b",
+              "text": "Attribute names must be lowercase"
+            },
+            {
+              "id": "c",
+              "text": "Attribute values must be quoted"
+            },
+            {
+              "id": "d",
+              "text": "Attribute values must be numbers"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Lowercase names, quoted values, no minimization.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-007",
+          "type": "single_choice",
+          "prompt": "“Attribute minimization is forbidden” in XHTML. Which line is valid XHTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<input type=\"checkbox\" checked>"
+            },
+            {
+              "id": "b",
+              "text": "<input type=\"checkbox\" checked=\"checked\" />"
+            },
+            {
+              "id": "c",
+              "text": "<input type=checkbox checked />"
+            },
+            {
+              "id": "d",
+              "text": "<INPUT TYPE=\"checkbox\" CHECKED>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Minimised attributes like `checked` must be written in full (checked=\"checked\"), quoted, lowercase, and the empty element closed with />.",
+          "difficulty": "hard",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-008",
+          "type": "single_choice",
+          "prompt": "Which line is valid XHTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<P>Hello <B>world</B></P>"
+            },
+            {
+              "id": "b",
+              "text": "<p>Hello <b>world"
+            },
+            {
+              "id": "c",
+              "text": "<p>Hello <b>world</p></b>"
+            },
+            {
+              "id": "d",
+              "text": "<p>Hello <b>world</b></p>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Lowercase, properly nested, and every element closed.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-009",
+          "type": "single_choice",
+          "prompt": "How must an empty element like a line break be written in XHTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<br>"
+            },
+            {
+              "id": "b",
+              "text": "<br />"
+            },
+            {
+              "id": "c",
+              "text": "</br>"
+            },
+            {
+              "id": "d",
+              "text": "<br></br/>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "In XHTML every element must be closed, so empty elements self-close: <br />. (Plain HTML5 also accepts <br>.)",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-010",
+          "type": "true_false",
+          "prompt": "In HTML (not XHTML), element names are case-insensitive, so <P> and <p> mean the same thing.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "HTML names are case-insensitive; XHTML requires lowercase.",
+          "difficulty": "easy",
+          "tags": [
+            "xhtml"
+          ]
+        },
+        {
+          "id": "w2-xhtml-011",
+          "type": "single_choice",
+          "prompt": "XHTML 1.0 requires this attribute on the <html> element. Which is it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "version=\"1.0\""
+            },
+            {
+              "id": "b",
+              "text": "type=\"text/xhtml\""
+            },
+            {
+              "id": "c",
+              "text": "lang=\"xhtml\""
+            },
+            {
+              "id": "d",
+              "text": "xmlns=\"http://www.w3.org/1999/xhtml\""
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The XML namespace attribute: <html xmlns=\"http://www.w3.org/1999/xhtml\">.",
+          "difficulty": "medium",
+          "tags": [
+            "xhtml"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tags-and-structure",
+      "title": "2.3–2.4 Tags, Elements & Basic Structure",
+      "description": "Start/end tags, DOCTYPE, html/head/title/body, the modern boilerplate, headings, paragraphs and nesting.",
+      "questions": [
+        {
+          "id": "w2-struct-001",
+          "type": "single_choice",
+          "prompt": "In HTML, what counts as a tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Any string of the form < … >"
+            },
+            {
+              "id": "b",
+              "text": "Any line ending with a semicolon"
+            },
+            {
+              "id": "c",
+              "text": "Any text between quotes"
+            },
+            {
+              "id": "d",
+              "text": "Any word in bold"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Any string of the form < … > is a tag.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-002",
+          "type": "single_choice",
+          "prompt": "How do you recognise an END tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It ends with />"
+            },
+            {
+              "id": "b",
+              "text": "It is written in capitals"
+            },
+            {
+              "id": "c",
+              "text": "It starts with <!"
+            },
+            {
+              "id": "d",
+              "text": "It begins with </"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "End tags begin with </ (e.g. </p>). All other tags are start tags.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-003",
+          "type": "single_choice",
+          "prompt": "In the start tag below, what is the element name?",
+          "code": "<p class=\"intro\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<"
+            },
+            {
+              "id": "b",
+              "text": "intro"
+            },
+            {
+              "id": "c",
+              "text": "p"
+            },
+            {
+              "id": "d",
+              "text": "class"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The string at the beginning of a start/end tag is the element name. `class` is an attribute and `intro` its value.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-004",
+          "type": "multiple_choice",
+          "prompt": "Look at the tag below. Which statements are correct? (select all that apply)",
+          "code": "<a href=\"page2.html\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "href is an attribute"
+            },
+            {
+              "id": "b",
+              "text": "a is the element name"
+            },
+            {
+              "id": "c",
+              "text": "href is the element name"
+            },
+            {
+              "id": "d",
+              "text": "\"page2.html\" is the attribute's value"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "Element name first, then attribute name=\"value\" pairs.",
+          "difficulty": "medium",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-005",
+          "type": "typed",
+          "prompt": "Write the document type declaration for an HTML5 page.",
+          "image": null,
+          "acceptedAnswers": [
+            "<!DOCTYPE html>",
+            "!DOCTYPE html"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "<!...>"
+          },
+          "explanation": "<!DOCTYPE html> goes on the very first line. It is not case-sensitive.",
+          "difficulty": "medium",
+          "tags": [
+            "doctype"
+          ]
+        },
+        {
+          "id": "w2-struct-006",
+          "type": "single_choice",
+          "prompt": "What is the purpose of <!DOCTYPE>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To link a style sheet"
+            },
+            {
+              "id": "b",
+              "text": "To add a page title"
+            },
+            {
+              "id": "c",
+              "text": "To tell the browser which HTML or XHTML version and type the document uses"
+            },
+            {
+              "id": "d",
+              "text": "To create a comment"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The DOCTYPE tells the browser which version of HTML/XHTML to expect.",
+          "difficulty": "easy",
+          "tags": [
+            "doctype"
+          ]
+        },
+        {
+          "id": "w2-struct-007",
+          "type": "true_false",
+          "prompt": "The root element of an HTML document must be <html>.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Everything else sits inside <html>.",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-008",
+          "type": "single_choice",
+          "prompt": "What do the <html> and </html> tags indicate?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The start and end of the visible content"
+            },
+            {
+              "id": "b",
+              "text": "The start and end of an HTML document"
+            },
+            {
+              "id": "c",
+              "text": "The page title"
+            },
+            {
+              "id": "d",
+              "text": "A hyperlink"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "They wrap the entire document.",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-009",
+          "type": "single_choice",
+          "prompt": "Which element contains the information displayed in the browser's client area (the visible page)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<body>"
+            },
+            {
+              "id": "b",
+              "text": "<title>"
+            },
+            {
+              "id": "c",
+              "text": "<meta>"
+            },
+            {
+              "id": "d",
+              "text": "<head>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Visible content goes in <body>.",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-010",
+          "type": "multiple_choice",
+          "prompt": "Which of these belong inside <head>? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<h1>Welcome</h1>"
+            },
+            {
+              "id": "b",
+              "text": "<meta charset=\"UTF-8\">"
+            },
+            {
+              "id": "c",
+              "text": "<title>"
+            },
+            {
+              "id": "d",
+              "text": "<link rel=\"stylesheet\">"
+            },
+            {
+              "id": "e",
+              "text": "<style> (style information)"
+            },
+            {
+              "id": "f",
+              "text": "<footer>"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "<head> holds information used by the browser: title, meta, styles, scripts. Headings and footers are visible content → <body>.",
+          "difficulty": "medium",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-011",
+          "type": "single_choice",
+          "prompt": "Where does the text inside <title> appear?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "In the browser's title bar / tab"
+            },
+            {
+              "id": "b",
+              "text": "At the bottom of the page"
+            },
+            {
+              "id": "c",
+              "text": "As the biggest heading on the page"
+            },
+            {
+              "id": "d",
+              "text": "Nowhere — it is only a comment"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The title shows in the title bar or tab (and in bookmarks).",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-012",
+          "type": "typed",
+          "prompt": "Besides <!DOCTYPE>, four sets of tags define a page's structure: <html>, <head>, <______> and <body>. Fill in the blank.",
+          "image": null,
+          "acceptedAnswers": [
+            "title",
+            "<title>",
+            "<title></title>"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "tag name"
+          },
+          "explanation": "The four sets are html, head, title and body.",
+          "difficulty": "medium",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-013",
+          "type": "single_choice",
+          "prompt": "Which skeleton is correctly structured?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<html> <body> <head> … </head> </body> </html>"
+            },
+            {
+              "id": "b",
+              "text": "<head> <html> … </html> </head> <body> … </body>"
+            },
+            {
+              "id": "c",
+              "text": "<html> <head> … <body> … </head> </body> </html>"
+            },
+            {
+              "id": "d",
+              "text": "<html> <head> <title>…</title> </head> <body> … </body> </html>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "<head> comes first and closes before <body> opens; both sit inside <html>.",
+          "difficulty": "medium",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "w2-struct-014",
+          "type": "single_choice",
+          "prompt": "In the modern boilerplate, what does this line do?",
+          "code": "<meta charset=\"UTF-8\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the page responsive on phones"
+            },
+            {
+              "id": "b",
+              "text": "Links the CSS file"
+            },
+            {
+              "id": "c",
+              "text": "Sets the character encoding so all characters (e.g. é, ©, emojis) display correctly"
+            },
+            {
+              "id": "d",
+              "text": "Sets the page language to English"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "charset=\"UTF-8\" sets the character encoding.",
+          "difficulty": "medium",
+          "tags": [
+            "boilerplate"
+          ]
+        },
+        {
+          "id": "w2-struct-015",
+          "type": "single_choice",
+          "prompt": "In the modern boilerplate, what does this line do?",
+          "code": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the page use the device's width so it displays properly on mobile"
+            },
+            {
+              "id": "b",
+              "text": "Adds a title"
+            },
+            {
+              "id": "c",
+              "text": "Sets the font size to 1"
+            },
+            {
+              "id": "d",
+              "text": "Prevents the page from being zoomed in a desktop browser"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Without the viewport meta tag, phones render the page at desktop width and shrink it.",
+          "difficulty": "medium",
+          "tags": [
+            "boilerplate"
+          ]
+        },
+        {
+          "id": "w2-struct-016",
+          "type": "single_choice",
+          "prompt": "What is the purpose of lang=\"en\" on <html lang=\"en\">?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It declares the page's language (helps screen readers, translation and search engines)"
+            },
+            {
+              "id": "b",
+              "text": "It is required for CSS to work"
+            },
+            {
+              "id": "c",
+              "text": "It makes the page load faster"
+            },
+            {
+              "id": "d",
+              "text": "It sets the font"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The lang attribute declares the content language.",
+          "difficulty": "medium",
+          "tags": [
+            "boilerplate"
+          ]
+        },
+        {
+          "id": "w2-struct-017",
+          "type": "single_choice",
+          "prompt": "In the boilerplate, where is the <script src=\"script.js\"> tag placed, and why?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inside <title>"
+            },
+            {
+              "id": "b",
+              "text": "Just before </body>, so the HTML loads before the script runs"
+            },
+            {
+              "id": "c",
+              "text": "After </html>"
+            },
+            {
+              "id": "d",
+              "text": "Before <!DOCTYPE>, so it loads first"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Placing scripts at the end of <body> lets the page content load first.",
+          "difficulty": "medium",
+          "tags": [
+            "boilerplate"
+          ]
+        },
+        {
+          "id": "w2-struct-018",
+          "type": "single_choice",
+          "prompt": "Which is the correct way to write an HTML comment?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<!-- This is a comment -->"
+            },
+            {
+              "id": "b",
+              "text": "// This is a comment"
+            },
+            {
+              "id": "c",
+              "text": "# This is a comment"
+            },
+            {
+              "id": "d",
+              "text": "/* This is a comment */"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "HTML comments use <!-- -->. /* */ is a CSS comment and // is a JavaScript comment.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-019",
+          "type": "single_choice",
+          "prompt": "What does &copy; display on the page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "©"
+            },
+            {
+              "id": "b",
+              "text": "™"
+            },
+            {
+              "id": "c",
+              "text": "®"
+            },
+            {
+              "id": "d",
+              "text": "&"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "&copy; is the HTML entity for the copyright symbol, used in the boilerplate footer.",
+          "difficulty": "easy",
+          "tags": [
+            "boilerplate"
+          ]
+        },
+        {
+          "id": "w2-struct-020",
+          "type": "single_choice",
+          "prompt": "Which heading tag produces the LARGEST heading?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<h6>"
+            },
+            {
+              "id": "b",
+              "text": "<h1>"
+            },
+            {
+              "id": "c",
+              "text": "<header>"
+            },
+            {
+              "id": "d",
+              "text": "<head>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Headings go from <h1> (largest/most important) to <h6> (smallest).",
+          "difficulty": "easy",
+          "tags": [
+            "headings"
+          ]
+        },
+        {
+          "id": "w2-struct-021",
+          "type": "typed",
+          "prompt": "How many heading levels does HTML have?",
+          "image": null,
+          "acceptedAnswers": [
+            "6",
+            "six"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "Six: <h1> to <h6>.",
+          "difficulty": "easy",
+          "tags": [
+            "headings"
+          ]
+        },
+        {
+          "id": "w2-struct-022",
+          "type": "typed",
+          "prompt": "Which tag defines a paragraph?",
+          "image": null,
+          "acceptedAnswers": [
+            "p",
+            "<p>",
+            "<p></p>"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "tag name"
+          },
+          "explanation": "<p> … </p> defines a paragraph.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        },
+        {
+          "id": "w2-struct-023",
+          "type": "single_choice",
+          "prompt": "Which snippet is correctly nested?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<p><h4>My Heading:</p></h4>"
+            },
+            {
+              "id": "b",
+              "text": "<h4>My Heading: <p>Hello World</p> </body></h4>"
+            },
+            {
+              "id": "c",
+              "text": "<h4>My Heading:</h4> <p>Hello World</p>"
+            },
+            {
+              "id": "d",
+              "text": "<h4>My Heading: <p>Hello World</h4></p>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Tags must close in the reverse order they were opened. Overlapping tags such as <h4><p></h4></p> are wrong.",
+          "difficulty": "medium",
+          "tags": [
+            "nesting"
+          ]
+        },
+        {
+          "id": "w2-struct-024",
+          "type": "true_false",
+          "prompt": "This snippet is correctly nested.",
+          "code": "<h4>My Heading:\n  <p>Hello World</h4></p>",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "</h4> closes before </p>, so the tags overlap. Close the inner element first: <p> … </p> then </h4>.",
+          "difficulty": "medium",
+          "tags": [
+            "nesting"
+          ]
+        },
+        {
+          "id": "w2-struct-025",
+          "type": "single_choice",
+          "prompt": "How are most HTML markup tags used?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "In pairs: an opening tag and a closing tag"
+            },
+            {
+              "id": "b",
+              "text": "Always alone with no closing tag"
+            },
+            {
+              "id": "c",
+              "text": "Only in CSS files"
+            },
+            {
+              "id": "d",
+              "text": "Only inside <head>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Most tags come in pairs, like <p> … </p>. A few (e.g. <img>, <br>) are empty elements with no closing tag.",
+          "difficulty": "easy",
+          "tags": [
+            "tags"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lists-links-images",
+      "title": "2.5 Lists, Links & Images",
+      "description": "Ordered, unordered and description lists; <a href>; <img src alt>; plus useful extras.",
+      "questions": [
+        {
+          "id": "w2-lists-001",
+          "type": "single_choice",
+          "prompt": "Which tag creates a list whose items are marked with NUMBERS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<ul>"
+            },
+            {
+              "id": "b",
+              "text": "<dl>"
+            },
+            {
+              "id": "c",
+              "text": "<ol>"
+            },
+            {
+              "id": "d",
+              "text": "<li>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<ol> = ordered list (numbers).",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-002",
+          "type": "single_choice",
+          "prompt": "Which tag creates a list whose items are marked with BULLETS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<dl>"
+            },
+            {
+              "id": "b",
+              "text": "<ol>"
+            },
+            {
+              "id": "c",
+              "text": "<ul>"
+            },
+            {
+              "id": "d",
+              "text": "<dt>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<ul> = unordered list (bullets).",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-003",
+          "type": "typed",
+          "prompt": "In <ol> and <ul>, which tag starts each list item?",
+          "image": null,
+          "acceptedAnswers": [
+            "li",
+            "<li>",
+            "<li></li>"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "tag name"
+          },
+          "explanation": "Each item is an <li>.",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-004",
+          "type": "single_choice",
+          "prompt": "In a description list, which tag DESCRIBES the term?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<li>"
+            },
+            {
+              "id": "b",
+              "text": "<dd>"
+            },
+            {
+              "id": "c",
+              "text": "<dt>"
+            },
+            {
+              "id": "d",
+              "text": "<dl>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "<dl> wraps the list, <dt> is the term (name), <dd> describes it.",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-005",
+          "type": "single_choice",
+          "prompt": "In a description list, which tag holds the TERM (name)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<th>"
+            },
+            {
+              "id": "b",
+              "text": "<td>"
+            },
+            {
+              "id": "c",
+              "text": "<dt>"
+            },
+            {
+              "id": "d",
+              "text": "<dd>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<dt> = description term.",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-006",
+          "type": "single_choice",
+          "prompt": "Which output does this code produce?",
+          "code": "<dl>\n  <dt>Langkawi</dt>\n    <dd>Island in Kedah</dd>\n  <dt>Cameron Highlands</dt>\n    <dd>Hill station in Pahang</dd>\n  <dt>Melaka</dt>\n    <dd>Historical city</dd>\n</dl>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Bulleted list",
+              "image": {
+                "src": "images/web/list-ul.svg",
+                "alt": "Bulleted list: Langkawi, Cameron Highlands, Melaka"
+              }
+            },
+            {
+              "id": "b",
+              "text": "Numbered list",
+              "image": {
+                "src": "images/web/list-ol.svg",
+                "alt": "Numbered list: 1. Langkawi, 2. Cameron Highlands, 3. Melaka"
+              }
+            },
+            {
+              "id": "c",
+              "text": "Terms with indented descriptions",
+              "image": {
+                "src": "images/web/list-dl.svg",
+                "alt": "Each place name on its own line with an indented description below it"
+              }
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<dl> shows each <dt> term with its <dd> description indented underneath — no numbers or bullets.",
+          "difficulty": "medium",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-007",
+          "type": "single_choice",
+          "prompt": "Which output does this code produce?",
+          "code": "<ol>\n  <li>Langkawi</li>\n  <li>Cameron Highlands</li>\n  <li>Melaka</li>\n</ol>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Terms with indented descriptions",
+              "image": {
+                "src": "images/web/list-dl.svg",
+                "alt": "Each place name on its own line with an indented description below it"
+              }
+            },
+            {
+              "id": "b",
+              "text": "Numbered list",
+              "image": {
+                "src": "images/web/list-ol.svg",
+                "alt": "Numbered list: 1. Langkawi, 2. Cameron Highlands, 3. Melaka"
+              }
+            },
+            {
+              "id": "c",
+              "text": "Bulleted list",
+              "image": {
+                "src": "images/web/list-ul.svg",
+                "alt": "Bulleted list: Langkawi, Cameron Highlands, Melaka"
+              }
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "<ol> numbers its items 1, 2, 3.",
+          "difficulty": "easy",
+          "tags": [
+            "lists"
+          ]
+        },
+        {
+          "id": "w2-lists-008",
+          "type": "single_choice",
+          "prompt": "How do you make an ordered list count with capital letters (A, B, C)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<ol style=\"A\">"
+            },
+            {
+              "id": "b",
+              "text": "<ul type=\"A\">"
+            },
+            {
+              "id": "c",
+              "text": "<ol type=\"A\">"
+            },
+            {
+              "id": "d",
+              "text": "<ol letters=\"true\">"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. The type attribute on <ol> can be 1, A, a, I or i. start=\"5\" starts counting at 5 and reversed counts down.",
+          "difficulty": "medium",
+          "tags": [
+            "lists",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-lists-009",
+          "type": "true_false",
+          "prompt": "You can nest a list by putting a <ul> inside an <li>.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Extra — not in your notes. Sub-lists go inside a list item: <li>Fruits <ul><li>Apple</li></ul></li>.",
+          "difficulty": "medium",
+          "tags": [
+            "lists",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-lists-010",
+          "type": "single_choice",
+          "prompt": "Which tag defines a hyperlink?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<href>"
+            },
+            {
+              "id": "b",
+              "text": "<link>"
+            },
+            {
+              "id": "c",
+              "text": "<a>"
+            },
+            {
+              "id": "d",
+              "text": "<url>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The anchor tag <a> defines a hyperlink. (<link> connects files such as CSS in <head>.)",
+          "difficulty": "easy",
+          "tags": [
+            "links"
+          ]
+        },
+        {
+          "id": "w2-lists-011",
+          "type": "typed",
+          "prompt": "Which attribute of <a> specifies the link's destination?",
+          "image": null,
+          "acceptedAnswers": [
+            "href",
+            "href="
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "attribute name"
+          },
+          "explanation": "href holds the URL the link points to.",
+          "difficulty": "easy",
+          "tags": [
+            "links"
+          ]
+        },
+        {
+          "id": "w2-lists-012",
+          "type": "single_choice",
+          "prompt": "What does this link do when clicked?",
+          "code": "<a href=\"http://www.mySite.com/nextpage.html\">Next page</a>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Opens nextpage.html; the visible clickable text is “Next page”"
+            },
+            {
+              "id": "b",
+              "text": "Opens a new email"
+            },
+            {
+              "id": "c",
+              "text": "Shows the URL as text but doesn't link anywhere"
+            },
+            {
+              "id": "d",
+              "text": "Downloads an image called Next page"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "href = destination; the text between <a> and </a> is what the user clicks.",
+          "difficulty": "easy",
+          "tags": [
+            "links"
+          ]
+        },
+        {
+          "id": "w2-lists-013",
+          "type": "single_choice",
+          "prompt": "What does target=\"_blank\" do on a link?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Opens the link in the same tab"
+            },
+            {
+              "id": "b",
+              "text": "Disables the link"
+            },
+            {
+              "id": "c",
+              "text": "Opens the link in a new tab or window"
+            },
+            {
+              "id": "d",
+              "text": "Makes the link text blank"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. target=\"_blank\" opens a new tab/window.",
+          "difficulty": "medium",
+          "tags": [
+            "links",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-lists-014",
+          "type": "single_choice",
+          "prompt": "Which link jumps to the element with id=\"contact\" on the same page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<a id=\"#contact\">Contact</a>"
+            },
+            {
+              "id": "b",
+              "text": "<a href=\".contact\">Contact</a>"
+            },
+            {
+              "id": "c",
+              "text": "<a href=\"contact\">Contact</a>"
+            },
+            {
+              "id": "d",
+              "text": "<a href=\"#contact\">Contact</a>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. A # followed by an id links to that spot on the page (the URL's anchor).",
+          "difficulty": "medium",
+          "tags": [
+            "links",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-lists-015",
+          "type": "single_choice",
+          "prompt": "Which link opens the user's email app?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<email>info@example.com</email>"
+            },
+            {
+              "id": "b",
+              "text": "<a href=\"email:info@example.com\">Email us</a>"
+            },
+            {
+              "id": "c",
+              "text": "<a href=\"mailto:info@example.com\">Email us</a>"
+            },
+            {
+              "id": "d",
+              "text": "<a mail=\"info@example.com\">Email us</a>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. mailto: starts an email; tel: starts a phone call on phones.",
+          "difficulty": "medium",
+          "tags": [
+            "links",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-lists-016",
+          "type": "single_choice",
+          "prompt": "Which tag displays an image?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<src>"
+            },
+            {
+              "id": "b",
+              "text": "<image>"
+            },
+            {
+              "id": "c",
+              "text": "<pic>"
+            },
+            {
+              "id": "d",
+              "text": "<img>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Images use <img>.",
+          "difficulty": "easy",
+          "tags": [
+            "images"
+          ]
+        },
+        {
+          "id": "w2-lists-017",
+          "type": "typed",
+          "prompt": "Which <img> attribute gives the location (URL) of the image file?",
+          "image": null,
+          "acceptedAnswers": [
+            "src",
+            "src="
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "attribute name"
+          },
+          "explanation": "src = source of the image.",
+          "difficulty": "easy",
+          "tags": [
+            "images"
+          ]
+        },
+        {
+          "id": "w2-lists-018",
+          "type": "single_choice",
+          "prompt": "What is the alt attribute of <img> for?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The image's file size"
+            },
+            {
+              "id": "b",
+              "text": "The image's alignment"
+            },
+            {
+              "id": "c",
+              "text": "The image's caption shown below it"
+            },
+            {
+              "id": "d",
+              "text": "Alternate text shown if the image can't be found (and read aloud by screen readers)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "If the browser can't load the image it shows the alt text. Screen readers read it to blind users.",
+          "difficulty": "easy",
+          "tags": [
+            "images"
+          ]
+        },
+        {
+          "id": "w2-lists-019",
+          "type": "true_false",
+          "prompt": "<img> needs a closing tag, like <img src=\"a.png\"></img>.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "<img> is an empty (void) element — it has no closing tag. In XHTML you write <img … />.",
+          "difficulty": "medium",
+          "tags": [
+            "images"
+          ]
+        },
+        {
+          "id": "w2-lists-020",
+          "type": "single_choice",
+          "prompt": "Which line correctly sets an image to display 300 pixels wide?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<img src=\"kl.png\" alt=\"KL Tower\" width=\"300\">"
+            },
+            {
+              "id": "b",
+              "text": "<img href=\"kl.png\" width=\"300\">"
+            },
+            {
+              "id": "c",
+              "text": "<img src=\"kl.png\" alt=\"KL Tower\" width=\"300px;\">"
+            },
+            {
+              "id": "d",
+              "text": "<img src=\"kl.png\" alt=\"KL Tower\" size=\"300\">"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. width and height attributes take a number of pixels (no unit). CSS can also set width.",
+          "difficulty": "medium",
+          "tags": [
+            "images",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tables",
+      "title": "2.5 Tables",
+      "description": "<table>, <tr>, <td>, <th>, borders, plus captions, row/column spans and table sections.",
+      "questions": [
+        {
+          "id": "w2-tables-001",
+          "type": "single_choice",
+          "prompt": "A table is divided into ROWS with which tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<td>"
+            },
+            {
+              "id": "b",
+              "text": "<tr>"
+            },
+            {
+              "id": "c",
+              "text": "<th>"
+            },
+            {
+              "id": "d",
+              "text": "<row>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "<tr> = table row.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-002",
+          "type": "single_choice",
+          "prompt": "Each row is divided into data cells (columns) with which tag?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<td>"
+            },
+            {
+              "id": "b",
+              "text": "<tr>"
+            },
+            {
+              "id": "c",
+              "text": "<tc>"
+            },
+            {
+              "id": "d",
+              "text": "<col>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "<td> = table data cell.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-003",
+          "type": "typed",
+          "prompt": "What does <td> stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "table data",
+            "table data cell"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Two words"
+          },
+          "explanation": "td = table data.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-004",
+          "type": "single_choice",
+          "prompt": "Which tag creates a HEADER cell (bold and centred by default)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<thead>"
+            },
+            {
+              "id": "b",
+              "text": "<td>"
+            },
+            {
+              "id": "c",
+              "text": "<th>"
+            },
+            {
+              "id": "d",
+              "text": "<head>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "<th> = table header cell.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-005",
+          "type": "multiple_choice",
+          "prompt": "What can a <td> cell contain? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Images"
+            },
+            {
+              "id": "b",
+              "text": "Text"
+            },
+            {
+              "id": "c",
+              "text": "Links"
+            },
+            {
+              "id": "d",
+              "text": "Lists"
+            },
+            {
+              "id": "e",
+              "text": "Other tables"
+            },
+            {
+              "id": "f",
+              "text": "A <tr> directly (without a nested table)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "A <td> can contain text, links, images, lists, forms and even other tables — but rows belong in a table, not straight inside a cell.",
+          "difficulty": "medium",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-006",
+          "type": "typed",
+          "prompt": "How many ROWS does this table have (including the header row)?",
+          "code": "<table border=\"1\">\n  <tr>\n    <th>Holiday Destination</th>\n    <th>Location</th>\n    <th>Type</th>\n  </tr>\n  <tr>\n    <td>Langkawi</td>\n    <td>Kedah</td>\n    <td>Island</td>\n  </tr>\n  <tr>\n    <td>Perhentian Island</td>\n    <td>Terengganu</td>\n    <td>Island</td>\n  </tr>\n</table>",
+          "image": null,
+          "acceptedAnswers": [
+            "3",
+            "three"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "Three <tr> elements = three rows (1 header row + 2 data rows).",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-007",
+          "type": "typed",
+          "prompt": "How many COLUMNS does this table have?",
+          "code": "<table border=\"1\">\n  <tr>\n    <th>Holiday Destination</th>\n    <th>Location</th>\n    <th>Type</th>\n  </tr>\n  <tr>\n    <td>Langkawi</td>\n    <td>Kedah</td>\n    <td>Island</td>\n  </tr>\n  <tr>\n    <td>Perhentian Island</td>\n    <td>Terengganu</td>\n    <td>Island</td>\n  </tr>\n</table>",
+          "image": null,
+          "acceptedAnswers": [
+            "3",
+            "three"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "Each row has three cells, so three columns.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-008",
+          "type": "single_choice",
+          "prompt": "What does border=\"1\" do in this table?",
+          "code": "<table border=\"1\">\n  <tr>\n    <th>Holiday Destination</th>\n    <th>Location</th>\n    <th>Type</th>\n  </tr>\n  <tr>\n    <td>Langkawi</td>\n    <td>Kedah</td>\n    <td>Island</td>\n  </tr>\n  <tr>\n    <td>Perhentian Island</td>\n    <td>Terengganu</td>\n    <td>Island</td>\n  </tr>\n</table>",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Draws a 1-pixel border around the table and its cells"
+            },
+            {
+              "id": "b",
+              "text": "Makes the first column bold"
+            },
+            {
+              "id": "c",
+              "text": "Sets the table to 1% width"
+            },
+            {
+              "id": "d",
+              "text": "Adds one empty row"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "border=\"1\" turns on borders. In modern HTML you'd usually use CSS instead: border: 1px solid; plus border-collapse: collapse.",
+          "difficulty": "easy",
+          "tags": [
+            "tables"
+          ]
+        },
+        {
+          "id": "w2-tables-009",
+          "type": "single_choice",
+          "prompt": "The top cell in this table stretches across all three columns. Which attribute does that?",
+          "image": {
+            "src": "images/web/table-merged.svg",
+            "alt": "A table whose top cell, 'Holiday Destinations', stretches across all three columns. Below it are headers Destination, Location, Type and a row Langkawi, Kedah, Island."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "merge"
+            },
+            {
+              "id": "b",
+              "text": "rowspan"
+            },
+            {
+              "id": "c",
+              "text": "span"
+            },
+            {
+              "id": "d",
+              "text": "colspan"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <th colspan=\"3\">Holiday Destinations</th> makes one cell span 3 columns. rowspan does the same vertically.",
+          "difficulty": "medium",
+          "tags": [
+            "tables",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-tables-010",
+          "type": "single_choice",
+          "prompt": "What does rowspan=\"2\" on a cell do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes the cell stretch down across 2 rows"
+            },
+            {
+              "id": "b",
+              "text": "Repeats the cell twice"
+            },
+            {
+              "id": "c",
+              "text": "Makes the cell stretch across 2 columns"
+            },
+            {
+              "id": "d",
+              "text": "Adds 2 new rows"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. rowspan merges vertically; colspan merges horizontally.",
+          "difficulty": "medium",
+          "tags": [
+            "tables",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-tables-011",
+          "type": "single_choice",
+          "prompt": "Which tag gives a table a title, shown above it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<caption>"
+            },
+            {
+              "id": "b",
+              "text": "<title>"
+            },
+            {
+              "id": "c",
+              "text": "<th>"
+            },
+            {
+              "id": "d",
+              "text": "<legend>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. <caption> goes straight after <table>. (<legend> is the caption for a form <fieldset>.)",
+          "difficulty": "medium",
+          "tags": [
+            "tables",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-tables-012",
+          "type": "multiple_choice",
+          "prompt": "Which tags group parts of a table? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<tgroup>"
+            },
+            {
+              "id": "b",
+              "text": "<tbody>"
+            },
+            {
+              "id": "c",
+              "text": "<thead>"
+            },
+            {
+              "id": "d",
+              "text": "<theader>"
+            },
+            {
+              "id": "e",
+              "text": "<tfoot>"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "Extra — not in your notes. <thead> holds header rows, <tbody> the main rows, <tfoot> totals/footer rows.",
+          "difficulty": "medium",
+          "tags": [
+            "tables",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forms",
+      "title": "2.5 Forms",
+      "description": "Extra — your notes list forms but don't describe them. <form>, inputs, labels, select, textarea, buttons.",
+      "questions": [
+        {
+          "id": "w2-forms-001",
+          "type": "single_choice",
+          "prompt": "What is an HTML <form> used for?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Collecting user input and sending it to a server"
+            },
+            {
+              "id": "b",
+              "text": "Displaying a table of data"
+            },
+            {
+              "id": "c",
+              "text": "Embedding a video"
+            },
+            {
+              "id": "d",
+              "text": "Styling the page"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Forms gather input (logins, searches, sign-ups) and submit it.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-002",
+          "type": "single_choice",
+          "prompt": "What does the action attribute of <form> specify?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Which button submits the form"
+            },
+            {
+              "id": "b",
+              "text": "The URL where the form data is sent"
+            },
+            {
+              "id": "c",
+              "text": "The form's colour"
+            },
+            {
+              "id": "d",
+              "text": "Whether fields are required"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. action=\"/register\" sends the data to /register.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-003",
+          "type": "multiple_choice",
+          "prompt": "Which are the two common values of the form's method attribute? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "SEND"
+            },
+            {
+              "id": "b",
+              "text": "PUSH"
+            },
+            {
+              "id": "c",
+              "text": "POST"
+            },
+            {
+              "id": "d",
+              "text": "GET"
+            }
+          ],
+          "correct": [
+            "c",
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. GET and POST.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-004",
+          "type": "single_choice",
+          "prompt": "Which method should a login form use to send a password?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "POST — the data goes in the request body, not the URL"
+            },
+            {
+              "id": "b",
+              "text": "Either; they are identical"
+            },
+            {
+              "id": "c",
+              "text": "Neither; passwords can't be sent"
+            },
+            {
+              "id": "d",
+              "text": "GET — the data is added to the URL"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. GET puts data in the URL (visible, bookmarked, logged). POST sends it in the request body. Use GET for searches, POST for sensitive or data-changing forms.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-005",
+          "type": "single_choice",
+          "prompt": "Which input type hides the characters as the user types?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "type=\"text\""
+            },
+            {
+              "id": "b",
+              "text": "type=\"hidden\""
+            },
+            {
+              "id": "c",
+              "text": "type=\"password\""
+            },
+            {
+              "id": "d",
+              "text": "type=\"secret\""
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. password shows dots. hidden isn't shown at all — it sends a value the user doesn't see.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-006",
+          "type": "multiple_choice",
+          "prompt": "Which of these are real <input> types? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "number"
+            },
+            {
+              "id": "b",
+              "text": "radio"
+            },
+            {
+              "id": "c",
+              "text": "dropdown"
+            },
+            {
+              "id": "d",
+              "text": "date"
+            },
+            {
+              "id": "e",
+              "text": "checkbox"
+            },
+            {
+              "id": "f",
+              "text": "email"
+            },
+            {
+              "id": "g",
+              "text": "paragraph"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e",
+            "f"
+          ],
+          "explanation": "Extra — not in your notes. Others include text, password, file, range, color, tel, url, search, submit, reset and hidden. A dropdown is <select>.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-007",
+          "type": "single_choice",
+          "prompt": "The user must choose exactly ONE option (e.g. Male / Female). Which input type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "radio"
+            },
+            {
+              "id": "b",
+              "text": "select-many"
+            },
+            {
+              "id": "c",
+              "text": "button"
+            },
+            {
+              "id": "d",
+              "text": "checkbox"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Radio buttons allow one choice per group. Group them by giving them the same name attribute.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-008",
+          "type": "single_choice",
+          "prompt": "How do you make several radio buttons belong to one group (only one can be chosen)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Put them in one <ol>"
+            },
+            {
+              "id": "b",
+              "text": "Give them all the same name attribute"
+            },
+            {
+              "id": "c",
+              "text": "Give them all the same value"
+            },
+            {
+              "id": "d",
+              "text": "Give them all the same id"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Same name = same group. ids must always be unique.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-009",
+          "type": "single_choice",
+          "prompt": "The user can tick several hobbies. Which input type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "checkbox"
+            },
+            {
+              "id": "b",
+              "text": "hidden"
+            },
+            {
+              "id": "c",
+              "text": "password"
+            },
+            {
+              "id": "d",
+              "text": "radio"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Checkboxes allow multiple selections.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-010",
+          "type": "single_choice",
+          "prompt": "Which element creates a drop-down list?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<input type=\"dropdown\">"
+            },
+            {
+              "id": "b",
+              "text": "<dl>"
+            },
+            {
+              "id": "c",
+              "text": "<list>"
+            },
+            {
+              "id": "d",
+              "text": "<select> containing <option> elements"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <select name=\"state\"><option>Kedah</option>…</select>.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-011",
+          "type": "typed",
+          "prompt": "Which element creates a multi-line text box (e.g. for comments)?",
+          "image": null,
+          "acceptedAnswers": [
+            "textarea",
+            "<textarea>",
+            "<textarea></textarea>"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "tag name"
+          },
+          "explanation": "Extra — not in your notes. <textarea rows=\"4\" cols=\"40\"></textarea>.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-012",
+          "type": "single_choice",
+          "prompt": "What does this <label> do?",
+          "code": "<label for=\"email\">Email</label>\n<input type=\"email\" id=\"email\" name=\"email\">",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Sets the input's placeholder"
+            },
+            {
+              "id": "b",
+              "text": "Validates the email address"
+            },
+            {
+              "id": "c",
+              "text": "Links the text “Email” to the input with id=\"email\", so tapping the label focuses the input"
+            },
+            {
+              "id": "d",
+              "text": "Gives the input a name for the server"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. for must match the input's id. Labels help accessibility and make small inputs easier to tap.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-013",
+          "type": "single_choice",
+          "prompt": "Which attribute decides the key under which a field's value is sent to the server?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "id"
+            },
+            {
+              "id": "b",
+              "text": "for"
+            },
+            {
+              "id": "c",
+              "text": "name"
+            },
+            {
+              "id": "d",
+              "text": "placeholder"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. Without a name, the field's value isn't submitted. id is for labels, CSS and links.",
+          "difficulty": "hard",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-014",
+          "type": "single_choice",
+          "prompt": "Which attribute shows grey hint text inside an empty field?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "value"
+            },
+            {
+              "id": "b",
+              "text": "title"
+            },
+            {
+              "id": "c",
+              "text": "hint"
+            },
+            {
+              "id": "d",
+              "text": "placeholder"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. placeholder=\"e.g. ali@mail.com\".",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-015",
+          "type": "single_choice",
+          "prompt": "Which attribute stops the form submitting while a field is empty?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "required"
+            },
+            {
+              "id": "b",
+              "text": "mandatory"
+            },
+            {
+              "id": "c",
+              "text": "notnull"
+            },
+            {
+              "id": "d",
+              "text": "validate"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Add required to the input.",
+          "difficulty": "easy",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-016",
+          "type": "multiple_choice",
+          "prompt": "Which create a button that submits the form? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<button type=\"submit\">Send</button>"
+            },
+            {
+              "id": "b",
+              "text": "<input type=\"submit\" value=\"Send\">"
+            },
+            {
+              "id": "c",
+              "text": "<input type=\"text\" value=\"Send\">"
+            },
+            {
+              "id": "d",
+              "text": "<a href=\"#\">Send</a>"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Both submit. type=\"reset\" clears the form instead.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-017",
+          "type": "single_choice",
+          "prompt": "Which tags group related form fields and give the group a caption?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<fieldset> and <legend>"
+            },
+            {
+              "id": "b",
+              "text": "<group> and <title>"
+            },
+            {
+              "id": "c",
+              "text": "<form> and <h1>"
+            },
+            {
+              "id": "d",
+              "text": "<div> and <caption>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. <fieldset> draws a box around the fields; <legend> is its caption.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-forms-018",
+          "type": "typed",
+          "prompt": "Which input type lets the user upload a file? (type=\"____\")",
+          "image": null,
+          "acceptedAnswers": [
+            "file",
+            "type=\"file\""
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "type value"
+          },
+          "explanation": "Extra — not in your notes. The form also needs method=\"post\" and enctype=\"multipart/form-data\" to send files.",
+          "difficulty": "medium",
+          "tags": [
+            "forms",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "semantic-and-text-tags",
+      "title": "More HTML: Semantic & Text Tags",
+      "description": "Extra — tags beyond your notes: header/nav/main/section/article/aside/footer, div vs span, and text formatting.",
+      "questions": [
+        {
+          "id": "w2-sem-001",
+          "type": "single_choice",
+          "prompt": "Which element should wrap the main navigation links?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<header>"
+            },
+            {
+              "id": "b",
+              "text": "<aside>"
+            },
+            {
+              "id": "c",
+              "text": "<nav>"
+            },
+            {
+              "id": "d",
+              "text": "<menu-bar>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. <nav> marks a block of navigation links.",
+          "difficulty": "easy",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-002",
+          "type": "single_choice",
+          "prompt": "Which element holds the dominant, unique content of the page (only one visible per page)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<body>"
+            },
+            {
+              "id": "b",
+              "text": "<article>"
+            },
+            {
+              "id": "c",
+              "text": "<section>"
+            },
+            {
+              "id": "d",
+              "text": "<main>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <main> is the page's primary content.",
+          "difficulty": "easy",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-003",
+          "type": "single_choice",
+          "prompt": "A blog post or news story that would make sense on its own should be wrapped in…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<article>"
+            },
+            {
+              "id": "b",
+              "text": "<aside>"
+            },
+            {
+              "id": "c",
+              "text": "<section>"
+            },
+            {
+              "id": "d",
+              "text": "<div>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. <article> = self-contained content.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-004",
+          "type": "single_choice",
+          "prompt": "Content only loosely related to the main content, like a sidebar, belongs in…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<footer>"
+            },
+            {
+              "id": "b",
+              "text": "<aside>"
+            },
+            {
+              "id": "c",
+              "text": "<nav>"
+            },
+            {
+              "id": "d",
+              "text": "<main>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. <aside> = sidebar / related content.",
+          "difficulty": "easy",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-005",
+          "type": "single_choice",
+          "prompt": "A thematic group of content, normally with its own heading (e.g. “Our Services”), should use…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<article>"
+            },
+            {
+              "id": "b",
+              "text": "<header>"
+            },
+            {
+              "id": "c",
+              "text": "<span>"
+            },
+            {
+              "id": "d",
+              "text": "<section>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <section> groups related content under a heading.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-006",
+          "type": "multiple_choice",
+          "prompt": "Which are HTML5 semantic layout elements? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<footer>"
+            },
+            {
+              "id": "b",
+              "text": "<span>"
+            },
+            {
+              "id": "c",
+              "text": "<div>"
+            },
+            {
+              "id": "d",
+              "text": "<nav>"
+            },
+            {
+              "id": "e",
+              "text": "<header>"
+            },
+            {
+              "id": "f",
+              "text": "<article>"
+            }
+          ],
+          "correct": [
+            "a",
+            "d",
+            "e",
+            "f"
+          ],
+          "explanation": "Extra — not in your notes. Semantic elements describe their meaning. <div> and <span> are generic containers with no meaning.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-007",
+          "type": "single_choice",
+          "prompt": "What is the difference between <div> and <span>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are identical"
+            },
+            {
+              "id": "b",
+              "text": "<span> is only for images"
+            },
+            {
+              "id": "c",
+              "text": "<div> is a block-level container; <span> is an inline container"
+            },
+            {
+              "id": "d",
+              "text": "<div> is inline; <span> is block-level"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. <div> starts on a new line and takes full width. <span> sits inside a line of text. Both are mainly hooks for CSS.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-008",
+          "type": "multiple_choice",
+          "prompt": "Which elements are INLINE by default (they don't start a new line)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<div>"
+            },
+            {
+              "id": "b",
+              "text": "<p>"
+            },
+            {
+              "id": "c",
+              "text": "<a>"
+            },
+            {
+              "id": "d",
+              "text": "<strong>"
+            },
+            {
+              "id": "e",
+              "text": "<h2>"
+            },
+            {
+              "id": "f",
+              "text": "<em>"
+            },
+            {
+              "id": "g",
+              "text": "<span>"
+            }
+          ],
+          "correct": [
+            "c",
+            "d",
+            "f",
+            "g"
+          ],
+          "explanation": "Extra — not in your notes. <div>, <p>, headings, lists and tables are block-level.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-009",
+          "type": "single_choice",
+          "prompt": "Which tag inserts a line break?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<break>"
+            },
+            {
+              "id": "b",
+              "text": "<br>"
+            },
+            {
+              "id": "c",
+              "text": "<hr>"
+            },
+            {
+              "id": "d",
+              "text": "<lb>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. <br> = line break. <hr> = horizontal rule (a thematic break line).",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-010",
+          "type": "single_choice",
+          "prompt": "Which tag draws a horizontal line to separate sections?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<br>"
+            },
+            {
+              "id": "b",
+              "text": "<line>"
+            },
+            {
+              "id": "c",
+              "text": "<hr>"
+            },
+            {
+              "id": "d",
+              "text": "<hl>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. <hr> = horizontal rule.",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-011",
+          "type": "single_choice",
+          "prompt": "What is the difference between <strong> and <b>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<strong> means important content; <b> is only visually bold"
+            },
+            {
+              "id": "b",
+              "text": "No difference in meaning or looks"
+            },
+            {
+              "id": "c",
+              "text": "<strong> makes text italic"
+            },
+            {
+              "id": "d",
+              "text": "<b> is newer than <strong>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. Both look bold, but <strong> carries meaning (screen readers can stress it). Likewise <em> = emphasis vs <i> = just italic.",
+          "difficulty": "medium",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-012",
+          "type": "typed",
+          "prompt": "Which tag makes the “2” in H₂O appear lowered (subscript)?",
+          "image": null,
+          "acceptedAnswers": [
+            "sub",
+            "<sub>",
+            "<sub></sub>"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "tag name"
+          },
+          "explanation": "Extra — not in your notes. <sub> = subscript (H<sub>2</sub>O). <sup> = superscript (x<sup>2</sup>).",
+          "difficulty": "medium",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-013",
+          "type": "single_choice",
+          "prompt": "Which tag would you use for the “2” in x² (superscript)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<top>"
+            },
+            {
+              "id": "b",
+              "text": "<sup>"
+            },
+            {
+              "id": "c",
+              "text": "<sub>"
+            },
+            {
+              "id": "d",
+              "text": "<small>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. <sup> raises text.",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-014",
+          "type": "single_choice",
+          "prompt": "Which tag highlights text like a yellow marker?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<highlight>"
+            },
+            {
+              "id": "b",
+              "text": "<em>"
+            },
+            {
+              "id": "c",
+              "text": "<strong>"
+            },
+            {
+              "id": "d",
+              "text": "<mark>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <mark> highlights.",
+          "difficulty": "easy",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-015",
+          "type": "single_choice",
+          "prompt": "Which tag keeps all spaces and line breaks exactly as typed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<p>"
+            },
+            {
+              "id": "b",
+              "text": "<code>"
+            },
+            {
+              "id": "c",
+              "text": "<pre>"
+            },
+            {
+              "id": "d",
+              "text": "<keep>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. <pre> = preformatted text, shown in a monospace font. <code> marks inline code.",
+          "difficulty": "medium",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-016",
+          "type": "single_choice",
+          "prompt": "Which tag is meant for a long quotation from another source?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<quote>"
+            },
+            {
+              "id": "b",
+              "text": "<blockquote>"
+            },
+            {
+              "id": "c",
+              "text": "<cite>"
+            },
+            {
+              "id": "d",
+              "text": "<q>"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. <blockquote> for a block quotation; <q> for a short inline quote (adds quote marks); <cite> for a work's title.",
+          "difficulty": "medium",
+          "tags": [
+            "text",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-sem-017",
+          "type": "true_false",
+          "prompt": "Building a whole page only with <div>s is invalid HTML.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Extra — not in your notes. It is valid, but not semantic. Semantic tags help screen readers, SEO and readability.",
+          "difficulty": "medium",
+          "tags": [
+            "semantic",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media-entities-attributes",
+      "title": "More HTML: Media, Entities & Attributes",
+      "description": "Extra — <video>, <audio>, <iframe>, <figure>, HTML entities, global attributes and meta tags.",
+      "questions": [
+        {
+          "id": "w2-media-001",
+          "type": "single_choice",
+          "prompt": "Which tag embeds a video file?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<media>"
+            },
+            {
+              "id": "b",
+              "text": "<movie>"
+            },
+            {
+              "id": "c",
+              "text": "<embed-video>"
+            },
+            {
+              "id": "d",
+              "text": "<video>"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. <video src=\"clip.mp4\" controls></video>.",
+          "difficulty": "easy",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-002",
+          "type": "single_choice",
+          "prompt": "What does the controls attribute do on <video> or <audio>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Starts playing automatically"
+            },
+            {
+              "id": "b",
+              "text": "Loops the media forever"
+            },
+            {
+              "id": "c",
+              "text": "Mutes the media"
+            },
+            {
+              "id": "d",
+              "text": "Shows play/pause, volume and progress controls"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. autoplay starts automatically, loop repeats, muted mutes.",
+          "difficulty": "easy",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-003",
+          "type": "single_choice",
+          "prompt": "Which tag plays a sound file?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<audio>"
+            },
+            {
+              "id": "b",
+              "text": "<music>"
+            },
+            {
+              "id": "c",
+              "text": "<mp3>"
+            },
+            {
+              "id": "d",
+              "text": "<sound>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. <audio src=\"song.mp3\" controls>.",
+          "difficulty": "easy",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-004",
+          "type": "single_choice",
+          "prompt": "Why put several <source> elements inside <video>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To play several videos at once"
+            },
+            {
+              "id": "b",
+              "text": "To offer different file formats so the browser can pick one it supports"
+            },
+            {
+              "id": "c",
+              "text": "To make the video bigger"
+            },
+            {
+              "id": "d",
+              "text": "To add subtitles"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. The browser uses the first <source> format it can play.",
+          "difficulty": "medium",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-005",
+          "type": "single_choice",
+          "prompt": "Which tag embeds another web page inside your page (e.g. Google Maps or a YouTube player)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<frame>"
+            },
+            {
+              "id": "b",
+              "text": "<object-page>"
+            },
+            {
+              "id": "c",
+              "text": "<iframe>"
+            },
+            {
+              "id": "d",
+              "text": "<embed-page>"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. <iframe src=\"…\">.",
+          "difficulty": "medium",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-006",
+          "type": "single_choice",
+          "prompt": "Which pair adds an image with a caption underneath, as one unit?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<figure> with <figcaption>"
+            },
+            {
+              "id": "b",
+              "text": "<picture> with <legend>"
+            },
+            {
+              "id": "c",
+              "text": "<img> with <caption>"
+            },
+            {
+              "id": "d",
+              "text": "<div> with <title>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. <figure><img …><figcaption>Petronas Twin Towers</figcaption></figure>.",
+          "difficulty": "medium",
+          "tags": [
+            "media",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-007",
+          "type": "typed",
+          "prompt": "Which HTML entity displays a less-than sign (<) as text?",
+          "image": null,
+          "acceptedAnswers": [
+            "&lt;",
+            "&lt"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "&...;"
+          },
+          "explanation": "Extra — not in your notes. &lt; = <, &gt; = >, &amp; = &, &quot; = \", &nbsp; = non-breaking space, &copy; = ©.",
+          "difficulty": "medium",
+          "tags": [
+            "entities",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-008",
+          "type": "single_choice",
+          "prompt": "What does &nbsp; insert?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A new paragraph"
+            },
+            {
+              "id": "b",
+              "text": "A line break"
+            },
+            {
+              "id": "c",
+              "text": "A tab"
+            },
+            {
+              "id": "d",
+              "text": "A non-breaking space"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. A space that won't break onto a new line (and isn't collapsed with other spaces).",
+          "difficulty": "medium",
+          "tags": [
+            "entities",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-009",
+          "type": "single_choice",
+          "prompt": "Why would you write &amp; instead of just & in HTML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Because & is not a valid character"
+            },
+            {
+              "id": "b",
+              "text": "It is required in every URL"
+            },
+            {
+              "id": "c",
+              "text": "Because & starts an entity, so a literal ampersand should be escaped"
+            },
+            {
+              "id": "d",
+              "text": "To make the text bold"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Extra — not in your notes. & begins entities like &copy;, so writing &amp; avoids confusion.",
+          "difficulty": "hard",
+          "tags": [
+            "entities",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-010",
+          "type": "multiple_choice",
+          "prompt": "Which are GLOBAL attributes that can go on any HTML element? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "href"
+            },
+            {
+              "id": "b",
+              "text": "style"
+            },
+            {
+              "id": "c",
+              "text": "id"
+            },
+            {
+              "id": "d",
+              "text": "class"
+            },
+            {
+              "id": "e",
+              "text": "title"
+            },
+            {
+              "id": "f",
+              "text": "src"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Extra — not in your notes. href belongs to <a>/<link> and src to <img>/<script>/media.",
+          "difficulty": "medium",
+          "tags": [
+            "attributes",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-011",
+          "type": "true_false",
+          "prompt": "The same id value can be used on several elements on one page.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Extra — not in your notes. An id must be unique on the page. Use a class for something repeated.",
+          "difficulty": "easy",
+          "tags": [
+            "attributes",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-012",
+          "type": "single_choice",
+          "prompt": "What does the title attribute do, e.g. <abbr title=\"HyperText Markup Language\">HTML</abbr>?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Shows a tooltip with extra information when hovering"
+            },
+            {
+              "id": "b",
+              "text": "Hides the element"
+            },
+            {
+              "id": "c",
+              "text": "Makes the text a heading"
+            },
+            {
+              "id": "d",
+              "text": "Sets the page's title bar text"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Extra — not in your notes. title gives advisory text, usually shown as a tooltip.",
+          "difficulty": "medium",
+          "tags": [
+            "attributes",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-013",
+          "type": "single_choice",
+          "prompt": "What is <meta name=\"description\" content=\"…\"> used for?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A hidden comment for developers"
+            },
+            {
+              "id": "b",
+              "text": "The page's file name"
+            },
+            {
+              "id": "c",
+              "text": "The text displayed at the top of the page"
+            },
+            {
+              "id": "d",
+              "text": "A short summary of the page, often shown by search engines under the link"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. Search engines may show it in results.",
+          "difficulty": "medium",
+          "tags": [
+            "attributes",
+            "extra"
+          ]
+        },
+        {
+          "id": "w2-media-014",
+          "type": "single_choice",
+          "prompt": "Which line adds a small icon (favicon) to the browser tab?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "<icon src=\"favicon.png\">"
+            },
+            {
+              "id": "b",
+              "text": "<link rel=\"icon\" href=\"favicon.png\">"
+            },
+            {
+              "id": "c",
+              "text": "<meta icon=\"favicon.png\">"
+            },
+            {
+              "id": "d",
+              "text": "<img rel=\"icon\" src=\"favicon.png\">"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. Favicons are linked in <head> with rel=\"icon\".",
+          "difficulty": "medium",
+          "tags": [
+            "attributes",
+            "extra"
+          ]
+        }
+      ]
+    }
+  ]
+}

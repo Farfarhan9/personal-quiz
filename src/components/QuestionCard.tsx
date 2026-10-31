@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
+import { RichText } from './RichText';
 import { QUESTION_TYPE_LABELS, type Question, type UserAnswer } from '../types';
+import { CodeSnippet } from './CodeSnippet';
 import { ZoomableImage } from './ImageViewer';
 import { QuestionInput } from './QuestionInput';
 
@@ -31,8 +33,9 @@ export const QuestionCard = forwardRef<HTMLHeadingElement, QuestionCardProps>(fu
         )}
       </div>
       <h2 id={promptId} className="question-card__prompt" ref={headingRef} tabIndex={-1}>
-        {question.prompt || <span className="muted">(No question text yet)</span>}
+        {question.prompt ? <RichText text={question.prompt} /> : <span className="muted">(No question text yet)</span>}
       </h2>
+      {question.code && <CodeSnippet code={question.code} />}
       {question.image && <ZoomableImage image={question.image} className="question-card__image" />}
       <QuestionInput
         question={question}

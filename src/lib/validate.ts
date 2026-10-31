@@ -144,6 +144,11 @@ function parseQuestion(
   if (!prompt) c.add(where, 'Question text ("prompt") is required.', ti, qi);
 
   const image = parseImage(raw.image, `${where} › image`, c, ti, qi);
+  if (raw.code !== undefined && raw.code !== null && typeof raw.code !== 'string') {
+    c.add(where, '"code" must be a string (use \\n for new lines).', ti, qi);
+  }
+  // Keep indentation inside the snippet; only strip blank lines at the start and trailing whitespace.
+  const code = typeof raw.code === 'string' ? raw.code.replace(/^(\s*\n)+/, '').replace(/\s+$/, '') : '';
   const explanation = str(raw.explanation)?.trim();
   let difficulty: Difficulty | undefined;
   if (raw.difficulty !== undefined && raw.difficulty !== null && raw.difficulty !== '') {
@@ -154,6 +159,7 @@ function parseQuestion(
   const base = {
     id,
     prompt,
+    ...(code ? { code } : {}),
     ...(image ? { image } : {}),
     ...(explanation ? { explanation } : {}),
     ...(difficulty ? { difficulty } : {}),

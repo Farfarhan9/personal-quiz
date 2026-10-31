@@ -119,6 +119,7 @@ export function convertQuestion(q: Question, type: QuestionType): Question {
   const common = {
     id: q.id,
     prompt: q.prompt,
+    code: q.code,
     image: q.image,
     explanation: q.explanation,
     difficulty: q.difficulty,
@@ -188,6 +189,7 @@ function coerceQuestion(v: unknown, fallbackId: string): Question | null {
   const common = {
     id: s(v.id) || fallbackId,
     prompt: s(v.prompt),
+    ...(s(v.code) ? { code: s(v.code) } : {}),
     ...(image ? { image } : {}),
     explanation: s(v.explanation),
     difficulty: (DIFFICULTIES as readonly string[]).includes(s(v.difficulty)) ? (s(v.difficulty) as Difficulty) : undefined,

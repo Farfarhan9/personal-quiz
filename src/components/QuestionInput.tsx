@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { RichText } from './RichText';
 import { assertNever, optionLetter } from '../lib/grading';
 import { assetUrl } from '../lib/data';
 import type { ChoiceQuestion, Question, QuizImage, TypedQuestion, UserAnswer } from '../types';
@@ -92,7 +93,9 @@ function ChoiceList({ question, answer, onChange, locked, reveal, idPrefix, labe
                   {marker}
                 </span>
                 <span className="option__body">
-                  {option.text && <span className="option__text">{option.text}</span>}
+                  {option.text && <span className="option__text">
+                      <RichText text={option.text} />
+                    </span>}
                   {option.image && (
                     <img
                       src={assetUrl(option.image.src)}

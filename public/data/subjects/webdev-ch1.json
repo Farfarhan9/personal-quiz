@@ -1,0 +1,2653 @@
+{
+  "id": "webdev-ch1",
+  "title": "Web Development · Chapter 1",
+  "description": "Introduction to the WWW and the Internet: history, architecture, servers, protocols, IP & DNS, URLs, browsers, requirement analysis and scripting.",
+  "topics": [
+    {
+      "id": "internet-and-www",
+      "title": "1.1 Internet & the World Wide Web",
+      "description": "What the Internet is, key milestones 1969–1998, who uses it most, and how the web works.",
+      "questions": [
+        {
+          "id": "w1-www-001",
+          "type": "single_choice",
+          "prompt": "What is the Internet?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A collection of web pages linked together"
+            },
+            {
+              "id": "b",
+              "text": "A language used to build websites"
+            },
+            {
+              "id": "c",
+              "text": "The network of connected computers that the web works on"
+            },
+            {
+              "id": "d",
+              "text": "A program used to display web pages"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The Internet is the network of connected computers. The World Wide Web is one service that runs on top of it.",
+          "difficulty": "easy",
+          "tags": [
+            "internet"
+          ]
+        },
+        {
+          "id": "w1-www-002",
+          "type": "true_false",
+          "prompt": "The Internet and the World Wide Web are the same thing.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "The Internet is the network (the cables, routers and computers). The web is the system of linked web pages that works on that network.",
+          "difficulty": "easy",
+          "tags": [
+            "internet",
+            "www"
+          ]
+        },
+        {
+          "id": "w1-www-003",
+          "type": "typed",
+          "prompt": "In which year was ARPANET, the network that started the Internet, created?",
+          "image": null,
+          "acceptedAnswers": [
+            "1969"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a year"
+          },
+          "explanation": "ARPANET appeared in 1969, during the Cold War.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-004",
+          "type": "single_choice",
+          "prompt": "Who proposed the World Wide Web in 1989?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Bill Gates"
+            },
+            {
+              "id": "b",
+              "text": "Tim Berners-Lee"
+            },
+            {
+              "id": "c",
+              "text": "Marc Andreessen"
+            },
+            {
+              "id": "d",
+              "text": "Larry Page"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Tim Berners-Lee proposed the Web in 1989 while working at CERN, and published the first web page in 1990.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-005",
+          "type": "single_choice",
+          "prompt": "The first graphical web browser, created by Tim Berners-Lee at CERN, was called…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Mosaic"
+            },
+            {
+              "id": "b",
+              "text": "Gopher"
+            },
+            {
+              "id": "c",
+              "text": "Netscape Navigator"
+            },
+            {
+              "id": "d",
+              "text": "WorldWideWeb"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It was simply called WorldWideWeb. Mosaic (1993) was the first widely downloaded browser; Gopher was a search protocol.",
+          "difficulty": "medium",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-006",
+          "type": "single_choice",
+          "prompt": "Mosaic, released in 1993, is remembered as…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The first domain name system"
+            },
+            {
+              "id": "b",
+              "text": "The first content-based search protocol"
+            },
+            {
+              "id": "c",
+              "text": "The first widely downloaded Internet browser"
+            },
+            {
+              "id": "d",
+              "text": "The first webmail service"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Mosaic (1993) was the first widely downloaded browser.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-007",
+          "type": "typed",
+          "prompt": "What was the first content-based search protocol, introduced in 1991, called?",
+          "image": null,
+          "acceptedAnswers": [
+            "Gopher"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Gopher (1991) was the first content-based search protocol.",
+          "difficulty": "medium",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-008",
+          "type": "single_choice",
+          "prompt": "HoTMaiL, launched in 1996, was the first…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Search engine"
+            },
+            {
+              "id": "b",
+              "text": "Graphical web browser"
+            },
+            {
+              "id": "c",
+              "text": "Webmail service"
+            },
+            {
+              "id": "d",
+              "text": "Social network"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "HoTMaiL (1996) was the first webmail service — the capital letters spell HTML.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-009",
+          "type": "typed",
+          "prompt": "In which year was Google launched?",
+          "image": null,
+          "acceptedAnswers": [
+            "1998"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a year"
+          },
+          "explanation": "Google was launched in 1998.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-010",
+          "type": "single_choice",
+          "prompt": "Which list is in the correct chronological order?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Web proposed → ARPANET → Mosaic → Gopher → Google → HoTMaiL"
+            },
+            {
+              "id": "b",
+              "text": "ARPANET → Mosaic → Web proposed → Gopher → HoTMaiL → Google"
+            },
+            {
+              "id": "c",
+              "text": "ARPANET → Web proposed → Gopher → Mosaic → HoTMaiL → Google"
+            },
+            {
+              "id": "d",
+              "text": "Gopher → ARPANET → Web proposed → HoTMaiL → Mosaic → Google"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "1969 ARPANET → 1989 Web proposed → 1991 Gopher → 1993 Mosaic → 1996 HoTMaiL → 1998 Google.",
+          "difficulty": "medium",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-011",
+          "type": "single_choice",
+          "prompt": "Which milestone belongs in the box marked “?” (1983)?",
+          "image": {
+            "src": "images/web/internet-timeline.svg",
+            "alt": "Timeline from 1969 to 1990 shaded for the Cold War. Markers: 1969 ARPANET, 1980 NSFNET, 1983 marked with a question mark, 1984 DNS, 1990 WWW."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "DNS"
+            },
+            {
+              "id": "b",
+              "text": "TCP/IP"
+            },
+            {
+              "id": "c",
+              "text": "WWW"
+            },
+            {
+              "id": "d",
+              "text": "NSFNET"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The timeline is: 1969 ARPANET, 1980 NSFNET, 1983 TCP/IP, 1984 DNS, 1990 WWW.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-012",
+          "type": "single_choice",
+          "prompt": "According to the timeline in your notes, in which decade was the Domain Name System (DNS) developed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "1990s"
+            },
+            {
+              "id": "b",
+              "text": "1980s"
+            },
+            {
+              "id": "c",
+              "text": "1970s"
+            },
+            {
+              "id": "d",
+              "text": "1960s"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "DNS was developed in the 1980s (1984 on the timeline).",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-013",
+          "type": "true_false",
+          "prompt": "The Internet's early milestones (ARPANET to WWW) all happened during the Cold War (1947–1991).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "ARPANET (1969), NSFNET (1980), TCP/IP (1983), DNS (1984) and WWW (1990) all fall inside 1947–1991.",
+          "difficulty": "easy",
+          "tags": [
+            "milestones"
+          ]
+        },
+        {
+          "id": "w1-www-014",
+          "type": "single_choice",
+          "prompt": "Which region has the most comprehensive internet coverage in the world?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "East Asia"
+            },
+            {
+              "id": "b",
+              "text": "Northern Europe"
+            },
+            {
+              "id": "c",
+              "text": "North America"
+            },
+            {
+              "id": "d",
+              "text": "Western Europe"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Northern Europe ranks first for coverage, with Western Europe second.",
+          "difficulty": "easy",
+          "tags": [
+            "usage"
+          ]
+        },
+        {
+          "id": "w1-www-015",
+          "type": "single_choice",
+          "prompt": "Which country had the highest number of online users (2016–2025)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Indonesia"
+            },
+            {
+              "id": "b",
+              "text": "United States"
+            },
+            {
+              "id": "c",
+              "text": "India"
+            },
+            {
+              "id": "d",
+              "text": "China"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "China had the most online users, followed by India.",
+          "difficulty": "easy",
+          "tags": [
+            "usage"
+          ]
+        },
+        {
+          "id": "w1-www-016",
+          "type": "single_choice",
+          "prompt": "The web works on which architecture?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Standalone"
+            },
+            {
+              "id": "b",
+              "text": "Peer-to-peer only"
+            },
+            {
+              "id": "c",
+              "text": "Client-server"
+            },
+            {
+              "id": "d",
+              "text": "Mainframe-terminal"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The web uses client-server architecture.",
+          "difficulty": "easy",
+          "tags": [
+            "client-server"
+          ]
+        },
+        {
+          "id": "w1-www-017",
+          "type": "single_choice",
+          "prompt": "In the diagram, what does the server send back to the client at step ②?",
+          "image": {
+            "src": "images/web/client-server.svg",
+            "alt": "A Client box (e.g. web browser) and a Server box (e.g. web server). Arrow 1 labelled Request goes from client to server. Arrow 2, labelled with a question mark, goes back from server to client."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "A response (the requested service)"
+            },
+            {
+              "id": "b",
+              "text": "Its IP address only"
+            },
+            {
+              "id": "c",
+              "text": "Another request"
+            },
+            {
+              "id": "d",
+              "text": "Nothing — servers never reply"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "In client-server architecture the client makes a service request and the server responds with the service.",
+          "difficulty": "easy",
+          "tags": [
+            "client-server"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture-and-protocols",
+      "title": "1.2–1.3 Web Architecture, Servers & Protocols",
+      "description": "Internet architecture, web servers, and the TCP/IP, HTTP and FTP protocols.",
+      "questions": [
+        {
+          "id": "w1-arch-001",
+          "type": "multiple_choice",
+          "prompt": "Which of these are part of the internet architecture listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "HTTP"
+            },
+            {
+              "id": "c",
+              "text": "TCP/IP"
+            },
+            {
+              "id": "d",
+              "text": "IP address"
+            },
+            {
+              "id": "e",
+              "text": "URL"
+            },
+            {
+              "id": "f",
+              "text": "JavaScript"
+            },
+            {
+              "id": "g",
+              "text": "DNS"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e",
+            "g"
+          ],
+          "explanation": "The notes list TCP/IP, IP address, DNS, Internet service, WWW, URL and HTTP. CSS and JavaScript are web page technologies, not internet architecture.",
+          "difficulty": "medium",
+          "tags": [
+            "architecture"
+          ]
+        },
+        {
+          "id": "w1-arch-002",
+          "type": "single_choice",
+          "prompt": "What is a web server?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Software and hardware that uses HTTP and other protocols to respond to client requests made over the Web"
+            },
+            {
+              "id": "b",
+              "text": "A language used to style web pages"
+            },
+            {
+              "id": "c",
+              "text": "A program on the user's computer that displays web pages"
+            },
+            {
+              "id": "d",
+              "text": "A cable that connects computers"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A web server is software plus hardware that answers client requests using HTTP and other protocols.",
+          "difficulty": "easy",
+          "tags": [
+            "web-server"
+          ]
+        },
+        {
+          "id": "w1-arch-003",
+          "type": "multiple_choice",
+          "prompt": "What does a web server do? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Delivers web pages to users"
+            },
+            {
+              "id": "b",
+              "text": "Displays web pages on the user's screen"
+            },
+            {
+              "id": "c",
+              "text": "Processes web pages"
+            },
+            {
+              "id": "d",
+              "text": "Translates domain names into IP addresses"
+            },
+            {
+              "id": "e",
+              "text": "Stores web pages"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "Web servers store, process and deliver pages. Displaying pages is the browser's job; translating names is DNS's job.",
+          "difficulty": "medium",
+          "tags": [
+            "web-server"
+          ]
+        },
+        {
+          "id": "w1-arch-004",
+          "type": "multiple_choice",
+          "prompt": "Which of these are examples of web servers? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Google Chrome"
+            },
+            {
+              "id": "b",
+              "text": "iPlanet Web Server"
+            },
+            {
+              "id": "c",
+              "text": "Nginx"
+            },
+            {
+              "id": "d",
+              "text": "Apache"
+            },
+            {
+              "id": "e",
+              "text": "Microsoft IIS"
+            },
+            {
+              "id": "f",
+              "text": "Opera"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Apache, Nginx, IIS and iPlanet are web servers. Chrome and Opera are web browsers (clients).",
+          "difficulty": "medium",
+          "tags": [
+            "web-server"
+          ]
+        },
+        {
+          "id": "w1-arch-005",
+          "type": "single_choice",
+          "prompt": "How does the Internet physically create its communication networks?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Radio broadcasts from TV stations"
+            },
+            {
+              "id": "b",
+              "text": "Only satellites in orbit"
+            },
+            {
+              "id": "c",
+              "text": "A global network of physical cables such as copper telephone wires and fibre optic cables"
+            },
+            {
+              "id": "d",
+              "text": "Only Wi-Fi signals between homes"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The Internet is built on physical cables — copper telephone wires and fibre optic cables.",
+          "difficulty": "easy",
+          "tags": [
+            "network"
+          ]
+        },
+        {
+          "id": "w1-arch-006",
+          "type": "true_false",
+          "prompt": "Wireless connections such as Wi-Fi and 4G/5G do not rely on physical cables to reach the Internet.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Even wireless connections connect to the physical cable network to access the Internet.",
+          "difficulty": "medium",
+          "tags": [
+            "network"
+          ]
+        },
+        {
+          "id": "w1-arch-007",
+          "type": "single_choice",
+          "prompt": "What is a communication protocol?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A standard mechanism that allows dissimilar systems to communicate"
+            },
+            {
+              "id": "b",
+              "text": "A web page written in HTML"
+            },
+            {
+              "id": "c",
+              "text": "A type of network cable"
+            },
+            {
+              "id": "d",
+              "text": "A list of websites a user has visited"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A protocol is an agreed standard so that different systems can talk to each other.",
+          "difficulty": "easy",
+          "tags": [
+            "protocols"
+          ]
+        },
+        {
+          "id": "w1-arch-008",
+          "type": "true_false",
+          "prompt": "A single communication can involve several different protocols.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Yes — loading a web page uses HTTP running over TCP/IP, for example.",
+          "difficulty": "easy",
+          "tags": [
+            "protocols"
+          ]
+        },
+        {
+          "id": "w1-arch-009",
+          "type": "multiple_choice",
+          "prompt": "Which are common protocols listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "FTP"
+            },
+            {
+              "id": "b",
+              "text": "HTTP"
+            },
+            {
+              "id": "c",
+              "text": "URL"
+            },
+            {
+              "id": "d",
+              "text": "HTML"
+            },
+            {
+              "id": "e",
+              "text": "TCP/IP"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "e"
+          ],
+          "explanation": "TCP/IP, HTTP and FTP are protocols. HTML is a markup language and a URL is an address.",
+          "difficulty": "medium",
+          "tags": [
+            "protocols"
+          ]
+        },
+        {
+          "id": "w1-arch-010",
+          "type": "typed",
+          "prompt": "What does TCP/IP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "transmission control protocol/internet protocol",
+            "transmission control protocol / internet protocol",
+            "transmission control protocol internet protocol",
+            "transmission control protocol and internet protocol"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "TCP/IP = Transmission Control Protocol / Internet Protocol. It enables a device to exchange data over a network.",
+          "difficulty": "medium",
+          "tags": [
+            "tcp-ip"
+          ]
+        },
+        {
+          "id": "w1-arch-011",
+          "type": "single_choice",
+          "prompt": "Which part of TCP/IP breaks a message into packets before sending and reassembles them at the destination?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "TCP"
+            },
+            {
+              "id": "b",
+              "text": "IP"
+            },
+            {
+              "id": "c",
+              "text": "HTTP"
+            },
+            {
+              "id": "d",
+              "text": "DNS"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "TCP controls assembling the message into packets and reassembling them once they arrive.",
+          "difficulty": "easy",
+          "tags": [
+            "tcp-ip"
+          ]
+        },
+        {
+          "id": "w1-arch-012",
+          "type": "single_choice",
+          "prompt": "Which part of TCP/IP labels each packet with the correct destination address?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "TCP"
+            },
+            {
+              "id": "b",
+              "text": "FTP"
+            },
+            {
+              "id": "c",
+              "text": "IP"
+            },
+            {
+              "id": "d",
+              "text": "URL"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "IP handles all the addressing details so each packet is labelled with the correct IP address.",
+          "difficulty": "easy",
+          "tags": [
+            "tcp-ip"
+          ]
+        },
+        {
+          "id": "w1-arch-013",
+          "type": "single_choice",
+          "prompt": "TCP/IP uses which communication model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Client-server"
+            },
+            {
+              "id": "b",
+              "text": "Master-slave"
+            },
+            {
+              "id": "c",
+              "text": "Peer-to-peer"
+            },
+            {
+              "id": "d",
+              "text": "Broadcast-only"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "TCP/IP uses the client-server model: a client is provided a service (like a web page) by a server.",
+          "difficulty": "easy",
+          "tags": [
+            "tcp-ip"
+          ]
+        },
+        {
+          "id": "w1-arch-014",
+          "type": "typed",
+          "prompt": "What does HTTP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "hypertext transfer protocol",
+            "hyper text transfer protocol"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "HTTP = Hypertext Transfer Protocol.",
+          "difficulty": "easy",
+          "tags": [
+            "http"
+          ]
+        },
+        {
+          "id": "w1-arch-015",
+          "type": "multiple_choice",
+          "prompt": "What does HTTP do? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Defines what actions a web server and browser should take in response to commands"
+            },
+            {
+              "id": "b",
+              "text": "Allows web resources to transfer between a web server and a web browser"
+            },
+            {
+              "id": "c",
+              "text": "Splits messages into packets"
+            },
+            {
+              "id": "d",
+              "text": "Translates domain names into IP addresses"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "HTTP transfers resources between server and browser and defines the actions for each command. DNS translates names; TCP makes packets.",
+          "difficulty": "medium",
+          "tags": [
+            "http"
+          ]
+        },
+        {
+          "id": "w1-arch-016",
+          "type": "single_choice",
+          "prompt": "You type a URL into the browser and press Enter. What happens, according to your notes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The browser sends an HTTP command to the web server telling it to fetch and transmit the page"
+            },
+            {
+              "id": "b",
+              "text": "The page is downloaded using FTP"
+            },
+            {
+              "id": "c",
+              "text": "The DNS server sends the web page"
+            },
+            {
+              "id": "d",
+              "text": "The browser builds the page itself from the URL"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Entering a URL sends an HTTP command directing the web server to fetch and transmit the requested page.",
+          "difficulty": "easy",
+          "tags": [
+            "http"
+          ]
+        },
+        {
+          "id": "w1-arch-017",
+          "type": "typed",
+          "prompt": "What does FTP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "file transfer protocol"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "FTP = File Transfer Protocol.",
+          "difficulty": "easy",
+          "tags": [
+            "ftp"
+          ]
+        },
+        {
+          "id": "w1-arch-018",
+          "type": "multiple_choice",
+          "prompt": "Which statements about FTP are true? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It can be used with a web browser or FTP software"
+            },
+            {
+              "id": "b",
+              "text": "Its URLs begin with ftp:// instead of http://"
+            },
+            {
+              "id": "c",
+              "text": "You can upload, download and manage files as if they were on your own computer"
+            },
+            {
+              "id": "d",
+              "text": "It is used to style web pages"
+            },
+            {
+              "id": "e",
+              "text": "An FTP site may require a login"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "FTP is the set of rules for transferring files. All of the first four statements come from the notes.",
+          "difficulty": "medium",
+          "tags": [
+            "ftp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ip-dns-url",
+      "title": "1.3 IP Addresses, DNS & URLs",
+      "description": "Public vs private IP, IPv4 vs IPv6, how DNS works, and the parts of a URL.",
+      "questions": [
+        {
+          "id": "w1-addr-001",
+          "type": "single_choice",
+          "prompt": "What is an IP address?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The name of a website"
+            },
+            {
+              "id": "b",
+              "text": "A unique identifier assigned to a device in a computer network"
+            },
+            {
+              "id": "c",
+              "text": "The location of a file on a web server"
+            },
+            {
+              "id": "d",
+              "text": "The password for a Wi-Fi network"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "An IP (Internet Protocol) address uniquely identifies a device on a network.",
+          "difficulty": "easy",
+          "tags": [
+            "ip"
+          ]
+        },
+        {
+          "id": "w1-addr-002",
+          "type": "single_choice",
+          "prompt": "Which type of IP address can be reached directly over the Internet and is assigned to your router by your ISP?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Loopback address"
+            },
+            {
+              "id": "b",
+              "text": "Private IP address"
+            },
+            {
+              "id": "c",
+              "text": "Local IP address"
+            },
+            {
+              "id": "d",
+              "text": "Public IP address"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A public IP is assigned to the router by an Internet Service Provider and is reachable over the internet.",
+          "difficulty": "easy",
+          "tags": [
+            "ip"
+          ]
+        },
+        {
+          "id": "w1-addr-003",
+          "type": "single_choice",
+          "prompt": "A private IP address is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An IP address used inside a local network"
+            },
+            {
+              "id": "b",
+              "text": "An address that only Google can see"
+            },
+            {
+              "id": "c",
+              "text": "An address reachable from anywhere on the internet"
+            },
+            {
+              "id": "d",
+              "text": "The address of a DNS server"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Private IP addresses are used within a local network (e.g. devices on your home Wi-Fi).",
+          "difficulty": "easy",
+          "tags": [
+            "ip"
+          ]
+        },
+        {
+          "id": "w1-addr-004",
+          "type": "typed",
+          "prompt": "What does ISP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "internet service provider"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "ISP = Internet Service Provider — the company that assigns your router its public IP address.",
+          "difficulty": "easy",
+          "tags": [
+            "ip"
+          ]
+        },
+        {
+          "id": "w1-addr-005",
+          "type": "multiple_choice",
+          "prompt": "What are the two versions of IP address? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IPv4"
+            },
+            {
+              "id": "b",
+              "text": "IPv2"
+            },
+            {
+              "id": "c",
+              "text": "IPv6"
+            },
+            {
+              "id": "d",
+              "text": "IPv8"
+            }
+          ],
+          "correct": [
+            "a",
+            "c"
+          ],
+          "explanation": "The two versions are IPv4 and IPv6.",
+          "difficulty": "easy",
+          "tags": [
+            "ip"
+          ]
+        },
+        {
+          "id": "w1-addr-006",
+          "type": "single_choice",
+          "prompt": "Which of these is written in IPv4 format?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "www.example.com"
+            },
+            {
+              "id": "b",
+              "text": "https://192.168.1.10/index.html"
+            },
+            {
+              "id": "c",
+              "text": "2001:0db8:85a3::8a2e:0370:7334"
+            },
+            {
+              "id": "d",
+              "text": "192.168.1.10"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Extra — not in your notes. IPv4 uses four numbers 0–255 separated by dots (32 bits). IPv6 uses hexadecimal groups separated by colons (128 bits), which gives far more addresses.",
+          "difficulty": "medium",
+          "tags": [
+            "ip",
+            "extra"
+          ]
+        },
+        {
+          "id": "w1-addr-007",
+          "type": "single_choice",
+          "prompt": "What is the Domain Name System (DNS)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A naming database that translates domain names into IP addresses"
+            },
+            {
+              "id": "b",
+              "text": "A language for describing web pages"
+            },
+            {
+              "id": "c",
+              "text": "A web browser feature for saving bookmarks"
+            },
+            {
+              "id": "d",
+              "text": "A protocol for transferring files"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "DNS translates human-friendly domain names into the IP addresses computers use.",
+          "difficulty": "easy",
+          "tags": [
+            "dns"
+          ]
+        },
+        {
+          "id": "w1-addr-008",
+          "type": "true_false",
+          "prompt": "DNS runs on one single server somewhere in the world.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "The whole DNS system involves a collection of servers.",
+          "difficulty": "easy",
+          "tags": [
+            "dns"
+          ]
+        },
+        {
+          "id": "w1-addr-009",
+          "type": "single_choice",
+          "prompt": "In this DNS lookup, what does the DNS server send back to the browser at step 2?",
+          "image": {
+            "src": "images/web/dns-flow.svg",
+            "alt": "Browser asks a DNS server 'Where is example.com?' (step 1). The DNS server replies with something marked ??? (step 2). The browser sends an HTTP request to the web server (step 3), which sends back the web page (step 4)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "A new domain name"
+            },
+            {
+              "id": "b",
+              "text": "The website's password"
+            },
+            {
+              "id": "c",
+              "text": "The IP address of example.com"
+            },
+            {
+              "id": "d",
+              "text": "The web page's HTML"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The DNS server answers with the IP address. Then the browser uses that IP to send an HTTP request to the web server, which returns the page.",
+          "difficulty": "easy",
+          "tags": [
+            "dns"
+          ]
+        },
+        {
+          "id": "w1-addr-010",
+          "type": "single_choice",
+          "prompt": "In the domain name gsb.uchicago.edu, what does “edu” tell you?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It is an educational institution"
+            },
+            {
+              "id": "b",
+              "text": "It is a government site"
+            },
+            {
+              "id": "c",
+              "text": "It is the file being requested"
+            },
+            {
+              "id": "d",
+              "text": "It is the name of the computer"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "edu = educational institution; uchicago = University of Chicago; gsb = Graduate School of Business.",
+          "difficulty": "easy",
+          "tags": [
+            "dns"
+          ]
+        },
+        {
+          "id": "w1-addr-011",
+          "type": "single_choice",
+          "prompt": "In gsb.uchicago.edu, what does “gsb” refer to?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The Graduate School of Business, an academic unit of the university"
+            },
+            {
+              "id": "b",
+              "text": "The country the server is in"
+            },
+            {
+              "id": "c",
+              "text": "The web browser being used"
+            },
+            {
+              "id": "d",
+              "text": "The University of Chicago"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "gsb is the Graduate School of Business — a unit within uchicago (University of Chicago), which is an edu.",
+          "difficulty": "medium",
+          "tags": [
+            "dns"
+          ]
+        },
+        {
+          "id": "w1-addr-012",
+          "type": "typed",
+          "prompt": "What does URL stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "uniform resource locator"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "URL = Uniform Resource Locator: the address of a unique resource on the Web.",
+          "difficulty": "easy",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-013",
+          "type": "multiple_choice",
+          "prompt": "According to your notes, a URL's addressing scheme tells you which four things? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The IP address of the user's computer"
+            },
+            {
+              "id": "b",
+              "text": "The pathname of the folder the file is in"
+            },
+            {
+              "id": "c",
+              "text": "The transfer protocol to use"
+            },
+            {
+              "id": "d",
+              "text": "The domain name of the computer holding the file"
+            },
+            {
+              "id": "e",
+              "text": "The browser the user is running"
+            },
+            {
+              "id": "f",
+              "text": "The name of the file"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "f"
+          ],
+          "explanation": "The four parts: protocol, domain name, path to the folder, and file name.",
+          "difficulty": "medium",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-014",
+          "type": "single_choice",
+          "prompt": "What is part 1 (https) of this URL called?",
+          "image": {
+            "src": "images/web/url-anatomy.svg",
+            "alt": "The URL https://example.com:443/docs/page.html?id=7&lang=en#top split into six numbered parts: 1 https, 2 example.com, 3 443, 4 /docs/page.html, 5 ?id=7&lang=en, 6 #top."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Anchor"
+            },
+            {
+              "id": "b",
+              "text": "Port"
+            },
+            {
+              "id": "c",
+              "text": "Authority"
+            },
+            {
+              "id": "d",
+              "text": "Scheme (protocol)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The scheme tells the browser which protocol to use, e.g. http, https or ftp.",
+          "difficulty": "easy",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-015",
+          "type": "single_choice",
+          "prompt": "What is part 3 (443) of this URL called?",
+          "image": {
+            "src": "images/web/url-anatomy.svg",
+            "alt": "The URL https://example.com:443/docs/page.html?id=7&lang=en#top split into six numbered parts: 1 https, 2 example.com, 3 443, 4 /docs/page.html, 5 ?id=7&lang=en, 6 #top."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Port"
+            },
+            {
+              "id": "b",
+              "text": "Scheme"
+            },
+            {
+              "id": "c",
+              "text": "Parameter"
+            },
+            {
+              "id": "d",
+              "text": "Path"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The port is the 'gate' on the server. It comes after a colon following the domain. 443 is the default port for HTTPS (80 for HTTP), so it is usually left out.",
+          "difficulty": "medium",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-016",
+          "type": "single_choice",
+          "prompt": "What is part 5 (?id=7&lang=en) of this URL called?",
+          "image": {
+            "src": "images/web/url-anatomy.svg",
+            "alt": "The URL https://example.com:443/docs/page.html?id=7&lang=en#top split into six numbered parts: 1 https, 2 example.com, 3 443, 4 /docs/page.html, 5 ?id=7&lang=en, 6 #top."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Authority"
+            },
+            {
+              "id": "b",
+              "text": "Parameters"
+            },
+            {
+              "id": "c",
+              "text": "Path to file"
+            },
+            {
+              "id": "d",
+              "text": "Anchor"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Parameters (the query string) start with ? and are key=value pairs joined by &.",
+          "difficulty": "medium",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-017",
+          "type": "single_choice",
+          "prompt": "What does part 6 (#top) of this URL do?",
+          "image": {
+            "src": "images/web/url-anatomy.svg",
+            "alt": "The URL https://example.com:443/docs/page.html?id=7&lang=en#top split into six numbered parts: 1 https, 2 example.com, 3 443, 4 /docs/page.html, 5 ?id=7&lang=en, 6 #top."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "It names the folder"
+            },
+            {
+              "id": "b",
+              "text": "It is the anchor: it jumps to a specific spot inside the page"
+            },
+            {
+              "id": "c",
+              "text": "It tells the server which port to use"
+            },
+            {
+              "id": "d",
+              "text": "It sends a password to the server"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The anchor (fragment) points to a location within the page, usually an element with that id.",
+          "difficulty": "medium",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-018",
+          "type": "typed",
+          "prompt": "In URL anatomy, the domain-name part (e.g. example.com) is also called the ______.",
+          "image": null,
+          "acceptedAnswers": [
+            "authority"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "One word"
+          },
+          "explanation": "Scheme, Authority (domain), Port, Path, Parameters, Anchor.",
+          "difficulty": "medium",
+          "tags": [
+            "url"
+          ]
+        },
+        {
+          "id": "w1-addr-019",
+          "type": "single_choice",
+          "prompt": "What is the default port for plain HTTP?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "443"
+            },
+            {
+              "id": "b",
+              "text": "80"
+            },
+            {
+              "id": "c",
+              "text": "8080"
+            },
+            {
+              "id": "d",
+              "text": "21"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Extra — not in your notes. HTTP uses port 80, HTTPS uses 443 and FTP uses 21. Default ports are normally hidden in the URL.",
+          "difficulty": "hard",
+          "tags": [
+            "url",
+            "extra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-pages-and-websites",
+      "title": "1.3 Web Pages & Websites",
+      "description": "Web page vs website, the home page, and static vs dynamic websites.",
+      "questions": [
+        {
+          "id": "w1-site-001",
+          "type": "single_choice",
+          "prompt": "What is a web page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A program that displays documents"
+            },
+            {
+              "id": "b",
+              "text": "A document written in HTML that can be viewed in any web browser"
+            },
+            {
+              "id": "c",
+              "text": "A server that stores files"
+            },
+            {
+              "id": "d",
+              "text": "A collection of related websites"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "A web page is an HTML document, stored in a directory on a web server, viewable in any browser.",
+          "difficulty": "easy",
+          "tags": [
+            "web-page"
+          ]
+        },
+        {
+          "id": "w1-site-002",
+          "type": "multiple_choice",
+          "prompt": "Which statements about web pages are true? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are written in HyperText Markup Language"
+            },
+            {
+              "id": "b",
+              "text": "They are stored in a specific directory on a web server"
+            },
+            {
+              "id": "c",
+              "text": "They may contain text, graphics, videos and hyperlinks"
+            },
+            {
+              "id": "d",
+              "text": "They can only be viewed in Google Chrome"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Web pages are HTML documents stored on a web server and can be viewed in any browser.",
+          "difficulty": "medium",
+          "tags": [
+            "web-page"
+          ]
+        },
+        {
+          "id": "w1-site-003",
+          "type": "single_choice",
+          "prompt": "A collection of related web pages that may contain text, images, audio and video is a…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Web server"
+            },
+            {
+              "id": "b",
+              "text": "Web browser"
+            },
+            {
+              "id": "c",
+              "text": "Home page"
+            },
+            {
+              "id": "d",
+              "text": "Website"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A website is a collection of related web pages.",
+          "difficulty": "easy",
+          "tags": [
+            "website"
+          ]
+        },
+        {
+          "id": "w1-site-004",
+          "type": "typed",
+          "prompt": "What is the first page of a website called?",
+          "image": null,
+          "acceptedAnswers": [
+            "home page",
+            "homepage",
+            "home"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Two words"
+          },
+          "explanation": "The first page of a website is the home page.",
+          "difficulty": "easy",
+          "tags": [
+            "website"
+          ]
+        },
+        {
+          "id": "w1-site-005",
+          "type": "single_choice",
+          "prompt": "A website whose code is fixed and whose content rarely changes is a…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Static website"
+            },
+            {
+              "id": "b",
+              "text": "Dynamic website"
+            },
+            {
+              "id": "c",
+              "text": "Server-side website"
+            },
+            {
+              "id": "d",
+              "text": "Responsive website"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Static website: fixed code, content rarely changes.",
+          "difficulty": "easy",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-006",
+          "type": "multiple_choice",
+          "prompt": "Which describe a STATIC website? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Prebuilt content is the same every time the page loads"
+            },
+            {
+              "id": "b",
+              "text": "It gives the same response for every request"
+            },
+            {
+              "id": "c",
+              "text": "It uses server-side code to build unique pages"
+            },
+            {
+              "id": "d",
+              "text": "It only uses HTML code"
+            },
+            {
+              "id": "e",
+              "text": "Content only changes when the source file is updated and published"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "The last option describes a dynamic website.",
+          "difficulty": "medium",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-007",
+          "type": "multiple_choice",
+          "prompt": "Which describe a DYNAMIC website? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Content is generated quickly and changes regularly"
+            },
+            {
+              "id": "b",
+              "text": "It gives the same response for every request"
+            },
+            {
+              "id": "c",
+              "text": "Server-side code creates unique content when the page loads"
+            },
+            {
+              "id": "d",
+              "text": "It uses server-side languages such as PHP, JSP or ASP.NET"
+            },
+            {
+              "id": "e",
+              "text": "It generates different HTML for each request"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Giving the same response for every request is a static website.",
+          "difficulty": "medium",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-008",
+          "type": "multiple_choice",
+          "prompt": "Which server-side languages are named in your notes for dynamic websites? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "b",
+              "text": "Servlet"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "CSS"
+            },
+            {
+              "id": "e",
+              "text": "JSP"
+            },
+            {
+              "id": "f",
+              "text": "HTML"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "PHP, Servlet, JSP and ASP.NET run on the server. HTML and CSS are not server-side languages.",
+          "difficulty": "medium",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-009",
+          "type": "single_choice",
+          "prompt": "After you log in, an online shop shows your own name, cart and order history. What kind of site is this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Home page only"
+            },
+            {
+              "id": "b",
+              "text": "Static website"
+            },
+            {
+              "id": "c",
+              "text": "FTP site"
+            },
+            {
+              "id": "d",
+              "text": "Dynamic website"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Each user gets different HTML generated by server-side code, so it is dynamic.",
+          "difficulty": "medium",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-010",
+          "type": "single_choice",
+          "prompt": "A small café page shows the same menu to everyone and only changes when the owner uploads a new HTML file. What kind of site is this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Dynamic website"
+            },
+            {
+              "id": "b",
+              "text": "Static website"
+            },
+            {
+              "id": "c",
+              "text": "Web server"
+            },
+            {
+              "id": "d",
+              "text": "Search engine"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Same content for every request, changed only by updating the source file → static.",
+          "difficulty": "medium",
+          "tags": [
+            "static-dynamic"
+          ]
+        },
+        {
+          "id": "w1-site-011",
+          "type": "true_false",
+          "prompt": "A static website generates different HTML for each request.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "That is a dynamic website. A static site returns the same prebuilt HTML every time.",
+          "difficulty": "easy",
+          "tags": [
+            "static-dynamic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-browsers",
+      "title": "1.4 Web Browsers",
+      "description": "What a browser is, how it interprets pages, examples and main features.",
+      "questions": [
+        {
+          "id": "w1-brow-001",
+          "type": "single_choice",
+          "prompt": "What is a web browser?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A database of domain names"
+            },
+            {
+              "id": "b",
+              "text": "A protocol for transferring files"
+            },
+            {
+              "id": "c",
+              "text": "A computer that stores websites"
+            },
+            {
+              "id": "d",
+              "text": "A software program that interprets and displays web pages so users can interact with them"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A browser interprets and displays web pages, letting users interact with them.",
+          "difficulty": "easy",
+          "tags": [
+            "browser"
+          ]
+        },
+        {
+          "id": "w1-brow-002",
+          "type": "single_choice",
+          "prompt": "Web browsers interpret web pages delivered using which protocol?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "HTTP"
+            },
+            {
+              "id": "b",
+              "text": "FTP"
+            },
+            {
+              "id": "c",
+              "text": "SMTP"
+            },
+            {
+              "id": "d",
+              "text": "DNS"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Browsers turn pages delivered over HTTP into human-readable content.",
+          "difficulty": "easy",
+          "tags": [
+            "browser"
+          ]
+        },
+        {
+          "id": "w1-brow-003",
+          "type": "multiple_choice",
+          "prompt": "Browsers display web pages composed using which languages? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "HTML"
+            },
+            {
+              "id": "b",
+              "text": "XML"
+            },
+            {
+              "id": "c",
+              "text": "PHP source code"
+            },
+            {
+              "id": "d",
+              "text": "SQL"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "Browsers display pages written in HTML and/or XML. PHP runs on the server and is never sent to the browser as code.",
+          "difficulty": "medium",
+          "tags": [
+            "browser"
+          ]
+        },
+        {
+          "id": "w1-brow-004",
+          "type": "multiple_choice",
+          "prompt": "Which of these are web browsers? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Apache"
+            },
+            {
+              "id": "b",
+              "text": "Opera"
+            },
+            {
+              "id": "c",
+              "text": "Google Chrome"
+            },
+            {
+              "id": "d",
+              "text": "Microsoft Edge"
+            },
+            {
+              "id": "e",
+              "text": "Nginx"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Apache and Nginx are web servers, not browsers.",
+          "difficulty": "medium",
+          "tags": [
+            "browser"
+          ]
+        },
+        {
+          "id": "w1-brow-005",
+          "type": "multiple_choice",
+          "prompt": "Which are main features of a web browser listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Personalization"
+            },
+            {
+              "id": "b",
+              "text": "Security settings"
+            },
+            {
+              "id": "c",
+              "text": "Search engine"
+            },
+            {
+              "id": "d",
+              "text": "Bookmarks"
+            },
+            {
+              "id": "e",
+              "text": "Hosting websites for other users"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Hosting websites is a web server's job.",
+          "difficulty": "medium",
+          "tags": [
+            "browser"
+          ]
+        },
+        {
+          "id": "w1-brow-006",
+          "type": "single_choice",
+          "prompt": "In client-server terms, a web browser is the…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Server"
+            },
+            {
+              "id": "b",
+              "text": "DNS"
+            },
+            {
+              "id": "c",
+              "text": "Router"
+            },
+            {
+              "id": "d",
+              "text": "Client"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The browser (client) requests pages; the web server responds.",
+          "difficulty": "easy",
+          "tags": [
+            "browser",
+            "client-server"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "requirements-and-scripting",
+      "title": "1.5–1.6 Requirements Analysis & Web Scripting",
+      "description": "What requirement analysis covers, scripts, scripting languages, client-side vs server-side.",
+      "questions": [
+        {
+          "id": "w1-req-001",
+          "type": "multiple_choice",
+          "prompt": "Which topics are covered during web development requirement analysis? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Features and functionality required"
+            },
+            {
+              "id": "b",
+              "text": "The developer's salary"
+            },
+            {
+              "id": "c",
+              "text": "Header and footer details"
+            },
+            {
+              "id": "d",
+              "text": "Standard layout of the website"
+            },
+            {
+              "id": "e",
+              "text": "Preferred platform and technology for development"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Requirement analysis covers platform/technology, layout, design features, functionality, space for content and photos, header/footer, and contact/subscription forms.",
+          "difficulty": "medium",
+          "tags": [
+            "requirements"
+          ]
+        },
+        {
+          "id": "w1-req-002",
+          "type": "multiple_choice",
+          "prompt": "Which of these are ALSO part of requirement analysis? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Space allocation for content and photos"
+            },
+            {
+              "id": "b",
+              "text": "Contact form and subscription details"
+            },
+            {
+              "id": "c",
+              "text": "Buying the web server hardware"
+            },
+            {
+              "id": "d",
+              "text": "Writing the final JavaScript code"
+            },
+            {
+              "id": "e",
+              "text": "Design features such as logo, special fonts and ad space"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "e"
+          ],
+          "explanation": "Writing final code comes later; requirement analysis decides WHAT is needed.",
+          "difficulty": "medium",
+          "tags": [
+            "requirements"
+          ]
+        },
+        {
+          "id": "w1-req-003",
+          "type": "single_choice",
+          "prompt": "The logo, special fonts and ad-space details fall under which requirement-analysis topic?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Contact form details"
+            },
+            {
+              "id": "b",
+              "text": "Platform and technology"
+            },
+            {
+              "id": "c",
+              "text": "Header and footer details"
+            },
+            {
+              "id": "d",
+              "text": "Design features"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "These are listed under design features.",
+          "difficulty": "easy",
+          "tags": [
+            "requirements"
+          ]
+        },
+        {
+          "id": "w1-req-004",
+          "type": "single_choice",
+          "prompt": "What is web scripting?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Registering a domain name"
+            },
+            {
+              "id": "b",
+              "text": "Designing a website's logo"
+            },
+            {
+              "id": "c",
+              "text": "Connecting computers with cables"
+            },
+            {
+              "id": "d",
+              "text": "The process of creating and embedding scripts in a web page"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Web scripting = creating scripts and embedding them in web pages.",
+          "difficulty": "easy",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-005",
+          "type": "single_choice",
+          "prompt": "What is a script?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A list of commands embedded in a web page and interpreted and executed by a program or scripting engine"
+            },
+            {
+              "id": "b",
+              "text": "A type of web server"
+            },
+            {
+              "id": "c",
+              "text": "A picture shown on a web page"
+            },
+            {
+              "id": "d",
+              "text": "The address of a web page"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A script is a list of commands interpreted by a scripting engine.",
+          "difficulty": "easy",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-006",
+          "type": "true_false",
+          "prompt": "Scripts are interpreted and executed by a program or scripting engine.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "That's the definition of a script in your notes.",
+          "difficulty": "easy",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-007",
+          "type": "multiple_choice",
+          "prompt": "Why are scripts written? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To assign IP addresses"
+            },
+            {
+              "id": "b",
+              "text": "To automate processes on a local computer"
+            },
+            {
+              "id": "c",
+              "text": "To replace internet cables"
+            },
+            {
+              "id": "d",
+              "text": "To generate web pages"
+            }
+          ],
+          "correct": [
+            "b",
+            "d"
+          ],
+          "explanation": "Scripts automate processes and generate web pages.",
+          "difficulty": "medium",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-008",
+          "type": "multiple_choice",
+          "prompt": "Which are common scripting languages listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "PERL"
+            },
+            {
+              "id": "b",
+              "text": "JavaScript"
+            },
+            {
+              "id": "c",
+              "text": "CSS"
+            },
+            {
+              "id": "d",
+              "text": "VBScript"
+            },
+            {
+              "id": "e",
+              "text": "PHP"
+            },
+            {
+              "id": "f",
+              "text": "HTML"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "VBScript, JavaScript, ASP, PHP, PERL and JSP are scripting languages. HTML is markup and CSS is a style sheet language.",
+          "difficulty": "medium",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-009",
+          "type": "typed",
+          "prompt": "How many types of script are there?",
+          "image": null,
+          "acceptedAnswers": [
+            "2",
+            "two"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Type a number"
+          },
+          "explanation": "Two: client-side and server-side.",
+          "difficulty": "easy",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-010",
+          "type": "multiple_choice",
+          "prompt": "What are the two types of script? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Server-side"
+            },
+            {
+              "id": "b",
+              "text": "Cable-side"
+            },
+            {
+              "id": "c",
+              "text": "Client-side"
+            },
+            {
+              "id": "d",
+              "text": "Database-side"
+            }
+          ],
+          "correct": [
+            "a",
+            "c"
+          ],
+          "explanation": "Client-side and server-side.",
+          "difficulty": "easy",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-011",
+          "type": "single_choice",
+          "prompt": "Where does a client-side script (e.g. JavaScript checking a form) run?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "On the ISP's router"
+            },
+            {
+              "id": "b",
+              "text": "On the web server"
+            },
+            {
+              "id": "c",
+              "text": "In the user's web browser"
+            },
+            {
+              "id": "d",
+              "text": "On the DNS server"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Client-side scripts run in the browser, so they can react instantly without contacting the server.",
+          "difficulty": "medium",
+          "tags": [
+            "scripting"
+          ]
+        },
+        {
+          "id": "w1-req-012",
+          "type": "single_choice",
+          "prompt": "Which of these normally runs as a SERVER-side script?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "HTML"
+            },
+            {
+              "id": "b",
+              "text": "JavaScript in a <script> tag"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "CSS"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "PHP runs on the server and sends the resulting HTML to the browser.",
+          "difficulty": "medium",
+          "tags": [
+            "scripting"
+          ]
+        }
+      ]
+    }
+  ]
+}

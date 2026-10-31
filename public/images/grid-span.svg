@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="640" height="240" rx="16" fill="#ffffff"/>
+  <text x="320" y="26" text-anchor="middle" font-size="14" fill="#5d6066">grid-template-columns: 1fr 1fr 1fr;   numbers = grid lines</text>
+  <line x1="60" y1="44" x2="60" y2="226" stroke="#2457d6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="60" cy="44" r="12" fill="#2457d6"/>
+  <text x="60" y="49" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+  <line x1="240" y1="44" x2="240" y2="226" stroke="#2457d6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="240" cy="44" r="12" fill="#2457d6"/>
+  <text x="240" y="49" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+  <line x1="420" y1="44" x2="420" y2="226" stroke="#2457d6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="420" cy="44" r="12" fill="#2457d6"/>
+  <text x="420" y="49" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+  <line x1="600" y1="44" x2="600" y2="226" stroke="#2457d6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="600" cy="44" r="12" fill="#2457d6"/>
+  <text x="600" y="49" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+  <rect x="66" y="64" width="348" height="70" rx="10" fill="#fff4dc" stroke="#8a5a00" stroke-width="3"/>
+  <text x="240.0" y="106.0" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1f23">Item 1</text>
+  <rect x="426" y="64" width="168" height="70" rx="10" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="510.0" y="106.0" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1f23">Item 2</text>
+  <rect x="66" y="146" width="168" height="70" rx="10" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="150.0" y="188.0" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1f23">Item 3</text>
+  <rect x="246" y="146" width="168" height="70" rx="10" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="330.0" y="188.0" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1f23">Item 4</text>
+  <rect x="426" y="146" width="168" height="70" rx="10" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2"/>
+  <text x="510.0" y="188.0" text-anchor="middle" font-size="20" font-weight="700" fill="#1d1f23">Item 5</text>
+</svg>

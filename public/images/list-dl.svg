@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="320" height="150" rx="16" fill="#ffffff"/>
+  <rect x="8" y="8" width="304" height="134" rx="10" fill="#fafaf8" stroke="#cbc7bb"/>
+  <text x="28" y="34" font-size="15" fill="#1d1f23">Langkawi</text>
+  <text x="64" y="52" font-size="14" fill="#5d6066">Island in Kedah</text>
+  <text x="28" y="72" font-size="15" fill="#1d1f23">Cameron Highlands</text>
+  <text x="64" y="90" font-size="14" fill="#5d6066">Hill station in Pahang</text>
+  <text x="28" y="110" font-size="15" fill="#1d1f23">Melaka</text>
+  <text x="64" y="128" font-size="14" fill="#5d6066">Historical city</text>
+</svg>

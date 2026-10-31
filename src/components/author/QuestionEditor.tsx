@@ -86,6 +86,16 @@ export function QuestionEditor({ question, index, total, issues, onChange, onDel
             onChange={(prompt) => onChange({ ...question, prompt })}
             placeholder="e.g. What is the powerhouse of the cell?"
           />
+          <TextAreaField
+            id={`${uid}-code`}
+            label="Code snippet (optional)"
+            monospace
+            rows={4}
+            value={question.code ?? ''}
+            onChange={(code) => onChange({ ...question, code: code || undefined })}
+            placeholder={'e.g. <ul>\n  <li>Item</li>\n</ul>'}
+            hint="Shown under the question in a monospace box. Indentation is kept."
+          />
           <ImageFields
             id={`${uid}-img`}
             label="Question image"
