@@ -2,7 +2,7 @@
 
 A calm, mobile-first personal quiz website. Subjects work like folders: open a subject, pick a topic, answer one question at a time, get instant feedback, then review your answers and retry. Everything is static, so it runs free on GitHub Pages.
 
-It ships with five subjects:
+It ships with seven subjects:
 
 | Subject | Topics | Questions |
 | --- | --- | --- |
@@ -11,6 +11,10 @@ It ships with five subjects:
 | 🌐 Web Development · Chapter 1 | Internet & WWW · Architecture & Protocols · IP, DNS & URLs · Web Pages & Websites · Browsers · Requirements & Scripting | 83 |
 | 📄 Web Development · Chapter 2 | Presentation Layer · Markup Languages & History · XHTML · Tags & Structure · Lists, Links & Images · Tables · Forms · Semantic & Text Tags · Media, Entities & Attributes | 139 |
 | 🎨 Web Development · Chapter 3 | CSS Basics · Types & Cascade · Selectors · Combinators · Pseudo-classes · Typography · Colours & Backgrounds · Box Model & Positioning · Flexbox · Grid · Responsive Design · Preprocessors · Transitions & More | 206 |
+| 🧠 Deep Learning · Chapter 1 | Types of AI · Machine Learning Basics & Types · Deep Learning vs ML · Applications | 55 |
+| 🕸️ Deep Learning · Chapter 2 | Supervised Learning · Steps & Notation · 1D Linear Regression & Generalisation · Shallow Network Architecture · How a Shallow Network Computes · Counting Parameters · Training & Backprop | 133 |
+
+The Deep Learning quizzes use your own slide images for Chapter 1 → Chapter 2 Figure B. See `DEEP_LEARNING_IMAGES.md` for the exact file names; until you add them, a placeholder shows the name to use.
 
 In the Web Development quizzes, explanations that start with “Extra — not in your notes” or “Covers a section missing from your notes” mark content added beyond the original notes.
 

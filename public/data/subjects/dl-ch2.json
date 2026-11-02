@@ -1,0 +1,4203 @@
+{
+  "id": "dl-ch2",
+  "title": "Deep Learning · Chapter 2",
+  "description": "Deep neural networks: supervised learning, notation, 1D linear regression and loss, generalisation, shallow neural networks, parameter counting and training with backpropagation.",
+  "topics": [
+    {
+      "id": "supervised-learning",
+      "title": "Supervised Learning",
+      "description": "Labelled data, mapping inputs to outputs, models and parameters, classification vs regression, problem types, Figures A and B.",
+      "questions": [
+        {
+          "id": "dl2-sup-001",
+          "type": "single_choice",
+          "prompt": "What is supervised learning?",
+          "image": {
+            "src": "images/dl/supervised_learning.png",
+            "alt": "Diagram of supervised learning: labelled training data is used to train a model that predicts labels for new data."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "A type of ML where a model learns from labelled data — every input has a corresponding correct output"
+            },
+            {
+              "id": "b",
+              "text": "Learning from unlabelled data by finding clusters"
+            },
+            {
+              "id": "c",
+              "text": "Learning without any data"
+            },
+            {
+              "id": "d",
+              "text": "Learning by trial and error with rewards"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Labelled data = input plus its correct answer.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-002",
+          "type": "single_choice",
+          "prompt": "In supervised learning, what does the algorithm learn?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "How to collect more data"
+            },
+            {
+              "id": "b",
+              "text": "A mapping function from input (X) to output (Y)"
+            },
+            {
+              "id": "c",
+              "text": "How to group data without labels"
+            },
+            {
+              "id": "d",
+              "text": "A mapping from output to input"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It observes examples where the correct answer is provided.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-003",
+          "type": "multiple_choice",
+          "prompt": "What does a supervised learning model do during training? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Makes predictions"
+            },
+            {
+              "id": "b",
+              "text": "Adjusts itself to reduce errors"
+            },
+            {
+              "id": "c",
+              "text": "Deletes the wrong training examples"
+            },
+            {
+              "id": "d",
+              "text": "Compares predictions with the true outputs"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "Predict → compare → adjust, improving accuracy over time.",
+          "difficulty": "medium",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-004",
+          "type": "single_choice",
+          "prompt": "What is the GOAL of a supervised learning model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To make accurate predictions on new, unseen data"
+            },
+            {
+              "id": "b",
+              "text": "To use as few parameters as possible"
+            },
+            {
+              "id": "c",
+              "text": "To memorise the training data perfectly"
+            },
+            {
+              "id": "d",
+              "text": "To label the training data"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "E.g. a model trained on handwritten digits recognises new digits it has never seen.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-005",
+          "type": "single_choice",
+          "prompt": "Which order shows the supervised-learning mapping?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Model input → real-world input → model → real-world output → model output"
+            },
+            {
+              "id": "b",
+              "text": "Real-world output → model output → model → model input → real-world input"
+            },
+            {
+              "id": "c",
+              "text": "Real-world input → model input → model → model output → real-world output"
+            },
+            {
+              "id": "d",
+              "text": "Model → real-world input → model output → model input → real-world output"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A real-world thing is encoded as a model input, the model maps it, and the model output is decoded into a real-world answer.",
+          "difficulty": "medium",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-006",
+          "type": "single_choice",
+          "prompt": "Mathematically, what is a supervised learning model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A table of all possible answers"
+            },
+            {
+              "id": "b",
+              "text": "A mapping (a mathematical equation) from one or more inputs to one or more outputs"
+            },
+            {
+              "id": "c",
+              "text": "A list of if-else rules"
+            },
+            {
+              "id": "d",
+              "text": "A database query"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The model is an equation; training picks which equation fits best.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-007",
+          "type": "single_choice",
+          "prompt": "What is INFERENCE?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Running the trained model on an input to compute its output (prediction)"
+            },
+            {
+              "id": "b",
+              "text": "Computing the inputs from the outputs"
+            },
+            {
+              "id": "c",
+              "text": "Labelling the data"
+            },
+            {
+              "id": "d",
+              "text": "Collecting training data"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Inference = using the model: input in, output out. ⚠️ Your notes say “computing the inputs from the outputs” — that's back to front. Inference computes the OUTPUTS from the INPUTS.",
+          "difficulty": "medium",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-008",
+          "type": "single_choice",
+          "prompt": "What do a model's PARAMETERS do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They store the training data"
+            },
+            {
+              "id": "b",
+              "text": "They affect the outcome of the equation — so one model represents a whole family of equations"
+            },
+            {
+              "id": "c",
+              "text": "They are the inputs to the model"
+            },
+            {
+              "id": "d",
+              "text": "They are the labels"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Changing parameters picks a different equation from the family.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-009",
+          "type": "single_choice",
+          "prompt": "What does “training a model” mean?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Running the model on new data"
+            },
+            {
+              "id": "b",
+              "text": "Testing on unseen data"
+            },
+            {
+              "id": "c",
+              "text": "Writing the model's equation by hand"
+            },
+            {
+              "id": "d",
+              "text": "Finding parameters that predict outputs well from inputs, for a training dataset of input/output pairs"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Training = searching for good parameter values.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-010",
+          "type": "single_choice",
+          "prompt": "In the simple model that predicts a child's height from age, what is x?",
+          "image": {
+            "src": "images/dl/simple_model.png",
+            "alt": "Simple model: x (model input, age of child) goes into y = f(x) (supervised learning model), producing y (model output, height of child)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "The model input — the child's age"
+            },
+            {
+              "id": "b",
+              "text": "The loss"
+            },
+            {
+              "id": "c",
+              "text": "The model output — the child's height"
+            },
+            {
+              "id": "d",
+              "text": "The parameters"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "x (age) → y = f[x] → y (height).",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-011",
+          "type": "single_choice",
+          "prompt": "The model gives y = 139 cm for x = 10 years. What is 139 cm here?",
+          "image": {
+            "src": "images/dl/model_age_height.png",
+            "alt": "Model example: input x is 10 years, the model graph maps it, and the output is y = 139 cm."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "The training label for every child"
+            },
+            {
+              "id": "b",
+              "text": "A parameter"
+            },
+            {
+              "id": "c",
+              "text": "The loss"
+            },
+            {
+              "id": "d",
+              "text": "The model output — the predicted height"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The model is an equation relating input (age) to output (height).",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-012",
+          "type": "true_false",
+          "prompt": "Fitting deep neural networks to data is what we call “deep learning”.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Deep neural networks are just a very flexible family of equations, and fitting them = deep learning.",
+          "difficulty": "easy",
+          "tags": [
+            "supervised"
+          ]
+        },
+        {
+          "id": "dl2-sup-013",
+          "type": "multiple_choice",
+          "prompt": "What are the two types of supervised learning? (select all that apply)",
+          "image": {
+            "src": "images/dl/supervised_learning_types.png",
+            "alt": "Mind map: supervised learning splits into classification and regression."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Regression"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement"
+            },
+            {
+              "id": "c",
+              "text": "Classification"
+            },
+            {
+              "id": "d",
+              "text": "Clustering"
+            }
+          ],
+          "correct": [
+            "a",
+            "c"
+          ],
+          "explanation": "Clustering is unsupervised; reinforcement is its own type.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dl2-sup-014",
+          "type": "single_choice",
+          "prompt": "When the output is a CATEGORICAL variable (e.g. spam vs not spam), the task is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Regression"
+            },
+            {
+              "id": "b",
+              "text": "Clustering"
+            },
+            {
+              "id": "c",
+              "text": "Dimensionality reduction"
+            },
+            {
+              "id": "d",
+              "text": "Classification"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Discrete classes → classification.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dl2-sup-015",
+          "type": "single_choice",
+          "prompt": "When the output is a CONTINUOUS variable (e.g. house price), the task is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Classification"
+            },
+            {
+              "id": "b",
+              "text": "Clustering"
+            },
+            {
+              "id": "c",
+              "text": "Regression"
+            },
+            {
+              "id": "d",
+              "text": "Inference"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Continuous numbers → regression.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dl2-sup-016",
+          "type": "single_choice",
+          "prompt": "Predicting tomorrow's stock price is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Regression"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement"
+            },
+            {
+              "id": "c",
+              "text": "Clustering"
+            },
+            {
+              "id": "d",
+              "text": "Classification"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "A continuous number.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dl2-sup-017",
+          "type": "single_choice",
+          "prompt": "In Figure A (shopping store dataset), what is the OUTPUT?",
+          "image": {
+            "src": "images/dl/figure_a.png",
+            "alt": "Figure A: shopping store dataset with columns for gender, age, salary and purchased (0 or 1)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Gender"
+            },
+            {
+              "id": "b",
+              "text": "Salary"
+            },
+            {
+              "id": "c",
+              "text": "Purchased: 1 = will buy, 0 = won't buy"
+            },
+            {
+              "id": "d",
+              "text": "Age"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Inputs are gender, age and salary; the output is a 0/1 class, so this is classification.",
+          "difficulty": "easy",
+          "tags": [
+            "figures"
+          ]
+        },
+        {
+          "id": "dl2-sup-018",
+          "type": "single_choice",
+          "prompt": "What kind of supervised learning problem is Figure A?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Binary classification"
+            },
+            {
+              "id": "b",
+              "text": "Clustering"
+            },
+            {
+              "id": "c",
+              "text": "Univariate regression"
+            },
+            {
+              "id": "d",
+              "text": "Multivariate regression"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The output has two discrete classes (0 or 1).",
+          "difficulty": "medium",
+          "tags": [
+            "figures"
+          ]
+        },
+        {
+          "id": "dl2-sup-019",
+          "type": "multiple_choice",
+          "prompt": "In Figure B (meteorological dataset), which are INPUTS? (select all that apply)",
+          "image": {
+            "src": "images/dl/figure_b.png",
+            "alt": "Figure B: meteorological dataset with dew point, temperature, pressure, relative humidity, wind direction and wind speed columns."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Relative humidity"
+            },
+            {
+              "id": "b",
+              "text": "Dew point"
+            },
+            {
+              "id": "c",
+              "text": "Wind direction"
+            },
+            {
+              "id": "d",
+              "text": "Temperature"
+            },
+            {
+              "id": "e",
+              "text": "Pressure"
+            },
+            {
+              "id": "f",
+              "text": "Wind speed"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Wind speed is the output.",
+          "difficulty": "medium",
+          "tags": [
+            "figures"
+          ]
+        },
+        {
+          "id": "dl2-sup-020",
+          "type": "single_choice",
+          "prompt": "Figure B predicts wind speed. What kind of problem is it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Clustering"
+            },
+            {
+              "id": "b",
+              "text": "Classification"
+            },
+            {
+              "id": "c",
+              "text": "Regression — the output is a continuous number"
+            },
+            {
+              "id": "d",
+              "text": "Reinforcement learning"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Wind speed is a real value.",
+          "difficulty": "easy",
+          "tags": [
+            "figures"
+          ]
+        },
+        {
+          "id": "dl2-sup-021",
+          "type": "single_choice",
+          "prompt": "Predicting ONE real-valued output (e.g. one price) is a…",
+          "image": {
+            "src": "images/dl/regression.png",
+            "alt": "Univariate regression example: one real-valued output predicted by a fully connected deep neural network."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Multivariate regression problem"
+            },
+            {
+              "id": "b",
+              "text": "Binary classification problem"
+            },
+            {
+              "id": "c",
+              "text": "Multiclass classification problem"
+            },
+            {
+              "id": "d",
+              "text": "Univariate regression problem"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Univariate = one output.",
+          "difficulty": "easy",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-022",
+          "type": "single_choice",
+          "prompt": "Predicting MORE THAN ONE real-valued output is a…",
+          "image": {
+            "src": "images/dl/graph_regression.png",
+            "alt": "Graph regression example: more than one real-valued output predicted by a graph neural network."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Multiclass classification problem"
+            },
+            {
+              "id": "b",
+              "text": "Binary classification problem"
+            },
+            {
+              "id": "c",
+              "text": "Multivariate regression problem"
+            },
+            {
+              "id": "d",
+              "text": "Univariate regression problem"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Multivariate = >1 output.",
+          "difficulty": "easy",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-023",
+          "type": "single_choice",
+          "prompt": "Classifying text into two classes (e.g. positive / negative) is a…",
+          "image": {
+            "src": "images/dl/text_classification.png",
+            "alt": "Text classification example: text is classified into one of two classes by a transformer network."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Binary classification problem"
+            },
+            {
+              "id": "b",
+              "text": "Multiclass classification problem"
+            },
+            {
+              "id": "c",
+              "text": "Univariate regression problem"
+            },
+            {
+              "id": "d",
+              "text": "Multivariate regression problem"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Two discrete classes.",
+          "difficulty": "easy",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-024",
+          "type": "single_choice",
+          "prompt": "Classifying music into one of many genres is a…",
+          "image": {
+            "src": "images/dl/music_genre_classification.png",
+            "alt": "Music genre classification example: audio is classified into one of several genres by a recurrent neural network."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Univariate regression problem"
+            },
+            {
+              "id": "b",
+              "text": "Multivariate regression problem"
+            },
+            {
+              "id": "c",
+              "text": "Binary classification problem"
+            },
+            {
+              "id": "d",
+              "text": "Multiclass classification problem"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "More than two discrete classes.",
+          "difficulty": "easy",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-025",
+          "type": "single_choice",
+          "prompt": "In your notes, which network type is used for IMAGE classification?",
+          "image": {
+            "src": "images/dl/image_classification.png",
+            "alt": "Image classification example: a picture is classified into one of several classes by a convolutional neural network."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Transformer"
+            },
+            {
+              "id": "b",
+              "text": "Convolutional Neural Network (CNN)"
+            },
+            {
+              "id": "c",
+              "text": "Graph Neural Network"
+            },
+            {
+              "id": "d",
+              "text": "Recurrent Neural Network (RNN)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Image → CNN; music genre → RNN; text → Transformer; graph regression → GNN; univariate regression → fully connected DNN.",
+          "difficulty": "medium",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-026",
+          "type": "single_choice",
+          "prompt": "In your notes, which network type is paired with MUSIC GENRE classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Convolutional Neural Network (CNN)"
+            },
+            {
+              "id": "b",
+              "text": "Transformer"
+            },
+            {
+              "id": "c",
+              "text": "Recurrent Neural Network (RNN)"
+            },
+            {
+              "id": "d",
+              "text": "Graph Neural Network"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "RNNs handle sequences such as audio over time.",
+          "difficulty": "medium",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-027",
+          "type": "single_choice",
+          "prompt": "In your notes, which network type is paired with TEXT classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Transformer"
+            },
+            {
+              "id": "b",
+              "text": "Graph Neural Network"
+            },
+            {
+              "id": "c",
+              "text": "Fully connected network"
+            },
+            {
+              "id": "d",
+              "text": "RNN"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Transformers power modern NLP.",
+          "difficulty": "medium",
+          "tags": [
+            "problem-types"
+          ]
+        },
+        {
+          "id": "dl2-sup-028",
+          "type": "single_choice",
+          "prompt": "In your notes, which network type is paired with the multivariate GRAPH regression example?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Graph Neural Network"
+            },
+            {
+              "id": "b",
+              "text": "Transformer"
+            },
+            {
+              "id": "c",
+              "text": "CNN"
+            },
+            {
+              "id": "d",
+              "text": "Reactive machine"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Graph inputs → GNN.",
+          "difficulty": "medium",
+          "tags": [
+            "problem-types"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workflow-and-notation",
+      "title": "Supervised Learning Steps, Terms & Notation",
+      "description": "The 5 key steps (CSTVD), the 80/20 split, important terms and the notation for inputs, models, loss, training and testing.",
+      "questions": [
+        {
+          "id": "dl2-not-001",
+          "type": "single_choice",
+          "prompt": "What is the correct order of the key supervised learning steps (CSTVD)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Split → Collect → Train → Deploy → Test"
+            },
+            {
+              "id": "b",
+              "text": "Collect labelled data → Split the dataset → Train → Validate & test → Deploy & predict"
+            },
+            {
+              "id": "c",
+              "text": "Collect → Train → Split → Deploy → Test"
+            },
+            {
+              "id": "d",
+              "text": "Train → Collect → Split → Test → Deploy"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "CSTVD.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-not-002",
+          "type": "typed",
+          "prompt": "When splitting the dataset, roughly what percentage is used for TRAINING?",
+          "image": null,
+          "acceptedAnswers": [
+            "80",
+            "80%",
+            "about 80%",
+            "80 percent"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "About 80% training, 20% testing.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-not-003",
+          "type": "single_choice",
+          "prompt": "Why is the model evaluated on testing data it has never seen before?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To check how well it generalises to new data"
+            },
+            {
+              "id": "b",
+              "text": "To create more labels"
+            },
+            {
+              "id": "c",
+              "text": "To make training faster"
+            },
+            {
+              "id": "d",
+              "text": "Because training data is too small"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Predictions on the test set are compared with the true labels to calculate accuracy or error.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-not-004",
+          "type": "multiple_choice",
+          "prompt": "Which algorithms are named in your notes for the training step? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "K-means clustering"
+            },
+            {
+              "id": "b",
+              "text": "Decision Trees"
+            },
+            {
+              "id": "c",
+              "text": "Linear Regression"
+            },
+            {
+              "id": "d",
+              "text": "SVM"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "K-means is unsupervised clustering.",
+          "difficulty": "medium",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-not-005",
+          "type": "single_choice",
+          "prompt": "In step 1, “images of handwritten digits with their actual numbers” is an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Labelled data"
+            },
+            {
+              "id": "b",
+              "text": "Test predictions"
+            },
+            {
+              "id": "c",
+              "text": "Parameters"
+            },
+            {
+              "id": "d",
+              "text": "Unlabelled data"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Each image has its correct label.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-not-006",
+          "type": "multiple_choice",
+          "prompt": "Match the terms — which are correct? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Univariate = one output"
+            },
+            {
+              "id": "b",
+              "text": "Regression = continuous numbers as output"
+            },
+            {
+              "id": "c",
+              "text": "Univariate = one input only"
+            },
+            {
+              "id": "d",
+              "text": "Classification = discrete classes as output"
+            },
+            {
+              "id": "e",
+              "text": "Multivariate = more than one output"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "Univariate/multivariate refer to the number of OUTPUTS here.",
+          "difficulty": "medium",
+          "tags": [
+            "terms"
+          ]
+        },
+        {
+          "id": "dl2-not-007",
+          "type": "true_false",
+          "prompt": "Two-class and multiclass classification are treated differently.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "E.g. sigmoid + binary cross-entropy for two classes, softmax + categorical cross-entropy for many.",
+          "difficulty": "easy",
+          "tags": [
+            "terms"
+          ]
+        },
+        {
+          "id": "dl2-not-008",
+          "type": "single_choice",
+          "prompt": "In the notation, variables (inputs x, outputs y) are always written with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Capital letters only"
+            },
+            {
+              "id": "b",
+              "text": "Greek letters"
+            },
+            {
+              "id": "c",
+              "text": "Roman letters"
+            },
+            {
+              "id": "d",
+              "text": "Square brackets"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Variables = Roman letters; parameters = Greek letters.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-009",
+          "type": "single_choice",
+          "prompt": "Parameters are always written with…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Bold capitals"
+            },
+            {
+              "id": "b",
+              "text": "Greek letters (e.g. φ, θ)"
+            },
+            {
+              "id": "c",
+              "text": "Roman letters"
+            },
+            {
+              "id": "d",
+              "text": "Numbers"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "e.g. φ (phi) for parameters.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-010",
+          "type": "typed",
+          "prompt": "Which Greek letter is used for the model's parameters in y = f[x, φ]? (name it)",
+          "image": null,
+          "acceptedAnswers": [
+            "phi",
+            "φ"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Greek letter name"
+          },
+          "explanation": "φ = phi.",
+          "difficulty": "medium",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-011",
+          "type": "single_choice",
+          "prompt": "In the notation, a BOLD lowercase letter (e.g. 𝐱) means…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A vector"
+            },
+            {
+              "id": "b",
+              "text": "A scalar"
+            },
+            {
+              "id": "c",
+              "text": "A function"
+            },
+            {
+              "id": "d",
+              "text": "A matrix"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Normal = scalar, bold = vector, capital bold = matrix.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-012",
+          "type": "single_choice",
+          "prompt": "A CAPITAL BOLD letter (e.g. 𝐗) means…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A parameter"
+            },
+            {
+              "id": "b",
+              "text": "A matrix"
+            },
+            {
+              "id": "c",
+              "text": "A vector"
+            },
+            {
+              "id": "d",
+              "text": "A scalar"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Capital bold = matrix.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-013",
+          "type": "single_choice",
+          "prompt": "Functions are always written with which brackets?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Curly brackets: f{x}"
+            },
+            {
+              "id": "b",
+              "text": "Round brackets: f(x)"
+            },
+            {
+              "id": "c",
+              "text": "Angle brackets: f<x>"
+            },
+            {
+              "id": "d",
+              "text": "Square brackets: f[x]"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "e.g. y = f[x, φ].",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-014",
+          "type": "single_choice",
+          "prompt": "What does the loss (cost) function measure?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "How many layers the network has"
+            },
+            {
+              "id": "b",
+              "text": "How many parameters the model has"
+            },
+            {
+              "id": "c",
+              "text": "How bad the model is — a scalar that is smaller when the model maps inputs to outputs better"
+            },
+            {
+              "id": "d",
+              "text": "How fast training runs"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Lower loss = better fit.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-015",
+          "type": "single_choice",
+          "prompt": "What does this notation describe?",
+          "code": "{ xᵢ , yᵢ }  for i = 1 … I",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A training dataset of I pairs of input/output examples"
+            },
+            {
+              "id": "b",
+              "text": "I parameters"
+            },
+            {
+              "id": "c",
+              "text": "I layers of a network"
+            },
+            {
+              "id": "d",
+              "text": "A loss function"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "{xᵢ, yᵢ} for i = 1 … I.",
+          "difficulty": "medium",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-016",
+          "type": "single_choice",
+          "prompt": "What does this equation mean?",
+          "code": "φ̂ = argmin  [ L[φ] ]\n      φ",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "φ̂ is the test accuracy"
+            },
+            {
+              "id": "b",
+              "text": "φ̂ is the maximum loss"
+            },
+            {
+              "id": "c",
+              "text": "The loss is set to φ"
+            },
+            {
+              "id": "d",
+              "text": "The best parameters φ̂ are the ones that minimise the loss L[φ]"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Training = find the parameters that minimise the loss.",
+          "difficulty": "medium",
+          "tags": [
+            "notation"
+          ]
+        },
+        {
+          "id": "dl2-not-017",
+          "type": "single_choice",
+          "prompt": "How is a model TESTED?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Run it on a separate test dataset of input/output pairs to see how well it generalises"
+            },
+            {
+              "id": "b",
+              "text": "Run it again on the training data"
+            },
+            {
+              "id": "c",
+              "text": "Count its parameters"
+            },
+            {
+              "id": "d",
+              "text": "Increase its layers"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Testing measures generalisation to new data.",
+          "difficulty": "easy",
+          "tags": [
+            "notation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-regression",
+      "title": "1D Linear Regression, Loss & Generalisation",
+      "description": "y = φ₀ + φ₁x, least-squares loss, gradient descent, testing, underfitting and overfitting.",
+      "questions": [
+        {
+          "id": "dl2-lin-001",
+          "type": "single_choice",
+          "prompt": "In the 1D linear regression model below, what is φ₀?",
+          "code": "y = f[x, φ] = φ₀ + φ₁x",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The slope"
+            },
+            {
+              "id": "b",
+              "text": "The y-offset (intercept)"
+            },
+            {
+              "id": "c",
+              "text": "The input"
+            },
+            {
+              "id": "d",
+              "text": "The loss"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "φ₀ = y-offset, φ₁ = slope.",
+          "difficulty": "easy",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-002",
+          "type": "single_choice",
+          "prompt": "In the same model, what is φ₁?",
+          "code": "y = f[x, φ] = φ₀ + φ₁x",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The slope"
+            },
+            {
+              "id": "b",
+              "text": "The output"
+            },
+            {
+              "id": "c",
+              "text": "The y-offset"
+            },
+            {
+              "id": "d",
+              "text": "The number of data points"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "φ₁ controls how steep the line is.",
+          "difficulty": "easy",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-003",
+          "type": "single_choice",
+          "prompt": "The model y = φ₀ + φ₁x represents…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "One fixed line"
+            },
+            {
+              "id": "b",
+              "text": "A curve with joints"
+            },
+            {
+              "id": "c",
+              "text": "A family of all possible straight lines"
+            },
+            {
+              "id": "d",
+              "text": "A cluster of points"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Each choice of φ₀, φ₁ gives a different line.",
+          "difficulty": "easy",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-004",
+          "type": "single_choice",
+          "prompt": "Which line in the graph is φ₀ = 0.0, φ₁ = 1.0?",
+          "image": {
+            "src": "images/dl/linreg_lines.svg",
+            "alt": "Graph of output y against input x from 0 to 2 with three straight lines: A rises from (0,0) to (2,2); B is almost flat, starting at 1.2 and falling slightly to 1.0; C starts at 1.0 and falls to 0.2."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Line C"
+            },
+            {
+              "id": "b",
+              "text": "Line A"
+            },
+            {
+              "id": "c",
+              "text": "Line B"
+            },
+            {
+              "id": "d",
+              "text": "None of them"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It starts at 0 (offset 0) and rises 1 unit per unit of x.",
+          "difficulty": "easy",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-005",
+          "type": "single_choice",
+          "prompt": "Which line in the graph is φ₀ = 1.0, φ₁ = −0.4?",
+          "image": {
+            "src": "images/dl/linreg_lines.svg",
+            "alt": "Graph of output y against input x from 0 to 2 with three straight lines: A rises from (0,0) to (2,2); B is almost flat, starting at 1.2 and falling slightly to 1.0; C starts at 1.0 and falls to 0.2."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Line C"
+            },
+            {
+              "id": "b",
+              "text": "None of them"
+            },
+            {
+              "id": "c",
+              "text": "Line B"
+            },
+            {
+              "id": "d",
+              "text": "Line A"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Starts at y = 1.0 and falls 0.4 per unit of x (to 0.2 at x = 2). Line B is φ₀ = 1.2, φ₁ = −0.1.",
+          "difficulty": "medium",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-006",
+          "type": "typed",
+          "prompt": "For φ₀ = 1.0 and φ₁ = −0.4, what is y when x = 1.5?",
+          "image": null,
+          "acceptedAnswers": [
+            "0.4",
+            ".4",
+            "0.40"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "y = 1.0 + (−0.4)(1.5) = 1.0 − 0.6 = 0.4.",
+          "difficulty": "medium",
+          "tags": [
+            "linear"
+          ]
+        },
+        {
+          "id": "dl2-lin-007",
+          "type": "single_choice",
+          "prompt": "What is the name of this loss function?",
+          "code": "L[φ] = Σᵢ ( f[xᵢ, φ] − yᵢ )²\n     = Σᵢ ( φ₀ + φ₁xᵢ − yᵢ )²",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Binary cross-entropy"
+            },
+            {
+              "id": "b",
+              "text": "ReLU"
+            },
+            {
+              "id": "c",
+              "text": "Least squares loss"
+            },
+            {
+              "id": "d",
+              "text": "Categorical cross-entropy"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "It sums the squared differences between predictions and true outputs.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-lin-008",
+          "type": "typed",
+          "prompt": "Two training points: (x=1, y=2) and (x=2, y=3). With φ₀ = 0.5 and φ₁ = 1, what is the least squares loss?",
+          "image": null,
+          "acceptedAnswers": [
+            "0.5",
+            ".5",
+            "0.50"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Predictions 1.5 and 2.5 → errors −0.5 and −0.5 → 0.25 + 0.25 = 0.5.",
+          "difficulty": "hard",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-lin-009",
+          "type": "single_choice",
+          "prompt": "Three candidate lines are fitted to the same data. Which has the SMALLEST least squares loss?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "φ₀ = 1.60, φ₁ = −0.80",
+              "image": {
+                "src": "images/dl/linreg_fit_2.svg",
+                "alt": "Scatter of 12 training points with the line φ₀ = 1.60, φ₁ = -0.80 and dashed red lines showing each point's error."
+              }
+            },
+            {
+              "id": "b",
+              "text": "φ₀ = 0.84, φ₁ = 0.50",
+              "image": {
+                "src": "images/dl/linreg_fit_3.svg",
+                "alt": "Scatter of 12 training points with the line φ₀ = 0.84, φ₁ = 0.50 and dashed red lines showing each point's error."
+              }
+            },
+            {
+              "id": "c",
+              "text": "φ₀ = 0.40, φ₁ = 0.20",
+              "image": {
+                "src": "images/dl/linreg_fit_1.svg",
+                "alt": "Scatter of 12 training points with the line φ₀ = 0.40, φ₁ = 0.20 and dashed red lines showing each point's error."
+              }
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Shorter dashed error lines → smaller squared errors. With this data the losses are about 6.70, 10.96 and 0.21.",
+          "difficulty": "medium",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-lin-010",
+          "type": "single_choice",
+          "prompt": "Why are the errors SQUARED in least squares loss?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Because the slope is squared"
+            },
+            {
+              "id": "b",
+              "text": "So positive and negative errors don't cancel out, and big errors are penalised more"
+            },
+            {
+              "id": "c",
+              "text": "To make the numbers smaller"
+            },
+            {
+              "id": "d",
+              "text": "It's only a convention with no effect"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Squaring makes every error positive and punishes large mistakes.",
+          "difficulty": "medium",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-lin-011",
+          "type": "single_choice",
+          "prompt": "How do we find a GOOD model?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Find the best parameters — the ones that minimise the loss"
+            },
+            {
+              "id": "b",
+              "text": "Use the largest possible slope"
+            },
+            {
+              "id": "c",
+              "text": "Add more data until loss is zero"
+            },
+            {
+              "id": "d",
+              "text": "Pick the line that passes through the first point"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "φ̂ = argmin L[φ].",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-lin-012",
+          "type": "single_choice",
+          "prompt": "This picture shows the loss for every intercept/slope pair, with steps moving downhill to the lowest loss. What is this technique called?",
+          "image": {
+            "src": "images/dl/gradient_descent.svg",
+            "alt": "Contour plot of loss with intercept φ₀ on the horizontal axis and slope φ₁ on the vertical axis. Red dots step from a start point near (1.6, −0.8) down to the lowest-loss point near (0.8, 0.5)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Backpropagation of inputs"
+            },
+            {
+              "id": "b",
+              "text": "Feature engineering"
+            },
+            {
+              "id": "c",
+              "text": "Data cleaning"
+            },
+            {
+              "id": "d",
+              "text": "Gradient descent"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Gradient descent repeatedly steps in the direction that reduces the loss.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-lin-013",
+          "type": "true_false",
+          "prompt": "The loss can be drawn as a contour graph with intercept and slope on the axes.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Each point on the contour is one possible line; the lowest point is the best line.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-lin-014",
+          "type": "single_choice",
+          "prompt": "Why test with a SEPARATE, unseen set of input/output pairs?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To increase the number of parameters"
+            },
+            {
+              "id": "b",
+              "text": "To train the model faster"
+            },
+            {
+              "id": "c",
+              "text": "Because training data has no labels"
+            },
+            {
+              "id": "d",
+              "text": "To measure performance on new data (generalisation)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The degree to which test performance matches training performance is generalisation.",
+          "difficulty": "easy",
+          "tags": [
+            "generalisation"
+          ]
+        },
+        {
+          "id": "dl2-lin-015",
+          "type": "single_choice",
+          "prompt": "A model that is TOO SIMPLE and doesn't even fit the training data well is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Generalising well"
+            },
+            {
+              "id": "b",
+              "text": "Backpropagating"
+            },
+            {
+              "id": "c",
+              "text": "Underfitting"
+            },
+            {
+              "id": "d",
+              "text": "Overfitting"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Too simple → underfitting.",
+          "difficulty": "easy",
+          "tags": [
+            "generalisation"
+          ]
+        },
+        {
+          "id": "dl2-lin-016",
+          "type": "single_choice",
+          "prompt": "A model that is TOO COMPLEX and fits the statistical peculiarities (noise) of the training data is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Underfitting"
+            },
+            {
+              "id": "b",
+              "text": "Overfitting"
+            },
+            {
+              "id": "c",
+              "text": "Normalising"
+            },
+            {
+              "id": "d",
+              "text": "Generalising well"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Too complex → overfitting.",
+          "difficulty": "easy",
+          "tags": [
+            "generalisation"
+          ]
+        },
+        {
+          "id": "dl2-lin-017",
+          "type": "single_choice",
+          "prompt": "Which fit shows OVERFITTING?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "image": {
+                "src": "images/dl/fit_underfit.svg",
+                "alt": "A straight line through wavy data points, missing the curve."
+              }
+            },
+            {
+              "id": "b",
+              "image": {
+                "src": "images/dl/fit_good.svg",
+                "alt": "A smooth curve that follows the overall wave of the data points."
+              }
+            },
+            {
+              "id": "c",
+              "image": {
+                "src": "images/dl/fit_overfit.svg",
+                "alt": "A wiggly curve passing through every data point and shooting off at the edges."
+              }
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The wiggly curve hits every training point but would predict new data badly.",
+          "difficulty": "medium",
+          "tags": [
+            "generalisation"
+          ]
+        },
+        {
+          "id": "dl2-lin-018",
+          "type": "single_choice",
+          "prompt": "Which fit GENERALISES best?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "image": {
+                "src": "images/dl/fit_overfit.svg",
+                "alt": "A wiggly curve passing through every data point and shooting off at the edges."
+              }
+            },
+            {
+              "id": "b",
+              "image": {
+                "src": "images/dl/fit_good.svg",
+                "alt": "A smooth curve that follows the overall wave of the data points."
+              }
+            },
+            {
+              "id": "c",
+              "image": {
+                "src": "images/dl/fit_underfit.svg",
+                "alt": "A straight line through wavy data points, missing the curve."
+              }
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The smooth curve captures the real pattern without chasing the noise.",
+          "difficulty": "medium",
+          "tags": [
+            "generalisation"
+          ]
+        },
+        {
+          "id": "dl2-lin-019",
+          "type": "single_choice",
+          "prompt": "This straight line through curved data is an example of…",
+          "image": {
+            "src": "images/dl/fit_underfit.svg",
+            "alt": "A straight line through wavy data points, missing the curve."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Good generalisation"
+            },
+            {
+              "id": "b",
+              "text": "Gradient descent"
+            },
+            {
+              "id": "c",
+              "text": "Underfitting"
+            },
+            {
+              "id": "d",
+              "text": "Overfitting"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The model is too simple to capture the curve.",
+          "difficulty": "easy",
+          "tags": [
+            "generalisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shallow-nn-architecture",
+      "title": "Shallow Neural Networks: Architecture",
+      "description": "Components (input, hidden, output, node), what each layer does, neurons, and choosing the output activation.",
+      "questions": [
+        {
+          "id": "dl2-arch-001",
+          "type": "multiple_choice",
+          "prompt": "What are the components of a neural network (IHON)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Hidden layers"
+            },
+            {
+              "id": "b",
+              "text": "Loss layer"
+            },
+            {
+              "id": "c",
+              "text": "Input layer"
+            },
+            {
+              "id": "d",
+              "text": "Node (neuron)"
+            },
+            {
+              "id": "e",
+              "text": "Output layer"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "IHON.",
+          "difficulty": "easy",
+          "tags": [
+            "components"
+          ]
+        },
+        {
+          "id": "dl2-arch-002",
+          "type": "single_choice",
+          "prompt": "Where does the network learn the relationships and interactions between the input variables?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Input layer"
+            },
+            {
+              "id": "b",
+              "text": "Loss function"
+            },
+            {
+              "id": "c",
+              "text": "Output layer"
+            },
+            {
+              "id": "d",
+              "text": "Hidden layers"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Hidden layers sit between input and output.",
+          "difficulty": "easy",
+          "tags": [
+            "components"
+          ]
+        },
+        {
+          "id": "dl2-arch-003",
+          "type": "single_choice",
+          "prompt": "What is a node (neuron)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The loss value"
+            },
+            {
+              "id": "b",
+              "text": "A computational unit that takes one or more input values and produces an output value"
+            },
+            {
+              "id": "c",
+              "text": "A type of dataset"
+            },
+            {
+              "id": "d",
+              "text": "A training example"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Nodes are the circles in network diagrams.",
+          "difficulty": "easy",
+          "tags": [
+            "components"
+          ]
+        },
+        {
+          "id": "dl2-arch-004",
+          "type": "single_choice",
+          "prompt": "In this artificial neuron, what usually goes in the box marked “?” after the weighted sum?",
+          "image": {
+            "src": "images/dl/artificial_neuron.svg",
+            "alt": "Artificial neuron: inputs x₁, x₂, x₃ multiplied by weights w₁, w₂, w₃ flow into a Σ circle labelled plus bias b, producing z, which goes into a box marked with a question mark and a[z], then to the output."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "An activation function a[z] (e.g. ReLU, sigmoid)"
+            },
+            {
+              "id": "b",
+              "text": "The training data"
+            },
+            {
+              "id": "c",
+              "text": "Another input"
+            },
+            {
+              "id": "d",
+              "text": "The loss function"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Inputs × weights, summed with a bias (z), then passed through an activation function to give the output.",
+          "difficulty": "easy",
+          "tags": [
+            "components"
+          ]
+        },
+        {
+          "id": "dl2-arch-005",
+          "type": "single_choice",
+          "prompt": "What is a SHALLOW neural network?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A neural network with a small number of layers — often just one hidden layer"
+            },
+            {
+              "id": "b",
+              "text": "A network with more than 100 layers"
+            },
+            {
+              "id": "c",
+              "text": "A network with no hidden layers and no output"
+            },
+            {
+              "id": "d",
+              "text": "A network that only works on images"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "One hidden layer = shallow; more than one = deep.",
+          "difficulty": "easy",
+          "tags": [
+            "shallow"
+          ]
+        },
+        {
+          "id": "dl2-arch-006",
+          "type": "single_choice",
+          "prompt": "Shallow neural networks are typically used for…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Training other networks"
+            },
+            {
+              "id": "b",
+              "text": "Only image generation"
+            },
+            {
+              "id": "c",
+              "text": "Simple tasks such as regression or classification"
+            },
+            {
+              "id": "d",
+              "text": "Replacing databases"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Simple regression and classification.",
+          "difficulty": "easy",
+          "tags": [
+            "shallow"
+          ]
+        },
+        {
+          "id": "dl2-arch-007",
+          "type": "single_choice",
+          "prompt": "In this example network, what are x₁ and x₂?",
+          "image": {
+            "src": "images/dl/snn_2_2_1.svg",
+            "alt": "Shallow network: inputs x₁ and x₂ connect to hidden nodes n₁ and n₂, which connect to one output y."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Input variables fed into the hidden nodes n₁ and n₂"
+            },
+            {
+              "id": "b",
+              "text": "Biases"
+            },
+            {
+              "id": "c",
+              "text": "Hidden units"
+            },
+            {
+              "id": "d",
+              "text": "Outputs"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "x₁ and x₂ feed into the two nodes of the single hidden layer, which then generate the output. (Your notes call them “response variables”, but they are the INPUT variables — the response is the output.)",
+          "difficulty": "medium",
+          "tags": [
+            "shallow"
+          ]
+        },
+        {
+          "id": "dl2-arch-008",
+          "type": "multiple_choice",
+          "prompt": "What does the INPUT layer do? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Passes data forward without computation"
+            },
+            {
+              "id": "b",
+              "text": "Has one neuron per input feature"
+            },
+            {
+              "id": "c",
+              "text": "Receives the raw data (features)"
+            },
+            {
+              "id": "d",
+              "text": "Applies the activation function"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Computation starts in the hidden layer.",
+          "difficulty": "medium",
+          "tags": [
+            "layers"
+          ]
+        },
+        {
+          "id": "dl2-arch-009",
+          "type": "typed",
+          "prompt": "A dataset has 4 features. How many neurons are in the input layer?",
+          "image": null,
+          "acceptedAnswers": [
+            "4",
+            "four"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Number of input neurons = number of features.",
+          "difficulty": "easy",
+          "tags": [
+            "layers"
+          ]
+        },
+        {
+          "id": "dl2-arch-010",
+          "type": "multiple_choice",
+          "prompt": "What does each HIDDEN neuron do? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Applies an activation function"
+            },
+            {
+              "id": "b",
+              "text": "Stores the training labels"
+            },
+            {
+              "id": "c",
+              "text": "Adds a bias"
+            },
+            {
+              "id": "d",
+              "text": "Computes a weighted sum of the previous layer's outputs"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Weighted sum + bias → activation.",
+          "difficulty": "medium",
+          "tags": [
+            "layers"
+          ]
+        },
+        {
+          "id": "dl2-arch-011",
+          "type": "single_choice",
+          "prompt": "Why do hidden layers use activation functions like ReLU, Sigmoid or Tanh?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They introduce non-linearity so the network can learn complex, non-linear relationships"
+            },
+            {
+              "id": "b",
+              "text": "They make the network linear"
+            },
+            {
+              "id": "c",
+              "text": "They remove the bias"
+            },
+            {
+              "id": "d",
+              "text": "They count the parameters"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Without non-linearity, stacked layers would just be one straight-line model.",
+          "difficulty": "easy",
+          "tags": [
+            "layers"
+          ]
+        },
+        {
+          "id": "dl2-arch-012",
+          "type": "single_choice",
+          "prompt": "How many output neurons for a 5-class classification task?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "2"
+            },
+            {
+              "id": "b",
+              "text": "5 (K neurons for K classes)"
+            },
+            {
+              "id": "c",
+              "text": "1"
+            },
+            {
+              "id": "d",
+              "text": "10"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "K classes → K output neurons (with softmax).",
+          "difficulty": "easy",
+          "tags": [
+            "output"
+          ]
+        },
+        {
+          "id": "dl2-arch-013",
+          "type": "single_choice",
+          "prompt": "How many output neurons for binary classification or regression?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "K"
+            },
+            {
+              "id": "b",
+              "text": "2"
+            },
+            {
+              "id": "c",
+              "text": "1"
+            },
+            {
+              "id": "d",
+              "text": "0"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "One neuron for binary classification or a single regression value.",
+          "difficulty": "easy",
+          "tags": [
+            "output"
+          ]
+        },
+        {
+          "id": "dl2-arch-014",
+          "type": "single_choice",
+          "prompt": "Which output activation is used for BINARY classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "ReLU"
+            },
+            {
+              "id": "b",
+              "text": "Linear"
+            },
+            {
+              "id": "c",
+              "text": "Softmax"
+            },
+            {
+              "id": "d",
+              "text": "Sigmoid"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Sigmoid squashes to 0–1, a probability.",
+          "difficulty": "easy",
+          "tags": [
+            "output"
+          ]
+        },
+        {
+          "id": "dl2-arch-015",
+          "type": "single_choice",
+          "prompt": "Which output activation is used for MULTI-CLASS classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Sigmoid"
+            },
+            {
+              "id": "b",
+              "text": "Softmax"
+            },
+            {
+              "id": "c",
+              "text": "Linear"
+            },
+            {
+              "id": "d",
+              "text": "Tanh"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Softmax turns K scores into K probabilities that add to 1.",
+          "difficulty": "easy",
+          "tags": [
+            "output"
+          ]
+        },
+        {
+          "id": "dl2-arch-016",
+          "type": "single_choice",
+          "prompt": "In this decision tree, which output activation goes in the “?” box for regression?",
+          "image": {
+            "src": "images/dl/output_activation_tree.svg",
+            "alt": "Decision tree: task splits into regression (output activation marked ?) and classification; classification with 2 classes uses sigmoid with 1 neuron, more than 2 classes uses softmax with K neurons."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "ReLU only"
+            },
+            {
+              "id": "b",
+              "text": "Sigmoid"
+            },
+            {
+              "id": "c",
+              "text": "Softmax"
+            },
+            {
+              "id": "d",
+              "text": "Linear (no squashing)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Regression outputs any real number, so the output layer uses a linear function.",
+          "difficulty": "easy",
+          "tags": [
+            "output"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "computing-shallow-networks",
+      "title": "How a Shallow Network Computes",
+      "description": "Weighted sum → activation → output, ReLU, weights and biases, activations, piecewise linear functions and the universal approximation theorem.",
+      "questions": [
+        {
+          "id": "dl2-comp-001",
+          "type": "single_choice",
+          "prompt": "What is the correct order of how a shallow network works (WAO)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Output → Weighted sum → Activation"
+            },
+            {
+              "id": "b",
+              "text": "Weighted sum → Activation function → Output generation"
+            },
+            {
+              "id": "c",
+              "text": "Activation → Output → Weighted sum"
+            },
+            {
+              "id": "d",
+              "text": "Weighted sum → Output → Activation"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "WAO.",
+          "difficulty": "easy",
+          "tags": [
+            "forward"
+          ]
+        },
+        {
+          "id": "dl2-comp-002",
+          "type": "single_choice",
+          "prompt": "What is the graph's function a[z]?",
+          "image": {
+            "src": "images/dl/relu.svg",
+            "alt": "Graph of an activation function: flat at zero for negative z, then rising in a straight line with slope 1 for positive z."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Softmax"
+            },
+            {
+              "id": "b",
+              "text": "ReLU: 0 when z < 0, z when z ≥ 0"
+            },
+            {
+              "id": "c",
+              "text": "Linear: a[z] = z"
+            },
+            {
+              "id": "d",
+              "text": "Sigmoid"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "ReLU = Rectified Linear Unit: flat at zero for negative inputs, then a straight line.",
+          "difficulty": "easy",
+          "tags": [
+            "relu"
+          ]
+        },
+        {
+          "id": "dl2-comp-003",
+          "type": "typed",
+          "prompt": "What does ReLU stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "rectified linear unit"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "ReLU = Rectified Linear Unit.",
+          "difficulty": "easy",
+          "tags": [
+            "relu"
+          ]
+        },
+        {
+          "id": "dl2-comp-004",
+          "type": "typed",
+          "prompt": "What is ReLU[−3]?",
+          "image": null,
+          "acceptedAnswers": [
+            "0"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Negative inputs become 0.",
+          "difficulty": "easy",
+          "tags": [
+            "relu"
+          ]
+        },
+        {
+          "id": "dl2-comp-005",
+          "type": "typed",
+          "prompt": "What is ReLU[2.5]?",
+          "image": null,
+          "acceptedAnswers": [
+            "2.5"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Non-negative inputs pass through unchanged.",
+          "difficulty": "easy",
+          "tags": [
+            "relu"
+          ]
+        },
+        {
+          "id": "dl2-comp-006",
+          "type": "multiple_choice",
+          "prompt": "In a shallow network, which statements are correct? (select all that apply)",
+          "image": {
+            "src": "images/dl/snn_1_3_1.svg",
+            "alt": "Shallow network with one input x, three hidden units h₁, h₂, h₃ and one output y. Edges into the hidden units are labelled θ₁₁, θ₂₁, θ₃₁ with biases θ₁₀, θ₂₀, θ₃₀; edges to the output are labelled φ₁, φ₂, φ₃ with bias φ₀."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Biases are the inputs x"
+            },
+            {
+              "id": "b",
+              "text": "Values AFTER ReLU are activations"
+            },
+            {
+              "id": "c",
+              "text": "Slopes (θ₁₁, φ₁ …) are WEIGHTS"
+            },
+            {
+              "id": "d",
+              "text": "Y-offsets (θ₁₀, φ₀ …) are BIASES"
+            },
+            {
+              "id": "e",
+              "text": "Values BEFORE ReLU are pre-activations"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Weights = slopes, biases = offsets, pre-activations go into ReLU, activations come out.",
+          "difficulty": "medium",
+          "tags": [
+            "terms"
+          ]
+        },
+        {
+          "id": "dl2-comp-007",
+          "type": "single_choice",
+          "prompt": "Network parameters are…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Training examples"
+            },
+            {
+              "id": "b",
+              "text": "Hidden units only"
+            },
+            {
+              "id": "c",
+              "text": "Inputs + outputs"
+            },
+            {
+              "id": "d",
+              "text": "Weights + biases"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Total parameters = all weights + all biases.",
+          "difficulty": "easy",
+          "tags": [
+            "terms"
+          ]
+        },
+        {
+          "id": "dl2-comp-008",
+          "type": "single_choice",
+          "prompt": "One hidden layer = shallow neural network. More than one hidden layer = …",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Linear regression"
+            },
+            {
+              "id": "b",
+              "text": "Reactive machine"
+            },
+            {
+              "id": "c",
+              "text": "Deep neural network"
+            },
+            {
+              "id": "d",
+              "text": "Very shallow network"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Deep = multiple hidden layers.",
+          "difficulty": "easy",
+          "tags": [
+            "terms"
+          ]
+        },
+        {
+          "id": "dl2-comp-009",
+          "type": "single_choice",
+          "prompt": "In these equations, what is h₁?",
+          "code": "h₁ = a[θ₁₀ + θ₁₁x]\nh₂ = a[θ₂₀ + θ₂₁x]\nh₃ = a[θ₃₀ + θ₃₁x]\n\ny  = φ₀ + φ₁h₁ + φ₂h₂ + φ₃h₃",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The input"
+            },
+            {
+              "id": "b",
+              "text": "A bias"
+            },
+            {
+              "id": "c",
+              "text": "The output"
+            },
+            {
+              "id": "d",
+              "text": "A hidden unit — the activation of the first hidden neuron"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "h = hidden unit = a[pre-activation].",
+          "difficulty": "easy",
+          "tags": [
+            "equations"
+          ]
+        },
+        {
+          "id": "dl2-comp-010",
+          "type": "typed",
+          "prompt": "θ₁₀ = −0.4, θ₁₁ = 1.0 and x = 1.2. What is h₁ = ReLU[θ₁₀ + θ₁₁x]?",
+          "image": null,
+          "acceptedAnswers": [
+            "0.8",
+            ".8",
+            "0.80"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Pre-activation = −0.4 + 1.0 × 1.2 = 0.8; ReLU keeps it: 0.8.",
+          "difficulty": "medium",
+          "tags": [
+            "equations"
+          ]
+        },
+        {
+          "id": "dl2-comp-011",
+          "type": "typed",
+          "prompt": "Using the parameters below, what is y when x = 2?",
+          "code": "θ₁₀ = 1,   θ₁₁ = −1\nθ₂₀ = −1,  θ₂₁ = 1\nθ₃₀ = 0.5, θ₃₁ = 0.5\n\nφ₀ = 0.5,  φ₁ = 2\nφ₂ = 1,    φ₃ = −1",
+          "image": null,
+          "acceptedAnswers": [
+            "0",
+            "0.0"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "h₁ = ReLU[1 − 2] = 0; h₂ = ReLU[−1 + 2] = 1; h₃ = ReLU[0.5 + 1] = 1.5. y = 0.5 + 2(0) + 1(1) − 1(1.5) = 0.",
+          "difficulty": "hard",
+          "tags": [
+            "equations"
+          ]
+        },
+        {
+          "id": "dl2-comp-012",
+          "type": "single_choice",
+          "prompt": "What is the correct order to build the output of a 3-hidden-unit network?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Compute three linear functions → pass through ReLU → weight the hidden units → sum them (+ φ₀)"
+            },
+            {
+              "id": "b",
+              "text": "Sum → ReLU → weight → compute linear functions"
+            },
+            {
+              "id": "c",
+              "text": "Weight the hidden units → compute linear functions → ReLU → sum"
+            },
+            {
+              "id": "d",
+              "text": "Pass through ReLU → compute linear functions → sum → weight"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "1) θ linear functions, 2) ReLU creates hidden units, 3) multiply by φ, 4) add together with φ₀.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-comp-013",
+          "type": "single_choice",
+          "prompt": "Which panel shows the hidden units AFTER passing through ReLU (negative parts clipped to zero)?",
+          "image": {
+            "src": "images/dl/nn_steps.svg",
+            "alt": "Four panels labelled a to d. a: three straight lines. b: the same lines with negative parts flattened to zero. c: the flattened lines scaled up, down or flipped. d: one purple line made of straight pieces with three joints circled."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Panel a"
+            },
+            {
+              "id": "b",
+              "text": "Panel b"
+            },
+            {
+              "id": "c",
+              "text": "Panel c"
+            },
+            {
+              "id": "d",
+              "text": "Panel d"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "a = linear functions, b = after ReLU, c = weighted by φ, d = sum + φ₀.",
+          "difficulty": "medium",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-comp-014",
+          "type": "single_choice",
+          "prompt": "Which panel shows the final network OUTPUT?",
+          "image": {
+            "src": "images/dl/nn_steps.svg",
+            "alt": "Four panels labelled a to d. a: three straight lines. b: the same lines with negative parts flattened to zero. c: the flattened lines scaled up, down or flipped. d: one purple line made of straight pieces with three joints circled."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Panel a"
+            },
+            {
+              "id": "b",
+              "text": "Panel b"
+            },
+            {
+              "id": "c",
+              "text": "Panel c"
+            },
+            {
+              "id": "d",
+              "text": "Panel d"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The sum of the weighted hidden units plus φ₀ is a piecewise linear function.",
+          "difficulty": "easy",
+          "tags": [
+            "steps"
+          ]
+        },
+        {
+          "id": "dl2-comp-015",
+          "type": "single_choice",
+          "prompt": "What kind of function does a shallow ReLU network with one input produce?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A smooth sine wave"
+            },
+            {
+              "id": "b",
+              "text": "A piecewise linear function — straight pieces joined at “joints”"
+            },
+            {
+              "id": "c",
+              "text": "A single straight line always"
+            },
+            {
+              "id": "d",
+              "text": "A step function"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Each ReLU adds one joint.",
+          "difficulty": "easy",
+          "tags": [
+            "piecewise"
+          ]
+        },
+        {
+          "id": "dl2-comp-016",
+          "type": "typed",
+          "prompt": "This network output has 3 joints. How many ReLU hidden units created them (at least)?",
+          "image": {
+            "src": "images/dl/piecewise_output.svg",
+            "alt": "Output y against input x: a line made of four straight pieces joined at three circled joints."
+          },
+          "acceptedAnswers": [
+            "3",
+            "three"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "1 joint per ReLU function.",
+          "difficulty": "medium",
+          "tags": [
+            "piecewise"
+          ]
+        },
+        {
+          "id": "dl2-comp-017",
+          "type": "typed",
+          "prompt": "A shallow network has D = 10 ReLU hidden units and one input. At most how many joints can its output have?",
+          "image": null,
+          "acceptedAnswers": [
+            "10",
+            "ten"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Up to one joint per hidden unit → up to 10 joints (11 linear regions).",
+          "difficulty": "medium",
+          "tags": [
+            "piecewise"
+          ]
+        },
+        {
+          "id": "dl2-comp-018",
+          "type": "single_choice",
+          "prompt": "What does the universal approximation theorem say?",
+          "image": {
+            "src": "images/dl/universal_approximation.svg",
+            "alt": "A wavy grey target function closely followed by a purple line made of many straight segments (11 joints)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Any network always gives zero loss"
+            },
+            {
+              "id": "b",
+              "text": "With enough hidden units, a shallow network can describe any continuous function (on a compact subset of ℝᴰ) to arbitrary precision"
+            },
+            {
+              "id": "c",
+              "text": "Deep networks can't approximate functions"
+            },
+            {
+              "id": "d",
+              "text": "A network with one hidden unit can fit any data"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "More hidden units → more joints → closer approximation.",
+          "difficulty": "easy",
+          "tags": [
+            "universal"
+          ]
+        },
+        {
+          "id": "dl2-comp-019",
+          "type": "single_choice",
+          "prompt": "For D hidden units, which pair of equations is correct?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "h_d = a[x]   and   y = φ₀·Σ h_d"
+            },
+            {
+              "id": "b",
+              "text": "h_d = a[θ_d0 + θ_d1·x]   and   y = φ₀ + Σ φ_d·h_d"
+            },
+            {
+              "id": "c",
+              "text": "y = a[θ_d0]   and   h_d = φ_d·x"
+            },
+            {
+              "id": "d",
+              "text": "h_d = θ_d0 + θ_d1·x   and   y = a[Σ h_d]"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Same form as 3 hidden units, summed from d = 1 to D.",
+          "difficulty": "medium",
+          "tags": [
+            "universal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inputs-outputs-and-parameters",
+      "title": "Multiple Inputs/Outputs & Counting Parameters",
+      "description": "Networks with several inputs or outputs, the general case, and the parameter-counting exercises from your notes.",
+      "questions": [
+        {
+          "id": "dl2-param-001",
+          "type": "typed",
+          "prompt": "How many parameters does this network (1 input, 3 hidden units, 1 output) have?",
+          "image": {
+            "src": "images/dl/snn_1_3_1.svg",
+            "alt": "Shallow network with one input x, three hidden units h₁, h₂, h₃ and one output y. Edges into the hidden units are labelled θ₁₁, θ₂₁, θ₃₁ with biases θ₁₀, θ₂₀, θ₃₀; edges to the output are labelled φ₁, φ₂, φ₃ with bias φ₀."
+          },
+          "acceptedAnswers": [
+            "10",
+            "ten"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 3 weights + 3 biases = 6. Output: 3 weights + 1 bias = 4. Total = 10.",
+          "difficulty": "medium",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-002",
+          "type": "typed",
+          "prompt": "Exercise from your notes: 1 input, 6 hidden units, 1 output. How many parameters?",
+          "image": {
+            "src": "images/dl/snn_1_6_1.svg",
+            "alt": "Shallow network: one input x, six hidden units h₁ to h₆, one output y."
+          },
+          "acceptedAnswers": [
+            "19",
+            "nineteen"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 6 weights + 6 biases = 12. Output: 6 weights + 1 bias = 7. Total = 19.",
+          "difficulty": "medium",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-003",
+          "type": "typed",
+          "prompt": "1 input, 4 hidden units, 2 outputs. How many parameters?",
+          "image": {
+            "src": "images/dl/snn_1_4_2.svg",
+            "alt": "Shallow network: one input x, four hidden units, two outputs y₁ and y₂."
+          },
+          "acceptedAnswers": [
+            "18",
+            "eighteen"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 4 + 4 = 8. Outputs: each has 4 weights + 1 bias = 5, × 2 = 10. Total = 18.",
+          "difficulty": "hard",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-004",
+          "type": "typed",
+          "prompt": "2 inputs, 3 hidden units, 1 output. How many parameters?",
+          "image": {
+            "src": "images/dl/snn_2_3_1.svg",
+            "alt": "Shallow network: two inputs x₁ and x₂, three hidden units, one output y."
+          },
+          "acceptedAnswers": [
+            "13",
+            "thirteen"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: each unit has 2 weights + 1 bias = 3, × 3 = 9. Output: 3 weights + 1 bias = 4. Total = 13.",
+          "difficulty": "hard",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-005",
+          "type": "typed",
+          "prompt": "From your notes: 3 inputs, 3 hidden units, 2 outputs. How many parameters?",
+          "image": {
+            "src": "images/dl/snn_3_3_2.svg",
+            "alt": "Shallow network: three inputs, three hidden units, two outputs."
+          },
+          "acceptedAnswers": [
+            "20",
+            "twenty"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 3 × (3 weights + 1 bias) = 12. Outputs: 2 × (3 weights + 1 bias) = 8. Total = 20.",
+          "difficulty": "hard",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-006",
+          "type": "single_choice",
+          "prompt": "In general, with Dᵢ inputs, D hidden units and Dₒ outputs, how many parameters are there?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Dᵢ × D × Dₒ"
+            },
+            {
+              "id": "b",
+              "text": "D(Dᵢ + 1) + Dₒ(D + 1)"
+            },
+            {
+              "id": "c",
+              "text": "Dᵢ + D + Dₒ"
+            },
+            {
+              "id": "d",
+              "text": "D(Dᵢ) + Dₒ(D)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Each hidden unit: Dᵢ weights + 1 bias. Each output: D weights + 1 bias.",
+          "difficulty": "hard",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dl2-param-007",
+          "type": "single_choice",
+          "prompt": "With 2 inputs, what is the hidden unit h₁?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "h₁ = a[θ₁₀ + θ₁₁x₁ + θ₁₂x₂]"
+            },
+            {
+              "id": "b",
+              "text": "h₁ = θ₁₀ + x₁ + x₂"
+            },
+            {
+              "id": "c",
+              "text": "h₁ = a[θ₁₀ + θ₁₁x₁]"
+            },
+            {
+              "id": "d",
+              "text": "h₁ = a[x₁ × x₂]"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Each hidden unit takes a weighted sum of ALL inputs plus its bias.",
+          "difficulty": "medium",
+          "tags": [
+            "multi-io"
+          ]
+        },
+        {
+          "id": "dl2-param-008",
+          "type": "single_choice",
+          "prompt": "With 2 outputs, how is y₂ computed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "y₂ = y₁ + φ₂₀"
+            },
+            {
+              "id": "b",
+              "text": "y₂ = φ₂₀ × h₂"
+            },
+            {
+              "id": "c",
+              "text": "y₂ = φ₂₀ + φ₂₁h₁ + φ₂₂h₂ + φ₂₃h₃ + φ₂₄h₄"
+            },
+            {
+              "id": "d",
+              "text": "y₂ = a[θ₂₀ + θ₂₁x]"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Each output has its own bias and its own weight for every hidden unit.",
+          "difficulty": "medium",
+          "tags": [
+            "multi-io"
+          ]
+        },
+        {
+          "id": "dl2-param-009",
+          "type": "multiple_choice",
+          "prompt": "Spam detector exercise: 3 input features (keyword, sender domain, attachments), 5 hidden units. Which design choices are right? (select all that apply)",
+          "image": {
+            "src": "images/dl/snn_spam.svg",
+            "alt": "Spam detector network: 3 inputs (keyword, domain, attachments), 5 hidden ReLU units, 1 sigmoid output."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "1 output neuron with a sigmoid activation"
+            },
+            {
+              "id": "b",
+              "text": "Binary cross-entropy as the loss"
+            },
+            {
+              "id": "c",
+              "text": "3 neurons in the input layer"
+            },
+            {
+              "id": "d",
+              "text": "Softmax with 3 output neurons"
+            },
+            {
+              "id": "e",
+              "text": "Mean squared error as the loss"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Spam / not spam is binary classification → 1 sigmoid output, binary cross-entropy loss.",
+          "difficulty": "hard",
+          "tags": [
+            "exercises"
+          ]
+        },
+        {
+          "id": "dl2-param-010",
+          "type": "typed",
+          "prompt": "How many parameters does the spam detector (3 inputs, 5 hidden units, 1 output) have?",
+          "image": null,
+          "acceptedAnswers": [
+            "26",
+            "twenty-six",
+            "twenty six"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 5 × (3 + 1) = 20. Output: 5 + 1 = 6. Total = 26.",
+          "difficulty": "hard",
+          "tags": [
+            "exercises"
+          ]
+        },
+        {
+          "id": "dl2-param-011",
+          "type": "multiple_choice",
+          "prompt": "Iris exercise: 4 features (sepal length/width, petal length/width), 5 hidden units, 3 species. Which are right? (select all that apply)",
+          "image": {
+            "src": "images/dl/snn_iris.svg",
+            "alt": "Iris classifier network: 4 inputs, 5 hidden units, 3 softmax outputs (setosa, versicolor, virginica)."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Softmax output activation"
+            },
+            {
+              "id": "b",
+              "text": "3 output neurons"
+            },
+            {
+              "id": "c",
+              "text": "4 input neurons"
+            },
+            {
+              "id": "d",
+              "text": "1 output neuron with sigmoid"
+            },
+            {
+              "id": "e",
+              "text": "Categorical cross-entropy loss"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "3 species = multiclass → 3 softmax outputs + categorical cross-entropy.",
+          "difficulty": "hard",
+          "tags": [
+            "exercises"
+          ]
+        },
+        {
+          "id": "dl2-param-012",
+          "type": "typed",
+          "prompt": "How many parameters does the Iris network (4 inputs, 5 hidden, 3 outputs) have?",
+          "image": null,
+          "acceptedAnswers": [
+            "43",
+            "forty-three",
+            "forty three"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "Hidden: 5 × (4 + 1) = 25. Outputs: 3 × (5 + 1) = 18. Total = 43.",
+          "difficulty": "hard",
+          "tags": [
+            "exercises"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-shallow-networks",
+      "title": "Training: Forward Prop, Loss & Backprop",
+      "description": "Forward propagation, loss functions (MSE, binary and categorical cross-entropy), backpropagation, weight updates and epochs.",
+      "questions": [
+        {
+          "id": "dl2-train-001",
+          "type": "single_choice",
+          "prompt": "What is the correct order of training a shallow network?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Weight update → Loss calculation → Forward propagation → Backpropagation"
+            },
+            {
+              "id": "b",
+              "text": "Backpropagation → Forward propagation → Weight update → Loss calculation"
+            },
+            {
+              "id": "c",
+              "text": "Forward propagation → Loss calculation → Backpropagation → Weight update (repeat for many epochs)"
+            },
+            {
+              "id": "d",
+              "text": "Loss calculation → Weight update → Backpropagation → Forward propagation"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Forward pass, measure error, compute gradients backwards, update, repeat.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-train-002",
+          "type": "single_choice",
+          "prompt": "Calculating the output for a given input by passing it through the layers is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Forward propagation"
+            },
+            {
+              "id": "b",
+              "text": "Weight update"
+            },
+            {
+              "id": "c",
+              "text": "Backpropagation"
+            },
+            {
+              "id": "d",
+              "text": "An epoch"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Input → hidden → output.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-train-003",
+          "type": "single_choice",
+          "prompt": "Calculating the gradient of the loss with respect to each weight is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Loss calculation"
+            },
+            {
+              "id": "b",
+              "text": "Feature engineering"
+            },
+            {
+              "id": "c",
+              "text": "Forward propagation"
+            },
+            {
+              "id": "d",
+              "text": "Backpropagation"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It tells us how to adjust each weight to reduce the loss.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-train-004",
+          "type": "single_choice",
+          "prompt": "What is an epoch?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "One neuron"
+            },
+            {
+              "id": "b",
+              "text": "One layer"
+            },
+            {
+              "id": "c",
+              "text": "One pass of the training process over the data; training repeats for many epochs until the network learns"
+            },
+            {
+              "id": "d",
+              "text": "The loss value"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Training iterates over many epochs.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-train-005",
+          "type": "single_choice",
+          "prompt": "What is the GOAL of training?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Maximise the loss"
+            },
+            {
+              "id": "b",
+              "text": "Minimise the loss and improve accuracy on unseen data"
+            },
+            {
+              "id": "c",
+              "text": "Memorise the training set"
+            },
+            {
+              "id": "d",
+              "text": "Use as many epochs as possible"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Low loss and good generalisation.",
+          "difficulty": "easy",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "id": "dl2-train-006",
+          "type": "single_choice",
+          "prompt": "In the forward pass, what is ŷ?",
+          "image": {
+            "src": "images/dl/training_data_fit.svg",
+            "alt": "Scatter of 12 true data points with a purple line of predictions ŷ and dashed red lines showing the error at each point."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "The true target"
+            },
+            {
+              "id": "b",
+              "text": "The predicted output"
+            },
+            {
+              "id": "c",
+              "text": "The input"
+            },
+            {
+              "id": "d",
+              "text": "The learning rate"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "ŷ = prediction; y = true value.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-007",
+          "type": "multiple_choice",
+          "prompt": "What is a loss function for? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Quantifies how good or bad the model's prediction is"
+            },
+            {
+              "id": "b",
+              "text": "Counts the hidden units"
+            },
+            {
+              "id": "c",
+              "text": "Chooses the input features"
+            },
+            {
+              "id": "d",
+              "text": "Gives feedback to optimisers like gradient descent"
+            }
+          ],
+          "correct": [
+            "a",
+            "d"
+          ],
+          "explanation": "Loss guides the weight updates.",
+          "difficulty": "medium",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-008",
+          "type": "single_choice",
+          "prompt": "Which loss is used for REGRESSION (continuous values)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Categorical cross-entropy"
+            },
+            {
+              "id": "b",
+              "text": "Binary cross-entropy"
+            },
+            {
+              "id": "c",
+              "text": "Softmax"
+            },
+            {
+              "id": "d",
+              "text": "Mean Squared Error (MSE)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "MSE = average of squared differences.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-009",
+          "type": "single_choice",
+          "prompt": "Which loss is used for BINARY classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "MSE"
+            },
+            {
+              "id": "b",
+              "text": "Binary cross-entropy (log loss)"
+            },
+            {
+              "id": "c",
+              "text": "ReLU"
+            },
+            {
+              "id": "d",
+              "text": "Categorical cross-entropy"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Two classes → binary cross-entropy.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-010",
+          "type": "single_choice",
+          "prompt": "Which loss is used for MULTICLASS classification?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Categorical cross-entropy"
+            },
+            {
+              "id": "b",
+              "text": "Binary cross-entropy"
+            },
+            {
+              "id": "c",
+              "text": "Least squares"
+            },
+            {
+              "id": "d",
+              "text": "MSE"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "More than two classes.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-011",
+          "type": "single_choice",
+          "prompt": "Which loss function is this?",
+          "code": "L = (1/N) Σᵢ (ŷᵢ − yᵢ)²",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Categorical cross-entropy"
+            },
+            {
+              "id": "b",
+              "text": "Binary cross-entropy"
+            },
+            {
+              "id": "c",
+              "text": "ReLU"
+            },
+            {
+              "id": "d",
+              "text": "Mean Squared Error"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Average (1/N) of squared differences.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-012",
+          "type": "single_choice",
+          "prompt": "Which loss function is this?",
+          "code": "L = −(1/N) Σᵢ [ yᵢ·log(ŷᵢ) + (1 − yᵢ)·log(1 − ŷᵢ) ]",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Binary cross-entropy"
+            },
+            {
+              "id": "b",
+              "text": "Categorical cross-entropy"
+            },
+            {
+              "id": "c",
+              "text": "Mean squared error"
+            },
+            {
+              "id": "d",
+              "text": "Least squares"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The y and (1 − y) terms handle the two classes.",
+          "difficulty": "medium",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-013",
+          "type": "single_choice",
+          "prompt": "In categorical cross-entropy L = −Σ yᵢ log(ŷᵢ), what is C (the number the sum goes up to)?",
+          "code": "L(y, ŷ) = − Σ  yᵢ · log(ŷᵢ)\n          i=1..C",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The number of layers"
+            },
+            {
+              "id": "b",
+              "text": "The number of classes"
+            },
+            {
+              "id": "c",
+              "text": "The learning rate"
+            },
+            {
+              "id": "d",
+              "text": "The number of training examples"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "yᵢ = true label for class i, ŷᵢ = predicted probability for class i, C = number of classes.",
+          "difficulty": "easy",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-014",
+          "type": "typed",
+          "prompt": "Using the table, what is the squared error (ŷ − y)² for x = 0.86?",
+          "code": "  x     y     ŷ\n0.07  0.65  0.80\n0.22  0.85  0.88\n0.37  1.02  0.96\n0.50  0.96  1.03\n0.84  1.38  1.22\n0.86  1.50  1.23\n1.14  1.27  1.38\n1.25  1.54  1.33\n1.48  1.54  1.56\n1.68  1.68  1.67\n1.73  1.73  1.70\n1.91  1.60  1.80",
+          "image": null,
+          "acceptedAnswers": [
+            "0.0729",
+            ".0729",
+            "0.073"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "(1.23 − 1.50)² = (−0.27)² = 0.0729.",
+          "difficulty": "medium",
+          "tags": [
+            "mse"
+          ]
+        },
+        {
+          "id": "dl2-train-015",
+          "type": "single_choice",
+          "prompt": "Using all 12 rows, what is the MSE (approximately)?",
+          "code": "  x     y     ŷ\n0.07  0.65  0.80\n0.22  0.85  0.88\n0.37  1.02  0.96\n0.50  0.96  1.03\n0.84  1.38  1.22\n0.86  1.50  1.23\n1.14  1.27  1.38\n1.25  1.54  1.33\n1.48  1.54  1.56\n1.68  1.68  1.67\n1.73  1.73  1.70\n1.91  1.60  1.80",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "≈ 0.19"
+            },
+            {
+              "id": "b",
+              "text": "≈ 0.228"
+            },
+            {
+              "id": "c",
+              "text": "≈ 1.9"
+            },
+            {
+              "id": "d",
+              "text": "≈ 0.019"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The squared errors add up to 0.228; 0.228 ÷ 12 ≈ 0.019. (Your notes say ≈ 0.018 — the slide probably used unrounded ŷ values.) 0.228 is the sum, not the mean.",
+          "difficulty": "hard",
+          "tags": [
+            "mse"
+          ]
+        },
+        {
+          "id": "dl2-train-016",
+          "type": "single_choice",
+          "prompt": "For one example with true label y = 1, binary cross-entropy simplifies to…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "−log(ŷ)"
+            },
+            {
+              "id": "b",
+              "text": "−log(1 − ŷ)"
+            },
+            {
+              "id": "c",
+              "text": "(ŷ − 1)²"
+            },
+            {
+              "id": "d",
+              "text": "0"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "When y = 1 the (1 − y) term disappears. ŷ = 0.9 gives −ln 0.9 ≈ 0.105 (small loss); ŷ = 0.1 gives ≈ 2.30 (big loss).",
+          "difficulty": "hard",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-017",
+          "type": "single_choice",
+          "prompt": "True class is the 2nd of 3 (one-hot y = [0, 1, 0]) and the model predicts ŷ = [0.2, 0.7, 0.1]. What is the categorical cross-entropy (natural log)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "−(log 0.2 + log 0.7 + log 0.1)"
+            },
+            {
+              "id": "b",
+              "text": "−log(0.2) ≈ 1.609"
+            },
+            {
+              "id": "c",
+              "text": "0.7"
+            },
+            {
+              "id": "d",
+              "text": "−log(0.7) ≈ 0.357"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Only the true class's term survives because the other yᵢ are 0.",
+          "difficulty": "hard",
+          "tags": [
+            "loss"
+          ]
+        },
+        {
+          "id": "dl2-train-018",
+          "type": "single_choice",
+          "prompt": "Backpropagation computes gradients using…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The softmax function"
+            },
+            {
+              "id": "b",
+              "text": "Random guessing"
+            },
+            {
+              "id": "c",
+              "text": "The chain rule"
+            },
+            {
+              "id": "d",
+              "text": "The universal approximation theorem"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Errors are propagated layer by layer from output back to input.",
+          "difficulty": "easy",
+          "tags": [
+            "backprop"
+          ]
+        },
+        {
+          "id": "dl2-train-019",
+          "type": "single_choice",
+          "prompt": "In which direction does backpropagation go through the network?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "From the output layer back to the input"
+            },
+            {
+              "id": "b",
+              "text": "Randomly"
+            },
+            {
+              "id": "c",
+              "text": "From input to output"
+            },
+            {
+              "id": "d",
+              "text": "Only within the hidden layer"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Hence “back”-propagation.",
+          "difficulty": "easy",
+          "tags": [
+            "backprop"
+          ]
+        },
+        {
+          "id": "dl2-train-020",
+          "type": "single_choice",
+          "prompt": "What is the correct order of the backpropagation steps?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Update parameters → Compute error gradient → Calculate partial derivatives"
+            },
+            {
+              "id": "b",
+              "text": "Forward pass → Softmax → Update"
+            },
+            {
+              "id": "c",
+              "text": "Calculate partial derivatives → Update parameters → Compute error gradient"
+            },
+            {
+              "id": "d",
+              "text": "Compute the error gradient → Calculate partial derivatives → Update parameters (weights & biases)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Then repeat across many epochs.",
+          "difficulty": "easy",
+          "tags": [
+            "backprop"
+          ]
+        },
+        {
+          "id": "dl2-train-021",
+          "type": "single_choice",
+          "prompt": "How are weights updated after backpropagation?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Add the gradient to each weight"
+            },
+            {
+              "id": "b",
+              "text": "Multiply each weight by the loss"
+            },
+            {
+              "id": "c",
+              "text": "Subtract a fraction of the gradient (learning rate × gradient) from each weight"
+            },
+            {
+              "id": "d",
+              "text": "Set every weight to zero"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "w_new = w_old − learning rate × ∂L/∂w — this moves downhill on the loss.",
+          "difficulty": "easy",
+          "tags": [
+            "backprop"
+          ]
+        },
+        {
+          "id": "dl2-train-022",
+          "type": "typed",
+          "prompt": "A weight is 0.8, the gradient ∂L/∂w is 2 and the learning rate is 0.1. What is the new weight?",
+          "image": null,
+          "acceptedAnswers": [
+            "0.6",
+            ".6",
+            "0.60"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "0.8 − 0.1 × 2 = 0.6.",
+          "difficulty": "medium",
+          "tags": [
+            "backprop"
+          ]
+        }
+      ]
+    }
+  ]
+}

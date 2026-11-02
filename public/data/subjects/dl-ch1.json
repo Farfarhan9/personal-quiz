@@ -1,0 +1,1795 @@
+{
+  "id": "dl-ch1",
+  "title": "Deep Learning · Chapter 1",
+  "description": "Introduction to deep learning: AI and its types, machine learning basics and types, deep learning vs machine learning, and applications.",
+  "topics": [
+    {
+      "id": "artificial-intelligence",
+      "title": "What Is AI? Types of AI",
+      "description": "AI definitions, types by capability (Narrow, General, Super) and by functionality (Reactive, Limited Memory, Theory of Mind, Self-Aware).",
+      "questions": [
+        {
+          "id": "dl1-ai-001",
+          "type": "single_choice",
+          "prompt": "Which statement best describes Artificial Intelligence (AI)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A database that stores human knowledge"
+            },
+            {
+              "id": "b",
+              "text": "A type of computer hardware"
+            },
+            {
+              "id": "c",
+              "text": "Technology that allows systems to replicate human behaviour and thoughts"
+            },
+            {
+              "id": "d",
+              "text": "A programming language for robots"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "AI is the “mother class”: its aim is to teach computers to behave like humans, with the final goal of simulating the cognitive capabilities of the human brain.",
+          "difficulty": "easy",
+          "tags": [
+            "ai"
+          ]
+        },
+        {
+          "id": "dl1-ai-002",
+          "type": "single_choice",
+          "prompt": "What is the final goal of AI, according to your notes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Making computers run faster"
+            },
+            {
+              "id": "b",
+              "text": "Storing more data than humans"
+            },
+            {
+              "id": "c",
+              "text": "Replacing all computer programmers"
+            },
+            {
+              "id": "d",
+              "text": "Building models able to simulate the cognitive capabilities of human brains"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The final goal is models that simulate human cognitive capabilities.",
+          "difficulty": "easy",
+          "tags": [
+            "ai"
+          ]
+        },
+        {
+          "id": "dl1-ai-003",
+          "type": "multiple_choice",
+          "prompt": "Types of AI by CAPABILITY (NGS) — select all that apply.",
+          "image": {
+            "src": "images/dl/ai_types_tree.png",
+            "alt": "Tree diagram of artificial intelligence branching into types based on capability and types based on functionality."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Narrow AI"
+            },
+            {
+              "id": "b",
+              "text": "Limited Memory"
+            },
+            {
+              "id": "c",
+              "text": "General AI"
+            },
+            {
+              "id": "d",
+              "text": "Super AI"
+            },
+            {
+              "id": "e",
+              "text": "Reactive Machines"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Capability: Narrow, General, Super. Reactive Machines and Limited Memory are types by FUNCTIONALITY.",
+          "difficulty": "medium",
+          "tags": [
+            "ai-types"
+          ]
+        },
+        {
+          "id": "dl1-ai-004",
+          "type": "multiple_choice",
+          "prompt": "Types of AI by FUNCTIONALITY (RLTS) — select all that apply.",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "b",
+              "text": "Reactive Machines"
+            },
+            {
+              "id": "c",
+              "text": "Limited Memory"
+            },
+            {
+              "id": "d",
+              "text": "Super AI"
+            },
+            {
+              "id": "e",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "f",
+              "text": "Narrow AI"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "Functionality: Reactive Machines, Limited Memory, Theory of Mind, Self-Aware.",
+          "difficulty": "medium",
+          "tags": [
+            "ai-types"
+          ]
+        },
+        {
+          "id": "dl1-ai-005",
+          "type": "single_choice",
+          "prompt": "AI that performs one specific task intelligently but fails beyond its limitations is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "b",
+              "text": "General AI (Strong AI)"
+            },
+            {
+              "id": "c",
+              "text": "Super AI"
+            },
+            {
+              "id": "d",
+              "text": "Narrow AI (Weak AI)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Narrow AI is trained only for a specific task.",
+          "difficulty": "easy",
+          "tags": [
+            "capability"
+          ]
+        },
+        {
+          "id": "dl1-ai-006",
+          "type": "multiple_choice",
+          "prompt": "Which are examples of Narrow AI? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Facial recognition"
+            },
+            {
+              "id": "b",
+              "text": "Recommendation engines"
+            },
+            {
+              "id": "c",
+              "text": "Chess games"
+            },
+            {
+              "id": "d",
+              "text": "A robot that thinks and adapts exactly like a human"
+            },
+            {
+              "id": "e",
+              "text": "Voice assistants like Siri and Alexa"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "All are trained for a limited range of functions. A human-like thinking robot would be General AI.",
+          "difficulty": "medium",
+          "tags": [
+            "capability"
+          ]
+        },
+        {
+          "id": "dl1-ai-007",
+          "type": "single_choice",
+          "prompt": "AI that can perform intellectual tasks as efficiently as humans — understanding, learning, adapting and thinking like a human — is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "General AI (Strong AI)"
+            },
+            {
+              "id": "b",
+              "text": "Limited Memory"
+            },
+            {
+              "id": "c",
+              "text": "Narrow AI"
+            },
+            {
+              "id": "d",
+              "text": "Reactive Machines"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "General AI is still a theoretical concept.",
+          "difficulty": "easy",
+          "tags": [
+            "capability"
+          ]
+        },
+        {
+          "id": "dl1-ai-008",
+          "type": "true_false",
+          "prompt": "General AI already exists in today's voice assistants.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "General AI is still theoretical. It needs self-consciousness, awareness of surroundings and independent decisions. Voice assistants are Narrow AI.",
+          "difficulty": "easy",
+          "tags": [
+            "capability"
+          ]
+        },
+        {
+          "id": "dl1-ai-009",
+          "type": "single_choice",
+          "prompt": "AI that SURPASSES human intelligence, performs any task better than humans and understands emotions is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Narrow AI"
+            },
+            {
+              "id": "b",
+              "text": "General AI"
+            },
+            {
+              "id": "c",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "d",
+              "text": "Super AI"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Super AI is an advanced version of General AI and remains hypothetical.",
+          "difficulty": "easy",
+          "tags": [
+            "capability"
+          ]
+        },
+        {
+          "id": "dl1-ai-010",
+          "type": "single_choice",
+          "prompt": "Which is the MOST BASIC type of AI by functionality?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "b",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "c",
+              "text": "Reactive Machines"
+            },
+            {
+              "id": "d",
+              "text": "Limited Memory"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Reactive machines work only on present data.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-011",
+          "type": "single_choice",
+          "prompt": "How do Reactive Machines operate?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They understand human emotions"
+            },
+            {
+              "id": "b",
+              "text": "They store past experiences and learn from them"
+            },
+            {
+              "id": "c",
+              "text": "They are self-conscious"
+            },
+            {
+              "id": "d",
+              "text": "Only on present data, giving predetermined outputs for specific inputs; they don't store or learn from past experiences"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "No memory, no learning from past actions.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-012",
+          "type": "single_choice",
+          "prompt": "IBM's Deep Blue, which beat world chess champion Garry Kasparov, is an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Limited Memory AI"
+            },
+            {
+              "id": "b",
+              "text": "Theory of Mind AI"
+            },
+            {
+              "id": "c",
+              "text": "General AI"
+            },
+            {
+              "id": "d",
+              "text": "A Reactive Machine"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It identified pieces and predicted moves but could not store memories or learn from past games.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-013",
+          "type": "single_choice",
+          "prompt": "According to your notes, Google's AlphaGo is also an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "b",
+              "text": "Theory of Mind AI"
+            },
+            {
+              "id": "c",
+              "text": "A Reactive Machine"
+            },
+            {
+              "id": "d",
+              "text": "Super AI"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Your notes list it as a reactive machine: it plays Go by pattern recognition without gaining knowledge from previous games.",
+          "difficulty": "medium",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-014",
+          "type": "single_choice",
+          "prompt": "Which category is used MOST in modern AI applications?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "b",
+              "text": "Limited Memory"
+            },
+            {
+              "id": "c",
+              "text": "Reactive Machines"
+            },
+            {
+              "id": "d",
+              "text": "Self-Aware AI"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Limited memory systems store historical data to predict and decide, but have no long-term memory.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-015",
+          "type": "multiple_choice",
+          "prompt": "Which are examples of Limited Memory AI? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IBM's Deep Blue"
+            },
+            {
+              "id": "b",
+              "text": "A self-conscious robot"
+            },
+            {
+              "id": "c",
+              "text": "Self-driving cars"
+            },
+            {
+              "id": "d",
+              "text": "Chatbots that remember recent conversation"
+            }
+          ],
+          "correct": [
+            "c",
+            "d"
+          ],
+          "explanation": "Chatbots use recent conversation; self-driving cars use past experiences plus current road conditions.",
+          "difficulty": "medium",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-016",
+          "type": "true_false",
+          "prompt": "Limited Memory AI keeps a permanent long-term memory of everything it has seen.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "It stores past data to improve decisions but does NOT have long-term memory.",
+          "difficulty": "medium",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-017",
+          "type": "single_choice",
+          "prompt": "AI that could understand human emotions, beliefs and intentions (still in development) is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "b",
+              "text": "Reactive Machines"
+            },
+            {
+              "id": "c",
+              "text": "Narrow AI"
+            },
+            {
+              "id": "d",
+              "text": "Limited Memory"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Possible applications: collaborating robots and human–robot interaction.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-018",
+          "type": "single_choice",
+          "prompt": "Which type represents the future of AI with self-consciousness similar to humans, and is far from being achieved?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Limited Memory"
+            },
+            {
+              "id": "b",
+              "text": "Narrow AI"
+            },
+            {
+              "id": "c",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "d",
+              "text": "Theory of Mind"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Self-aware systems could be fully autonomous and make moral and ethical decisions.",
+          "difficulty": "easy",
+          "tags": [
+            "functionality"
+          ]
+        },
+        {
+          "id": "dl1-ai-019",
+          "type": "single_choice",
+          "prompt": "A robot works next to factory staff and changes its behaviour when it senses a worker is stressed. This would be…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Theory of Mind"
+            },
+            {
+              "id": "b",
+              "text": "Narrow AI only"
+            },
+            {
+              "id": "c",
+              "text": "Self-Aware AI"
+            },
+            {
+              "id": "d",
+              "text": "Reactive Machine"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Interpreting emotions and adjusting behaviour is Theory of Mind.",
+          "difficulty": "medium",
+          "tags": [
+            "functionality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "title": "Machine Learning Basics & Types",
+      "description": "What ML is, the ML basics (DFME), how ML works (8 steps), and supervised, unsupervised and reinforcement learning.",
+      "questions": [
+        {
+          "id": "dl1-ml-001",
+          "type": "single_choice",
+          "prompt": "What is Machine Learning?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A database of human knowledge"
+            },
+            {
+              "id": "b",
+              "text": "A type of robot hardware"
+            },
+            {
+              "id": "c",
+              "text": "Writing a rule by hand for every situation"
+            },
+            {
+              "id": "d",
+              "text": "A branch of AI where models and algorithms let computers learn from data without being explicitly programmed for every task"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "ML learns from data instead of hand-written rules for every task.",
+          "difficulty": "easy",
+          "tags": [
+            "ml"
+          ]
+        },
+        {
+          "id": "dl1-ml-002",
+          "type": "true_false",
+          "prompt": "Machine Learning is a branch of Artificial Intelligence.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "AI ⊃ ML ⊃ DL.",
+          "difficulty": "easy",
+          "tags": [
+            "ml"
+          ]
+        },
+        {
+          "id": "dl1-ml-003",
+          "type": "single_choice",
+          "prompt": "What is the correct order of the Machine Learning basics (DFME)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Model training → Data preprocessing → Feature selection → Model evaluation"
+            },
+            {
+              "id": "b",
+              "text": "Data preprocessing → Model training → Feature selection → Model evaluation"
+            },
+            {
+              "id": "c",
+              "text": "Data preprocessing → Feature selection → Model training → Model evaluation"
+            },
+            {
+              "id": "d",
+              "text": "Feature selection → Model evaluation → Data preprocessing → Model training"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "DFME: Data preprocessing, Feature selection, Model training, Model evaluation.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-process"
+          ]
+        },
+        {
+          "id": "dl1-ml-004",
+          "type": "single_choice",
+          "prompt": "Which is the correct order of how Machine Learning works?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Data collection → Problem statement → Data modeling → Data cleaning → Feature engineering → Model evaluation → Exploratory data analysis → Deployment"
+            },
+            {
+              "id": "b",
+              "text": "Data cleaning → Data collection → Problem statement → Feature engineering → Data modeling → Exploratory data analysis → Deployment → Model evaluation"
+            },
+            {
+              "id": "c",
+              "text": "Problem statement → Data collection → Data cleaning → Feature engineering → Exploratory data analysis → Data modeling → Model evaluation → Optimization & deployment"
+            },
+            {
+              "id": "d",
+              "text": "Problem statement → Data modeling → Data collection → Data cleaning → Model evaluation → Feature engineering → Exploratory data analysis → Deployment"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "PDDFEDMO.",
+          "difficulty": "medium",
+          "tags": [
+            "ml-process"
+          ]
+        },
+        {
+          "id": "dl1-ml-005",
+          "type": "typed",
+          "prompt": "In “How Machine Learning works”, which step comes right after Data Cleaning?",
+          "image": null,
+          "acceptedAnswers": [
+            "feature engineering"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Two words"
+          },
+          "explanation": "… Data Collection → Data Cleaning → Feature Engineering → Exploratory Data Analysis …",
+          "difficulty": "medium",
+          "tags": [
+            "ml-process"
+          ]
+        },
+        {
+          "id": "dl1-ml-006",
+          "type": "typed",
+          "prompt": "What is the FIRST step of how Machine Learning works?",
+          "image": null,
+          "acceptedAnswers": [
+            "problem statement",
+            "the problem statement"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Two words"
+          },
+          "explanation": "You start by defining the problem.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-process"
+          ]
+        },
+        {
+          "id": "dl1-ml-007",
+          "type": "multiple_choice",
+          "prompt": "What are the three types of Machine Learning? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Unsupervised learning"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "c",
+              "text": "Supervised learning"
+            },
+            {
+              "id": "d",
+              "text": "Narrow learning"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Supervised, unsupervised and reinforcement.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-008",
+          "type": "single_choice",
+          "prompt": "Which type of ML trains on LABELLED data to predict or classify new, unseen data?",
+          "image": {
+            "src": "images/dl/supervised_learning.png",
+            "alt": "Diagram of supervised learning: labelled training data is used to train a model that predicts labels for new data."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Reactive learning"
+            },
+            {
+              "id": "b",
+              "text": "Unsupervised learning"
+            },
+            {
+              "id": "c",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "d",
+              "text": "Supervised learning"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Labelled = every input has the correct answer.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-009",
+          "type": "single_choice",
+          "prompt": "Which type of ML finds patterns or groups in UNLABELLED data (e.g. clustering)?",
+          "image": {
+            "src": "images/dl/unsupervised_learning.png",
+            "alt": "Diagram of unsupervised learning: unlabelled data is grouped into clusters by the model."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Transfer learning"
+            },
+            {
+              "id": "b",
+              "text": "Supervised learning"
+            },
+            {
+              "id": "c",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "d",
+              "text": "Unsupervised learning"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Clustering and dimensionality reduction are unsupervised.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-010",
+          "type": "single_choice",
+          "prompt": "Which type of ML learns by trial and error to maximise rewards?",
+          "image": {
+            "src": "images/dl/reinforcement_learning.png",
+            "alt": "Diagram of reinforcement learning: an agent takes actions in an environment and receives rewards."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Unsupervised learning"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "c",
+              "text": "Supervised learning"
+            },
+            {
+              "id": "d",
+              "text": "Feature learning"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Ideal for decision-making tasks such as games and robots.",
+          "difficulty": "easy",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-011",
+          "type": "single_choice",
+          "prompt": "A shop groups its customers into segments using purchase history, with no labels given. Which type of ML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reactive machine"
+            },
+            {
+              "id": "b",
+              "text": "Supervised learning"
+            },
+            {
+              "id": "c",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "d",
+              "text": "Unsupervised learning"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "No labels + finding groups = clustering = unsupervised.",
+          "difficulty": "medium",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-012",
+          "type": "single_choice",
+          "prompt": "A model learns to predict house prices from past sales that include the actual price. Which type of ML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Unsupervised learning"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "c",
+              "text": "General AI"
+            },
+            {
+              "id": "d",
+              "text": "Supervised learning"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The past sales are labelled with the correct output (price).",
+          "difficulty": "medium",
+          "tags": [
+            "ml-types"
+          ]
+        },
+        {
+          "id": "dl1-ml-013",
+          "type": "single_choice",
+          "prompt": "A program learns to play a video game by getting points for good moves and penalties for bad ones. Which type of ML?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Supervised learning"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement learning"
+            },
+            {
+              "id": "c",
+              "text": "Unsupervised learning"
+            },
+            {
+              "id": "d",
+              "text": "Narrow AI"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Trial and error with rewards = reinforcement learning.",
+          "difficulty": "medium",
+          "tags": [
+            "ml-types"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-learning-vs-ml",
+      "title": "What Is Deep Learning? DL vs ML",
+      "description": "Definition of deep learning, artificial neural networks, and how DL differs from traditional ML.",
+      "questions": [
+        {
+          "id": "dl1-dl-001",
+          "type": "multiple_choice",
+          "prompt": "Deep Learning is a subset of… (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Computer hardware"
+            },
+            {
+              "id": "b",
+              "text": "Reinforcement learning only"
+            },
+            {
+              "id": "c",
+              "text": "Machine Learning"
+            },
+            {
+              "id": "d",
+              "text": "Artificial Intelligence"
+            }
+          ],
+          "correct": [
+            "c",
+            "d"
+          ],
+          "explanation": "DL ⊂ ML ⊂ AI.",
+          "difficulty": "medium",
+          "tags": [
+            "dl"
+          ]
+        },
+        {
+          "id": "dl1-dl-002",
+          "type": "single_choice",
+          "prompt": "What does deep learning use to learn from large datasets?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only decision trees"
+            },
+            {
+              "id": "b",
+              "text": "Multi-layered (artificial) neural networks"
+            },
+            {
+              "id": "c",
+              "text": "Spreadsheets"
+            },
+            {
+              "id": "d",
+              "text": "Hand-written if-else rules"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Deep learning's algorithm is the artificial neural network.",
+          "difficulty": "easy",
+          "tags": [
+            "dl"
+          ]
+        },
+        {
+          "id": "dl1-dl-003",
+          "type": "single_choice",
+          "prompt": "An artificial neural network learns high-level features from data by…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Removing all hidden layers"
+            },
+            {
+              "id": "b",
+              "text": "Increasing the depth (number of layers) of the network"
+            },
+            {
+              "id": "c",
+              "text": "Adding more input data columns by hand"
+            },
+            {
+              "id": "d",
+              "text": "Using only one neuron"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "More layers → more abstract features. It also removes the need for manual feature extraction.",
+          "difficulty": "easy",
+          "tags": [
+            "dl"
+          ]
+        },
+        {
+          "id": "dl1-dl-004",
+          "type": "single_choice",
+          "prompt": "What does “deep” refer to in deep learning?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Very large hard drives"
+            },
+            {
+              "id": "b",
+              "text": "Data stored deep in a database"
+            },
+            {
+              "id": "c",
+              "text": "The use of multiple hidden layers in the neural network"
+            },
+            {
+              "id": "d",
+              "text": "Very long training time"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Deep = many hidden layers.",
+          "difficulty": "easy",
+          "tags": [
+            "dl"
+          ]
+        },
+        {
+          "id": "dl1-dl-005",
+          "type": "single_choice",
+          "prompt": "What is the KEY difference between traditional ML and deep learning?",
+          "image": {
+            "src": "images/dl/dl_vs_ml.png",
+            "alt": "Comparison of machine learning, where a human extracts features before classification, and deep learning, where the network does feature extraction and classification together."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Traditional ML always uses neural networks"
+            },
+            {
+              "id": "b",
+              "text": "Deep learning needs a human to pick every feature"
+            },
+            {
+              "id": "c",
+              "text": "There is no difference"
+            },
+            {
+              "id": "d",
+              "text": "Traditional ML needs manual feature engineering; deep learning learns features automatically from raw data"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "In ML a human expert creates features first. Deep networks learn and extract features themselves.",
+          "difficulty": "easy",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-006",
+          "type": "single_choice",
+          "prompt": "To classify a dog photo, a traditional ML model might need features like “average pixel colour” or “edge sharpness”. Who creates these features?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A human expert"
+            },
+            {
+              "id": "b",
+              "text": "The output layer"
+            },
+            {
+              "id": "c",
+              "text": "The camera"
+            },
+            {
+              "id": "d",
+              "text": "The neural network automatically"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "That is manual feature engineering.",
+          "difficulty": "easy",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-007",
+          "type": "single_choice",
+          "prompt": "In a deep network classifying a dog photo, what do the FIRST layers typically learn?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Simple features like edges and lines"
+            },
+            {
+              "id": "b",
+              "text": "The word “dog”"
+            },
+            {
+              "id": "c",
+              "text": "Whole shapes like eyes and ears"
+            },
+            {
+              "id": "d",
+              "text": "The final classification"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "First layers: edges/lines → middle layers: shapes like eyes and ears → final layers: “dog”.",
+          "difficulty": "medium",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-008",
+          "type": "true_false",
+          "prompt": "Each successive layer of a deep network learns increasingly abstract and complex features.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "This automatic feature learning is the main reason for deep learning's success.",
+          "difficulty": "easy",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-009",
+          "type": "multiple_choice",
+          "prompt": "Which describe DEEP LEARNING (from the comparison table)? (select all that apply)",
+          "image": {
+            "src": "images/dl/ml_vs_dl_table.png",
+            "alt": "Table comparing ML and DL: dataset size, computation needed, feature selection and accuracy."
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Learns features and classifies automatically"
+            },
+            {
+              "id": "b",
+              "text": "Small datasets"
+            },
+            {
+              "id": "c",
+              "text": "Computationally intensive"
+            },
+            {
+              "id": "d",
+              "text": "High accuracy"
+            },
+            {
+              "id": "e",
+              "text": "Large data sets"
+            },
+            {
+              "id": "f",
+              "text": "Feature selection with human intervention"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Small datasets and human feature selection describe traditional ML.",
+          "difficulty": "medium",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-010",
+          "type": "multiple_choice",
+          "prompt": "Which describe traditional MACHINE LEARNING (from the comparison table)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Feature selection with human intervention"
+            },
+            {
+              "id": "b",
+              "text": "Learns features automatically"
+            },
+            {
+              "id": "c",
+              "text": "Small datasets"
+            },
+            {
+              "id": "d",
+              "text": "Not computationally intensive"
+            },
+            {
+              "id": "e",
+              "text": "Lower accuracy than DL"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Automatic feature learning is deep learning.",
+          "difficulty": "medium",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        },
+        {
+          "id": "dl1-dl-011",
+          "type": "single_choice",
+          "prompt": "You have only 200 rows of tabular data and a basic laptop. Which approach suits better, according to the table?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Neither can work"
+            },
+            {
+              "id": "b",
+              "text": "Deep learning"
+            },
+            {
+              "id": "c",
+              "text": "Super AI"
+            },
+            {
+              "id": "d",
+              "text": "Traditional machine learning"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "ML works with small datasets and little computation; DL needs large data and heavy computation.",
+          "difficulty": "medium",
+          "tags": [
+            "dl-vs-ml"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Applications of Deep Learning",
+      "description": "Computer vision, NLP, speech recognition and generative AI (CNSG).",
+      "questions": [
+        {
+          "id": "dl1-app-001",
+          "type": "multiple_choice",
+          "prompt": "What are the four application areas of deep learning in your notes (CNSG)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Natural Language Processing"
+            },
+            {
+              "id": "b",
+              "text": "Generative AI"
+            },
+            {
+              "id": "c",
+              "text": "Spreadsheet Formatting"
+            },
+            {
+              "id": "d",
+              "text": "Speech Recognition"
+            },
+            {
+              "id": "e",
+              "text": "Computer Vision"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "CNSG.",
+          "difficulty": "easy",
+          "tags": [
+            "applications"
+          ]
+        },
+        {
+          "id": "dl1-app-002",
+          "type": "typed",
+          "prompt": "What does NLP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "natural language processing"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "NLP = Natural Language Processing.",
+          "difficulty": "easy",
+          "tags": [
+            "applications"
+          ]
+        },
+        {
+          "id": "dl1-app-003",
+          "type": "single_choice",
+          "prompt": "Which type of network excels at analysing images and videos (computer vision)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Transformers only"
+            },
+            {
+              "id": "b",
+              "text": "CNNs (Convolutional Neural Networks)"
+            },
+            {
+              "id": "c",
+              "text": "Decision trees"
+            },
+            {
+              "id": "d",
+              "text": "Reactive machines"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "CNNs are particularly good at images.",
+          "difficulty": "easy",
+          "tags": [
+            "computer-vision"
+          ]
+        },
+        {
+          "id": "dl1-app-004",
+          "type": "single_choice",
+          "prompt": "Google Photos automatically tagging faces is an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Image classification"
+            },
+            {
+              "id": "b",
+              "text": "Speech recognition"
+            },
+            {
+              "id": "c",
+              "text": "Content creation"
+            },
+            {
+              "id": "d",
+              "text": "Machine translation"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Identifying what is in a picture.",
+          "difficulty": "easy",
+          "tags": [
+            "computer-vision"
+          ]
+        },
+        {
+          "id": "dl1-app-005",
+          "type": "single_choice",
+          "prompt": "A self-driving car locating and identifying several pedestrians and vehicles in one camera frame is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Image generation"
+            },
+            {
+              "id": "b",
+              "text": "Object detection"
+            },
+            {
+              "id": "c",
+              "text": "Image classification"
+            },
+            {
+              "id": "d",
+              "text": "Sentiment analysis"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Object detection finds AND locates multiple objects.",
+          "difficulty": "medium",
+          "tags": [
+            "computer-vision"
+          ]
+        },
+        {
+          "id": "dl1-app-006",
+          "type": "single_choice",
+          "prompt": "Detecting tumours from X-rays and MRIs is which computer vision application?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Machine translation"
+            },
+            {
+              "id": "b",
+              "text": "Chatbots"
+            },
+            {
+              "id": "c",
+              "text": "Medical imaging"
+            },
+            {
+              "id": "d",
+              "text": "Object detection for cars"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Medical imaging detects diseases with high accuracy.",
+          "difficulty": "easy",
+          "tags": [
+            "computer-vision"
+          ]
+        },
+        {
+          "id": "dl1-app-007",
+          "type": "single_choice",
+          "prompt": "Which models revolutionised how computers understand and generate human language (NLP)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reactive machines"
+            },
+            {
+              "id": "b",
+              "text": "Linear regression"
+            },
+            {
+              "id": "c",
+              "text": "Transformers"
+            },
+            {
+              "id": "d",
+              "text": "CNNs"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Transformers power modern NLP.",
+          "difficulty": "easy",
+          "tags": [
+            "nlp"
+          ]
+        },
+        {
+          "id": "dl1-app-008",
+          "type": "single_choice",
+          "prompt": "Google Translate is an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Image generation"
+            },
+            {
+              "id": "b",
+              "text": "Speech recognition only"
+            },
+            {
+              "id": "c",
+              "text": "Object detection"
+            },
+            {
+              "id": "d",
+              "text": "Machine translation (NLP)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Translating between languages.",
+          "difficulty": "easy",
+          "tags": [
+            "nlp"
+          ]
+        },
+        {
+          "id": "dl1-app-009",
+          "type": "single_choice",
+          "prompt": "Analysing customer reviews to find whether they are positive or negative is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Object detection"
+            },
+            {
+              "id": "b",
+              "text": "Medical imaging"
+            },
+            {
+              "id": "c",
+              "text": "Sentiment analysis"
+            },
+            {
+              "id": "d",
+              "text": "Machine translation"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Sentiment analysis determines emotional tone.",
+          "difficulty": "easy",
+          "tags": [
+            "nlp"
+          ]
+        },
+        {
+          "id": "dl1-app-010",
+          "type": "single_choice",
+          "prompt": "Converting spoken language into text is…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Content creation"
+            },
+            {
+              "id": "b",
+              "text": "Speech recognition"
+            },
+            {
+              "id": "c",
+              "text": "Sentiment analysis"
+            },
+            {
+              "id": "d",
+              "text": "Image classification"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Deep learning made dictation and voice assistants far more accurate.",
+          "difficulty": "easy",
+          "tags": [
+            "speech"
+          ]
+        },
+        {
+          "id": "dl1-app-011",
+          "type": "single_choice",
+          "prompt": "Midjourney and DALL-E creating photorealistic images from a text description is an example of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Speech recognition"
+            },
+            {
+              "id": "b",
+              "text": "Sentiment analysis"
+            },
+            {
+              "id": "c",
+              "text": "Object detection"
+            },
+            {
+              "id": "d",
+              "text": "Generative AI — image generation"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Generative AI also creates articles, poetry and code.",
+          "difficulty": "easy",
+          "tags": [
+            "generative"
+          ]
+        },
+        {
+          "id": "dl1-app-012",
+          "type": "multiple_choice",
+          "prompt": "Siri and Alexa use deep learning for which of these? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Speech recognition (turning your voice into text)"
+            },
+            {
+              "id": "b",
+              "text": "Medical imaging"
+            },
+            {
+              "id": "c",
+              "text": "Image generation"
+            },
+            {
+              "id": "d",
+              "text": "NLP — conversational AI / chatbots"
+            }
+          ],
+          "correct": [
+            "a",
+            "d"
+          ],
+          "explanation": "Voice assistants combine speech recognition with NLP.",
+          "difficulty": "medium",
+          "tags": [
+            "nlp",
+            "speech"
+          ]
+        }
+      ]
+    }
+  ]
+}

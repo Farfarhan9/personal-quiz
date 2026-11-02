@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 426" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="640" height="426" rx="16" fill="#ffffff"/>
+  <text x="320.0" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1d1f23">Iris classifier</text>
+  <line x1="112" y1="120.0" x2="298.0" y2="88.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="120.0" x2="298.0" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="120.0" x2="298.0" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="120.0" x2="298.0" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="120.0" x2="298.0" y2="344.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="184.0" x2="298.0" y2="88.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="184.0" x2="298.0" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="184.0" x2="298.0" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="184.0" x2="298.0" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="184.0" x2="298.0" y2="344.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="248.0" x2="298.0" y2="88.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="248.0" x2="298.0" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="248.0" x2="298.0" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="248.0" x2="298.0" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="248.0" x2="298.0" y2="344.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="312.0" x2="298.0" y2="88.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="312.0" x2="298.0" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="312.0" x2="298.0" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="312.0" x2="298.0" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="112" y1="312.0" x2="298.0" y2="344.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="88.0" x2="528" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="88.0" x2="528" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="88.0" x2="528" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="152.0" x2="528" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="152.0" x2="528" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="152.0" x2="528" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="216.0" x2="528" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="216.0" x2="528" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="216.0" x2="528" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="280.0" x2="528" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="280.0" x2="528" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="280.0" x2="528" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="344.0" x2="528" y2="152.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="344.0" x2="528" y2="216.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <line x1="342.0" y1="344.0" x2="528" y2="280.0" stroke="#b9b4a6" stroke-width="1.6"/>
+  <circle cx="90" cy="120.0" r="22" fill="#e8eefc" stroke="#2457d6" stroke-width="2.5"/>
+  <text x="90" y="125.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">SL</text>
+  <circle cx="90" cy="184.0" r="22" fill="#e8eefc" stroke="#2457d6" stroke-width="2.5"/>
+  <text x="90" y="189.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">SW</text>
+  <circle cx="90" cy="248.0" r="22" fill="#e8eefc" stroke="#2457d6" stroke-width="2.5"/>
+  <text x="90" y="253.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">PL</text>
+  <circle cx="90" cy="312.0" r="22" fill="#e8eefc" stroke="#2457d6" stroke-width="2.5"/>
+  <text x="90" y="317.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">PW</text>
+  <text x="90" y="410" text-anchor="middle" font-size="13" fill="#5d6066">4 inputs</text>
+  <circle cx="320.0" cy="88.0" r="22" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2.5"/>
+  <text x="320.0" y="93.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">h₁</text>
+  <circle cx="320.0" cy="152.0" r="22" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2.5"/>
+  <text x="320.0" y="157.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">h₂</text>
+  <circle cx="320.0" cy="216.0" r="22" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2.5"/>
+  <text x="320.0" y="221.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">h₃</text>
+  <circle cx="320.0" cy="280.0" r="22" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2.5"/>
+  <text x="320.0" y="285.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">h₄</text>
+  <circle cx="320.0" cy="344.0" r="22" fill="#e1f1ee" stroke="#0f6e64" stroke-width="2.5"/>
+  <text x="320.0" y="349.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">h₅</text>
+  <text x="320.0" y="410" text-anchor="middle" font-size="13" fill="#5d6066">5 hidden (ReLU)</text>
+  <circle cx="550" cy="152.0" r="22" fill="#f1eafe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="550" y="157.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">set</text>
+  <circle cx="550" cy="216.0" r="22" fill="#f1eafe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="550" y="221.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">ver</text>
+  <circle cx="550" cy="280.0" r="22" fill="#f1eafe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="550" y="285.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1f23">vir</text>
+  <text x="550" y="410" text-anchor="middle" font-size="13" fill="#5d6066">3 outputs (softmax)</text>
+</svg>

@@ -39,6 +39,22 @@
       "file": "subjects/webdev-ch3.json",
       "icon": "🎨",
       "color": "#db2777"
+    },
+    {
+      "id": "dl-ch1",
+      "title": "Deep Learning · Chapter 1",
+      "description": "Introduction to deep learning: AI and its types, machine learning basics and types, deep learning vs machine learning, and applications.",
+      "file": "subjects/dl-ch1.json",
+      "icon": "🧠",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "dl-ch2",
+      "title": "Deep Learning · Chapter 2",
+      "description": "Deep neural networks: supervised learning, notation, 1D linear regression and loss, generalisation, shallow neural networks, parameter counting and training with backpropagation.",
+      "file": "subjects/dl-ch2.json",
+      "icon": "🕸️",
+      "color": "#0891b2"
     }
   ]
 }
