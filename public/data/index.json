@@ -55,6 +55,30 @@
       "file": "subjects/dl-ch2.json",
       "icon": "🕸️",
       "color": "#0891b2"
+    },
+    {
+      "id": "dotnet-ch1",
+      "title": "Dotnet Programming · Chapter 1",
+      "description": ".NET technology (CLR, FCL, CLS, languages, C#), static vs dynamic web pages, ASP.NET, advantages and PHP vs .NET.",
+      "file": "subjects/dotnet-ch1.json",
+      "icon": "🔷",
+      "color": "#512bd4"
+    },
+    {
+      "id": "dotnet-ch2",
+      "title": "Dotnet Programming · Chapter 2",
+      "description": "Visual Studio .NET: the IDE and its windows, creating an ASP.NET web app, file types, CodeBehind vs inline code, event handlers, and compilation vs runtime errors.",
+      "file": "subjects/dotnet-ch2.json",
+      "icon": "🛠️",
+      "color": "#9333ea"
+    },
+    {
+      "id": "dotnet-ch3",
+      "title": "Dotnet Programming · Chapter 3",
+      "description": "Programming .NET with C#: types and variables, conversions and operators, statements and loops, code structure and errors, and the four OOP principles.",
+      "file": "subjects/dotnet-ch3.json",
+      "icon": "🧩",
+      "color": "#68217a"
     }
   ]
 }

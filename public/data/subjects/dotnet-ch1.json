@@ -1,0 +1,3381 @@
+{
+  "id": "dotnet-ch1",
+  "title": "Dotnet Programming · Chapter 1",
+  "description": ".NET technology (CLR, FCL, CLS, languages, C#), static vs dynamic web pages, ASP.NET, advantages and PHP vs .NET.",
+  "topics": [
+    {
+      "id": "dotnet-overview",
+      "title": "1.1 What Is .NET?",
+      "description": ".NET as a platform, its languages and platforms, origin, what you can build, the .NET Framework and its design features.",
+      "questions": [
+        {
+          "id": "dn1-net-001",
+          "type": "single_choice",
+          "prompt": "What is .NET?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A web browser"
+            },
+            {
+              "id": "b",
+              "text": "A unified, open-source developer platform by Microsoft for building, deploying and running applications in several languages"
+            },
+            {
+              "id": "c",
+              "text": "A single programming language for web pages"
+            },
+            {
+              "id": "d",
+              "text": "A database system made by Microsoft"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": ".NET is a developer platform supporting several languages (C#, VB.NET, F#).",
+          "difficulty": "easy",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-002",
+          "type": "multiple_choice",
+          "prompt": "Which LANGUAGES does .NET support, according to your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "C#"
+            },
+            {
+              "id": "b",
+              "text": "F#"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "Python only"
+            },
+            {
+              "id": "e",
+              "text": "VB.NET"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "e"
+          ],
+          "explanation": "C#, VB.NET and F#. (.NET Core, .NET Framework and Xamarin are PLATFORMS, not languages.)",
+          "difficulty": "medium",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-003",
+          "type": "multiple_choice",
+          "prompt": "Which are .NET PLATFORMS listed in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ".NET Core"
+            },
+            {
+              "id": "b",
+              "text": "C#"
+            },
+            {
+              "id": "c",
+              "text": "Xamarin"
+            },
+            {
+              "id": "d",
+              "text": "Visual Studio"
+            },
+            {
+              "id": "e",
+              "text": ".NET Framework"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "C# is a language and Visual Studio is an IDE.",
+          "difficulty": "medium",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-004",
+          "type": "single_choice",
+          "prompt": "According to your notes, when did Microsoft announce .NET?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "July 2000"
+            },
+            {
+              "id": "b",
+              "text": "January 2010"
+            },
+            {
+              "id": "c",
+              "text": "December 1999"
+            },
+            {
+              "id": "d",
+              "text": "July 1995"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Announced by Microsoft in July 2000.",
+          "difficulty": "easy",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-005",
+          "type": "single_choice",
+          "prompt": "What was .NET originally designed to do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Make websites static"
+            },
+            {
+              "id": "b",
+              "text": "Replace HTML"
+            },
+            {
+              "id": "c",
+              "text": "Run only on Linux"
+            },
+            {
+              "id": "d",
+              "text": "Bridge the gap in interoperability between services written in different languages"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Its goal was interoperability across languages.",
+          "difficulty": "easy",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-006",
+          "type": "multiple_choice",
+          "prompt": "What can you build with .NET (WMDMGMCI)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Web and mobile apps"
+            },
+            {
+              "id": "b",
+              "text": "Games, machine learning and IoT"
+            },
+            {
+              "id": "c",
+              "text": "Microservices and cloud apps"
+            },
+            {
+              "id": "d",
+              "text": "Nothing except Windows desktop apps"
+            },
+            {
+              "id": "e",
+              "text": "Desktop apps"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "Web, Mobile, Desktop, Microservices, Game development, Machine learning, Cloud, Internet of Things.",
+          "difficulty": "medium",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-007",
+          "type": "typed",
+          "prompt": "In “What can I build with .NET”, what does IoT stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "internet of things"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "IoT = Internet of Things.",
+          "difficulty": "easy",
+          "tags": [
+            "dotnet"
+          ]
+        },
+        {
+          "id": "dn1-net-008",
+          "type": "single_choice",
+          "prompt": "What is the .NET Framework?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A text editor"
+            },
+            {
+              "id": "b",
+              "text": "A software development platform for building and running Windows applications, with languages, libraries and developer tools"
+            },
+            {
+              "id": "c",
+              "text": "A web server"
+            },
+            {
+              "id": "d",
+              "text": "A programming language"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It includes the CLR, which manages execution of all apps built with the .NET library.",
+          "difficulty": "easy",
+          "tags": [
+            "framework"
+          ]
+        },
+        {
+          "id": "dn1-net-009",
+          "type": "single_choice",
+          "prompt": "Which part of the .NET Framework maintains the execution of all applications developed using the .NET library?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The Framework Class Library (FCL)"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "c",
+              "text": "Visual Studio"
+            },
+            {
+              "id": "d",
+              "text": "The Common Language Runtime (CLR)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The CLR runs .NET applications.",
+          "difficulty": "easy",
+          "tags": [
+            "framework"
+          ]
+        },
+        {
+          "id": "dn1-net-010",
+          "type": "multiple_choice",
+          "prompt": "What are the design features of the .NET Framework (IPSMST)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Manual memory freeing"
+            },
+            {
+              "id": "b",
+              "text": "Portability"
+            },
+            {
+              "id": "c",
+              "text": "Security"
+            },
+            {
+              "id": "d",
+              "text": "Simplified deployment"
+            },
+            {
+              "id": "e",
+              "text": "Interoperability"
+            },
+            {
+              "id": "f",
+              "text": "Memory management"
+            },
+            {
+              "id": "g",
+              "text": "Type safety"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+          ],
+          "explanation": "IPSMST. Memory is managed automatically (garbage collection), not freed by hand.",
+          "difficulty": "medium",
+          "tags": [
+            "framework"
+          ]
+        },
+        {
+          "id": "dn1-net-011",
+          "type": "multiple_choice",
+          "prompt": "What are the two MAIN components of the .NET Framework? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Framework Class Library (FCL)"
+            },
+            {
+              "id": "b",
+              "text": "Common Language Runtime (CLR)"
+            },
+            {
+              "id": "c",
+              "text": "SQL Server"
+            },
+            {
+              "id": "d",
+              "text": "Visual Studio IDE"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "CLR + FCL.",
+          "difficulty": "easy",
+          "tags": [
+            "framework"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clr-and-fcl",
+      "title": "1.1 CLR & FCL",
+      "description": "What the CLR does, JIT compilation, its eight components, and the Framework Class Library.",
+      "questions": [
+        {
+          "id": "dn1-clr-001",
+          "type": "typed",
+          "prompt": "What does CLR stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "common language runtime"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "CLR = Common Language Runtime.",
+          "difficulty": "easy",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-002",
+          "type": "single_choice",
+          "prompt": "The CLR is a common runtime environment for all .NET languages, built on…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The Framework Class Library"
+            },
+            {
+              "id": "b",
+              "text": "The Common Type System (CTS)"
+            },
+            {
+              "id": "c",
+              "text": "SQL"
+            },
+            {
+              "id": "d",
+              "text": "HTML"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "CTS defines the types all .NET languages share.",
+          "difficulty": "medium",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-003",
+          "type": "single_choice",
+          "prompt": "What does the Just-In-Time (JIT) compiler do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Converts managed Intermediate Language (IL / MSIL) code into native machine code at runtime"
+            },
+            {
+              "id": "b",
+              "text": "Translates HTML into C#"
+            },
+            {
+              "id": "c",
+              "text": "Converts C# into JavaScript"
+            },
+            {
+              "id": "d",
+              "text": "Deletes unused objects"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": ".NET code compiles to IL first; the JIT turns IL into native code when it runs.",
+          "difficulty": "easy",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-004",
+          "type": "single_choice",
+          "prompt": ".NET source code is first compiled into which form, before the JIT runs it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Intermediate Language (IL / MSIL)"
+            },
+            {
+              "id": "b",
+              "text": "Java bytecode"
+            },
+            {
+              "id": "c",
+              "text": "HTML"
+            },
+            {
+              "id": "d",
+              "text": "Native machine code"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Source → IL (managed code) → JIT → native code.",
+          "difficulty": "medium",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-005",
+          "type": "typed",
+          "prompt": "According to your notes, the CLR supports how many languages? (number)",
+          "image": null,
+          "acceptedAnswers": [
+            "36",
+            "36+",
+            "more than 36"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "36+ languages.",
+          "difficulty": "medium",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-006",
+          "type": "single_choice",
+          "prompt": "How does the CLR prevent memory leaks?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The programmer frees every object by hand"
+            },
+            {
+              "id": "b",
+              "text": "Automatic garbage collection"
+            },
+            {
+              "id": "c",
+              "text": "By restarting the app"
+            },
+            {
+              "id": "d",
+              "text": "It never allocates memory"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Memory allocation and garbage collection are automated.",
+          "difficulty": "easy",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-007",
+          "type": "true_false",
+          "prompt": "The CLR allows cross-language inheritance and debugging between .NET languages.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Interoperability is a core CLR feature.",
+          "difficulty": "easy",
+          "tags": [
+            "clr"
+          ]
+        },
+        {
+          "id": "dn1-clr-008",
+          "type": "multiple_choice",
+          "prompt": "Which are components of the CLR (EOIMSEIM)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Memory allocation"
+            },
+            {
+              "id": "b",
+              "text": "Metadata support"
+            },
+            {
+              "id": "c",
+              "text": "Web browser"
+            },
+            {
+              "id": "d",
+              "text": "Execution engine"
+            },
+            {
+              "id": "e",
+              "text": "Exception handling"
+            },
+            {
+              "id": "f",
+              "text": "SQL query designer"
+            },
+            {
+              "id": "g",
+              "text": "OS interface"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e",
+            "g"
+          ],
+          "explanation": "The eight CLR components are Execution engine, OS interface, IL translation, Memory allocation, Security, Exception handling, Interoperability and Metadata support.",
+          "difficulty": "medium",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-009",
+          "type": "single_choice",
+          "prompt": "Which CLR component connects .NET applications directly with the operating system?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IL Translation"
+            },
+            {
+              "id": "b",
+              "text": "Metadata Support"
+            },
+            {
+              "id": "c",
+              "text": "Execution Engine"
+            },
+            {
+              "id": "d",
+              "text": "OS Interface"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-010",
+          "type": "single_choice",
+          "prompt": "Which CLR component translates IL code into native machine language for the target hardware?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IL Translation"
+            },
+            {
+              "id": "b",
+              "text": "OS Interface"
+            },
+            {
+              "id": "c",
+              "text": "Security"
+            },
+            {
+              "id": "d",
+              "text": "Memory Allocation"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-011",
+          "type": "single_choice",
+          "prompt": "Which CLR component lets .NET work with COM components and DLLs?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Metadata Support"
+            },
+            {
+              "id": "b",
+              "text": "Interoperability"
+            },
+            {
+              "id": "c",
+              "text": "Exception Handling"
+            },
+            {
+              "id": "d",
+              "text": "Execution Engine"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "COM = Component Object Model; DLL = Dynamic Link Library.",
+          "difficulty": "medium",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-012",
+          "type": "single_choice",
+          "prompt": "Which CLR component provides information needed for runtime inspection, reflection and type safety?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Security"
+            },
+            {
+              "id": "b",
+              "text": "Metadata Support"
+            },
+            {
+              "id": "c",
+              "text": "Memory Allocation"
+            },
+            {
+              "id": "d",
+              "text": "OS Interface"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-013",
+          "type": "single_choice",
+          "prompt": "Which CLR component enforces code identity, access permissions and type-safety boundaries?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Security"
+            },
+            {
+              "id": "b",
+              "text": "IL Translation"
+            },
+            {
+              "id": "c",
+              "text": "Execution Engine"
+            },
+            {
+              "id": "d",
+              "text": "Interoperability"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "clr-components"
+          ]
+        },
+        {
+          "id": "dn1-clr-014",
+          "type": "typed",
+          "prompt": "What does FCL stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "framework class library"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "FCL = Framework Class Library.",
+          "difficulty": "easy",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-015",
+          "type": "single_choice",
+          "prompt": "What is the FCL?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A database"
+            },
+            {
+              "id": "b",
+              "text": "A compiler"
+            },
+            {
+              "id": "c",
+              "text": "The runtime that executes code"
+            },
+            {
+              "id": "d",
+              "text": "A huge collection of reusable classes, interfaces, namespaces and value types"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A consistent, object-oriented library of prepackaged functionality.",
+          "difficulty": "easy",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-016",
+          "type": "single_choice",
+          "prompt": "How are FCL classes accessed?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Through URLs"
+            },
+            {
+              "id": "b",
+              "text": "Through HTML tags"
+            },
+            {
+              "id": "c",
+              "text": "Through IP addresses"
+            },
+            {
+              "id": "d",
+              "text": "Through namespaces (logical groupings of types)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "e.g. `using System;` gives access to the System namespace.",
+          "difficulty": "easy",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-017",
+          "type": "multiple_choice",
+          "prompt": "What kinds of applications can you develop with the class library? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Operating system kernels"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET Web Forms"
+            },
+            {
+              "id": "c",
+              "text": "Traditional command-line applications"
+            },
+            {
+              "id": "d",
+              "text": "GUI applications"
+            },
+            {
+              "id": "e",
+              "text": "XML Web services"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "From your notes.",
+          "difficulty": "medium",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-018",
+          "type": "typed",
+          "prompt": "According to your notes, the class library contains more than how many classes?",
+          "image": null,
+          "acceptedAnswers": [
+            "7000",
+            "7,000",
+            "7000+"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "More than 7000 classes.",
+          "difficulty": "medium",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-019",
+          "type": "multiple_choice",
+          "prompt": "The classes let a .NET app do which of these? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Read and write types of data"
+            },
+            {
+              "id": "b",
+              "text": "Connect to a database"
+            },
+            {
+              "id": "c",
+              "text": "Use web services"
+            },
+            {
+              "id": "d",
+              "text": "Display the interface"
+            },
+            {
+              "id": "e",
+              "text": "Process XML"
+            },
+            {
+              "id": "f",
+              "text": "Replace the operating system"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "From your notes' list.",
+          "difficulty": "medium",
+          "tags": [
+            "fcl"
+          ]
+        },
+        {
+          "id": "dn1-clr-020",
+          "type": "single_choice",
+          "prompt": "In “Execution in CLR”, what does each language's compiler produce?",
+          "image": {
+            "src": "images/dotnet/clr_execution.png",
+            "alt": "Execution in CLR: VB, C# and C++ source code each go through a compiler to Assembly / IL code (managed code). All IL goes into the Common Language Runtime, whose JIT compiler translates IL into native machine code, which then runs on operating system services.",
+            "caption": "Execution in CLR"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "HTML"
+            },
+            {
+              "id": "b",
+              "text": "Assembly / IL code (managed code)"
+            },
+            {
+              "id": "c",
+              "text": "Native machine code"
+            },
+            {
+              "id": "d",
+              "text": "Operating system services"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "VB, C# and C++ all compile to the same Intermediate Language.",
+          "difficulty": "easy",
+          "tags": [
+            "clr",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-021",
+          "type": "single_choice",
+          "prompt": "Inside the CLR, which part translates IL code into native machine code?",
+          "image": {
+            "src": "images/dotnet/clr_execution.png",
+            "alt": "Execution in CLR: VB, C# and C++ source code each go through a compiler to Assembly / IL code (managed code). All IL goes into the Common Language Runtime, whose JIT compiler translates IL into native machine code, which then runs on operating system services.",
+            "caption": "Execution in CLR"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "The JIT compiler"
+            },
+            {
+              "id": "b",
+              "text": "The CLS"
+            },
+            {
+              "id": "c",
+              "text": "Visual Studio"
+            },
+            {
+              "id": "d",
+              "text": "The operating system"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "JIT = Just-In-Time.",
+          "difficulty": "easy",
+          "tags": [
+            "clr",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-022",
+          "type": "single_choice",
+          "prompt": "What is the correct order shown in the diagram?",
+          "image": {
+            "src": "images/dotnet/clr_execution.png",
+            "alt": "Execution in CLR: VB, C# and C++ source code each go through a compiler to Assembly / IL code (managed code). All IL goes into the Common Language Runtime, whose JIT compiler translates IL into native machine code, which then runs on operating system services.",
+            "caption": "Execution in CLR"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "IL code → source code → JIT → OS services → native code"
+            },
+            {
+              "id": "b",
+              "text": "Source code → compiler → Assembly/IL code → CLR (JIT) → native code → OS services"
+            },
+            {
+              "id": "c",
+              "text": "Source code → CLR → compiler → OS services → IL code"
+            },
+            {
+              "id": "d",
+              "text": "Source code → native code → IL code → CLR → OS services"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "clr",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-023",
+          "type": "single_choice",
+          "prompt": "In the diagram, which code is labelled “Managed Code”?",
+          "image": {
+            "src": "images/dotnet/clr_execution.png",
+            "alt": "Execution in CLR: VB, C# and C++ source code each go through a compiler to Assembly / IL code (managed code). All IL goes into the Common Language Runtime, whose JIT compiler translates IL into native machine code, which then runs on operating system services.",
+            "caption": "Execution in CLR"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Operating system services"
+            },
+            {
+              "id": "b",
+              "text": "Assembly / IL code"
+            },
+            {
+              "id": "c",
+              "text": "Source code"
+            },
+            {
+              "id": "d",
+              "text": "Native code"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "IL code is managed: the CLR controls how it runs (memory, security, exceptions).",
+          "difficulty": "medium",
+          "tags": [
+            "clr",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-024",
+          "type": "true_false",
+          "prompt": "According to the diagram, VB, C# and C++ code all end up going through the same CLR.",
+          "image": {
+            "src": "images/dotnet/clr_execution.png",
+            "alt": "Execution in CLR: VB, C# and C++ source code each go through a compiler to Assembly / IL code (managed code). All IL goes into the Common Language Runtime, whose JIT compiler translates IL into native machine code, which then runs on operating system services.",
+            "caption": "Execution in CLR"
+          },
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "That's why .NET languages can work together.",
+          "difficulty": "easy",
+          "tags": [
+            "clr",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-025",
+          "type": "single_choice",
+          "prompt": "In the Unified Classes diagram, which group contains caching, session and security classes?",
+          "image": {
+            "src": "images/dotnet/unified_classes.png",
+            "alt": "Unified Classes: Web Classes (ASP.NET) with controls, caching, security, session and configuration; Data (ADO.NET) with ADO, SQL and types; Windows Forms with design and component model.",
+            "caption": "Unified Classes"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "b",
+              "text": "Data (ADO.NET)"
+            },
+            {
+              "id": "c",
+              "text": "CLR"
+            },
+            {
+              "id": "d",
+              "text": "Web Classes (ASP.NET)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "fcl",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-026",
+          "type": "single_choice",
+          "prompt": "Classes for SQL and data types belong to which group?",
+          "image": {
+            "src": "images/dotnet/unified_classes.png",
+            "alt": "Unified Classes: Web Classes (ASP.NET) with controls, caching, security, session and configuration; Data (ADO.NET) with ADO, SQL and types; Windows Forms with design and component model.",
+            "caption": "Unified Classes"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Web Classes (ASP.NET)"
+            },
+            {
+              "id": "b",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "c",
+              "text": "Data (ADO.NET)"
+            },
+            {
+              "id": "d",
+              "text": "Visual Studio"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "fcl",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-clr-027",
+          "type": "single_choice",
+          "prompt": "Design and component-model classes belong to which group?",
+          "image": {
+            "src": "images/dotnet/unified_classes.png",
+            "alt": "Unified Classes: Web Classes (ASP.NET) with controls, caching, security, session and configuration; Data (ADO.NET) with ADO, SQL and types; Windows Forms with design and component model.",
+            "caption": "Unified Classes"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "JIT compiler"
+            },
+            {
+              "id": "b",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "c",
+              "text": "Web Classes (ASP.NET)"
+            },
+            {
+              "id": "d",
+              "text": "Data (ADO.NET)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "fcl",
+            "diagram"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture-cls-languages",
+      "title": "1.1 Architecture, CLS, Languages & C#",
+      "description": "The .NET Framework stack, the Common Language Specification, Visual Studio .NET languages and C# features.",
+      "questions": [
+        {
+          "id": "dn1-cls-001",
+          "type": "single_choice",
+          "prompt": "In the .NET Framework architecture stack, what is the BOTTOM (foundation) layer?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "c",
+              "text": "ADO.NET and XML"
+            },
+            {
+              "id": "d",
+              "text": "The .NET Framework Base Class Library"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Bottom: Base Class Library → middle: ADO.NET and XML → top: ASP.NET and Windows Forms.",
+          "difficulty": "easy",
+          "tags": [
+            "architecture"
+          ]
+        },
+        {
+          "id": "dn1-cls-002",
+          "type": "single_choice",
+          "prompt": "Which layer sits in the MIDDLE of the stack (data access)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Base Class Library"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "c",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "d",
+              "text": "ADO.NET and XML"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "architecture"
+          ]
+        },
+        {
+          "id": "dn1-cls-003",
+          "type": "multiple_choice",
+          "prompt": "Which sit in the TOP layer (application models)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "ADO.NET"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET (Web Forms, Web Services, Mobile Internet Toolkit)"
+            },
+            {
+              "id": "c",
+              "text": "Base Class Library"
+            },
+            {
+              "id": "d",
+              "text": "Windows Forms"
+            }
+          ],
+          "correct": [
+            "b",
+            "d"
+          ],
+          "explanation": "ASP.NET and Windows Forms sit side by side above ADO.NET and XML.",
+          "difficulty": "medium",
+          "tags": [
+            "architecture"
+          ]
+        },
+        {
+          "id": "dn1-cls-004",
+          "type": "typed",
+          "prompt": "What does CLS stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "common language specification"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "CLS = Common Language Specification.",
+          "difficulty": "easy",
+          "tags": [
+            "cls"
+          ]
+        },
+        {
+          "id": "dn1-cls-005",
+          "type": "single_choice",
+          "prompt": "What is the CLS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The runtime that executes code"
+            },
+            {
+              "id": "b",
+              "text": "A set of basic language features/rules that .NET languages must follow, converting their syntax rules into a CLR-understandable format"
+            },
+            {
+              "id": "c",
+              "text": "A web server"
+            },
+            {
+              "id": "d",
+              "text": "A class library"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It lets objects written in different languages interact.",
+          "difficulty": "easy",
+          "tags": [
+            "cls"
+          ]
+        },
+        {
+          "id": "dn1-cls-006",
+          "type": "multiple_choice",
+          "prompt": "What are the functions of the CLS? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Garbage collection"
+            },
+            {
+              "id": "b",
+              "text": "Defining rules languages must follow"
+            },
+            {
+              "id": "c",
+              "text": "An object-oriented model supporting many languages"
+            },
+            {
+              "id": "d",
+              "text": "Cross-language integration"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "Garbage collection is a CLR job.",
+          "difficulty": "medium",
+          "tags": [
+            "cls"
+          ]
+        },
+        {
+          "id": "dn1-cls-007",
+          "type": "multiple_choice",
+          "prompt": "Which are the BASIC .NET languages listed under CLS? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "C#"
+            },
+            {
+              "id": "b",
+              "text": "J#"
+            },
+            {
+              "id": "c",
+              "text": "VB"
+            },
+            {
+              "id": "d",
+              "text": "Smalltalk"
+            },
+            {
+              "id": "e",
+              "text": "Perl"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Perl and Smalltalk are among the 36+ OTHER languages.",
+          "difficulty": "medium",
+          "tags": [
+            "cls"
+          ]
+        },
+        {
+          "id": "dn1-cls-008",
+          "type": "single_choice",
+          "prompt": "What is Visual Studio .NET?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A database"
+            },
+            {
+              "id": "b",
+              "text": "A programming language"
+            },
+            {
+              "id": "c",
+              "text": "An Integrated Development Environment (IDE) to build, compile and run .NET apps"
+            },
+            {
+              "id": "d",
+              "text": "A web browser"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "dn1-cls-009",
+          "type": "typed",
+          "prompt": "What does IDE stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "integrated development environment"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "dn1-cls-010",
+          "type": "single_choice",
+          "prompt": "Which Visual Studio .NET language was designed to help JAVA developers build .NET apps?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "VJ# (Visual J#)"
+            },
+            {
+              "id": "b",
+              "text": "C#"
+            },
+            {
+              "id": "c",
+              "text": "VB"
+            },
+            {
+              "id": "d",
+              "text": "VC++"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "dn1-cls-011",
+          "type": "single_choice",
+          "prompt": "Which Visual Studio .NET language gives system-level access and high performance?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "F#"
+            },
+            {
+              "id": "b",
+              "text": "VB"
+            },
+            {
+              "id": "c",
+              "text": "VJ#"
+            },
+            {
+              "id": "d",
+              "text": "VC++ (Visual C++)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "dn1-cls-012",
+          "type": "single_choice",
+          "prompt": "Which language is described as a high-productivity language for building rapid .NET applications?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "VC++"
+            },
+            {
+              "id": "b",
+              "text": "VJ#"
+            },
+            {
+              "id": "c",
+              "text": "VB (Visual Basic)"
+            },
+            {
+              "id": "d",
+              "text": "Perl"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "dn1-cls-013",
+          "type": "single_choice",
+          "prompt": "C# syntax is very similar to…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "C++ and Java"
+            },
+            {
+              "id": "b",
+              "text": "HTML and CSS"
+            },
+            {
+              "id": "c",
+              "text": "SQL"
+            },
+            {
+              "id": "d",
+              "text": "Python and Ruby"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "C# is a modern, managed, object-oriented language by Microsoft.",
+          "difficulty": "easy",
+          "tags": [
+            "csharp"
+          ]
+        },
+        {
+          "id": "dn1-cls-014",
+          "type": "multiple_choice",
+          "prompt": "What is C#'s language philosophy? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Modern"
+            },
+            {
+              "id": "b",
+              "text": "Type-safe"
+            },
+            {
+              "id": "c",
+              "text": "Simple"
+            },
+            {
+              "id": "d",
+              "text": "Untyped"
+            },
+            {
+              "id": "e",
+              "text": "Object-oriented"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "csharp"
+          ]
+        },
+        {
+          "id": "dn1-cls-015",
+          "type": "multiple_choice",
+          "prompt": "Which are the features of C# (SMOTVCS)? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Simple"
+            },
+            {
+              "id": "b",
+              "text": "Object-oriented"
+            },
+            {
+              "id": "c",
+              "text": "Type-safe"
+            },
+            {
+              "id": "d",
+              "text": "Versionable"
+            },
+            {
+              "id": "e",
+              "text": "Compatible"
+            },
+            {
+              "id": "f",
+              "text": "Secure"
+            },
+            {
+              "id": "g",
+              "text": "Interpreted only"
+            },
+            {
+              "id": "h",
+              "text": "Modern"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "h"
+          ],
+          "explanation": "SMOTVCS.",
+          "difficulty": "medium",
+          "tags": [
+            "csharp"
+          ]
+        },
+        {
+          "id": "dn1-cls-016",
+          "type": "true_false",
+          "prompt": "C# code is compiled as managed code that runs on .NET.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "csharp"
+          ]
+        },
+        {
+          "id": "dn1-cls-017",
+          "type": "single_choice",
+          "prompt": "In this architecture diagram, which layer sits DIRECTLY above the Operating System?",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Common Language Runtime (CLR)"
+            },
+            {
+              "id": "b",
+              "text": "Common Language Specification (CLS)"
+            },
+            {
+              "id": "c",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "d",
+              "text": "Visual Studio IDE"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The CLR runs on top of the OS and executes all .NET code.",
+          "difficulty": "easy",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-cls-018",
+          "type": "single_choice",
+          "prompt": "In the same diagram, which layer sits between the LANGUAGES (VB, C++, C#, JScript) and ASP.NET / Windows Forms / ADO.NET?",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Operating System"
+            },
+            {
+              "id": "b",
+              "text": "Common Language Specification (CLS)"
+            },
+            {
+              "id": "c",
+              "text": "Framework Class Library"
+            },
+            {
+              "id": "d",
+              "text": "Common Language Runtime (CLR)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The CLS defines the rules all .NET languages follow so their code works with the rest of the framework.",
+          "difficulty": "medium",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-cls-019",
+          "type": "multiple_choice",
+          "prompt": "Which three blocks share the middle (blue) row of the diagram? (select all that apply)",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "ADO.NET"
+            },
+            {
+              "id": "b",
+              "text": "JScript"
+            },
+            {
+              "id": "c",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "d",
+              "text": "Common Language Runtime"
+            },
+            {
+              "id": "e",
+              "text": "Windows Forms"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "ASP.NET (web), Windows Forms (desktop) and ADO.NET (data).",
+          "difficulty": "medium",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-cls-020",
+          "type": "single_choice",
+          "prompt": "What does the tall bar running down the right side of every layer represent?",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "A database"
+            },
+            {
+              "id": "b",
+              "text": "The operating system"
+            },
+            {
+              "id": "c",
+              "text": "The CLR"
+            },
+            {
+              "id": "d",
+              "text": "Visual Studio IDE — the tool used to work with every layer"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Visual Studio spans the whole stack.",
+          "difficulty": "easy",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-cls-021",
+          "type": "typed",
+          "prompt": "Besides VB, C++ and C#, which other language is shown in the top row of the diagram?",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "acceptedAnswers": [
+            "jscript",
+            "j script"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "language"
+          },
+          "explanation": "JScript (Microsoft's JavaScript implementation). The “…” means more languages can be added.",
+          "difficulty": "medium",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-cls-022",
+          "type": "single_choice",
+          "prompt": "Reading the diagram from BOTTOM to TOP, which order is correct?",
+          "image": {
+            "src": "images/dotnet/framework_architecture.png",
+            "alt": ".NET Framework architecture: top row of languages VB, C++, C#, JScript and more; below it the Common Language Specification; then ASP.NET, Windows Forms and ADO.NET; then the Common Language Runtime (CLR); then the Operating System at the bottom. Visual Studio IDE runs down the right side beside all layers.",
+            "caption": ".NET Framework Architecture"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Languages → CLS → CLR → Operating System → ASP.NET"
+            },
+            {
+              "id": "b",
+              "text": "CLR → Operating System → CLS → Languages → ADO.NET"
+            },
+            {
+              "id": "c",
+              "text": "Operating System → CLS → CLR → Languages → ASP.NET"
+            },
+            {
+              "id": "d",
+              "text": "Operating System → CLR → ASP.NET / Windows Forms / ADO.NET → CLS → Languages"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "hard",
+          "tags": [
+            "architecture",
+            "diagram"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static-vs-dynamic",
+      "title": "1.2 Web-Based Applications: Static vs Dynamic",
+      "description": "The UTHM / SMAP scenario, static and dynamic web pages, how each is served, and server-side technology.",
+      "questions": [
+        {
+          "id": "dn1-web-001",
+          "type": "single_choice",
+          "prompt": "What is a web application?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A mobile phone's operating system"
+            },
+            {
+              "id": "b",
+              "text": "A database file"
+            },
+            {
+              "id": "c",
+              "text": "An application accessed through a web browser"
+            },
+            {
+              "id": "d",
+              "text": "Any desktop program"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "web-apps"
+          ]
+        },
+        {
+          "id": "dn1-web-002",
+          "type": "single_choice",
+          "prompt": "Ali reads general information about UTHM before registering. Every visitor sees the same content. What kind of page is it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Static web page"
+            },
+            {
+              "id": "b",
+              "text": "Dynamic web page"
+            },
+            {
+              "id": "c",
+              "text": "Server-side script"
+            },
+            {
+              "id": "d",
+              "text": "Database"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "It shows fixed information and doesn't need individual user information.",
+          "difficulty": "easy",
+          "tags": [
+            "scenario"
+          ]
+        },
+        {
+          "id": "dn1-web-003",
+          "type": "single_choice",
+          "prompt": "After logging in, SMAP UTHM shows Ali his own profile and registered courses. Why can it do this?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Static pages change by themselves"
+            },
+            {
+              "id": "b",
+              "text": "The browser invents the data"
+            },
+            {
+              "id": "c",
+              "text": "It uses user accounts and server-side processing to generate personalised pages"
+            },
+            {
+              "id": "d",
+              "text": "It stores a separate HTML file for every student on Ali's computer"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Dynamic pages are built on the server per request.",
+          "difficulty": "easy",
+          "tags": [
+            "scenario"
+          ]
+        },
+        {
+          "id": "dn1-web-004",
+          "type": "single_choice",
+          "prompt": "What is the MAIN difference between how static and dynamic pages are served?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Static pages need a database"
+            },
+            {
+              "id": "b",
+              "text": "Static pages are faster to type"
+            },
+            {
+              "id": "c",
+              "text": "Dynamic pages never use HTML"
+            },
+            {
+              "id": "d",
+              "text": "Static: the server returns a stored HTML file unchanged. Dynamic: the server runs server-side code first to generate the HTML"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Dynamic pages add a server-side processing step before the HTML is sent.",
+          "difficulty": "medium",
+          "tags": [
+            "scenario"
+          ]
+        },
+        {
+          "id": "dn1-web-005",
+          "type": "multiple_choice",
+          "prompt": "Static web pages are written with which languages? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "HTML"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "e",
+              "text": "JavaScript"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "e"
+          ],
+          "explanation": "PHP and ASP.NET are dynamic (server-side).",
+          "difficulty": "medium",
+          "tags": [
+            "static"
+          ]
+        },
+        {
+          "id": "dn1-web-006",
+          "type": "true_false",
+          "prompt": "A static web page uses a database to build its content at runtime.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Static pages return predefined content with no database queries or application logic.",
+          "difficulty": "easy",
+          "tags": [
+            "static"
+          ]
+        },
+        {
+          "id": "dn1-web-007",
+          "type": "single_choice",
+          "prompt": "What is the correct order for serving a STATIC page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Author writes HTML → client requests page → server locates the file → server returns the unmodified HTML → browser renders it"
+            },
+            {
+              "id": "b",
+              "text": "Client requests → server runs code → database query → HTML generated → browser renders"
+            },
+            {
+              "id": "c",
+              "text": "Server locates file → author writes HTML → browser renders → client requests"
+            },
+            {
+              "id": "d",
+              "text": "Browser renders → server returns HTML → client requests"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "static"
+          ]
+        },
+        {
+          "id": "dn1-web-008",
+          "type": "multiple_choice",
+          "prompt": "Which technologies are used for DYNAMIC web pages in your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CGI"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "Plain HTML only"
+            },
+            {
+              "id": "e",
+              "text": "Node.js"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "Also ASP and AJAX.",
+          "difficulty": "medium",
+          "tags": [
+            "dynamic"
+          ]
+        },
+        {
+          "id": "dn1-web-009",
+          "type": "multiple_choice",
+          "prompt": "Which are examples of dynamic websites? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Online shopping stores"
+            },
+            {
+              "id": "b",
+              "text": "Webmail"
+            },
+            {
+              "id": "c",
+              "text": "Chat applications"
+            },
+            {
+              "id": "d",
+              "text": "A one-page poster that never changes"
+            },
+            {
+              "id": "e",
+              "text": "Search engines"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "Also community portals.",
+          "difficulty": "medium",
+          "tags": [
+            "dynamic"
+          ]
+        },
+        {
+          "id": "dn1-web-010",
+          "type": "multiple_choice",
+          "prompt": "What are the key capabilities of dynamic web pages? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Identical content for every visitor"
+            },
+            {
+              "id": "b",
+              "text": "Dynamic layouts"
+            },
+            {
+              "id": "c",
+              "text": "Visitor identification"
+            },
+            {
+              "id": "d",
+              "text": "Personalisation"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "dynamic"
+          ]
+        },
+        {
+          "id": "dn1-web-011",
+          "type": "single_choice",
+          "prompt": "What does server-side technology enable?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The browser can work without a server"
+            },
+            {
+              "id": "b",
+              "text": "HTML to be removed"
+            },
+            {
+              "id": "c",
+              "text": "Pages to load without HTTP"
+            },
+            {
+              "id": "d",
+              "text": "The web server can generate HTML on the fly"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It adds an extra layer to static pages.",
+          "difficulty": "easy",
+          "tags": [
+            "server-side"
+          ]
+        },
+        {
+          "id": "dn1-web-012",
+          "type": "single_choice",
+          "prompt": "What is the correct order of how server-side technology works?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Send response → generate HTML → interpret code"
+            },
+            {
+              "id": "b",
+              "text": "Generate HTML → interpret code → send response"
+            },
+            {
+              "id": "c",
+              "text": "Send response → interpret code → generate HTML"
+            },
+            {
+              "id": "d",
+              "text": "Interpret server-side code → generate appropriate HTML → send the response to the browser"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "server-side"
+          ]
+        },
+        {
+          "id": "dn1-web-013",
+          "type": "single_choice",
+          "prompt": "When serving a DYNAMIC page, what does the server do after locating the page?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Deletes the code"
+            },
+            {
+              "id": "b",
+              "text": "Collects the contents (code + HTML), parses and processes them to produce HTML"
+            },
+            {
+              "id": "c",
+              "text": "Sends the file unmodified"
+            },
+            {
+              "id": "d",
+              "text": "Asks the user to write the HTML"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "dynamic"
+          ]
+        },
+        {
+          "id": "dn1-web-014",
+          "type": "true_false",
+          "prompt": "In both static and dynamic serving, the browser finally receives HTML and renders it.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Server-side code never reaches the browser; only the resulting HTML does.",
+          "difficulty": "medium",
+          "tags": [
+            "dynamic"
+          ]
+        },
+        {
+          "id": "dn1-web-015",
+          "type": "single_choice",
+          "prompt": "Which diagram shows a DYNAMIC web page being served?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "image": {
+                "src": "images/dotnet/serving_dynamic.png",
+                "alt": "A laptop sends a REQUEST to a web server; the server sends a request to an application script (gear) that exchanges data with a database, then the server sends a RESPONSE back."
+              }
+            },
+            {
+              "id": "b",
+              "image": {
+                "src": "images/dotnet/serving_static.png",
+                "alt": "A laptop sends a REQUEST to a web server with a file folder, and the server sends a RESPONSE straight back."
+              }
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The dynamic version passes the request to an application script that talks to a database before the server responds.",
+          "difficulty": "easy",
+          "tags": [
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-web-016",
+          "type": "single_choice",
+          "prompt": "In the dynamic diagram, which component processes the request and interacts with the database?",
+          "image": {
+            "src": "images/dotnet/static_dynamic_serving.png",
+            "alt": "Static: the laptop sends a request to the web server, which sends back pre-written HTML files directly. Dynamic: the laptop requests from the web server, which passes a request to an application script; the script works with a database and returns a response, and the server sends back a custom HTML page.",
+            "caption": "Static vs dynamic page serving"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "The application script"
+            },
+            {
+              "id": "b",
+              "text": "The laptop (browser)"
+            },
+            {
+              "id": "c",
+              "text": "The database alone"
+            },
+            {
+              "id": "d",
+              "text": "The response arrow"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Server-side scripts generate a custom HTML page from script and database data.",
+          "difficulty": "easy",
+          "tags": [
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-web-017",
+          "type": "single_choice",
+          "prompt": "In the static diagram, what does the web server send back?",
+          "image": {
+            "src": "images/dotnet/static_dynamic_serving.png",
+            "alt": "Static: the laptop sends a request to the web server, which sends back pre-written HTML files directly. Dynamic: the laptop requests from the web server, which passes a request to an application script; the script works with a database and returns a response, and the server sends back a custom HTML page.",
+            "caption": "Static vs dynamic page serving"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Nothing"
+            },
+            {
+              "id": "b",
+              "text": "A page generated from a database"
+            },
+            {
+              "id": "c",
+              "text": "Pre-written HTML files, directly"
+            },
+            {
+              "id": "d",
+              "text": "The application script"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "diagram"
+          ]
+        },
+        {
+          "id": "dn1-web-018",
+          "type": "multiple_choice",
+          "prompt": "Which components appear ONLY in the dynamic serving process? (select all that apply)",
+          "image": {
+            "src": "images/dotnet/static_dynamic_serving.png",
+            "alt": "Static: the laptop sends a request to the web server, which sends back pre-written HTML files directly. Dynamic: the laptop requests from the web server, which passes a request to an application script; the script works with a database and returns a response, and the server sends back a custom HTML page.",
+            "caption": "Static vs dynamic page serving"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Web server"
+            },
+            {
+              "id": "b",
+              "text": "Application script"
+            },
+            {
+              "id": "c",
+              "text": "Client laptop / browser"
+            },
+            {
+              "id": "d",
+              "text": "Database"
+            }
+          ],
+          "correct": [
+            "b",
+            "d"
+          ],
+          "explanation": "Both diagrams have a client and a web server.",
+          "difficulty": "medium",
+          "tags": [
+            "diagram"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspnet",
+      "title": "1.3 Introduction to ASP.NET",
+      "description": "What ASP.NET is, its foundations, capabilities, .aspx pages and how an ASP.NET request is processed.",
+      "questions": [
+        {
+          "id": "dn1-asp-001",
+          "type": "single_choice",
+          "prompt": "What is ASP.NET?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A Microsoft .NET technology for creating interactive and dynamic web pages"
+            },
+            {
+              "id": "b",
+              "text": "A static HTML editor"
+            },
+            {
+              "id": "c",
+              "text": "A database"
+            },
+            {
+              "id": "d",
+              "text": "A web browser"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-002",
+          "type": "multiple_choice",
+          "prompt": "ASP.NET is a convergence of which two Microsoft technologies? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The .NET Framework"
+            },
+            {
+              "id": "b",
+              "text": "PHP"
+            },
+            {
+              "id": "c",
+              "text": "Java"
+            },
+            {
+              "id": "d",
+              "text": "Active Server Pages (ASP)"
+            }
+          ],
+          "correct": [
+            "a",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-003",
+          "type": "typed",
+          "prompt": "What does ASP stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "active server pages"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "ASP = Active Server Pages.",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-004",
+          "type": "single_choice",
+          "prompt": "ASP.NET is built on top of…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The Java Virtual Machine"
+            },
+            {
+              "id": "b",
+              "text": "The .NET Common Language Runtime (CLR)"
+            },
+            {
+              "id": "c",
+              "text": "The web browser"
+            },
+            {
+              "id": "d",
+              "text": "PHP"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-005",
+          "type": "multiple_choice",
+          "prompt": "Which languages can you program ASP.NET in? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "VJ#"
+            },
+            {
+              "id": "b",
+              "text": "VB.NET"
+            },
+            {
+              "id": "c",
+              "text": "C#"
+            },
+            {
+              "id": "d",
+              "text": "HTML only"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "Any .NET language.",
+          "difficulty": "medium",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-006",
+          "type": "multiple_choice",
+          "prompt": "What capabilities does ASP.NET have? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Better user authentication"
+            },
+            {
+              "id": "b",
+              "text": "No security controls"
+            },
+            {
+              "id": "c",
+              "text": "Better language support"
+            },
+            {
+              "id": "d",
+              "text": "A large set of rich web controls"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-007",
+          "type": "typed",
+          "prompt": "ASP.NET web pages are saved with which file extension?",
+          "image": null,
+          "acceptedAnswers": [
+            ".aspx",
+            "aspx"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": ".xxx"
+          },
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-008",
+          "type": "single_choice",
+          "prompt": "Why is ASP.NET fast?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It runs entirely in the browser"
+            },
+            {
+              "id": "b",
+              "text": "It uses compiled code"
+            },
+            {
+              "id": "c",
+              "text": "It only serves static HTML"
+            },
+            {
+              "id": "d",
+              "text": "It never runs any code"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Compiled execution increases performance.",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet"
+          ]
+        },
+        {
+          "id": "dn1-asp-009",
+          "type": "single_choice",
+          "prompt": "What is the correct order when an ASP.NET page is requested?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Web server sends HTML → browser requests → engine executes → file retrieved"
+            },
+            {
+              "id": "b",
+              "text": "Browser requests → web server retrieves the file → forwards it to the ASP.NET script engine → engine executes it → HTML is generated and returned to the server → server sends HTML to the client"
+            },
+            {
+              "id": "c",
+              "text": "Engine executes → browser requests → server retrieves → HTML sent"
+            },
+            {
+              "id": "d",
+              "text": "Browser requests → server sends the .aspx code to the browser → browser executes it"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The browser only ever receives HTML.",
+          "difficulty": "medium",
+          "tags": [
+            "aspnet-process"
+          ]
+        },
+        {
+          "id": "dn1-asp-010",
+          "type": "single_choice",
+          "prompt": "Which part reads the ASP.NET file from top to bottom and executes it?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The client's operating system"
+            },
+            {
+              "id": "b",
+              "text": "The ASP.NET Script Engine"
+            },
+            {
+              "id": "c",
+              "text": "The database"
+            },
+            {
+              "id": "d",
+              "text": "The web browser"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "aspnet-process"
+          ]
+        },
+        {
+          "id": "dn1-asp-011",
+          "type": "true_false",
+          "prompt": "The web browser receives and runs the .aspx code directly.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "The server-side engine runs it; the browser receives only the resulting HTML.",
+          "difficulty": "medium",
+          "tags": [
+            "aspnet-process"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advantages-and-comparison",
+      "title": "1.3 Advantages, .NET Software & PHP vs .NET",
+      "description": "Advantages of the .NET Framework and ASP.NET, .NET software components, Visual Studio and PHP vs .NET.",
+      "questions": [
+        {
+          "id": "dn1-adv-001",
+          "type": "multiple_choice",
+          "prompt": "Which are advantages of the Microsoft .NET Framework? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reduced amount of code"
+            },
+            {
+              "id": "b",
+              "text": "Language independent"
+            },
+            {
+              "id": "c",
+              "text": "Good design"
+            },
+            {
+              "id": "d",
+              "text": "Larger class library"
+            },
+            {
+              "id": "e",
+              "text": "Only one programming language"
+            },
+            {
+              "id": "f",
+              "text": "Code security"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f"
+          ],
+          "explanation": "From your notes' list.",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-002",
+          "type": "multiple_choice",
+          "prompt": "Which are .NET SERVER and CLIENT technologies? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Windows Forms (Windows desktop)"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET (server/web)"
+            },
+            {
+              "id": "c",
+              "text": "PHP"
+            },
+            {
+              "id": "d",
+              "text": "Compact Framework (PDA/mobile)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-003",
+          "type": "single_choice",
+          "prompt": "The Compact Framework is for…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Web servers"
+            },
+            {
+              "id": "b",
+              "text": "Desktop games only"
+            },
+            {
+              "id": "c",
+              "text": "Databases"
+            },
+            {
+              "id": "d",
+              "text": "PDA / mobile solutions"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-004",
+          "type": "single_choice",
+          "prompt": "Which ASP.NET advantage category includes Master Pages and Themes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Performance"
+            },
+            {
+              "id": "b",
+              "text": "Hardware"
+            },
+            {
+              "id": "c",
+              "text": "Enterprise & Security"
+            },
+            {
+              "id": "d",
+              "text": "Development"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Development: easy programming model, flexible languages, master pages, themes.",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-005",
+          "type": "single_choice",
+          "prompt": "Rich output caching and compiled execution belong to which ASP.NET advantage category?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Performance"
+            },
+            {
+              "id": "b",
+              "text": "Design"
+            },
+            {
+              "id": "c",
+              "text": "Development"
+            },
+            {
+              "id": "d",
+              "text": "Enterprise & Security"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-006",
+          "type": "single_choice",
+          "prompt": "Web-farm session state and improved security belong to which category?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Development"
+            },
+            {
+              "id": "b",
+              "text": "Performance"
+            },
+            {
+              "id": "c",
+              "text": "Mobile"
+            },
+            {
+              "id": "d",
+              "text": "Enterprise & Security"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "advantages"
+          ]
+        },
+        {
+          "id": "dn1-adv-007",
+          "type": "single_choice",
+          "prompt": "What is .NET software?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A mix of technologies, standards and development tools"
+            },
+            {
+              "id": "b",
+              "text": "An operating system only"
+            },
+            {
+              "id": "c",
+              "text": "One single program"
+            },
+            {
+              "id": "d",
+              "text": "A web browser"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "software"
+          ]
+        },
+        {
+          "id": "dn1-adv-008",
+          "type": "multiple_choice",
+          "prompt": "Which are SERVER & DATA components of .NET software? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Office.NET"
+            },
+            {
+              "id": "b",
+              "text": "Visual Basic.NET"
+            },
+            {
+              "id": "c",
+              "text": "IIS 10.0 (Internet Information Services)"
+            },
+            {
+              "id": "d",
+              "text": "SQL Server 2022"
+            }
+          ],
+          "correct": [
+            "c",
+            "d"
+          ],
+          "explanation": "Visual Basic.NET is a development tool; Office.NET is a platform/application.",
+          "difficulty": "medium",
+          "tags": [
+            "software"
+          ]
+        },
+        {
+          "id": "dn1-adv-009",
+          "type": "typed",
+          "prompt": "What does IIS stand for?",
+          "image": null,
+          "acceptedAnswers": [
+            "internet information services",
+            "internet information server"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "Full name"
+          },
+          "explanation": "IIS = Internet Information Services, Microsoft's web server.",
+          "difficulty": "medium",
+          "tags": [
+            "software"
+          ]
+        },
+        {
+          "id": "dn1-adv-010",
+          "type": "single_choice",
+          "prompt": "Which describes PHP, according to your notes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Optimised for MSSQL only"
+            },
+            {
+              "id": "b",
+              "text": "A framework supporting multiple languages only on Windows"
+            },
+            {
+              "id": "c",
+              "text": "An HTML-embedded scripting language that runs on any OS and HTTP server, free of cost"
+            },
+            {
+              "id": "d",
+              "text": "A proprietary framework that needs software licences"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "php-vs-net"
+          ]
+        },
+        {
+          "id": "dn1-adv-011",
+          "type": "single_choice",
+          "prompt": "Which describes .NET, according to your notes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Has no OOP support"
+            },
+            {
+              "id": "b",
+              "text": "An HTML-embedded scripting language"
+            },
+            {
+              "id": "c",
+              "text": "Free of cost with no licences at all"
+            },
+            {
+              "id": "d",
+              "text": "A framework supporting multiple languages, proprietary, optimised for MSSQL, with full OOP support"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Note: today's .NET (Core / .NET 5+) is free, open source and cross-platform; the comparison in your notes reflects the older .NET Framework.",
+          "difficulty": "medium",
+          "tags": [
+            "php-vs-net"
+          ]
+        },
+        {
+          "id": "dn1-adv-012",
+          "type": "single_choice",
+          "prompt": "According to your notes, which has the steeper learning curve?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "They are identical"
+            },
+            {
+              "id": "b",
+              "text": "Neither"
+            },
+            {
+              "id": "c",
+              "text": ".NET"
+            },
+            {
+              "id": "d",
+              "text": "PHP"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "PHP is described as easily learnable.",
+          "difficulty": "easy",
+          "tags": [
+            "php-vs-net"
+          ]
+        },
+        {
+          "id": "dn1-adv-013",
+          "type": "single_choice",
+          "prompt": "For databases other than MSSQL, .NET connects using…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CSS"
+            },
+            {
+              "id": "b",
+              "text": "HTML"
+            },
+            {
+              "id": "c",
+              "text": "FTP"
+            },
+            {
+              "id": "d",
+              "text": "ODBC"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "ODBC = Open Database Connectivity.",
+          "difficulty": "medium",
+          "tags": [
+            "php-vs-net"
+          ]
+        },
+        {
+          "id": "dn1-adv-014",
+          "type": "true_false",
+          "prompt": "Your notes say PHP does not implement OOP concepts. For modern PHP (version 5 and later), is that still true?",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "Your notes compare older PHP. Modern PHP fully supports classes, inheritance and interfaces. For the exam, remember the notes say .NET has full OOP support.",
+          "difficulty": "hard",
+          "tags": [
+            "php-vs-net"
+          ]
+        }
+      ]
+    }
+  ]
+}

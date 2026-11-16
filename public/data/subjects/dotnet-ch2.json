@@ -1,0 +1,2666 @@
+{
+  "id": "dotnet-ch2",
+  "title": "Dotnet Programming · Chapter 2",
+  "description": "Visual Studio .NET: the IDE and its windows, creating an ASP.NET web app, file types, CodeBehind vs inline code, event handlers, and compilation vs runtime errors.",
+  "topics": [
+    {
+      "id": "visual-studio-ide",
+      "title": "Visual Studio IDE & Its Windows",
+      "description": "What Visual Studio is, visual programming, the unified IDE, core capabilities, ecosystem support and the main windows.",
+      "questions": [
+        {
+          "id": "dn2-ide-001",
+          "type": "single_choice",
+          "prompt": "What is Visual Studio .NET?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Microsoft's Integrated Development Environment (IDE) for creating, running and debugging programs"
+            },
+            {
+              "id": "b",
+              "text": "A web browser"
+            },
+            {
+              "id": "c",
+              "text": "A programming language"
+            },
+            {
+              "id": "d",
+              "text": "A database server"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "ide"
+          ]
+        },
+        {
+          "id": "dn2-ide-002",
+          "type": "multiple_choice",
+          "prompt": "What are this chapter's learning outcomes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Identify the purpose of Visual Studio as an IDE"
+            },
+            {
+              "id": "b",
+              "text": "Install Windows Server"
+            },
+            {
+              "id": "c",
+              "text": "Recognise the main windows in Visual Studio"
+            },
+            {
+              "id": "d",
+              "text": "Create, build, run and debug a basic .NET project"
+            },
+            {
+              "id": "e",
+              "text": "Use common Menu Bar and Toolbar commands"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "ide"
+          ]
+        },
+        {
+          "id": "dn2-ide-003",
+          "type": "single_choice",
+          "prompt": "What does VISUAL programming let you do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Program without any computer"
+            },
+            {
+              "id": "b",
+              "text": "Drag and drop predefined building blocks into place"
+            },
+            {
+              "id": "c",
+              "text": "Write code only in Notepad"
+            },
+            {
+              "id": "d",
+              "text": "Design databases only"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "This makes it easy to create a simple Visual Basic program.",
+          "difficulty": "easy",
+          "tags": [
+            "ide"
+          ]
+        },
+        {
+          "id": "dn2-ide-004",
+          "type": "single_choice",
+          "prompt": "What does “unified .NET IDE” mean?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An IDE that only supports C#"
+            },
+            {
+              "id": "b",
+              "text": "An IDE that runs in the browser only"
+            },
+            {
+              "id": "c",
+              "text": "One IDE for different forms of .NET development — class libraries, form-based apps and web services"
+            },
+            {
+              "id": "d",
+              "text": "A separate IDE for every language"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "It supports C#, VB, C++ and J#.",
+          "difficulty": "easy",
+          "tags": [
+            "ide"
+          ]
+        },
+        {
+          "id": "dn2-ide-005",
+          "type": "multiple_choice",
+          "prompt": "Which are core capabilities of Visual Studio? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IntelliSense & smart code completion"
+            },
+            {
+              "id": "b",
+              "text": "Built-in testing & profiling tools"
+            },
+            {
+              "id": "c",
+              "text": "Advanced debugging & diagnostics"
+            },
+            {
+              "id": "d",
+              "text": "Automatic website hosting for free"
+            },
+            {
+              "id": "e",
+              "text": "Git & version-control integration"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "capabilities"
+          ]
+        },
+        {
+          "id": "dn2-ide-006",
+          "type": "single_choice",
+          "prompt": "Which feature suggests and completes code as you type?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Git"
+            },
+            {
+              "id": "b",
+              "text": "Profiler"
+            },
+            {
+              "id": "c",
+              "text": "Server Explorer"
+            },
+            {
+              "id": "d",
+              "text": "IntelliSense"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "capabilities"
+          ]
+        },
+        {
+          "id": "dn2-ide-007",
+          "type": "multiple_choice",
+          "prompt": "Which .NET ecosystem support does Visual Studio offer? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Only PHP projects"
+            },
+            {
+              "id": "b",
+              "text": "First-class C# & VB.NET support"
+            },
+            {
+              "id": "c",
+              "text": "ASP.NET web applications"
+            },
+            {
+              "id": "d",
+              "text": "An extensible extension marketplace"
+            },
+            {
+              "id": "e",
+              "text": "Cloud-ready Azure integration"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "capabilities"
+          ]
+        },
+        {
+          "id": "dn2-ide-008",
+          "type": "multiple_choice",
+          "prompt": "Which windows/areas make up the main Visual Studio environment? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Task Manager"
+            },
+            {
+              "id": "b",
+              "text": "Document Window"
+            },
+            {
+              "id": "c",
+              "text": "Properties Window"
+            },
+            {
+              "id": "d",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "e",
+              "text": "Toolbox"
+            },
+            {
+              "id": "f",
+              "text": "Server Explorer"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "explanation": "Also the main menu and toolbar area.",
+          "difficulty": "medium",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-009",
+          "type": "single_choice",
+          "prompt": "Which window contains drag-and-drop controls such as Button, Label and TextBox?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "b",
+              "text": "Properties Window"
+            },
+            {
+              "id": "c",
+              "text": "Server Explorer"
+            },
+            {
+              "id": "d",
+              "text": "Toolbox"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-010",
+          "type": "single_choice",
+          "prompt": "Which window shows all project files and the project structure?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "b",
+              "text": "Document Window"
+            },
+            {
+              "id": "c",
+              "text": "Toolbox"
+            },
+            {
+              "id": "d",
+              "text": "Server Explorer"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-011",
+          "type": "single_choice",
+          "prompt": "You selected a Button and want to change its Text and ID. Which window do you use?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Toolbox"
+            },
+            {
+              "id": "b",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "c",
+              "text": "Properties Window"
+            },
+            {
+              "id": "d",
+              "text": "Server Explorer"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "It configures the selected control.",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-012",
+          "type": "single_choice",
+          "prompt": "Which window is used to manage databases, connections and web servers?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Properties Window"
+            },
+            {
+              "id": "b",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "c",
+              "text": "Toolbox"
+            },
+            {
+              "id": "d",
+              "text": "Server Explorer"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-013",
+          "type": "single_choice",
+          "prompt": "Where do you write code or design the application?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Document Window"
+            },
+            {
+              "id": "b",
+              "text": "Properties Window"
+            },
+            {
+              "id": "c",
+              "text": "Server Explorer"
+            },
+            {
+              "id": "d",
+              "text": "Toolbox"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-014",
+          "type": "single_choice",
+          "prompt": "Commands like Build, Run, View and Debug are found in the…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Server Explorer"
+            },
+            {
+              "id": "b",
+              "text": "Properties Window"
+            },
+            {
+              "id": "c",
+              "text": "Toolbox"
+            },
+            {
+              "id": "d",
+              "text": "Main Menu & Toolbar"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        },
+        {
+          "id": "dn2-ide-015",
+          "type": "single_choice",
+          "prompt": "What is the correct project workflow?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Debug → Build → Create → Run"
+            },
+            {
+              "id": "b",
+              "text": "Build → Run → Create → Debug"
+            },
+            {
+              "id": "c",
+              "text": "Run → Create → Debug → Build"
+            },
+            {
+              "id": "d",
+              "text": "Create project → Build solution → Run application → Debug code"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-aspnet-app-and-files",
+      "title": "Creating Your First ASP.NET Web App & File Types",
+      "description": "The project creation workflow, ASP.NET file extensions, views and project types.",
+      "questions": [
+        {
+          "id": "dn2-app-001",
+          "type": "single_choice",
+          "prompt": "When creating the first ASP.NET web app in the lecture, which project type is selected?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Empty"
+            },
+            {
+              "id": "b",
+              "text": "Class Library"
+            },
+            {
+              "id": "c",
+              "text": "Windows Forms"
+            },
+            {
+              "id": "d",
+              "text": "Console App"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Then a Web Form is added to the empty project.",
+          "difficulty": "easy",
+          "tags": [
+            "create"
+          ]
+        },
+        {
+          "id": "dn2-app-002",
+          "type": "single_choice",
+          "prompt": "Which is the correct order to create the first web app?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Run → add code → choose project type → name the project"
+            },
+            {
+              "id": "b",
+              "text": "Add a Web Form → choose project type → run → name the project"
+            },
+            {
+              "id": "c",
+              "text": "Name the project → run → add a Web Form → select “empty”"
+            },
+            {
+              "id": "d",
+              "text": "Choose project type → enter project name → select “empty” → Visual Studio creates the app → add a Web Form → add code → run"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "create"
+          ]
+        },
+        {
+          "id": "dn2-app-003",
+          "type": "multiple_choice",
+          "prompt": "After adding a Web Form, which views can you use? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Markup view — the page's markup (source)"
+            },
+            {
+              "id": "b",
+              "text": "Design view — a graphical representation of the page"
+            },
+            {
+              "id": "c",
+              "text": "Split view — markup and design at the same time"
+            },
+            {
+              "id": "d",
+              "text": "Console view"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "views"
+          ]
+        },
+        {
+          "id": "dn2-app-004",
+          "type": "single_choice",
+          "prompt": "Which view shows Markup View and Design View at the same time?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Markup View"
+            },
+            {
+              "id": "b",
+              "text": "Design View"
+            },
+            {
+              "id": "c",
+              "text": "Code View"
+            },
+            {
+              "id": "d",
+              "text": "Split View"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "views"
+          ]
+        },
+        {
+          "id": "dn2-app-005",
+          "type": "typed",
+          "prompt": "Which file extension does a Web Form use?",
+          "image": null,
+          "acceptedAnswers": [
+            ".aspx",
+            "aspx"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": ".xxx"
+          },
+          "explanation": "The workhorse of an ASP.NET site.",
+          "difficulty": "easy",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-006",
+          "type": "single_choice",
+          "prompt": "Which file defines the global site structure and shared layout?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Site Map (.sitemap)"
+            },
+            {
+              "id": "b",
+              "text": "Master Page (.master)"
+            },
+            {
+              "id": "c",
+              "text": "Skin file (.skin)"
+            },
+            {
+              "id": "d",
+              "text": "Web Form (.aspx)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-007",
+          "type": "typed",
+          "prompt": "Which extension is used for a Web User Control (a reusable page fragment)?",
+          "image": null,
+          "acceptedAnswers": [
+            ".ascx",
+            "ascx"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": ".xxx"
+          },
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-008",
+          "type": "single_choice",
+          "prompt": "Which file stores global application configuration settings?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Skin file (.skin)"
+            },
+            {
+              "id": "b",
+              "text": "Style sheet (.css)"
+            },
+            {
+              "id": "c",
+              "text": "Web config file (.config)"
+            },
+            {
+              "id": "d",
+              "text": "Site map (.sitemap)"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-009",
+          "type": "single_choice",
+          "prompt": "Which file holds XML-formatted hierarchical data for site navigation?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Master Page (.master)"
+            },
+            {
+              "id": "b",
+              "text": "Web config (.config)"
+            },
+            {
+              "id": "c",
+              "text": "JavaScript file (.js)"
+            },
+            {
+              "id": "d",
+              "text": "Site Map (.sitemap)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-010",
+          "type": "single_choice",
+          "prompt": "Which file contains visual theme properties and styling rules for UI controls?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Skin file (.skin)"
+            },
+            {
+              "id": "b",
+              "text": "Style sheet (.css)"
+            },
+            {
+              "id": "c",
+              "text": "Web User Control (.ascx)"
+            },
+            {
+              "id": "d",
+              "text": "Master Page (.master)"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-011",
+          "type": "single_choice",
+          "prompt": "Which file type does NOT process server-side script?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Master Page (.master)"
+            },
+            {
+              "id": "b",
+              "text": "HTML page (.html)"
+            },
+            {
+              "id": "c",
+              "text": "Web Form (.aspx)"
+            },
+            {
+              "id": "d",
+              "text": "Web User Control (.ascx)"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Plain HTML is static content.",
+          "difficulty": "medium",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-012",
+          "type": "single_choice",
+          "prompt": "Which file contains code executed directly in the user's browser?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "JavaScript file (.js)"
+            },
+            {
+              "id": "b",
+              "text": "CodeBehind (.aspx.cs)"
+            },
+            {
+              "id": "c",
+              "text": "Site Map (.sitemap)"
+            },
+            {
+              "id": "d",
+              "text": "Web config (.config)"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-013",
+          "type": "typed",
+          "prompt": "According to the chapter summary, which extension is used for an SQL database file?",
+          "image": null,
+          "acceptedAnswers": [
+            ".mdf",
+            "mdf"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": ".xxx"
+          },
+          "explanation": "",
+          "difficulty": "hard",
+          "tags": [
+            "extensions"
+          ]
+        },
+        {
+          "id": "dn2-app-014",
+          "type": "single_choice",
+          "prompt": "What does a Web Form present?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The database schema"
+            },
+            {
+              "id": "b",
+              "text": "The compiler output"
+            },
+            {
+              "id": "c",
+              "text": "The user interface of the website at the client"
+            },
+            {
+              "id": "d",
+              "text": "Server configuration"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "summary"
+          ]
+        },
+        {
+          "id": "dn2-app-015",
+          "type": "multiple_choice",
+          "prompt": "Which two PROJECT TYPES does Visual Studio offer for web development? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Game Projects"
+            },
+            {
+              "id": "b",
+              "text": "Web Site Projects"
+            },
+            {
+              "id": "c",
+              "text": "Web Application Projects"
+            },
+            {
+              "id": "d",
+              "text": "Console Projects only"
+            }
+          ],
+          "correct": [
+            "b",
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "summary"
+          ]
+        },
+        {
+          "id": "dn2-app-016",
+          "type": "single_choice",
+          "prompt": "What are project templates for?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To start web development by setting up a site for a specific scenario"
+            },
+            {
+              "id": "b",
+              "text": "To compile C#"
+            },
+            {
+              "id": "c",
+              "text": "To store passwords"
+            },
+            {
+              "id": "d",
+              "text": "To design databases"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "summary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "codebehind-and-inline",
+      "title": "CodeBehind & Inline Code",
+      "description": "CodeBehind vs inline code, file naming, the @Page directive and the Page_Init / Page_Load events.",
+      "questions": [
+        {
+          "id": "dn2-cb-001",
+          "type": "single_choice",
+          "prompt": "What is CodeBehind?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A CSS file"
+            },
+            {
+              "id": "b",
+              "text": "Code written inside the HTML in the same file"
+            },
+            {
+              "id": "c",
+              "text": "A database file"
+            },
+            {
+              "id": "d",
+              "text": "ASP.NET page code written in a separate class file from the markup"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It separates presentation (HTML, CSS) from execution code (C#, VB.NET).",
+          "difficulty": "easy",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-002",
+          "type": "multiple_choice",
+          "prompt": "What are the advantages of CodeBehind? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Separates logic and presentation, making maintenance easier"
+            },
+            {
+              "id": "b",
+              "text": "Works with server controls, which can interact with the code behind the page"
+            },
+            {
+              "id": "c",
+              "text": "Runs code in the browser"
+            },
+            {
+              "id": "d",
+              "text": "Improves readability, teamwork and maintainability"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-003",
+          "type": "typed",
+          "prompt": "The Web Form is mypage.aspx and the language is C#. What is the CodeBehind file's name?",
+          "image": null,
+          "acceptedAnswers": [
+            "mypage.aspx.cs"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "filename"
+          },
+          "explanation": "The CodeBehind file name matches the Web Form, plus .cs for C# (or .vb for VB.NET).",
+          "difficulty": "medium",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-004",
+          "type": "single_choice",
+          "prompt": "Which extension does a VB.NET CodeBehind file use?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": ".cs"
+            },
+            {
+              "id": "b",
+              "text": ".vbs"
+            },
+            {
+              "id": "c",
+              "text": ".vb (e.g. mypage.aspx.vb)"
+            },
+            {
+              "id": "d",
+              "text": ".aspx"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-005",
+          "type": "single_choice",
+          "prompt": "What is INLINE code?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Code in the database"
+            },
+            {
+              "id": "b",
+              "text": "Code in a separate .cs file"
+            },
+            {
+              "id": "c",
+              "text": "JavaScript in a .js file"
+            },
+            {
+              "id": "d",
+              "text": "Server-side code written directly inside the .aspx page, alongside the HTML, in a <script> block"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "inline"
+          ]
+        },
+        {
+          "id": "dn2-cb-006",
+          "type": "single_choice",
+          "prompt": "Which model stores markup and server-side code in SEPARATE files (Default.aspx + Default.aspx.cs)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "CodeBehind model"
+            },
+            {
+              "id": "b",
+              "text": "Inline code model"
+            },
+            {
+              "id": "c",
+              "text": "Master page model"
+            },
+            {
+              "id": "d",
+              "text": "Static model"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "inline"
+          ]
+        },
+        {
+          "id": "dn2-cb-007",
+          "type": "single_choice",
+          "prompt": "A page has only Default.aspx, with the C# code inside it. Which model is that?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Inline code model"
+            },
+            {
+              "id": "b",
+              "text": "CodeBehind model"
+            },
+            {
+              "id": "c",
+              "text": "Static HTML"
+            },
+            {
+              "id": "d",
+              "text": "MVC model"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "inline"
+          ]
+        },
+        {
+          "id": "dn2-cb-008",
+          "type": "single_choice",
+          "prompt": "When are scripting blocks (<% %>) suitable?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "For simple scripts — CodeBehind is better for larger logic"
+            },
+            {
+              "id": "b",
+              "text": "Always, for all logic"
+            },
+            {
+              "id": "c",
+              "text": "Only for CSS"
+            },
+            {
+              "id": "d",
+              "text": "Never"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "inline"
+          ]
+        },
+        {
+          "id": "dn2-cb-009",
+          "type": "single_choice",
+          "prompt": "What does the @Page directive do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Adds a button"
+            },
+            {
+              "id": "b",
+              "text": "Creates a database"
+            },
+            {
+              "id": "c",
+              "text": "Runs the app"
+            },
+            {
+              "id": "d",
+              "text": "Sets default properties for the whole page, such as the default language"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "page-directive"
+          ]
+        },
+        {
+          "id": "dn2-cb-010",
+          "type": "single_choice",
+          "prompt": "In the @Page directive, what does the CodeBehind property identify?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The page title"
+            },
+            {
+              "id": "b",
+              "text": "The CSS file"
+            },
+            {
+              "id": "c",
+              "text": "The browser to use"
+            },
+            {
+              "id": "d",
+              "text": "The path and filename of the CodeBehind file"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "page-directive"
+          ]
+        },
+        {
+          "id": "dn2-cb-011",
+          "type": "single_choice",
+          "prompt": "In the @Page directive, what does the Inherits property indicate?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "That the code behind the page inherits the page class (which holds the page's compiled code)"
+            },
+            {
+              "id": "b",
+              "text": "The page's colour scheme"
+            },
+            {
+              "id": "c",
+              "text": "The database connection"
+            },
+            {
+              "id": "d",
+              "text": "The default language"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "page-directive"
+          ]
+        },
+        {
+          "id": "dn2-cb-012",
+          "type": "single_choice",
+          "prompt": "Which page event comes first and initialises the page control hierarchy (according to your notes)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Page_Init"
+            },
+            {
+              "id": "b",
+              "text": "Button_Click"
+            },
+            {
+              "id": "c",
+              "text": "Page_Unload"
+            },
+            {
+              "id": "d",
+              "text": "Page_Load"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Page_Init, then Page_Load. (Strictly, ASP.NET also has a Page_PreInit event before Page_Init, but your notes list Page_Init as the first.)",
+          "difficulty": "easy",
+          "tags": [
+            "page-events"
+          ]
+        },
+        {
+          "id": "dn2-cb-013",
+          "type": "single_choice",
+          "prompt": "Which page event loads server controls into memory and runs EVERY time the page executes?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Page_Init"
+            },
+            {
+              "id": "b",
+              "text": "Page_Compile"
+            },
+            {
+              "id": "c",
+              "text": "Page_Load"
+            },
+            {
+              "id": "d",
+              "text": "Page_Start"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "page-events"
+          ]
+        },
+        {
+          "id": "dn2-cb-014",
+          "type": "multiple_choice",
+          "prompt": "Which object-oriented parts can a CodeBehind file contain? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "namespace"
+            },
+            {
+              "id": "b",
+              "text": "Class name"
+            },
+            {
+              "id": "c",
+              "text": "HTML <body> tag"
+            },
+            {
+              "id": "d",
+              "text": "Methods"
+            },
+            {
+              "id": "e",
+              "text": "Inherited class (using the inheritance symbol :)"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d",
+            "e"
+          ],
+          "explanation": "The page class uses inheritance, e.g. `public partial class Default : System.Web.UI.Page`.",
+          "difficulty": "medium",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-015",
+          "type": "single_choice",
+          "prompt": "How do you open the CodeBehind file in Visual Studio?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Right-click the Toolbox"
+            },
+            {
+              "id": "b",
+              "text": "Open Server Explorer"
+            },
+            {
+              "id": "c",
+              "text": "In Solution Explorer, expand the Web Form and double-click the .aspx.cs file"
+            },
+            {
+              "id": "d",
+              "text": "Press Ctrl + F5"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "It opens in the Document Window.",
+          "difficulty": "easy",
+          "tags": [
+            "codebehind"
+          ]
+        },
+        {
+          "id": "dn2-cb-016",
+          "type": "single_choice",
+          "prompt": "After adding code to the CodeBehind file, which keys run the app (without debugging)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Alt + Tab"
+            },
+            {
+              "id": "b",
+              "text": "Ctrl + S"
+            },
+            {
+              "id": "c",
+              "text": "Ctrl + F5"
+            },
+            {
+              "id": "d",
+              "text": "F12"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Save first, then Ctrl + F5 and check the browser output.",
+          "difficulty": "easy",
+          "tags": [
+            "codebehind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-handlers",
+      "title": "Event Handlers",
+      "description": "Events, event-driven ASP.NET, event-handler structure, sender and e, and adding a button event in Design view.",
+      "questions": [
+        {
+          "id": "dn2-evt-001",
+          "type": "single_choice",
+          "prompt": "What is an event?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A file type"
+            },
+            {
+              "id": "b",
+              "text": "An action or occurrence, such as a mouse click, key press or system notification"
+            },
+            {
+              "id": "c",
+              "text": "A variable"
+            },
+            {
+              "id": "d",
+              "text": "A compilation error"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "events"
+          ]
+        },
+        {
+          "id": "dn2-evt-002",
+          "type": "multiple_choice",
+          "prompt": "Which of these are events? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "System-generated notification"
+            },
+            {
+              "id": "b",
+              "text": "A variable declaration"
+            },
+            {
+              "id": "c",
+              "text": "Key press"
+            },
+            {
+              "id": "d",
+              "text": "Mouse movement"
+            },
+            {
+              "id": "e",
+              "text": "Mouse click"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "events"
+          ]
+        },
+        {
+          "id": "dn2-evt-003",
+          "type": "true_false",
+          "prompt": "ASP.NET Web Forms applications are entirely event-driven.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "events"
+          ]
+        },
+        {
+          "id": "dn2-evt-004",
+          "type": "single_choice",
+          "prompt": "In Web Forms, where is the event-handling code added?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "In the .css file"
+            },
+            {
+              "id": "b",
+              "text": "In web.config"
+            },
+            {
+              "id": "c",
+              "text": "In the .aspx.cs CodeBehind file"
+            },
+            {
+              "id": "d",
+              "text": "In the .sitemap file"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "events"
+          ]
+        },
+        {
+          "id": "dn2-evt-005",
+          "type": "single_choice",
+          "prompt": "What is the return type of an ASP.NET event handler?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "string"
+            },
+            {
+              "id": "b",
+              "text": "bool"
+            },
+            {
+              "id": "c",
+              "text": "void"
+            },
+            {
+              "id": "d",
+              "text": "int"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The pattern is `void EventName(object sender, EventArgs e)`. Your notes write it as private; Visual Studio usually generates `protected void Button1_Click(...)` for Web Forms — both return void.",
+          "difficulty": "easy",
+          "tags": [
+            "handler"
+          ]
+        },
+        {
+          "id": "dn2-evt-006",
+          "type": "single_choice",
+          "prompt": "In `EventName(object sender, EventArgs e)`, what is sender?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The web server"
+            },
+            {
+              "id": "b",
+              "text": "The return value"
+            },
+            {
+              "id": "c",
+              "text": "The object that raised the event"
+            },
+            {
+              "id": "d",
+              "text": "The event data"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "handler"
+          ]
+        },
+        {
+          "id": "dn2-evt-007",
+          "type": "single_choice",
+          "prompt": "In the same signature, what is e?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The page class"
+            },
+            {
+              "id": "b",
+              "text": "The object that raised the event"
+            },
+            {
+              "id": "c",
+              "text": "The error"
+            },
+            {
+              "id": "d",
+              "text": "The event data / arguments"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "handler"
+          ]
+        },
+        {
+          "id": "dn2-evt-008",
+          "type": "typed",
+          "prompt": "The user types Ali into txtName and clicks the button. What text does lblResult show?",
+          "code": "protected void btnSubmit_Click(object sender, EventArgs e)\n{\n    lblResult.Text = \"Hello, \" + txtName.Text;\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "Hello, Ali"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "The handler joins \"Hello, \" with the TextBox's text.",
+          "difficulty": "medium",
+          "tags": [
+            "handler"
+          ]
+        },
+        {
+          "id": "dn2-evt-009",
+          "type": "single_choice",
+          "prompt": "How do you open the Web Form Designer?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Open Server Explorer"
+            },
+            {
+              "id": "b",
+              "text": "Press Ctrl + F5"
+            },
+            {
+              "id": "c",
+              "text": "Double-click web.config"
+            },
+            {
+              "id": "d",
+              "text": "Right-click the .aspx file and choose “View Designer”"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The Web Form opens in Design view.",
+          "difficulty": "easy",
+          "tags": [
+            "designer"
+          ]
+        },
+        {
+          "id": "dn2-evt-010",
+          "type": "single_choice",
+          "prompt": "In Design view, what happens when you double-click a Button?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The button is deleted"
+            },
+            {
+              "id": "b",
+              "text": "A new event-handler method is created in the CodeBehind file"
+            },
+            {
+              "id": "c",
+              "text": "The button is copied"
+            },
+            {
+              "id": "d",
+              "text": "The app runs"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "designer"
+          ]
+        },
+        {
+          "id": "dn2-evt-011",
+          "type": "single_choice",
+          "prompt": "What is the correct order when testing a button event?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Click the button → run the app → type text → result"
+            },
+            {
+              "id": "b",
+              "text": "Run the app → type into the TextBox → click the button → the handler runs → the result is displayed"
+            },
+            {
+              "id": "c",
+              "text": "Type text → result → run the app → click"
+            },
+            {
+              "id": "d",
+              "text": "Result → click → type → run"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "designer"
+          ]
+        },
+        {
+          "id": "dn2-evt-012",
+          "type": "single_choice",
+          "prompt": "Where do you get Label, TextBox and Button controls to add to the form?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Server Explorer"
+            },
+            {
+              "id": "b",
+              "text": "Toolbox"
+            },
+            {
+              "id": "c",
+              "text": "Solution Explorer"
+            },
+            {
+              "id": "d",
+              "text": "Output window"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "designer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compilation-and-runtime-errors",
+      "title": "Compilation & Runtime Errors",
+      "description": "Build-time vs run-time failures, the execution pipeline, types of compilation errors and runtime exceptions.",
+      "questions": [
+        {
+          "id": "dn2-err-001",
+          "type": "single_choice",
+          "prompt": "A COMPILATION error happens at which stage?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Never"
+            },
+            {
+              "id": "b",
+              "text": "After deployment only"
+            },
+            {
+              "id": "c",
+              "text": "Build time — detected by the C# compiler"
+            },
+            {
+              "id": "d",
+              "text": "Run time — detected by the .NET runtime"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "dn2-err-002",
+          "type": "single_choice",
+          "prompt": "A RUNTIME error happens at which stage?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Before writing code"
+            },
+            {
+              "id": "b",
+              "text": "While a successfully built program is executing"
+            },
+            {
+              "id": "c",
+              "text": "During compilation"
+            },
+            {
+              "id": "d",
+              "text": "When saving the file"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "dn2-err-003",
+          "type": "single_choice",
+          "prompt": "Why can't a program with a compilation error run?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The browser blocks it"
+            },
+            {
+              "id": "b",
+              "text": "The runtime deletes it"
+            },
+            {
+              "id": "c",
+              "text": "It can run normally"
+            },
+            {
+              "id": "d",
+              "text": "The compiler can't translate the source code into IL, so the build fails"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "dn2-err-004",
+          "type": "single_choice",
+          "prompt": "In .NET, how are runtime errors represented?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "As compiler warnings"
+            },
+            {
+              "id": "b",
+              "text": "As exceptions"
+            },
+            {
+              "id": "c",
+              "text": "As comments"
+            },
+            {
+              "id": "d",
+              "text": "As HTML pages"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "dn2-err-005",
+          "type": "single_choice",
+          "prompt": "What is the correct C# execution pipeline?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Compiler → C# code → output → runtime"
+            },
+            {
+              "id": "b",
+              "text": "Output → runtime → compiler → C# code"
+            },
+            {
+              "id": "c",
+              "text": "C# code → compiler → .NET runtime → output"
+            },
+            {
+              "id": "d",
+              "text": "Runtime → compiler → C# code → output"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Compilation errors are caught at the compiler stage; runtime errors at the runtime stage.",
+          "difficulty": "easy",
+          "tags": [
+            "basics"
+          ]
+        },
+        {
+          "id": "dn2-err-006",
+          "type": "single_choice",
+          "prompt": "What type of compilation error is this?",
+          "code": "Console.WriteLine(\"Hello\")",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Undeclared variable"
+            },
+            {
+              "id": "b",
+              "text": "Type mismatch"
+            },
+            {
+              "id": "c",
+              "text": "Syntax error (missing semicolon)"
+            },
+            {
+              "id": "d",
+              "text": "Duplicate declaration"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "compile-types"
+          ]
+        },
+        {
+          "id": "dn2-err-007",
+          "type": "single_choice",
+          "prompt": "What type of compilation error is this?",
+          "code": "int age = \"Twenty\";",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Missing namespace"
+            },
+            {
+              "id": "b",
+              "text": "Syntax error"
+            },
+            {
+              "id": "c",
+              "text": "Access modifier violation"
+            },
+            {
+              "id": "d",
+              "text": "Type mismatch"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A string can't be assigned to an int.",
+          "difficulty": "easy",
+          "tags": [
+            "compile-types"
+          ]
+        },
+        {
+          "id": "dn2-err-008",
+          "type": "single_choice",
+          "prompt": "What type of compilation error is this?",
+          "code": "int x = 10;\nint x = 20;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Syntax error"
+            },
+            {
+              "id": "b",
+              "text": "Duplicate variable declaration"
+            },
+            {
+              "id": "c",
+              "text": "Type mismatch"
+            },
+            {
+              "id": "d",
+              "text": "Undeclared variable"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Same name twice in the same scope.",
+          "difficulty": "easy",
+          "tags": [
+            "compile-types"
+          ]
+        },
+        {
+          "id": "dn2-err-009",
+          "type": "single_choice",
+          "prompt": "What type of compilation error is `UnknownType obj = new();`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Missing namespace or reference"
+            },
+            {
+              "id": "b",
+              "text": "Runtime error"
+            },
+            {
+              "id": "c",
+              "text": "Duplicate declaration"
+            },
+            {
+              "id": "d",
+              "text": "Syntax error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The compiler can't find the type.",
+          "difficulty": "medium",
+          "tags": [
+            "compile-types"
+          ]
+        },
+        {
+          "id": "dn2-err-010",
+          "type": "single_choice",
+          "prompt": "Accessing a private field from another class causes which error?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "FormatException"
+            },
+            {
+              "id": "b",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "c",
+              "text": "Type mismatch"
+            },
+            {
+              "id": "d",
+              "text": "Access modifier violation (compilation error)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "compile-types"
+          ]
+        },
+        {
+          "id": "dn2-err-011",
+          "type": "single_choice",
+          "prompt": "In this program, which problem does the developer see FIRST?",
+          "code": "int number1 = 10;\nint number2 = 0;\n\nConsole.WriteLine(\"Total = \" + total);\n\nint result = number1 / number2;\nConsole.WriteLine(result);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Both at the same moment"
+            },
+            {
+              "id": "b",
+              "text": "Neither; it runs fine"
+            },
+            {
+              "id": "c",
+              "text": "The compilation error — `total` was never declared (CS0103)"
+            },
+            {
+              "id": "d",
+              "text": "The divide-by-zero runtime error"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A program must build before it can run, so the runtime error only appears after the compilation error is fixed.",
+          "difficulty": "hard",
+          "tags": [
+            "examples"
+          ]
+        },
+        {
+          "id": "dn2-err-012",
+          "type": "single_choice",
+          "prompt": "Once `total` is fixed, what happens when the program runs?",
+          "code": "int number1 = 10;\nint number2 = 0;\n\nConsole.WriteLine(\"Total = \" + total);\n\nint result = number1 / number2;\nConsole.WriteLine(result);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A DivideByZeroException at number1 / number2"
+            },
+            {
+              "id": "b",
+              "text": "Nothing"
+            },
+            {
+              "id": "c",
+              "text": "It prints Total = 10 and 0"
+            },
+            {
+              "id": "d",
+              "text": "A compilation error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "number2 is 0, so integer division by zero throws.",
+          "difficulty": "medium",
+          "tags": [
+            "examples"
+          ]
+        },
+        {
+          "id": "dn2-err-013",
+          "type": "typed",
+          "prompt": "Which compiler error code does your notes give for the undeclared variable `total`?",
+          "image": null,
+          "acceptedAnswers": [
+            "CS0103",
+            "cs0103"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "CSxxxx"
+          },
+          "explanation": "CS0103: The name 'total' does not exist in the current context.",
+          "difficulty": "hard",
+          "tags": [
+            "examples"
+          ]
+        },
+        {
+          "id": "dn2-err-014",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "string name = null;\nConsole.WriteLine(name.Length);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "DivideByZeroException"
+            },
+            {
+              "id": "b",
+              "text": "FormatException"
+            },
+            {
+              "id": "c",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "d",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "e",
+              "text": "FileNotFoundException"
+            },
+            {
+              "id": "f",
+              "text": "InvalidCastException"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Accessing a member through a null reference.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-015",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "int[] a = { 1, 2, 3 };\nConsole.WriteLine(a[5]);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "b",
+              "text": "FormatException"
+            },
+            {
+              "id": "c",
+              "text": "DivideByZeroException"
+            },
+            {
+              "id": "d",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "e",
+              "text": "InvalidCastException"
+            },
+            {
+              "id": "f",
+              "text": "FileNotFoundException"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The valid indexes are 0, 1 and 2.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-016",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "int n = int.Parse(\"ABC\");",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "b",
+              "text": "FormatException"
+            },
+            {
+              "id": "c",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "d",
+              "text": "DivideByZeroException"
+            },
+            {
+              "id": "e",
+              "text": "FileNotFoundException"
+            },
+            {
+              "id": "f",
+              "text": "InvalidCastException"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "\"ABC\" isn't a valid number format.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-017",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "string text = File.ReadAllText(\"missing.txt\");",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "b",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "c",
+              "text": "FormatException"
+            },
+            {
+              "id": "d",
+              "text": "InvalidCastException"
+            },
+            {
+              "id": "e",
+              "text": "FileNotFoundException"
+            },
+            {
+              "id": "f",
+              "text": "DivideByZeroException"
+            }
+          ],
+          "correct": [
+            "e"
+          ],
+          "explanation": "The file doesn't exist.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-018",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "object x = \"Hello\";\nint n = (int)x;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "b",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "c",
+              "text": "FileNotFoundException"
+            },
+            {
+              "id": "d",
+              "text": "InvalidCastException"
+            },
+            {
+              "id": "e",
+              "text": "DivideByZeroException"
+            },
+            {
+              "id": "f",
+              "text": "FormatException"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "A string object can't be cast to int at runtime.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-019",
+          "type": "single_choice",
+          "prompt": "Which runtime exception does this code throw?",
+          "code": "int number2 = 0;\nint result = 10 / number2;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "FileNotFoundException"
+            },
+            {
+              "id": "b",
+              "text": "FormatException"
+            },
+            {
+              "id": "c",
+              "text": "DivideByZeroException"
+            },
+            {
+              "id": "d",
+              "text": "NullReferenceException"
+            },
+            {
+              "id": "e",
+              "text": "IndexOutOfRangeException"
+            },
+            {
+              "id": "f",
+              "text": "InvalidCastException"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Integer division by zero.",
+          "difficulty": "medium",
+          "tags": [
+            "runtime-types"
+          ]
+        },
+        {
+          "id": "dn2-err-020",
+          "type": "multiple_choice",
+          "prompt": "Which are common causes of RUNTIME errors? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Missing semicolon"
+            },
+            {
+              "id": "b",
+              "text": "Undeclared variable"
+            },
+            {
+              "id": "c",
+              "text": "Division by zero"
+            },
+            {
+              "id": "d",
+              "text": "Null references"
+            },
+            {
+              "id": "e",
+              "text": "Invalid array index"
+            }
+          ],
+          "correct": [
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "Missing semicolons and undeclared variables are compilation errors.",
+          "difficulty": "medium",
+          "tags": [
+            "examples"
+          ]
+        },
+        {
+          "id": "dn2-err-021",
+          "type": "multiple_choice",
+          "prompt": "How do you fix a RUNTIME error? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Handle exceptions"
+            },
+            {
+              "id": "b",
+              "text": "Debug the program"
+            },
+            {
+              "id": "c",
+              "text": "Validate input"
+            },
+            {
+              "id": "d",
+              "text": "Only rebuild without changing anything"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "fixing"
+          ]
+        },
+        {
+          "id": "dn2-err-022",
+          "type": "single_choice",
+          "prompt": "How do you fix a COMPILATION error?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Handle the exception at runtime"
+            },
+            {
+              "id": "b",
+              "text": "Restart the computer"
+            },
+            {
+              "id": "c",
+              "text": "Correct the code and rebuild"
+            },
+            {
+              "id": "d",
+              "text": "Ignore it"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "fixing"
+          ]
+        }
+      ]
+    }
+  ]
+}

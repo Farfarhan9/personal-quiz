@@ -1,0 +1,4133 @@
+{
+  "id": "dotnet-ch3",
+  "title": "Dotnet Programming · Chapter 3",
+  "description": "Programming .NET with C#: types and variables, conversions and operators, statements and loops, code structure and errors, and the four OOP principles.",
+  "topics": [
+    {
+      "id": "csharp-program-structure",
+      "title": "Warm-up: A C# Program at a Glance",
+      "description": "The chapter route, building blocks of a C# program, creating a Console App and the two entry-point styles.",
+      "questions": [
+        {
+          "id": "dn3-warm-001",
+          "type": "single_choice",
+          "prompt": "What is the correct order of the Student Grade Management System's basic process?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Organise → Output → Process → Input"
+            },
+            {
+              "id": "b",
+              "text": "Input → Process → Output → Organise"
+            },
+            {
+              "id": "c",
+              "text": "Output → Input → Process → Organise"
+            },
+            {
+              "id": "d",
+              "text": "Process → Input → Organise → Output"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Input marks → apply conditions → show grade/status → keep code reusable with methods and classes.",
+          "difficulty": "easy",
+          "tags": [
+            "overview"
+          ]
+        },
+        {
+          "id": "dn3-warm-002",
+          "type": "multiple_choice",
+          "prompt": "A working application combines which three things? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Logic"
+            },
+            {
+              "id": "b",
+              "text": "A database server"
+            },
+            {
+              "id": "c",
+              "text": "Well-organised code"
+            },
+            {
+              "id": "d",
+              "text": "Data"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "overview"
+          ]
+        },
+        {
+          "id": "dn3-warm-003",
+          "type": "single_choice",
+          "prompt": "In this program, what does `using System;` do?",
+          "code": "using System;\n\nnamespace HelloDotNet\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"Hello, .NET!\");\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Gives access to types in the System namespace (e.g. Console)"
+            },
+            {
+              "id": "b",
+              "text": "Displays output"
+            },
+            {
+              "id": "c",
+              "text": "Starts the program"
+            },
+            {
+              "id": "d",
+              "text": "Declares a class"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "dn3-warm-004",
+          "type": "single_choice",
+          "prompt": "In the same program, which part is the STARTING POINT of the program?",
+          "code": "using System;\n\nnamespace HelloDotNet\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"Hello, .NET!\");\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "`static void Main(string[] args)`"
+            },
+            {
+              "id": "b",
+              "text": "`namespace HelloDotNet`"
+            },
+            {
+              "id": "c",
+              "text": "`using System;`"
+            },
+            {
+              "id": "d",
+              "text": "`class Program`"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Main() is the entry point.",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "dn3-warm-005",
+          "type": "typed",
+          "prompt": "What does this program display?",
+          "code": "using System;\n\nnamespace HelloDotNet\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"Hello, .NET!\");\n        }\n    }\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "Hello, .NET!"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "Console.WriteLine prints the text inside the quotes.",
+          "difficulty": "easy",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "dn3-warm-006",
+          "type": "multiple_choice",
+          "prompt": "Match the building blocks — which are correct? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Console.WriteLine(): displays output"
+            },
+            {
+              "id": "b",
+              "text": "Main(): reads keyboard input"
+            },
+            {
+              "id": "c",
+              "text": "class: groups related members"
+            },
+            {
+              "id": "d",
+              "text": "using: access types from a namespace"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Main() is the starting point; Console.ReadLine() reads input.",
+          "difficulty": "medium",
+          "tags": [
+            "structure"
+          ]
+        },
+        {
+          "id": "dn3-warm-007",
+          "type": "single_choice",
+          "prompt": "In Visual Studio, after creating a Console App (C#) and writing code, which shortcut runs it (without debugging)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Ctrl + Z"
+            },
+            {
+              "id": "b",
+              "text": "Ctrl + S"
+            },
+            {
+              "id": "c",
+              "text": "Ctrl + F5"
+            },
+            {
+              "id": "d",
+              "text": "Alt + F4"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Ctrl + F5 starts without debugging; F5 starts with debugging.",
+          "difficulty": "easy",
+          "tags": [
+            "visual-studio"
+          ]
+        },
+        {
+          "id": "dn3-warm-008",
+          "type": "single_choice",
+          "prompt": "Which Visual Studio project template do you choose for the first program?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Console App (C#)"
+            },
+            {
+              "id": "b",
+              "text": "ASP.NET Web App"
+            },
+            {
+              "id": "c",
+              "text": "Blank Solution"
+            },
+            {
+              "id": "d",
+              "text": "Class Library"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "visual-studio"
+          ]
+        },
+        {
+          "id": "dn3-warm-009",
+          "type": "single_choice",
+          "prompt": "What is this style of C# program called?",
+          "code": "using System;\n\nConsole.WriteLine(\"Hello, .NET!\");",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Explicit Main() method"
+            },
+            {
+              "id": "b",
+              "text": "A class library"
+            },
+            {
+              "id": "c",
+              "text": "A namespace declaration"
+            },
+            {
+              "id": "d",
+              "text": "Top-level statements"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Modern Console App templates allow code without writing Main() yourself.",
+          "difficulty": "easy",
+          "tags": [
+            "entry-point"
+          ]
+        },
+        {
+          "id": "dn3-warm-010",
+          "type": "true_false",
+          "prompt": "Both top-level statements and an explicit Main() method are valid ways to run a C# program.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Use explicit Main() when you want to show program structure and classes.",
+          "difficulty": "easy",
+          "tags": [
+            "entry-point"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-types-and-variables",
+      "title": "3.1 Data Types & Variables",
+      "description": "Value vs reference types, common types, choosing a type, constants, var and naming rules.",
+      "questions": [
+        {
+          "id": "dn3-types-001",
+          "type": "single_choice",
+          "prompt": "C# data types are divided into which two main groups?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Public and private types"
+            },
+            {
+              "id": "b",
+              "text": "Value types and reference types"
+            },
+            {
+              "id": "c",
+              "text": "Static and dynamic types"
+            },
+            {
+              "id": "d",
+              "text": "Text and number types"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-002",
+          "type": "multiple_choice",
+          "prompt": "Which are VALUE types? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "int"
+            },
+            {
+              "id": "b",
+              "text": "string"
+            },
+            {
+              "id": "c",
+              "text": "bool"
+            },
+            {
+              "id": "d",
+              "text": "arrays"
+            },
+            {
+              "id": "e",
+              "text": "decimal"
+            },
+            {
+              "id": "f",
+              "text": "char"
+            },
+            {
+              "id": "g",
+              "text": "double"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "e",
+            "f",
+            "g"
+          ],
+          "explanation": "string, arrays and class instances are reference types.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-003",
+          "type": "multiple_choice",
+          "prompt": "Which are REFERENCE types? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "class instances"
+            },
+            {
+              "id": "b",
+              "text": "int"
+            },
+            {
+              "id": "c",
+              "text": "bool"
+            },
+            {
+              "id": "d",
+              "text": "string"
+            },
+            {
+              "id": "e",
+              "text": "arrays"
+            }
+          ],
+          "correct": [
+            "a",
+            "d",
+            "e"
+          ],
+          "explanation": "A reference-type variable holds a reference to an object.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-004",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int a = 5;\nint b = a;\nb = 10;\nConsole.WriteLine(a);",
+          "image": null,
+          "acceptedAnswers": [
+            "5"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "int is a value type: `b = a` COPIES the value. Changing b doesn't affect a.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-005",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int[] first = { 1, 2 };\nint[] second = first;\nsecond[0] = 99;\nConsole.WriteLine(first[0]);",
+          "image": null,
+          "acceptedAnswers": [
+            "99"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "Arrays are reference types: `second = first` makes both variables refer to the SAME array, so the change shows through `first`.",
+          "difficulty": "hard",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-006",
+          "type": "true_false",
+          "prompt": "string is a reference type, but a string cannot be modified in place.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "Strings are immutable: operations like `name + \"!\"` create a new string.",
+          "difficulty": "medium",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-007",
+          "type": "single_choice",
+          "prompt": "Which declaration is correct for a float?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "float rate = 1.5f;"
+            },
+            {
+              "id": "b",
+              "text": "float rate = \"1.5\";"
+            },
+            {
+              "id": "c",
+              "text": "float rate = 1.5m;"
+            },
+            {
+              "id": "d",
+              "text": "float rate = 1.5;"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Add f for float, m for decimal.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-008",
+          "type": "single_choice",
+          "prompt": "Which declaration is correct for a decimal?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "decimal fee = 19.90d;"
+            },
+            {
+              "id": "b",
+              "text": "decimal fee = '19.90';"
+            },
+            {
+              "id": "c",
+              "text": "decimal fee = 19.90f;"
+            },
+            {
+              "id": "d",
+              "text": "decimal fee = 19.90m;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-009",
+          "type": "single_choice",
+          "prompt": "Which is correct for a char?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "char grade = 'AB';"
+            },
+            {
+              "id": "b",
+              "text": "char grade = 'A';"
+            },
+            {
+              "id": "c",
+              "text": "char grade = \"A\";"
+            },
+            {
+              "id": "d",
+              "text": "char grade = A;"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Single quotes and exactly one character for char; double quotes for string.",
+          "difficulty": "easy",
+          "tags": [
+            "types"
+          ]
+        },
+        {
+          "id": "dn3-types-010",
+          "type": "single_choice",
+          "prompt": "Which data type should store a TUITION FEE?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "float"
+            },
+            {
+              "id": "b",
+              "text": "int"
+            },
+            {
+              "id": "c",
+              "text": "double"
+            },
+            {
+              "id": "d",
+              "text": "decimal"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "decimal gives accurate decimal arithmetic for money.",
+          "difficulty": "easy",
+          "tags": [
+            "choose-type"
+          ]
+        },
+        {
+          "id": "dn3-types-011",
+          "type": "single_choice",
+          "prompt": "Which data type should store a student ID like \"00142\"?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "double"
+            },
+            {
+              "id": "b",
+              "text": "char"
+            },
+            {
+              "id": "c",
+              "text": "int"
+            },
+            {
+              "id": "d",
+              "text": "string"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "int would drop the leading zeros (00142 → 142).",
+          "difficulty": "easy",
+          "tags": [
+            "choose-type"
+          ]
+        },
+        {
+          "id": "dn3-types-012",
+          "type": "single_choice",
+          "prompt": "Which data type should store “Is payment complete?”",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "char"
+            },
+            {
+              "id": "b",
+              "text": "bool"
+            },
+            {
+              "id": "c",
+              "text": "int"
+            },
+            {
+              "id": "d",
+              "text": "string"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Two logical states.",
+          "difficulty": "easy",
+          "tags": [
+            "choose-type"
+          ]
+        },
+        {
+          "id": "dn3-types-013",
+          "type": "single_choice",
+          "prompt": "Which data type should store a letter grade such as A?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "bool"
+            },
+            {
+              "id": "b",
+              "text": "string"
+            },
+            {
+              "id": "c",
+              "text": "char"
+            },
+            {
+              "id": "d",
+              "text": "decimal"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A single character.",
+          "difficulty": "easy",
+          "tags": [
+            "choose-type"
+          ]
+        },
+        {
+          "id": "dn3-types-014",
+          "type": "single_choice",
+          "prompt": "Which data type should store age in years?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "string"
+            },
+            {
+              "id": "b",
+              "text": "int"
+            },
+            {
+              "id": "c",
+              "text": "double"
+            },
+            {
+              "id": "d",
+              "text": "decimal"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "A whole number.",
+          "difficulty": "easy",
+          "tags": [
+            "choose-type"
+          ]
+        },
+        {
+          "id": "dn3-types-015",
+          "type": "single_choice",
+          "prompt": "Which line will NOT compile?",
+          "code": "int marks;\nmarks = 85;\nconst double PI = 3.14159;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "marks = 90;"
+            },
+            {
+              "id": "b",
+              "text": "var year = 2026;"
+            },
+            {
+              "id": "c",
+              "text": "string studentName = \"Ali\";"
+            },
+            {
+              "id": "d",
+              "text": "PI = 3.0;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "PI is a constant, so it can't be reassigned.",
+          "difficulty": "medium",
+          "tags": [
+            "variables"
+          ]
+        },
+        {
+          "id": "dn3-types-016",
+          "type": "typed",
+          "prompt": "In `var year = 2026;`, what type does the compiler infer for year?",
+          "image": null,
+          "acceptedAnswers": [
+            "int"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "type"
+          },
+          "explanation": "var doesn't mean “any type” — the compiler infers it from the value. 2026 is an int.",
+          "difficulty": "medium",
+          "tags": [
+            "variables"
+          ]
+        },
+        {
+          "id": "dn3-types-017",
+          "type": "multiple_choice",
+          "prompt": "Which are INVALID as C# variable names? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "class"
+            },
+            {
+              "id": "b",
+              "text": "_total"
+            },
+            {
+              "id": "c",
+              "text": "1score"
+            },
+            {
+              "id": "d",
+              "text": "studentAge"
+            }
+          ],
+          "correct": [
+            "a",
+            "c"
+          ],
+          "explanation": "Names can't start with a digit, and reserved keywords like class can't be used.",
+          "difficulty": "medium",
+          "tags": [
+            "naming"
+          ]
+        },
+        {
+          "id": "dn3-types-018",
+          "type": "true_false",
+          "prompt": "In C#, `marks` and `Marks` are the same identifier.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "C# identifiers are case-sensitive.",
+          "difficulty": "easy",
+          "tags": [
+            "naming"
+          ]
+        },
+        {
+          "id": "dn3-types-019",
+          "type": "single_choice",
+          "prompt": "Which naming convention is used for LOCAL VARIABLES?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "camelCase (e.g. studentAge)"
+            },
+            {
+              "id": "b",
+              "text": "UPPER_CASE"
+            },
+            {
+              "id": "c",
+              "text": "PascalCase (e.g. StudentAge)"
+            },
+            {
+              "id": "d",
+              "text": "kebab-case"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "camelCase for locals; PascalCase for types, methods and properties.",
+          "difficulty": "easy",
+          "tags": [
+            "naming"
+          ]
+        },
+        {
+          "id": "dn3-types-020",
+          "type": "single_choice",
+          "prompt": "Which name follows the convention for a CLASS?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "StudentProfile"
+            },
+            {
+              "id": "b",
+              "text": "x"
+            },
+            {
+              "id": "c",
+              "text": "studentProfile"
+            },
+            {
+              "id": "d",
+              "text": "student_profile"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "naming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type-conversion",
+      "title": "3.1 Type Conversion & TryParse",
+      "description": "Implicit vs explicit conversion, casting, Parse and the safe TryParse pattern.",
+      "questions": [
+        {
+          "id": "dn3-conv-001",
+          "type": "single_choice",
+          "prompt": "What kind of conversion is this?",
+          "code": "int number = 25;\ndouble result = number;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Explicit — needs a cast"
+            },
+            {
+              "id": "b",
+              "text": "Invalid"
+            },
+            {
+              "id": "c",
+              "text": "Parsing"
+            },
+            {
+              "id": "d",
+              "text": "Implicit — no cast needed"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "int fits safely into double (25 → 25.0).",
+          "difficulty": "easy",
+          "tags": [
+            "conversion"
+          ]
+        },
+        {
+          "id": "dn3-conv-002",
+          "type": "typed",
+          "prompt": "What value does roundedDown hold?",
+          "code": "double price = 19.95;\nint roundedDown = (int)price;",
+          "image": null,
+          "acceptedAnswers": [
+            "19"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "Casting a double to int removes (truncates) the decimal part: 19.95 → 19.",
+          "difficulty": "medium",
+          "tags": [
+            "conversion"
+          ]
+        },
+        {
+          "id": "dn3-conv-003",
+          "type": "single_choice",
+          "prompt": "Why does converting double → int need an explicit cast?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It never compiles"
+            },
+            {
+              "id": "b",
+              "text": "int is bigger than double"
+            },
+            {
+              "id": "c",
+              "text": "Because double is a reference type"
+            },
+            {
+              "id": "d",
+              "text": "Information (the decimal part) may be lost"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Explicit conversion: always consider loss of information.",
+          "difficulty": "medium",
+          "tags": [
+            "conversion"
+          ]
+        },
+        {
+          "id": "dn3-conv-004",
+          "type": "single_choice",
+          "prompt": "Which converts the text \"42\" into an int?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "\"42\".ToInt()"
+            },
+            {
+              "id": "b",
+              "text": "int(\"42\")"
+            },
+            {
+              "id": "c",
+              "text": "int.Parse(\"42\")"
+            },
+            {
+              "id": "d",
+              "text": "(int)\"42\""
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Parsing turns text into a number. Casting a string to int doesn't compile.",
+          "difficulty": "easy",
+          "tags": [
+            "conversion"
+          ]
+        },
+        {
+          "id": "dn3-conv-005",
+          "type": "single_choice",
+          "prompt": "Which method safely converts text to int WITHOUT throwing an exception for invalid text?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "int.TryParse"
+            },
+            {
+              "id": "b",
+              "text": "(int) cast"
+            },
+            {
+              "id": "c",
+              "text": "Console.ReadLine"
+            },
+            {
+              "id": "d",
+              "text": "int.Parse"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "TryParse returns false instead of throwing a FormatException.",
+          "difficulty": "easy",
+          "tags": [
+            "tryparse"
+          ]
+        },
+        {
+          "id": "dn3-conv-006",
+          "type": "single_choice",
+          "prompt": "The user types abc. What does this print?",
+          "code": "string? input = Console.ReadLine();\n\nif (int.TryParse(input, out int age))\n    Console.WriteLine($\"Age: {age}\");\nelse\n    Console.WriteLine(\"Invalid number.\");",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The program crashes"
+            },
+            {
+              "id": "b",
+              "text": "Age: 0"
+            },
+            {
+              "id": "c",
+              "text": "Invalid number."
+            },
+            {
+              "id": "d",
+              "text": "Age: abc"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "TryParse returns false, so the else branch runs.",
+          "difficulty": "easy",
+          "tags": [
+            "tryparse"
+          ]
+        },
+        {
+          "id": "dn3-conv-007",
+          "type": "single_choice",
+          "prompt": "If the user types abc into `int.Parse(input)` instead, what happens?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It prints abc"
+            },
+            {
+              "id": "b",
+              "text": "It returns 0"
+            },
+            {
+              "id": "c",
+              "text": "It returns false"
+            },
+            {
+              "id": "d",
+              "text": "A FormatException is thrown"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "That's exactly why TryParse is safer.",
+          "difficulty": "medium",
+          "tags": [
+            "tryparse"
+          ]
+        },
+        {
+          "id": "dn3-conv-008",
+          "type": "multiple_choice",
+          "prompt": "What does int.TryParse(input, out int age) do? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Returns true when conversion succeeds"
+            },
+            {
+              "id": "b",
+              "text": "Returns false for invalid input"
+            },
+            {
+              "id": "c",
+              "text": "Throws an exception for invalid input"
+            },
+            {
+              "id": "d",
+              "text": "Stores the converted number in age"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "tryparse"
+          ]
+        },
+        {
+          "id": "dn3-conv-009",
+          "type": "single_choice",
+          "prompt": "What does the `?` in `string? input` mean?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "input is optional to declare"
+            },
+            {
+              "id": "b",
+              "text": "input is a char"
+            },
+            {
+              "id": "c",
+              "text": "input may be null (e.g. if there is no input)"
+            },
+            {
+              "id": "d",
+              "text": "input is a question"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Console.ReadLine() can return null, so the type is a nullable string.",
+          "difficulty": "hard",
+          "tags": [
+            "tryparse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operators",
+      "title": "3.1 Operators & Precedence",
+      "description": "Arithmetic, integer division, modulus, precedence, comparison and logical operators.",
+      "questions": [
+        {
+          "id": "dn3-ops-001",
+          "type": "typed",
+          "prompt": "What is `7 % 3`?",
+          "image": null,
+          "acceptedAnswers": [
+            "1"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "% gives the remainder: 7 = 2 × 3 + 1.",
+          "difficulty": "easy",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-002",
+          "type": "typed",
+          "prompt": "What is `7 / 3` when both are int?",
+          "image": null,
+          "acceptedAnswers": [
+            "2"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "Integer division drops the remainder.",
+          "difficulty": "medium",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-003",
+          "type": "typed",
+          "prompt": "What is `17 % 5`?",
+          "image": null,
+          "acceptedAnswers": [
+            "2"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "17 = 3 × 5 + 2.",
+          "difficulty": "medium",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-004",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int a = 5;\nint b = 2;\nConsole.WriteLine(a / b);",
+          "image": null,
+          "acceptedAnswers": [
+            "2"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "Both are int, so 5 / 2 = 2 (integer division).",
+          "difficulty": "medium",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-005",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int a = 5;\nint b = 2;\nConsole.WriteLine((double)a / b);",
+          "image": null,
+          "acceptedAnswers": [
+            "2.5"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "Casting a to double first makes it decimal division.",
+          "difficulty": "medium",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-006",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int x = 7;\ndouble y = x / 2;\nConsole.WriteLine(y);",
+          "image": null,
+          "acceptedAnswers": [
+            "3"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "Tricky: `x / 2` is int / int = 3 FIRST, then stored in a double as 3 (printed as 3). Use `x / 2.0` to get 3.5.",
+          "difficulty": "hard",
+          "tags": [
+            "arithmetic"
+          ]
+        },
+        {
+          "id": "dn3-ops-007",
+          "type": "typed",
+          "prompt": "What is `2 + 3 * 4`?",
+          "image": null,
+          "acceptedAnswers": [
+            "14"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "* happens before +: 3 × 4 = 12, + 2 = 14.",
+          "difficulty": "medium",
+          "tags": [
+            "precedence"
+          ]
+        },
+        {
+          "id": "dn3-ops-008",
+          "type": "typed",
+          "prompt": "What is `(2 + 3) * 4`?",
+          "image": null,
+          "acceptedAnswers": [
+            "20"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "Parentheses first: 5 × 4 = 20.",
+          "difficulty": "easy",
+          "tags": [
+            "precedence"
+          ]
+        },
+        {
+          "id": "dn3-ops-009",
+          "type": "single_choice",
+          "prompt": "Which operator means NOT EQUAL to?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "!="
+            },
+            {
+              "id": "b",
+              "text": "!=="
+            },
+            {
+              "id": "c",
+              "text": "=!"
+            },
+            {
+              "id": "d",
+              "text": "<>"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "comparison"
+          ]
+        },
+        {
+          "id": "dn3-ops-010",
+          "type": "single_choice",
+          "prompt": "What is the difference between `=` and `==`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "= assigns a value; == compares two values"
+            },
+            {
+              "id": "b",
+              "text": "== assigns; = compares"
+            },
+            {
+              "id": "c",
+              "text": "They are the same"
+            },
+            {
+              "id": "d",
+              "text": "= is for strings only"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "comparison"
+          ]
+        },
+        {
+          "id": "dn3-ops-011",
+          "type": "single_choice",
+          "prompt": "With age = 20 and paid = false, what is `age >= 18 && paid`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "true"
+            },
+            {
+              "id": "b",
+              "text": "20"
+            },
+            {
+              "id": "c",
+              "text": "false"
+            },
+            {
+              "id": "d",
+              "text": "error"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "&& is true only if BOTH sides are true.",
+          "difficulty": "easy",
+          "tags": [
+            "logical"
+          ]
+        },
+        {
+          "id": "dn3-ops-012",
+          "type": "single_choice",
+          "prompt": "With isMember = false and isStaff = true, what is `isMember || isStaff`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "false"
+            },
+            {
+              "id": "b",
+              "text": "error"
+            },
+            {
+              "id": "c",
+              "text": "true"
+            },
+            {
+              "id": "d",
+              "text": "null"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "|| is true if AT LEAST ONE side is true.",
+          "difficulty": "easy",
+          "tags": [
+            "logical"
+          ]
+        },
+        {
+          "id": "dn3-ops-013",
+          "type": "single_choice",
+          "prompt": "With isRegistered = true, what is `!isRegistered`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "false"
+            },
+            {
+              "id": "b",
+              "text": "0"
+            },
+            {
+              "id": "c",
+              "text": "true"
+            },
+            {
+              "id": "d",
+              "text": "error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "! reverses the value.",
+          "difficulty": "easy",
+          "tags": [
+            "logical"
+          ]
+        },
+        {
+          "id": "dn3-ops-014",
+          "type": "single_choice",
+          "prompt": "In Student Profile v1, the user enters 150. What is printed?",
+          "code": "bool valid = int.TryParse(Console.ReadLine(), out int marks);\n\nif (valid && marks >= 0 && marks <= 100)\n    Console.WriteLine($\"{name}: {marks} marks\");\nelse\n    Console.WriteLine(\"Invalid marks.\");",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Invalid marks."
+            },
+            {
+              "id": "b",
+              "text": "150"
+            },
+            {
+              "id": "c",
+              "text": "Nothing"
+            },
+            {
+              "id": "d",
+              "text": "Ali: 150 marks"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "valid is true, but marks <= 100 is false, so the whole && expression is false.",
+          "difficulty": "medium",
+          "tags": [
+            "logical"
+          ]
+        },
+        {
+          "id": "dn3-ops-015",
+          "type": "typed",
+          "prompt": "Campus Café: what does this print?",
+          "code": "decimal unitPrice = 4.50m;\nint quantity = 2;\n\ndecimal total = unitPrice * quantity;\nConsole.WriteLine($\"Total: RM{total:F2}\");",
+          "image": null,
+          "acceptedAnswers": [
+            "Total: RM9.00",
+            "RM9.00"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "4.50 × 2 = 9.00, and :F2 formats to 2 decimal places.",
+          "difficulty": "medium",
+          "tags": [
+            "practice"
+          ]
+        },
+        {
+          "id": "dn3-ops-016",
+          "type": "single_choice",
+          "prompt": "Why does the café app store unitPrice as decimal instead of double?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "decimal uses less memory"
+            },
+            {
+              "id": "b",
+              "text": "decimal is faster"
+            },
+            {
+              "id": "c",
+              "text": "double can't store decimals"
+            },
+            {
+              "id": "d",
+              "text": "decimal gives accurate decimal arithmetic for money (no binary rounding errors)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "practice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "selection-statements",
+      "title": "3.2 Selection Statements",
+      "description": "Sequence, selection, iteration and jump; if-else, else-if grading, switch and the conditional operator.",
+      "questions": [
+        {
+          "id": "dn3-sel-001",
+          "type": "multiple_choice",
+          "prompt": "Match the four ways statements control execution — which are correct? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Iteration: repeats a block"
+            },
+            {
+              "id": "b",
+              "text": "Sequence: runs statements in order"
+            },
+            {
+              "id": "c",
+              "text": "Jump: changes the flow (break, continue, return)"
+            },
+            {
+              "id": "d",
+              "text": "Selection: chooses a branch based on a condition"
+            },
+            {
+              "id": "e",
+              "text": "Selection: repeats a block"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "control-flow"
+          ]
+        },
+        {
+          "id": "dn3-sel-002",
+          "type": "single_choice",
+          "prompt": "Processing 5 student marks one after another uses which kind of statement?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Jump"
+            },
+            {
+              "id": "b",
+              "text": "Selection"
+            },
+            {
+              "id": "c",
+              "text": "Sequence"
+            },
+            {
+              "id": "d",
+              "text": "Iteration"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "control-flow"
+          ]
+        },
+        {
+          "id": "dn3-sel-003",
+          "type": "typed",
+          "prompt": "With marks = 49, what does this print?",
+          "code": "if (marks >= 50)\n{\n    Console.WriteLine(\"PASS\");\n}\nelse\n{\n    Console.WriteLine(\"FAIL\");\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "FAIL"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "49 >= 50 is false → else branch.",
+          "difficulty": "easy",
+          "tags": [
+            "if-else"
+          ]
+        },
+        {
+          "id": "dn3-sel-004",
+          "type": "typed",
+          "prompt": "With marks = 85, what grade does this assign?",
+          "code": "if (marks >= 80)\n    grade = \"A\";\nelse if (marks >= 60)\n    grade = \"B\";\nelse if (marks >= 50)\n    grade = \"C\";\nelse\n    grade = \"F\";",
+          "image": null,
+          "acceptedAnswers": [
+            "A"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "grade"
+          },
+          "explanation": "85 >= 80 → A.",
+          "difficulty": "easy",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-005",
+          "type": "typed",
+          "prompt": "With marks = 79, what grade does this assign?",
+          "code": "if (marks >= 80)\n    grade = \"A\";\nelse if (marks >= 60)\n    grade = \"B\";\nelse if (marks >= 50)\n    grade = \"C\";\nelse\n    grade = \"F\";",
+          "image": null,
+          "acceptedAnswers": [
+            "B"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "grade"
+          },
+          "explanation": "79 < 80, but 79 >= 60 → B.",
+          "difficulty": "medium",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-006",
+          "type": "typed",
+          "prompt": "With marks = 50, what grade does this assign?",
+          "code": "if (marks >= 80)\n    grade = \"A\";\nelse if (marks >= 60)\n    grade = \"B\";\nelse if (marks >= 50)\n    grade = \"C\";\nelse\n    grade = \"F\";",
+          "image": null,
+          "acceptedAnswers": [
+            "C"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "grade"
+          },
+          "explanation": "50 >= 50 → C (the boundary counts).",
+          "difficulty": "medium",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-007",
+          "type": "typed",
+          "prompt": "With marks = 49, what grade does this assign?",
+          "code": "if (marks >= 80)\n    grade = \"A\";\nelse if (marks >= 60)\n    grade = \"B\";\nelse if (marks >= 50)\n    grade = \"C\";\nelse\n    grade = \"F\";",
+          "image": null,
+          "acceptedAnswers": [
+            "F"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "grade"
+          },
+          "explanation": "None of the conditions are true → else → F.",
+          "difficulty": "easy",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-008",
+          "type": "single_choice",
+          "prompt": "Why must the else-if conditions be checked from HIGHEST to lowest here?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "C# requires numbers in descending order"
+            },
+            {
+              "id": "b",
+              "text": "It doesn't matter"
+            },
+            {
+              "id": "c",
+              "text": "It makes the code faster"
+            },
+            {
+              "id": "d",
+              "text": "Conditions are checked in order and the first true one wins — checking >= 50 first would give 85 a C"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "hard",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-009",
+          "type": "single_choice",
+          "prompt": "What should you do BEFORE applying the grading rules?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Convert marks to a string"
+            },
+            {
+              "id": "b",
+              "text": "Print the grade"
+            },
+            {
+              "id": "c",
+              "text": "Validate that marks are within 0–100"
+            },
+            {
+              "id": "d",
+              "text": "Use a switch"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Otherwise 150 would get an A.",
+          "difficulty": "easy",
+          "tags": [
+            "else-if"
+          ]
+        },
+        {
+          "id": "dn3-sel-010",
+          "type": "typed",
+          "prompt": "The user types 4. What does this print?",
+          "code": "switch (choice)\n{\n    case \"1\": Console.WriteLine(\"View\"); break;\n    case \"2\": Console.WriteLine(\"Add\");  break;\n    case \"3\": Console.WriteLine(\"Exit\"); break;\n    default:  Console.WriteLine(\"Invalid\"); break;\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "Invalid"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "No case matches \"4\", so default runs.",
+          "difficulty": "medium",
+          "tags": [
+            "switch"
+          ]
+        },
+        {
+          "id": "dn3-sel-011",
+          "type": "single_choice",
+          "prompt": "In a switch, what does `break` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Skips to the next case"
+            },
+            {
+              "id": "b",
+              "text": "Ends the selected case"
+            },
+            {
+              "id": "c",
+              "text": "Restarts the switch"
+            },
+            {
+              "id": "d",
+              "text": "Exits the program"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "switch"
+          ]
+        },
+        {
+          "id": "dn3-sel-012",
+          "type": "single_choice",
+          "prompt": "When is a switch statement a good choice?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "To declare a class"
+            },
+            {
+              "id": "b",
+              "text": "When checking ranges like marks >= 80"
+            },
+            {
+              "id": "c",
+              "text": "When one variable is compared against several exact values"
+            },
+            {
+              "id": "d",
+              "text": "To repeat code"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "Ranges suit if/else-if better.",
+          "difficulty": "medium",
+          "tags": [
+            "switch"
+          ]
+        },
+        {
+          "id": "dn3-sel-013",
+          "type": "typed",
+          "prompt": "What is status when m = 72?",
+          "code": "string status = m >= 50 ? \"PASS\" : \"FAIL\";",
+          "image": null,
+          "acceptedAnswers": [
+            "PASS"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "`condition ? valueIfTrue : valueIfFalse` — 72 >= 50 is true.",
+          "difficulty": "medium",
+          "tags": [
+            "conditional-operator"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loops-and-jumps",
+      "title": "3.2 Loops & Jump Statements",
+      "description": "for, while, do-while and foreach loops; break, continue and return; tracing loop output.",
+      "questions": [
+        {
+          "id": "dn3-loop-001",
+          "type": "multiple_choice",
+          "prompt": "What are the parts of this for loop? (select all that apply)",
+          "code": "for (int i = 1; i <= 3; i++)\n{\n    Console.WriteLine(i);\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Condition: i <= 3"
+            },
+            {
+              "id": "b",
+              "text": "Condition: i++"
+            },
+            {
+              "id": "c",
+              "text": "Update: i++"
+            },
+            {
+              "id": "d",
+              "text": "Initialisation: int i = 1"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "for"
+          ]
+        },
+        {
+          "id": "dn3-loop-002",
+          "type": "typed",
+          "prompt": "How many times does this loop body run?",
+          "code": "for (int i = 1; i <= 3; i++)\n{\n    Console.WriteLine(i);\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "3",
+            "three"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "i = 1, 2, 3 run; at i = 4 the condition 4 <= 3 is false and the loop stops.",
+          "difficulty": "easy",
+          "tags": [
+            "for"
+          ]
+        },
+        {
+          "id": "dn3-loop-003",
+          "type": "typed",
+          "prompt": "How many times does this loop body run?",
+          "code": "for (int i = 0; i < 5; i++)\n{\n    Console.WriteLine(i);\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "5",
+            "five"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "i = 0, 1, 2, 3, 4 → five times.",
+          "difficulty": "medium",
+          "tags": [
+            "for"
+          ]
+        },
+        {
+          "id": "dn3-loop-004",
+          "type": "single_choice",
+          "prompt": "What is the main difference between while and do-while?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "while is faster"
+            },
+            {
+              "id": "b",
+              "text": "do-while can't use conditions"
+            },
+            {
+              "id": "c",
+              "text": "There is no difference"
+            },
+            {
+              "id": "d",
+              "text": "WHEN the condition is checked: while checks first; do-while runs the body first"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "while"
+          ]
+        },
+        {
+          "id": "dn3-loop-005",
+          "type": "single_choice",
+          "prompt": "Which loop always executes its body AT LEAST ONCE?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "for"
+            },
+            {
+              "id": "b",
+              "text": "while"
+            },
+            {
+              "id": "c",
+              "text": "do-while"
+            },
+            {
+              "id": "d",
+              "text": "foreach"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "while"
+          ]
+        },
+        {
+          "id": "dn3-loop-006",
+          "type": "typed",
+          "prompt": "How many lines does this print?",
+          "code": "int i = 5;\nwhile (i <= 3)\n{\n    Console.WriteLine(i);\n    i++;\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "0",
+            "zero",
+            "none"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "while checks first: 5 <= 3 is false, so the body never runs.",
+          "difficulty": "medium",
+          "tags": [
+            "while"
+          ]
+        },
+        {
+          "id": "dn3-loop-007",
+          "type": "typed",
+          "prompt": "What does this print?",
+          "code": "int i = 5;\ndo\n{\n    Console.WriteLine(i);\n    i++;\n} while (i <= 3);",
+          "image": null,
+          "acceptedAnswers": [
+            "5"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "do-while runs the body once BEFORE checking 6 <= 3, so it prints 5 once.",
+          "difficulty": "hard",
+          "tags": [
+            "while"
+          ]
+        },
+        {
+          "id": "dn3-loop-008",
+          "type": "single_choice",
+          "prompt": "Which loop is best to visit each item in a collection without an index?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "switch"
+            },
+            {
+              "id": "b",
+              "text": "for"
+            },
+            {
+              "id": "c",
+              "text": "foreach"
+            },
+            {
+              "id": "d",
+              "text": "do-while"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "for uses a counter/index; foreach uses each item.",
+          "difficulty": "easy",
+          "tags": [
+            "foreach"
+          ]
+        },
+        {
+          "id": "dn3-loop-009",
+          "type": "typed",
+          "prompt": "What is the FIRST number this prints?",
+          "code": "int[] scores = { 72, 86, 61 };\n\nforeach (int score in scores)\n{\n    Console.WriteLine(score);\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "72"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "foreach visits items in order: 72, 86, 61.",
+          "difficulty": "easy",
+          "tags": [
+            "foreach"
+          ]
+        },
+        {
+          "id": "dn3-loop-010",
+          "type": "single_choice",
+          "prompt": "Which jump statement STOPS the current loop or switch?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "goto next"
+            },
+            {
+              "id": "b",
+              "text": "continue"
+            },
+            {
+              "id": "c",
+              "text": "break"
+            },
+            {
+              "id": "d",
+              "text": "return"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "jump"
+          ]
+        },
+        {
+          "id": "dn3-loop-011",
+          "type": "single_choice",
+          "prompt": "Which jump statement SKIPS to the next loop iteration?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "continue"
+            },
+            {
+              "id": "b",
+              "text": "skip"
+            },
+            {
+              "id": "c",
+              "text": "break"
+            },
+            {
+              "id": "d",
+              "text": "return"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "jump"
+          ]
+        },
+        {
+          "id": "dn3-loop-012",
+          "type": "single_choice",
+          "prompt": "Which jump statement exits a METHOD, optionally with a value?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "break"
+            },
+            {
+              "id": "b",
+              "text": "exit"
+            },
+            {
+              "id": "c",
+              "text": "return"
+            },
+            {
+              "id": "d",
+              "text": "continue"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "jump"
+          ]
+        },
+        {
+          "id": "dn3-loop-013",
+          "type": "typed",
+          "prompt": "Predict the output.",
+          "code": "int sum = 0;\n\nfor (int i = 1; i <= 5; i++)\n{\n    if (i == 3) continue;\n    sum += i;\n}\n\nConsole.WriteLine(sum);",
+          "image": null,
+          "acceptedAnswers": [
+            "12"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "continue skips 3, so sum = 1 + 2 + 4 + 5 = 12.",
+          "difficulty": "medium",
+          "tags": [
+            "tracing"
+          ]
+        },
+        {
+          "id": "dn3-loop-014",
+          "type": "typed",
+          "prompt": "If `continue` is changed to `break`, what is printed?",
+          "code": "int sum = 0;\n\nfor (int i = 1; i <= 5; i++)\n{\n    if (i == 3) break;\n    sum += i;\n}\n\nConsole.WriteLine(sum);",
+          "image": null,
+          "acceptedAnswers": [
+            "3"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "The loop stops at i = 3, so only 1 + 2 = 3 is added.",
+          "difficulty": "hard",
+          "tags": [
+            "tracing"
+          ]
+        },
+        {
+          "id": "dn3-loop-015",
+          "type": "single_choice",
+          "prompt": "In Grade Manager v2, what happens when the user types 120 for a student?",
+          "code": "for (int i = 1; i <= 3; i++)\n{\n    Console.Write($\"Marks for student {i}: \");\n    if (!int.TryParse(Console.ReadLine(), out int m)\n        || m < 0 || m > 100)\n    {\n        Console.WriteLine(\"Invalid marks\");\n        continue;\n    }\n\n    string status = m >= 50 ? \"PASS\" : \"FAIL\";\n    Console.WriteLine($\"Student {i}: {status}\");\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The program crashes"
+            },
+            {
+              "id": "b",
+              "text": "Student gets PASS"
+            },
+            {
+              "id": "c",
+              "text": "\"Invalid marks\" is printed and continue moves on to the next student"
+            },
+            {
+              "id": "d",
+              "text": "The loop stops completely"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "m > 100 makes the OR condition true; continue skips the rest of that iteration.",
+          "difficulty": "medium",
+          "tags": [
+            "tracing"
+          ]
+        },
+        {
+          "id": "dn3-loop-016",
+          "type": "typed",
+          "prompt": "Event Ticket Counter: children under 13 pay RM5, everyone else RM10. Four people aged 8, 25, 12 and 13 buy tickets. What is the total in RM?",
+          "image": null,
+          "acceptedAnswers": [
+            "30",
+            "rm30",
+            "rm 30"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "number"
+          },
+          "explanation": "8 → 5, 25 → 10, 12 → 5, 13 → 10 (13 is NOT under 13). Total = 30.",
+          "difficulty": "medium",
+          "tags": [
+            "practice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code-structure-and-methods",
+      "title": "3.3 Code Structure, Methods & Scope",
+      "description": "using, namespace, class, Main, methods, parameters vs arguments, return values, void, fields vs locals and readability.",
+      "questions": [
+        {
+          "id": "dn3-struct-001",
+          "type": "multiple_choice",
+          "prompt": "Which statements about this program are correct? (select all that apply)",
+          "code": "using System;\n\nnamespace GradeApp\n{\n    class Program\n    {\n        static void Main()\n        {\n            PrintWelcome();\n        }\n\n        static void PrintWelcome()\n        {\n            Console.WriteLine(\"Welcome!\");\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "PrintWelcome is a reusable method"
+            },
+            {
+              "id": "b",
+              "text": "PrintWelcome runs before Main"
+            },
+            {
+              "id": "c",
+              "text": "namespace GradeApp groups related types"
+            },
+            {
+              "id": "d",
+              "text": "Main starts this executable"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "Main calls PrintWelcome.",
+          "difficulty": "medium",
+          "tags": [
+            "anatomy"
+          ]
+        },
+        {
+          "id": "dn3-struct-002",
+          "type": "single_choice",
+          "prompt": "What design principle should each method follow?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "As many tasks as possible"
+            },
+            {
+              "id": "b",
+              "text": "One clear responsibility"
+            },
+            {
+              "id": "c",
+              "text": "Always over 50 lines"
+            },
+            {
+              "id": "d",
+              "text": "Never return a value"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "methods"
+          ]
+        },
+        {
+          "id": "dn3-struct-003",
+          "type": "single_choice",
+          "prompt": "Which method in the grade system should convert a mark to a grade?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "DisplayResult()"
+            },
+            {
+              "id": "b",
+              "text": "CalculateGrade()"
+            },
+            {
+              "id": "c",
+              "text": "GetMarks()"
+            },
+            {
+              "id": "d",
+              "text": "Main()"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "methods"
+          ]
+        },
+        {
+          "id": "dn3-struct-004",
+          "type": "single_choice",
+          "prompt": "In this code, what is `int marks`?",
+          "code": "static string GetGrade(int marks)\n{\n    if (marks >= 80) return \"A\";\n    if (marks >= 60) return \"B\";\n    if (marks >= 50) return \"C\";\n    return \"F\";\n}\n\nstring result = GetGrade(85);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A field"
+            },
+            {
+              "id": "b",
+              "text": "A parameter"
+            },
+            {
+              "id": "c",
+              "text": "A return value"
+            },
+            {
+              "id": "d",
+              "text": "An argument"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "The variable in the method definition is the parameter.",
+          "difficulty": "easy",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dn3-struct-005",
+          "type": "single_choice",
+          "prompt": "In the same code, what is `85` in `GetGrade(85)`?",
+          "code": "static string GetGrade(int marks)\n{\n    if (marks >= 80) return \"A\";\n    if (marks >= 60) return \"B\";\n    if (marks >= 50) return \"C\";\n    return \"F\";\n}\n\nstring result = GetGrade(85);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A constant field"
+            },
+            {
+              "id": "b",
+              "text": "A return type"
+            },
+            {
+              "id": "c",
+              "text": "A parameter"
+            },
+            {
+              "id": "d",
+              "text": "An argument"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "The value passed in when calling is the argument.",
+          "difficulty": "easy",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dn3-struct-006",
+          "type": "typed",
+          "prompt": "What value is stored in result?",
+          "code": "static string GetGrade(int marks)\n{\n    if (marks >= 80) return \"A\";\n    if (marks >= 60) return \"B\";\n    if (marks >= 50) return \"C\";\n    return \"F\";\n}\n\nstring result = GetGrade(85);",
+          "image": null,
+          "acceptedAnswers": [
+            "A"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "85 >= 80, so the method returns \"A\".",
+          "difficulty": "easy",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dn3-struct-007",
+          "type": "single_choice",
+          "prompt": "What does `void` mean in `static void PrintGrade(string grade)`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "The method returns no value"
+            },
+            {
+              "id": "b",
+              "text": "The method is private"
+            },
+            {
+              "id": "c",
+              "text": "The method is empty"
+            },
+            {
+              "id": "d",
+              "text": "The method takes no parameters"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "parameters"
+          ]
+        },
+        {
+          "id": "dn3-struct-008",
+          "type": "single_choice",
+          "prompt": "In this class, what is `total`?",
+          "code": "class Counter\n{\n    private int total = 0;\n\n    public void AddOne()\n    {\n        int amount = 1;\n        total += amount;\n    }\n\n    public int GetTotal() => total;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A parameter"
+            },
+            {
+              "id": "b",
+              "text": "A class field"
+            },
+            {
+              "id": "c",
+              "text": "A local variable"
+            },
+            {
+              "id": "d",
+              "text": "A constant"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "It belongs to the object and keeps its value between method calls.",
+          "difficulty": "easy",
+          "tags": [
+            "scope"
+          ]
+        },
+        {
+          "id": "dn3-struct-009",
+          "type": "single_choice",
+          "prompt": "In the same class, what is `amount`?",
+          "code": "class Counter\n{\n    private int total = 0;\n\n    public void AddOne()\n    {\n        int amount = 1;\n        total += amount;\n    }\n\n    public int GetTotal() => total;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A local variable, visible only inside AddOne()"
+            },
+            {
+              "id": "b",
+              "text": "A class field"
+            },
+            {
+              "id": "c",
+              "text": "A property"
+            },
+            {
+              "id": "d",
+              "text": "A global variable"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "scope"
+          ]
+        },
+        {
+          "id": "dn3-struct-010",
+          "type": "typed",
+          "prompt": "A Counter object calls AddOne() three times. What does GetTotal() return?",
+          "code": "class Counter\n{\n    private int total = 0;\n\n    public void AddOne()\n    {\n        int amount = 1;\n        total += amount;\n    }\n\n    public int GetTotal() => total;\n}",
+          "image": null,
+          "acceptedAnswers": [
+            "3"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "total is a field, so it keeps increasing: 0 → 1 → 2 → 3.",
+          "difficulty": "medium",
+          "tags": [
+            "scope"
+          ]
+        },
+        {
+          "id": "dn3-struct-011",
+          "type": "multiple_choice",
+          "prompt": "Which make code more readable and maintainable? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Consistent indentation"
+            },
+            {
+              "id": "b",
+              "text": "Putting everything on one line"
+            },
+            {
+              "id": "c",
+              "text": "Small methods"
+            },
+            {
+              "id": "d",
+              "text": "Meaningful names"
+            }
+          ],
+          "correct": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "readability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "errors-and-debugging",
+      "title": "3.3 Errors & Debugging",
+      "description": "Compilation, runtime and logic errors, the debugging exercise and debugging tips.",
+      "questions": [
+        {
+          "id": "dn3-err-001",
+          "type": "single_choice",
+          "prompt": "What kind of error is `int age = \"twenty\";`?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "No error"
+            },
+            {
+              "id": "b",
+              "text": "Logic error"
+            },
+            {
+              "id": "c",
+              "text": "Compilation error"
+            },
+            {
+              "id": "d",
+              "text": "Runtime error"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A string can't be assigned to an int — caught before the program runs.",
+          "difficulty": "easy",
+          "tags": [
+            "errors"
+          ]
+        },
+        {
+          "id": "dn3-err-002",
+          "type": "single_choice",
+          "prompt": "What kind of error is this?",
+          "code": "int b = 0;\nConsole.WriteLine(5 / b);",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Compilation error"
+            },
+            {
+              "id": "b",
+              "text": "No error"
+            },
+            {
+              "id": "c",
+              "text": "Logic error"
+            },
+            {
+              "id": "d",
+              "text": "Runtime error (division by zero)"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "It compiles, but crashes while running.",
+          "difficulty": "easy",
+          "tags": [
+            "errors"
+          ]
+        },
+        {
+          "id": "dn3-err-003",
+          "type": "single_choice",
+          "prompt": "What kind of error is `total = price - quantity;` (when you meant price × quantity)?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Logic error"
+            },
+            {
+              "id": "b",
+              "text": "Compilation error"
+            },
+            {
+              "id": "c",
+              "text": "Syntax error"
+            },
+            {
+              "id": "d",
+              "text": "Runtime error"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "It runs, but the result is wrong.",
+          "difficulty": "easy",
+          "tags": [
+            "errors"
+          ]
+        },
+        {
+          "id": "dn3-err-004",
+          "type": "single_choice",
+          "prompt": "In this code, which line is the COMPILATION error?",
+          "code": "string customer = \"Amir\";\nint age = \"21\";\nint totalStudents = 8;\nint groups = 0;\nint eachGroup = totalStudents / groups;\ndecimal itemPrice = 5.00m;\nint quantity = 3;\ndecimal total = itemPrice - quantity;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "int age = \"21\";"
+            },
+            {
+              "id": "b",
+              "text": "decimal total = itemPrice - quantity;"
+            },
+            {
+              "id": "c",
+              "text": "int eachGroup = totalStudents / groups;"
+            },
+            {
+              "id": "d",
+              "text": "string customer = \"Amir\";"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "\"21\" is a string. Fix: int age = 21;",
+          "difficulty": "medium",
+          "tags": [
+            "debugging"
+          ]
+        },
+        {
+          "id": "dn3-err-005",
+          "type": "single_choice",
+          "prompt": "Which line causes a RUNTIME failure?",
+          "code": "string customer = \"Amir\";\nint age = \"21\";\nint totalStudents = 8;\nint groups = 0;\nint eachGroup = totalStudents / groups;\ndecimal itemPrice = 5.00m;\nint quantity = 3;\ndecimal total = itemPrice - quantity;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "int age = \"21\";"
+            },
+            {
+              "id": "b",
+              "text": "decimal total = itemPrice - quantity;"
+            },
+            {
+              "id": "c",
+              "text": "int quantity = 3;"
+            },
+            {
+              "id": "d",
+              "text": "int eachGroup = totalStudents / groups;"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "groups is 0 → divide by zero. Fix: check groups > 0 first.",
+          "difficulty": "medium",
+          "tags": [
+            "debugging"
+          ]
+        },
+        {
+          "id": "dn3-err-006",
+          "type": "single_choice",
+          "prompt": "Which line is the LOGIC mistake?",
+          "code": "string customer = \"Amir\";\nint age = \"21\";\nint totalStudents = 8;\nint groups = 0;\nint eachGroup = totalStudents / groups;\ndecimal itemPrice = 5.00m;\nint quantity = 3;\ndecimal total = itemPrice - quantity;",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "int groups = 0;"
+            },
+            {
+              "id": "b",
+              "text": "int totalStudents = 8;"
+            },
+            {
+              "id": "c",
+              "text": "decimal total = itemPrice - quantity;"
+            },
+            {
+              "id": "d",
+              "text": "int age = \"21\";"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "A total price needs multiplication: itemPrice * quantity.",
+          "difficulty": "medium",
+          "tags": [
+            "debugging"
+          ]
+        },
+        {
+          "id": "dn3-err-007",
+          "type": "multiple_choice",
+          "prompt": "Which are debugging tips from your notes? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Set breakpoints"
+            },
+            {
+              "id": "b",
+              "text": "Step through code"
+            },
+            {
+              "id": "c",
+              "text": "Inspect variables"
+            },
+            {
+              "id": "d",
+              "text": "Read error messages"
+            },
+            {
+              "id": "e",
+              "text": "Delete the code and start again"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "debugging"
+          ]
+        },
+        {
+          "id": "dn3-err-008",
+          "type": "true_false",
+          "prompt": "A program with a logic error usually runs without crashing.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "It just gives the wrong result.",
+          "difficulty": "easy",
+          "tags": [
+            "errors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classes-and-objects",
+      "title": "3.4 Classes & Objects",
+      "description": "Procedural vs OOP thinking, class vs object, properties, methods, constructors and creating objects.",
+      "questions": [
+        {
+          "id": "dn3-obj-001",
+          "type": "single_choice",
+          "prompt": "How does object-oriented thinking differ from procedural thinking?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "OOP can't solve problems procedural code can"
+            },
+            {
+              "id": "b",
+              "text": "OOP bundles related data (state) and behaviour (methods) into objects; procedural code often keeps data and functions separate"
+            },
+            {
+              "id": "c",
+              "text": "Procedural code always uses classes"
+            },
+            {
+              "id": "d",
+              "text": "There is no difference"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Both solve problems; OOP groups state with relevant behaviour.",
+          "difficulty": "easy",
+          "tags": [
+            "oop-basics"
+          ]
+        },
+        {
+          "id": "dn3-obj-002",
+          "type": "single_choice",
+          "prompt": "What is the relationship between a class and an object?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A class is the blueprint; an object is an instance created from it"
+            },
+            {
+              "id": "b",
+              "text": "They are the same"
+            },
+            {
+              "id": "c",
+              "text": "A class is a variable"
+            },
+            {
+              "id": "d",
+              "text": "An object is the blueprint; a class is an instance"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "oop-basics"
+          ]
+        },
+        {
+          "id": "dn3-obj-003",
+          "type": "single_choice",
+          "prompt": "In this class, what are Name and Marks?",
+          "code": "class Student\n{\n    public string Name { get; set; }\n    public int Marks { get; set; }\n\n    public Student(string name, int marks)\n    {\n        Name = name;\n        Marks = marks;\n    }\n\n    public bool HasPassed() => Marks >= 50;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Properties"
+            },
+            {
+              "id": "b",
+              "text": "Methods"
+            },
+            {
+              "id": "c",
+              "text": "Namespaces"
+            },
+            {
+              "id": "d",
+              "text": "Constructors"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Properties store or expose an object's data.",
+          "difficulty": "easy",
+          "tags": [
+            "members"
+          ]
+        },
+        {
+          "id": "dn3-obj-004",
+          "type": "single_choice",
+          "prompt": "In the same class, what is `public Student(string name, int marks)`?",
+          "code": "class Student\n{\n    public string Name { get; set; }\n    public int Marks { get; set; }\n\n    public Student(string name, int marks)\n    {\n        Name = name;\n        Marks = marks;\n    }\n\n    public bool HasPassed() => Marks >= 50;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "A constructor"
+            },
+            {
+              "id": "b",
+              "text": "A return value"
+            },
+            {
+              "id": "c",
+              "text": "A field"
+            },
+            {
+              "id": "d",
+              "text": "A property"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "It has the same name as the class and no return type; it initialises the object.",
+          "difficulty": "easy",
+          "tags": [
+            "members"
+          ]
+        },
+        {
+          "id": "dn3-obj-005",
+          "type": "single_choice",
+          "prompt": "What is `HasPassed()`?",
+          "code": "class Student\n{\n    public string Name { get; set; }\n    public int Marks { get; set; }\n\n    public Student(string name, int marks)\n    {\n        Name = name;\n        Marks = marks;\n    }\n\n    public bool HasPassed() => Marks >= 50;\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "An instance method (behaviour)"
+            },
+            {
+              "id": "b",
+              "text": "A constructor"
+            },
+            {
+              "id": "c",
+              "text": "A class"
+            },
+            {
+              "id": "d",
+              "text": "A property"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Methods define behaviour.",
+          "difficulty": "easy",
+          "tags": [
+            "members"
+          ]
+        },
+        {
+          "id": "dn3-obj-006",
+          "type": "single_choice",
+          "prompt": "Which class member initialises an object when it is created?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Property"
+            },
+            {
+              "id": "b",
+              "text": "Constructor"
+            },
+            {
+              "id": "c",
+              "text": "Field"
+            },
+            {
+              "id": "d",
+              "text": "Method"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "members"
+          ]
+        },
+        {
+          "id": "dn3-obj-007",
+          "type": "typed",
+          "prompt": "What is the SECOND line this prints?",
+          "code": "Student student1 = new Student(\"Ali\", 85);\nStudent student2 = new Student(\"Sara\", 45);\n\nConsole.WriteLine(student1.Name);\nConsole.WriteLine(student1.HasPassed());\nConsole.WriteLine(student2.HasPassed());",
+          "image": null,
+          "acceptedAnswers": [
+            "True"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "student1 has 85 marks; 85 >= 50 → True (C# prints bools as True/False).",
+          "difficulty": "medium",
+          "tags": [
+            "objects"
+          ]
+        },
+        {
+          "id": "dn3-obj-008",
+          "type": "typed",
+          "prompt": "What is the THIRD line this prints?",
+          "code": "Student student1 = new Student(\"Ali\", 85);\nStudent student2 = new Student(\"Sara\", 45);\n\nConsole.WriteLine(student1.Name);\nConsole.WriteLine(student1.HasPassed());\nConsole.WriteLine(student2.HasPassed());",
+          "image": null,
+          "acceptedAnswers": [
+            "False"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "output"
+          },
+          "explanation": "student2 has 45 marks; 45 >= 50 is false.",
+          "difficulty": "medium",
+          "tags": [
+            "objects"
+          ]
+        },
+        {
+          "id": "dn3-obj-009",
+          "type": "single_choice",
+          "prompt": "Which keyword creates a new object?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "class"
+            },
+            {
+              "id": "b",
+              "text": "create"
+            },
+            {
+              "id": "c",
+              "text": "make"
+            },
+            {
+              "id": "d",
+              "text": "new"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "objects"
+          ]
+        },
+        {
+          "id": "dn3-obj-010",
+          "type": "true_false",
+          "prompt": "student1 and student2 are different instances of the same Student class.",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "objects"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "four-oop-principles",
+      "title": "3.4 The Four OOP Principles",
+      "description": "Encapsulation, inheritance, polymorphism and abstraction with code.",
+      "questions": [
+        {
+          "id": "dn3-oop-001",
+          "type": "multiple_choice",
+          "prompt": "What are the four OOP principles? (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Encapsulation"
+            },
+            {
+              "id": "b",
+              "text": "Abstraction"
+            },
+            {
+              "id": "c",
+              "text": "Inheritance"
+            },
+            {
+              "id": "d",
+              "text": "Compilation"
+            },
+            {
+              "id": "e",
+              "text": "Polymorphism"
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "dn3-oop-002",
+          "type": "single_choice",
+          "prompt": "Which OOP principle does this code show?",
+          "code": "class Student\n{\n    private int marks;\n\n    public int Marks\n    {\n        get => marks;\n        set\n        {\n            if (value < 0 || value > 100)\n                throw new ArgumentOutOfRangeException();\n            marks = value;\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Polymorphism"
+            },
+            {
+              "id": "b",
+              "text": "Encapsulation"
+            },
+            {
+              "id": "c",
+              "text": "Inheritance"
+            },
+            {
+              "id": "d",
+              "text": "Abstraction"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "A private field with a public property that controls and validates access.",
+          "difficulty": "easy",
+          "tags": [
+            "encapsulation"
+          ]
+        },
+        {
+          "id": "dn3-oop-003",
+          "type": "single_choice",
+          "prompt": "With the class above, what happens on `student.Marks = 120;`?",
+          "code": "class Student\n{\n    private int marks;\n\n    public int Marks\n    {\n        get => marks;\n        set\n        {\n            if (value < 0 || value > 100)\n                throw new ArgumentOutOfRangeException();\n            marks = value;\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "marks becomes 120"
+            },
+            {
+              "id": "b",
+              "text": "Nothing happens"
+            },
+            {
+              "id": "c",
+              "text": "An ArgumentOutOfRangeException is thrown"
+            },
+            {
+              "id": "d",
+              "text": "marks becomes 100"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "The setter rejects values outside 0–100.",
+          "difficulty": "medium",
+          "tags": [
+            "encapsulation"
+          ]
+        },
+        {
+          "id": "dn3-oop-004",
+          "type": "true_false",
+          "prompt": "Code outside the class can read or change `marks` directly.",
+          "code": "class Student\n{\n    private int marks;\n\n    public int Marks\n    {\n        get => marks;\n        set\n        {\n            if (value < 0 || value > 100)\n                throw new ArgumentOutOfRangeException();\n            marks = value;\n        }\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "false"
+          ],
+          "explanation": "marks is private; outside code must go through the Marks property.",
+          "difficulty": "easy",
+          "tags": [
+            "encapsulation"
+          ]
+        },
+        {
+          "id": "dn3-oop-005",
+          "type": "single_choice",
+          "prompt": "Which OOP principle protects internal state through access control?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Abstraction"
+            },
+            {
+              "id": "b",
+              "text": "Polymorphism"
+            },
+            {
+              "id": "c",
+              "text": "Inheritance"
+            },
+            {
+              "id": "d",
+              "text": "Encapsulation"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "encapsulation"
+          ]
+        },
+        {
+          "id": "dn3-oop-006",
+          "type": "single_choice",
+          "prompt": "In this code, which is the BASE class?",
+          "code": "class Person\n{\n    public string Name { get; set; } = \"\";\n}\n\nclass Student : Person\n{\n    public string StudentId { get; set; } = \"\";\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Student"
+            },
+            {
+              "id": "b",
+              "text": "Name"
+            },
+            {
+              "id": "c",
+              "text": "StudentId"
+            },
+            {
+              "id": "d",
+              "text": "Person"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "`Student : Person` means Student derives from Person.",
+          "difficulty": "easy",
+          "tags": [
+            "inheritance"
+          ]
+        },
+        {
+          "id": "dn3-oop-007",
+          "type": "multiple_choice",
+          "prompt": "A Student object `s` is created. Which lines work? (select all that apply)",
+          "code": "class Person\n{\n    public string Name { get; set; } = \"\";\n}\n\nclass Student : Person\n{\n    public string StudentId { get; set; } = \"\";\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "s.StudentId = \"S001\";"
+            },
+            {
+              "id": "b",
+              "text": "s.Name = \"Ali\";"
+            },
+            {
+              "id": "c",
+              "text": "Person p = new Person(); p.StudentId = \"S001\";"
+            }
+          ],
+          "correct": [
+            "a",
+            "b"
+          ],
+          "explanation": "Student inherits Name from Person and has its own StudentId. A plain Person has no StudentId.",
+          "difficulty": "medium",
+          "tags": [
+            "inheritance"
+          ]
+        },
+        {
+          "id": "dn3-oop-008",
+          "type": "single_choice",
+          "prompt": "Which relationship does inheritance express here?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Student HAS-A Person"
+            },
+            {
+              "id": "b",
+              "text": "No relationship"
+            },
+            {
+              "id": "c",
+              "text": "Person IS-A Student"
+            },
+            {
+              "id": "d",
+              "text": "Student IS-A Person"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "inheritance"
+          ]
+        },
+        {
+          "id": "dn3-oop-009",
+          "type": "typed",
+          "prompt": "What does `b.Describe()` return?",
+          "code": "class Person\n{\n    public virtual string Describe() => \"Person\";\n}\n\nclass Student : Person\n{\n    public override string Describe() => \"Student\";\n}\n\nPerson a = new Person();\nPerson b = new Student();",
+          "image": null,
+          "acceptedAnswers": [
+            "Student"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "b's reference type is Person, but the actual object is a Student, and the method is virtual/override — so Student's version runs.",
+          "difficulty": "hard",
+          "tags": [
+            "polymorphism"
+          ]
+        },
+        {
+          "id": "dn3-oop-010",
+          "type": "single_choice",
+          "prompt": "What does the `virtual` keyword do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Prevents overriding"
+            },
+            {
+              "id": "b",
+              "text": "Allows the method to be overridden in a derived class"
+            },
+            {
+              "id": "c",
+              "text": "Creates an object"
+            },
+            {
+              "id": "d",
+              "text": "Makes the method private"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "polymorphism"
+          ]
+        },
+        {
+          "id": "dn3-oop-011",
+          "type": "single_choice",
+          "prompt": "What does `override` do?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Supplies a new implementation of an inherited virtual method"
+            },
+            {
+              "id": "b",
+              "text": "Declares a property"
+            },
+            {
+              "id": "c",
+              "text": "Deletes the base method"
+            },
+            {
+              "id": "d",
+              "text": "Calls the base method"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "polymorphism"
+          ]
+        },
+        {
+          "id": "dn3-oop-012",
+          "type": "true_false",
+          "prompt": "A base-class reference (Person) can hold a derived-class object (Student).",
+          "image": null,
+          "options": [
+            {
+              "id": "true",
+              "text": "True"
+            },
+            {
+              "id": "false",
+              "text": "False"
+            }
+          ],
+          "correct": [
+            "true"
+          ],
+          "explanation": "The behaviour depends on the actual object.",
+          "difficulty": "easy",
+          "tags": [
+            "polymorphism"
+          ]
+        },
+        {
+          "id": "dn3-oop-013",
+          "type": "single_choice",
+          "prompt": "Which OOP principle does this code show?",
+          "code": "interface IReport\n{\n    string Generate();\n}\n\nclass GradeReport : IReport\n{\n    public string Generate()\n    {\n        return \"Grade Report\";\n    }\n}",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Abstraction"
+            },
+            {
+              "id": "b",
+              "text": "Inheritance only"
+            },
+            {
+              "id": "c",
+              "text": "Encapsulation"
+            },
+            {
+              "id": "d",
+              "text": "Polymorphism only"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "The interface says WHAT a report must do (Generate); GradeReport supplies HOW.",
+          "difficulty": "easy",
+          "tags": [
+            "abstraction"
+          ]
+        },
+        {
+          "id": "dn3-oop-014",
+          "type": "typed",
+          "prompt": "What does `report.Generate()` return?",
+          "code": "interface IReport\n{\n    string Generate();\n}\n\nclass GradeReport : IReport\n{\n    public string Generate()\n    {\n        return \"Grade Report\";\n    }\n}\n\nIReport report = new GradeReport();",
+          "image": null,
+          "acceptedAnswers": [
+            "Grade Report"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "abstraction"
+          ]
+        },
+        {
+          "id": "dn3-oop-015",
+          "type": "single_choice",
+          "prompt": "Which summary matches ABSTRACTION?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reuse and extend a base type"
+            },
+            {
+              "id": "b",
+              "text": "Different forms of the same operation"
+            },
+            {
+              "id": "c",
+              "text": "Protect and validate state"
+            },
+            {
+              "id": "d",
+              "text": "Expose what, hide how"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "dn3-oop-016",
+          "type": "single_choice",
+          "prompt": "Which summary matches POLYMORPHISM?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reuse a base type"
+            },
+            {
+              "id": "b",
+              "text": "Different forms of the same operation (virtual/override)"
+            },
+            {
+              "id": "c",
+              "text": "Protect and validate state"
+            },
+            {
+              "id": "d",
+              "text": "Expose what, hide how"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "principles"
+          ]
+        },
+        {
+          "id": "dn3-oop-017",
+          "type": "single_choice",
+          "prompt": "Your notes say “also explore abstract class”. Which is true of an abstract class?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "It can only contain fields"
+            },
+            {
+              "id": "b",
+              "text": "It is the same as a static class"
+            },
+            {
+              "id": "c",
+              "text": "It can't have any methods"
+            },
+            {
+              "id": "d",
+              "text": "It can't be instantiated with new; derived classes provide the missing implementations"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Like an interface, it defines a contract, but it can also contain shared code.",
+          "difficulty": "hard",
+          "tags": [
+            "abstraction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing-and-knowledge-check",
+      "title": "Testing, Mini PBL & Knowledge Check",
+      "description": "Boundary test cases, the mini PBL requirements, learning outcomes and the knowledge-check questions.",
+      "questions": [
+        {
+          "id": "dn3-test-001",
+          "type": "single_choice",
+          "prompt": "Test case 49: what is the expected behaviour?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Grade F / FAIL"
+            },
+            {
+              "id": "b",
+              "text": "Grade C / PASS"
+            },
+            {
+              "id": "c",
+              "text": "Grade B / PASS"
+            },
+            {
+              "id": "d",
+              "text": "Grade A / PASS"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "Boundaries: 50 is the lowest pass, 80 the lowest A.",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-002",
+          "type": "single_choice",
+          "prompt": "Test case 50: what is the expected behaviour?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Grade F / FAIL"
+            },
+            {
+              "id": "b",
+              "text": "Grade C / PASS"
+            },
+            {
+              "id": "c",
+              "text": "Grade B / PASS"
+            },
+            {
+              "id": "d",
+              "text": "Grade A / PASS"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "Boundaries: 50 is the lowest pass, 80 the lowest A.",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-003",
+          "type": "single_choice",
+          "prompt": "Test case 80: what is the expected behaviour?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Grade F / FAIL"
+            },
+            {
+              "id": "b",
+              "text": "Grade C / PASS"
+            },
+            {
+              "id": "c",
+              "text": "Grade B / PASS"
+            },
+            {
+              "id": "d",
+              "text": "Grade A / PASS"
+            }
+          ],
+          "correct": [
+            "d"
+          ],
+          "explanation": "Boundaries: 50 is the lowest pass, 80 the lowest A.",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-004",
+          "type": "single_choice",
+          "prompt": "Test cases −5 and 120: what is the expected behaviour?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Reject the input / ask again"
+            },
+            {
+              "id": "b",
+              "text": "Grade F"
+            },
+            {
+              "id": "c",
+              "text": "Crash"
+            },
+            {
+              "id": "d",
+              "text": "Grade A"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-005",
+          "type": "single_choice",
+          "prompt": "Test case “abc”: what is the expected behaviour?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Convert it to 0 and continue silently"
+            },
+            {
+              "id": "b",
+              "text": "Handle the invalid format (e.g. with TryParse)"
+            },
+            {
+              "id": "c",
+              "text": "Crash"
+            },
+            {
+              "id": "d",
+              "text": "Grade F"
+            }
+          ],
+          "correct": [
+            "b"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-006",
+          "type": "single_choice",
+          "prompt": "What testing habit do your notes recommend?",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Test the boundaries, not only the “normal” input"
+            },
+            {
+              "id": "b",
+              "text": "Only test one normal value"
+            },
+            {
+              "id": "c",
+              "text": "Never test invalid input"
+            },
+            {
+              "id": "d",
+              "text": "Test after submitting"
+            }
+          ],
+          "correct": [
+            "a"
+          ],
+          "explanation": "",
+          "difficulty": "easy",
+          "tags": [
+            "testing"
+          ]
+        },
+        {
+          "id": "dn3-test-007",
+          "type": "multiple_choice",
+          "prompt": "The Mini PBL Grade Management System must… (select all that apply)",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Use a database"
+            },
+            {
+              "id": "b",
+              "text": "Validate input (0–100)"
+            },
+            {
+              "id": "c",
+              "text": "Process at least three students"
+            },
+            {
+              "id": "d",
+              "text": "Use a Student class and methods"
+            },
+            {
+              "id": "e",
+              "text": "Assign grade and PASS/FAIL"
+            }
+          ],
+          "correct": [
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "pbl"
+          ]
+        },
+        {
+          "id": "dn3-test-008",
+          "type": "single_choice",
+          "prompt": "Learning outcome C4 – ANALYSE asks you to…",
+          "image": null,
+          "options": [
+            {
+              "id": "a",
+              "text": "Describe data types"
+            },
+            {
+              "id": "b",
+              "text": "Write programs with loops"
+            },
+            {
+              "id": "c",
+              "text": "Distinguish the four OOP principles in a given solution"
+            },
+            {
+              "id": "d",
+              "text": "Organise code with methods"
+            }
+          ],
+          "correct": [
+            "c"
+          ],
+          "explanation": "C2 explain, C3 develop / construct, C4 analyse.",
+          "difficulty": "medium",
+          "tags": [
+            "outcomes"
+          ]
+        },
+        {
+          "id": "dn3-test-009",
+          "type": "typed",
+          "prompt": "Knowledge check: what is 5 / 2 when both operands are int?",
+          "image": null,
+          "acceptedAnswers": [
+            "2"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "value"
+          },
+          "explanation": "Integer division.",
+          "difficulty": "medium",
+          "tags": [
+            "knowledge-check"
+          ]
+        },
+        {
+          "id": "dn3-test-010",
+          "type": "typed",
+          "prompt": "Knowledge check: which data type should hold the ID \"00142\"?",
+          "image": null,
+          "acceptedAnswers": [
+            "string"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "type"
+          },
+          "explanation": "To keep the leading zeros.",
+          "difficulty": "medium",
+          "tags": [
+            "knowledge-check"
+          ]
+        },
+        {
+          "id": "dn3-test-011",
+          "type": "typed",
+          "prompt": "Knowledge check: which method safely converts text to int without throwing?",
+          "image": null,
+          "acceptedAnswers": [
+            "int.TryParse",
+            "TryParse",
+            "int.TryParse()",
+            "TryParse()"
+          ],
+          "caseSensitive": false,
+          "input": {
+            "placeholder": "method"
+          },
+          "explanation": "",
+          "difficulty": "medium",
+          "tags": [
+            "knowledge-check"
+          ]
+        }
+      ]
+    }
+  ]
+}
